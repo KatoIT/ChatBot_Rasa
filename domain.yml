@@ -1,0 +1,253 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 15
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- bye:
+    use_entities: true
+- confirm:
+    use_entities: true
+- unconfirm:
+    use_entities: true
+- thanks:
+    use_entities: true
+- composition:
+    use_entities: true
+- taste:
+    use_entities: true
+- effects:
+    use_entities: true
+- contraindications:
+    use_entities: true
+- user_manual:
+    use_entities: true
+- storage:
+    use_entities: true
+- made_in:
+    use_entities: true
+- sale:
+    use_entities: true
+- price:
+    use_entities: true
+- nominations:
+    use_entities: true
+- recognizing_signs:
+    use_entities: true
+- ship:
+    use_entities: true
+- user_object:
+    use_entities: true
+- year_old:
+    use_entities:
+    - age
+- advisory:
+    use_entities:
+    - product_name_en
+- order:
+    use_entities:
+    - product_name_en
+- customer_name:
+    use_entities:
+    - name
+- customer_phone_number:
+    use_entities:
+    - phone
+- product_name:
+    use_entities:
+    - product_name_en
+- number_of_products:
+    use_entities:
+    - amount
+- answer_province:
+    use_entities:
+    - province
+- answer_district:
+    use_entities:
+    - district
+- answer_ward:
+    use_entities:
+    - ward
+- out_of_scope:
+    use_entities: true
+entities:
+- name
+- phone
+- age
+- product_name_en
+- amount
+- province
+- district
+- ward
+slots:
+  name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  age:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  amount:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  phone:
+    type: actions.custom_type_sdt.PhoneNumber
+    influence_conversation: true
+  product_name_en:
+    type: rasa.shared.core.slots.CategoricalSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+    values:
+    - Bánh dinh dưỡng hebi
+    - Men vi khuẩn sống việt nhật
+  request_counselling:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  s_province:
+    type: text
+    influence_conversation: true
+  s_district:
+    type: text
+    influence_conversation: true
+  s_ward:
+    type: text
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Xin chào Shop có thể giúp gì cho bạn?
+  utter_bye:
+  - text: Bye👋👋
+  - text: Xin chào! Hẹn gặp lại👋👋
+  utter_thanks:
+  - text: Cảm ơn {name} đã quan tâm đến các sản phẩm của Shop!😉
+  utter_unconfirm:
+  - buttons:
+    - payload: /#
+      title: Sửa thông tin
+    - payload: /#
+      title: Xóa đơn
+    text: |-
+      Bạn cần sửa thông tin nào ạ?
+      Hoặc muốn xóa đơn hàng?
+  utter_advisory:
+  - buttons:
+    - payload: /product_name{{"product_name_en":"Bánh dinh duỡng Hebi"}}
+      title: Bánh dinh dưỡng Hebi
+    - payload: /product_name{{"product_name_en":"Men vi khuẩn sống Việt Nhật"}}
+      title: Men vi khuẩn sống Việt Nhật
+    text: 'Shop hiện có 2 sản phẩm là:'
+  utter_order_details:
+  - buttons:
+    - payload: /confirm
+      title: Đặt hàng
+    - payload: /unconfirm
+      title: Hủy đơn
+    text: |-
+      Đơn hàng bạn {name}:
+       ☎ SĐT: {phone}
+       📦 SP: {product_name_en}
+       🖊️ SL: {amount}
+       💵 Tổng tiền: {sum_money} VNĐ
+       Vui lòng xác nhận đặt hàng!!
+       (Chat: Đồng ý hoặc Hủy đơn)
+  utter_ask_age:
+  - buttons:
+    - payload: /year_old{{"age":"1"}}
+      title: Dưới 2 tuổi 👶
+    - payload: /year_old{{"age":"3"}}
+      title: 2 đến 15 tuổi 👦
+    - payload: /year_old{{"age":"20"}}
+      title: Trên 15 tuổi 👨
+    text: Người dùng bao nhiêu tuổi?
+  utter_ask_name:
+  - text: Cho Shop hỏi bạn tên gì?🤔🤔
+  - text: Bạn cho Shop xin tên🤔🤔
+  - text: Tên của bạn là gì?🤔🤔
+  utter_ask_phone:
+  - text: ☎ Số điện thoại của bạn là...
+  - text: ☎ Cho Shop xin số điện thoại của bạn ạ...
+  utter_ask_product_name_en:
+  - buttons:
+    - payload: /product_name{{"product_name_en":"Bánh dinh duỡng Hebi"}}
+      title: Bánh dinh dưỡng Hebi 🍪
+    - payload: /product_name{{"product_name_en":"Men vi khuẩn sống Việt Nhật"}}
+      title: Men vi khuẩn sống Việt Nhật 📦
+    text: Vui lòng chọn sản phẩm
+  utter_ask_amount:
+    - text: bạn {name} mua số lượng bao nhiêu ạ?
+  utter_ask_request_counselling:
+  - buttons:
+    - payload: /price{{"request_counselling":"price"}}
+      title: Giá SP
+    - payload: /effects{{"request_counselling":"effects"}}
+      title: Công dụng SP
+    text: Bạn cần biết gì về sản phẩm {product_name_en}?
+  utter_out_of_scope:
+  - text: |-
+      Xin lỗi ! Tôi chưa hiểu ý của bạn.
+      Vui lòng cho tôi biết chính xác bạn cần gì.🤖
+
+  utter_ask_s_province:
+    - text: bạn ở tỉnh/thành nào
+  utter_ask_s_district:
+    - text: bạn ở quận/huyện nào
+  utter_ask_s_ward:
+    - text: bạn ở phường/xã nào
+actions:
+- action_answer
+- action_confirm_order
+- validate_action_order_form
+- action_submit
+- action_reset_slot
+- action_set_slot_composition
+- action_set_slot_taste
+- action_set_slot_effects
+- action_set_slot_contraindications
+- action_set_slot_user_manual
+- action_set_slot_storage
+- action_set_slot_made_in
+- action_set_slot_sale
+- action_set_slot_price
+- action_set_slot_nominations
+- action_set_slot_recognizing_signs
+- action_set_slot_ship
+- action_set_slot_user_object
+forms:
+  action_order_form:
+    required_slots:
+      name:
+      - type: from_entity
+        entity: name
+      phone:
+      - type: from_entity
+        entity: phone
+      product_name_en:
+      - type: from_entity
+        entity: product_name_en
+      amount:
+      - type: from_entity
+        entity: amount
+      s_province:
+      - type: from_entity
+        entity: province
+        intent: answer_province
+      s_district:
+      - type: from_entity
+        entity: district
+        intent: answer_district
+      s_ward:
+      - type: from_entity
+        entity: ward
+        intent: answer_ward
+e2e_actions: []

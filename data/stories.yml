@@ -1,0 +1,17 @@
+version: "2.0"
+stories:
+- story: chao hoi 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: bye
+  - action: utter_bye
+- story: hoi gia
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: price
+  - action: action_set_slot_price
+  - action: action_answer
+  - intent: bye
+  - action: utter_bye

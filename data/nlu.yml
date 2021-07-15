@@ -1,0 +1,336 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - xin chào
+    - chào bạn
+    - hello
+    - hi
+    - hey
+    - mình có vài câu hỏi
+    - có ai giúp mình không
+    - bạn ơi
+    - anh ơi
+    - chị ơi
+    - cháu ơi
+    - chào bạn
+    - có ai ở đây không?
+    - Ê
+    - .
+    - cho mình hỏi
+    - Xin chào
+- intent: bye
+  examples: |
+    - bye
+    - goodbye
+    - tạm biệt
+    - chào tạm biệt
+    - chào tạm biệt em
+    - tạm biệt em
+    - tạm biệt em nhé
+- intent: confirm
+  examples: |
+    - Đồng ý
+    - Đồng ý
+    - Đồng ý
+    - Đồng ý
+    - Đồng ý
+    - Đồng ý
+    - Đồng ý
+    - Đồng ý
+    - Đồng ý
+    - Đồng ý
+    - Đồng ý
+    - Đồng ý
+    - Đồng ý
+    - Đồng ý
+    - Đồng ý
+    - Đồng ý
+    - Đồng ý
+    - Đồng ý
+    - Đồng ý ạ!
+- intent: unconfirm
+  examples: |
+    - Hủy đơn
+    - Hủy đơn
+    - Hủy đơn
+    - Hủy đơn
+    - Hủy đơn
+    - Hủy đơn
+    - Hủy đơn
+    - Hủy đơn
+    - Hủy đơn
+    - Hủy đơn
+    - Hủy đơn
+    - Hủy đơn
+    - Hủy đơn
+    - Hủy đơn
+    - Hủy đơn
+    - Hủy đơn
+    - Hủy đơn
+    - Hủy đơn ạ!
+- intent: thanks
+  examples: |
+    - thanks
+    - cảm ơn
+    - thank you
+    - chuẩn
+    - hay
+    - cám ơn
+    - cảm ơn em
+    - cảm ơn em nhiều nhé
+- intent: composition
+  examples: |
+    - thành phần
+    - gồm những thành phẩn nào?
+- intent: taste
+  examples: |
+    - hương vị
+    - có vị gì?
+    - có dễ ăn không?
+    - Bánh có vị gì?
+- intent: effects
+  examples: |
+    - tác dụng chính
+    - có lợi
+    - tốt cho
+    - công dụng
+    - công dụng của sản phẩm là gì vậy?
+- intent: contraindications
+  examples: |
+    - lưu ý
+    - chống chỉ định
+    - không dùng cho
+    - ko dùng cho
+    - có lưu ý gì khi dùng sản phẩm không?
+- intent: user_manual
+  examples: |
+    - liều dùng
+    - dùng làm sao
+    - cách dùng
+    - hướng dẫn sủ dụng
+    - có thể dùng theo những cách nào
+    - dùng sản phẩm này thế nào ạ
+    - bé nhà mình [3](age) tuổi thì dùng bao nhiêu
+- intent: storage
+  examples: |
+    - hạn dùng
+    - hạn sử dụng
+    - sản phẩm có thể bảo quản trong bao lâu?
+- intent: made_in
+  examples: |
+    - sản xuất tại\ở đâu?
+    - hàng của nước nào?
+    - có phải hàng ngoại không?
+    - xuất sứ ở đâu
+    - hãng nào sản xuất thế?
+    - bánh có trên thị trường lâu chưa ạ?
+- intent: sale
+  examples: |
+    - giảm giá
+    - ưu đãi
+    - sale
+    - có giảm giá gì không?
+    - có sale gì không?
+- intent: price
+  examples: |
+    - xin giá sản phẩm [Bánh dinh duỡng Hebi](product_name_en)
+    - xin giá [Bánh dinh duỡng Hebi](product_name_en)
+    - [Bánh dinh duỡng Hebi](product_name_en) giá
+    - xin giá bán
+    - giá
+    - bán như thế nào?
+    - bán ra sao đây
+    - cho mk xin giá?
+    - Bánh bn 1 thanh vậy shop
+    - Bánh bao nhiêu 1 thanh vậy shop
+    - Bánh bao nhiêu 1 thanh
+    - Bánh bán theo hộp hay như như thế nào
+    - Bánh bán theo hộp hay như ntn
+    - cho mình xin giá sản phẩm
+- intent: nominations
+  examples: |
+    - dùng cùng
+    - dùng kèm
+    - dùng với
+- intent: recognizing_signs
+  examples: |
+    - phân biệt hàng giả
+    - phân biệt hàng thật
+- intent: ship
+  examples: |
+    - vận chuyển
+    - giao hàng
+    - shop có giao hàng không?
+    - shop có ship không?
+    - shop có ship hàng không?
+    - có ship không ạ?
+    - có ship ko ạ?
+    - gửi qua đường bưu điện hay như thế nào ạ?
+    - bảo hành
+    - đổi trả
+    - chính sách đổi trả hàng
+- intent: user_object
+  examples: |
+    - ai có thể dùng được
+    - dùng cho ai
+- intent: year_old
+  examples: |
+    - [12](age) tuổi ạ
+    - mình sinh năm [2000](age) nha
+- intent: advisory
+  examples: |
+    - nhà mình bán cái gì
+    - mình có thể mua gì
+    - có những mặt hàng
+    - mình chưa biết mua cái gì
+    - mình mua cả cửa hàng này
+    - mua gì
+    - mình cần tư vấn về [Bánh dinh duỡng Hebi](product_name_en)
+    - tư vấn về [Bánh dinh duỡng Hebi](product_name_en)
+- intent: order
+  examples: |
+    - Anh muốn mua gói [Bánh dinh duỡng Hebi](product_name_en)
+    - Anh muốn mua [Bánh dinh duỡng Hebi](product_name_en)
+    - Ah muốn mua [Bánh dinh duỡng Hebi](product_name_en)
+    - Anh muốn mua 10 hộp [Men vi khuẩn sống Việt Nhật](product_name_en)
+    - Anh muốn mua [Men vi khuẩn sống Việt Nhật](product_name_en)
+    - Em muốn đặt hàng
+    - E muốn đặt hàng
+    - Anh muốn đặt hàng
+    - Ah muốn đặt hàng
+    - mình muốn đặt hàng
+    - mk muốn đặt hàng
+    - cho mình đặt hàng
+    - cho mk đặt hàng
+    - đặt hàng làm sao nhỉ?
+- intent: customer_name
+  examples: |
+    - là [Thọ](name)
+    - là [Thỏ](name)
+    - tên là [Linh](name)
+    - [Thúy](name)
+    - [An](name)
+    - [Am](name)
+    - [A](name)
+    - [Ă](name)
+    - [Â](name)
+    - [E](name)
+    - [Ê](name)
+    - [O](name)
+    - [Ô](name)
+    - [Ơ](name)
+    - [I](name)
+    - [Y](name)
+    - [U](name)
+    - [Ư](name)
+    - [Duy](name)
+    - tên [Hường](name)
+    - tên [Hưởng](name)
+    - tên [Hướng](name)
+    - tên [Đạt](name)
+    - tên [Nghĩa](name)
+    - Dạ [Ánh](name)
+    - [Ánh](name)
+- intent: customer_phone_number
+  examples: |
+    - sdt của mình là [0912531510](phone)
+    - [0987191143](phone) đây là số chính
+    - [0987191143](phone)
+    - sdt [1234567891](phone)
+    - [0973271208](phone) nhé
+- intent: product_name
+  examples: |
+    - [Bánh dinh duỡng Hebi](product_name_en)
+    - [Bánh Hebi]{"entity": "product_name_en", "value":"Bánh dinh duỡng Hebi"}
+    - [Bánh dinh duỡng]{"entity": "product_name_en", "value":"Bánh dinh duỡng Hebi"}
+    - [Bánh]{"entity": "product_name_en", "value": "Bánh dinh duỡng Hebi"}
+    - [Men vi khuẩn sống Việt Nhật](product_name_en)
+    - [Men vi khuẩn sống]{"entity": "product_name_en", "value": "Men vi khuẩn sống Việt Nhật"}
+    - [Men Việt Nhật]{"entity": "product_name_en", "value": "Men vi khuẩn sống Việt Nhật"}
+    - [Men]{"entity": "product_name_en", "value": "Men vi khuẩn sống Việt Nhật"}
+- intent: number_of_products
+  examples: |
+    - mua [12](amount) bánh ạ
+    - mình mua [10](amount) bánh
+    - bán [10](amount) bánh
+    - cho [10](amount) bánh
+    - lấy [10](amount) bánh
+    - [10](amount) bánh
+    - [10](amount) bánh nhé
+    - [10](amount) gói nhé
+    - [1](amount) hộp nhé
+    - [2](amount) gói nhé
+    - [10](amount) gói nhé
+    - [10](amount) gói nhé
+    - cho [1](amount) hộp nhé
+    - lấy [2](amount) hộp nhé
+    - lấy [1](amount) thùng nhé
+    - lấy [1](amount) bao nhé
+    - lấy [1](amount) bì nhé
+    - lấy [1](amount) bọc nhé
+    - [10](amount) gói nhé
+- intent: answer_province
+  examples: |
+    - mình ở tỉnh [Hưng Yên](province)
+    - tỉnh [Cao Bằng](province) ạ
+    - ở tỉnh [Phú Thọ](province)
+    - mình ở thành phố [Hà Nội](province)
+    - thành phố [Hà Nội](province)
+    - TP.[Hà Nội](province)
+    - ở TP.[Hồ Chí Minh](province)
+    - trong TP.[Hà Nội](province)
+- intent: answer_district
+  examples: |
+    - ở quận [Cầu Giấy](district)
+    - bên quận [Ba Đình](district)
+    - phía quận [Hoàn Kiếm](district)
+    - thuộc Quận [Đông Đa](district)
+    - mình ở huyện [Khoái Châu](district)
+    - huyện [Kim Động](district) ạ
+    - ở huyện [Yên Mỹ](district)
+    - tớ ở H.[Văn Giang](district)
+    - H.[Đông Anh](district)
+    - Huyện [Chương Mỹ](district) ạ
+    - Quận [Ba Đình](district)
+    - ở Quận [Hoàn Kiếm](district)
+    - bên Q.[Đông Đa](district)
+    - trong Q.[Ba Đình](district)
+    - bên Q.[Hoàn Kiếm](district)
+- intent: answer_ward
+  examples: |
+    - mình ở xã [Bình Minh](ward)
+    - ở xã [Dạ Trạch](ward) ạ
+    - bên xã [Tân Dân](ward) ạ
+    - mình ở phường [Láng](ward)
+    - bên phường [Kim Liên](ward)
+    - dưới xã [Mễ Sở](ward)
+    - xã [Tứ Dân](ward)
+    - xã [Yên Mạc](ward)
+    - xã [Yên Từ](ward) ạ
+    - xã [Yên Từ](ward) ạ
+    - phường [Quang Trung](ward)
+- intent: out_of_scope
+  examples: |
+    - Điên
+    - Đù!
+- synonym: Bánh dinh duỡng Hebi
+  examples: |
+    - Bánh Hebi
+    - Bánh dinh duỡng
+    - Bánh
+    - cao năng lượng hebi
+- synonym: Men vi khuẩn sống Việt Nhật
+  examples: |
+    - Men vi khuẩn sống
+    - Men Việt Nhật
+    - Men
+- regex: age
+  examples: |
+    - \d{1,2}[ ]*(tuổi|tháng|thg|T|th)
+- regex: amount
+  examples: |
+    - \d{1,2}[ ]*(bánh|túi|gói|b|B)
+- regex: phone
+  examples: |
+    - \d{10,12}
