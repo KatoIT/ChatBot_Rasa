@@ -65,12 +65,21 @@ intents:
 - answer_province:
     use_entities:
     - province
+    ignore_entities:
+    - district
+    - ward
 - answer_district:
     use_entities:
     - district
+    ignore_entities:
+    - province
+    - ward
 - answer_ward:
     use_entities:
     - ward
+    ignore_entities:
+    - province
+    - district
 - out_of_scope:
     use_entities: true
 entities:
@@ -114,13 +123,16 @@ slots:
     initial_value: null
     auto_fill: true
     influence_conversation: true
-  s_province:
+  province:
     type: text
     influence_conversation: true
-  s_district:
+  district:
     type: text
     influence_conversation: true
-  s_ward:
+  ward:
+    type: text
+    influence_conversation: true
+  total:
     type: text
     influence_conversation: true
 responses:
@@ -158,7 +170,8 @@ responses:
        ☎ SĐT: {phone}
        📦 SP: {product_name_en}
        🖊️ SL: {amount}
-       💵 Tổng tiền: {sum_money} VNĐ
+       Địa chỉ: {ward}, {district}, {province}
+       💵 Tổng tiền: {total} VNĐ
        Vui lòng xác nhận đặt hàng!!
        (Chat: Đồng ý hoặc Hủy đơn)
   utter_ask_age:
@@ -198,11 +211,11 @@ responses:
       Xin lỗi ! Tôi chưa hiểu ý của bạn.
       Vui lòng cho tôi biết chính xác bạn cần gì.🤖
 
-  utter_ask_s_province:
+  utter_ask_province:
     - text: bạn ở tỉnh/thành nào
-  utter_ask_s_district:
+  utter_ask_district:
     - text: bạn ở quận/huyện nào
-  utter_ask_s_ward:
+  utter_ask_ward:
     - text: bạn ở phường/xã nào
 actions:
 - action_answer
@@ -238,15 +251,15 @@ forms:
       amount:
       - type: from_entity
         entity: amount
-      s_province:
+      province:
       - type: from_entity
         entity: province
         intent: answer_province
-      s_district:
+      district:
       - type: from_entity
         entity: district
         intent: answer_district
-      s_ward:
+      ward:
       - type: from_entity
         entity: ward
         intent: answer_ward

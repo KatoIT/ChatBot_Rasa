@@ -277,9 +277,24 @@ nlu:
     - ở tỉnh [Phú Thọ](province)
     - mình ở thành phố [Hà Nội](province)
     - thành phố [Hà Nội](province)
-    - TP.[Hà Nội](province)
-    - ở TP.[Hồ Chí Minh](province)
-    - trong TP.[Hà Nội](province)
+    - TP [Hà Nội](province)
+    - ở TP [Hồ Chí Minh](province)
+    - trong TP [Hà Nội](province)
+    - [Lào Cai](province)
+    - [Hưng Yên](province)
+    - [Hòa Bình](province)
+    - [Sơn La](province)
+    - [Điện Biên](province)
+    - [Lai Châu](province)
+    - [Yên Bái](province)
+    - [Bình Định](province)
+    - [Ninh Thuận](province)
+    - [Ninh Bình](province)
+    - [Thanh Hoá](province)
+    - [Nam Định](province)
+    - [Đằng Nẵng](province)
+    - [Hà Nam](province)
+    - [Cao Bằng](province)
 - intent: answer_district
   examples: |
     - ở quận [Cầu Giấy](district)
@@ -287,16 +302,49 @@ nlu:
     - phía quận [Hoàn Kiếm](district)
     - thuộc Quận [Đông Đa](district)
     - mình ở huyện [Khoái Châu](district)
-    - huyện [Kim Động](district) ạ
+    - huyện [Kim Động](district)
+    - huyện [Hoà An](district)
+    - huyện [Kim Động](district)
+    - huyện [Kim Động](district)
     - ở huyện [Yên Mỹ](district)
-    - tớ ở H.[Văn Giang](district)
-    - H.[Đông Anh](district)
+    - ở H [Văn Giang](district)
+    - H [Đông Anh](district)
     - Huyện [Chương Mỹ](district) ạ
     - Quận [Ba Đình](district)
     - ở Quận [Hoàn Kiếm](district)
-    - bên Q.[Đông Đa](district)
-    - trong Q.[Ba Đình](district)
-    - bên Q.[Hoàn Kiếm](district)
+    - Quận [Đông Đa](district)
+    - Q [Ba Đình](district)
+    - Q [Hoàn Kiếm](district)
+    - Quận [Nam Từ Liêm](district)
+    - Quận [Hà Đông](district)
+    - Quận [Tây Hồ](district)
+    - Quận [Long Biên](district)
+    - Quận [Hoang Mai](district)
+    - Quận [Hoàn Kiếm](district)
+    - Quận [Hai Bà Trưng](district)
+    - Quận [Đống Đa](district)
+    - Quận [Cầu Giấy](district)
+    - Quận [Ba Đình](district)
+    - Quận [Bắc Từ Liêm](district)
+    - Quận [Thanh Xuân](district)
+    - Huyện [Thường Tín](district)
+    - Huyện [Phú Xuyên](district)
+    - Huyện [Quốc Oai](district)
+    - Huyện [Chương Mỹ](district)
+    - Huyện [Ứng Hòa](district)
+    - Huyện [Thanh Oai](district)
+    - Huyện [Thạch Thất](district)
+    - Huyện [Phúc Thọ](district)
+    - Huyện [Hoài Đức](district)
+    - Huyện [Mỹ Đức](district)
+    - Huyện [Đan Phượng](district)
+    - Huyện [Ba Vì](district)
+    - Huyện [Thanh Trì](district)
+    - Huyện [Gia Lâm](district)
+    - Huyện [Sóc Sơn](district)
+    - Huyện [Đông Anh](district)
+    - Huyện [Mê Linh](district)
+    - Thị xã [Sơn Tây](district)
 - intent: answer_ward
   examples: |
     - mình ở xã [Bình Minh](ward)
@@ -307,9 +355,25 @@ nlu:
     - dưới xã [Mễ Sở](ward)
     - xã [Tứ Dân](ward)
     - xã [Yên Mạc](ward)
-    - xã [Yên Từ](ward) ạ
+    - xã [Yên Lâm](ward) ạ
     - xã [Yên Từ](ward) ạ
     - phường [Quang Trung](ward)
+    - phường [Láng Hạ](ward)
+    - phường [Đội Cấn](ward)
+    - phường [Liễu Giai](ward)
+    - phường [Kim Mã](ward)
+    - phường [Giảng Võ](ward)
+    - phường [Đội Cấn](ward)
+    - phường [Điện Biên](ward)
+    - phường [Cống Vị](ward)
+    - phường [Vĩnh Phúc](ward)
+    - phường [Trúc Bạch](ward)
+    - phường [Thành Công](ward)
+    - phường [Quán Thánh](ward)
+    - phường [Phúc Xá](ward)
+    - phường [Nguyễn Trung Trực](ward)
+    - phường [Ngọc Khánh](ward)
+    - phường [Ngọc Hà](ward)
 - intent: out_of_scope
   examples: |
     - Điên
@@ -327,10 +391,20 @@ nlu:
     - Men
 - regex: age
   examples: |
+    - \d{1,2}[ ]*(tuổi|tháng|thg|T|th|Th)
+    - \d{1,2}[ ]*(tuổi|tháng|thg|T)
     - \d{1,2}[ ]*(tuổi|tháng|thg|T|th)
 - regex: amount
   examples: |
-    - \d{1,2}[ ]*(bánh|túi|gói|b|B)
+    - \d{1,3}[ ]*(bánh|túi|gói|b|B|hộp|H|h|Túi)
+    - \d{1,3}[ ]*(bánh|túi|gói|b|B|hộp|H)
+    - \d{1,2}[ ]*(bánh|túi|gói|b|B|hộp|H|h)
 - regex: phone
   examples: |
     - \d{10,12}
+    - \d{10,12}
+    - \d{10,12}
+- regex: product_name_en
+  examples: |
+    - ((B|b)+ánh dinh duỡng +(H|h)+ebi)|((B|b)+ánh +(H|h)+ebi)|((B|b)+ánh dinh duỡng)|((B|b)+ánh)
+    - ((M|m)+en +(V|v)+i +(K|k)+huẩn +(S|s)+ống +(V|v)+iệt +(N|n)+hật)|((M|m)+en +(V|v)+i +(K|k)+huẩn +(S|s)+ống)|((M|m)+en +(V|v)+i +(K|k)+huẩn +(V|v)+iệt +(N|n)+hật)|((M|m)+en )
