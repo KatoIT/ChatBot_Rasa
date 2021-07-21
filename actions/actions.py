@@ -1,18 +1,37 @@
 from rasa_sdk import FormValidationAction
 from rasa_sdk.events import EventType
 import requests
-import openpyxl
 import datetime
-from pathlib import Path
 from rasa_sdk.types import DomainDict
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet, FollowupAction, AllSlotsReset
 import phonenumbers
+import re
+from actions.servicesBot import *
+
+sheet = read_file()
+switchRequire = {'composition': 2,
+                 'taste': 3,
+                 'effects': 4,
+                 'contraindications': 5,
+                 'user_manual': 6,
+                 'storage': 7,
+                 'made_in': 8,
+                 'sale': 9,
+                 'price': 10,
+                 'nominations': 11,
+                 'recognizing_signs': 12,
+                 'ship': 13,
+                 'user_object': 14,
+                 'year_gr1': 16,
+                 'year_gr2': 17,
+                 'year_gr3': 18,
+                 }
 
 
-# ----------------- Answer Request Counselling ------------------------#
+# ----------------- Trả lời yêu cầu của khách về thông tin sản phẩm ------------------------#
 class ActionAnswer(Action):
 
     def name(self) -> Text:
@@ -22,23 +41,15 @@ class ActionAnswer(Action):
             dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        # mở file
-        xlsx_file = Path('', 'Data.xlsx')  # file
-        wb_obj = openpyxl.load_workbook(xlsx_file)
-        sheet = wb_obj.active
         if tracker.get_slot("product_name_en") is None:
             # nếu chưa nhận được tên sản phẩm sẽ yêu cầu khách hàng chọn sản phẩm cần tư vấn.
-            dispatcher.utter_message(
-                response="utter_ask_product_name_en"
-            )
+            dispatcher.utter_message(response="utter_ask_product_name_en")
         elif tracker.get_slot("request_counselling") is None:
             # Nếu chưa nhận được yêu cầu tư vấn từ khách sẽ hỏi khách cần tư vấn gì?
-            dispatcher.utter_message(
-                response="utter_ask_request_counselling"
-            )
+            dispatcher.utter_message(response="utter_ask_request_counselling")
         else:
             # Xử lý yêu cầu của khách
-            requestCustom = tracker.get_slot("request_counselling")
+            requestCustom = str(tracker.get_slot("request_counselling"))
             productName = tracker.get_slot("product_name_en")
             content = "Rất xin lỗi!!!\nShop hiện chưa có thông tin về vấn đề này."
             if "bánh" in str(productName).lower():
@@ -50,44 +61,14 @@ class ActionAnswer(Action):
                 # Tư vấn theo sản phẩm Men vi khuẩn sống Việt Nhật
                 if sheet["C" + requestCustom].value is not None:
                     content = str(sheet["C" + requestCustom].value)
-            # Trả về thông tin khách cần
+            # Trả về thông tin khách yêu cầu
             dispatcher.utter_message(text=content)
+            # reset slot request_counselling
             return [SlotSet("request_counselling", None)]
         return []
 
 
-# ----------------- Set slot value ------------------------#
-class ActionComfirm(Action):
-    def name(self) -> Text:
-        return "action_confirm_order"
-
-    def run(self,
-            dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        #
-        xlsx_file = Path('', 'OrderList.xlsx')  # file
-        wb_obj = openpyxl.load_workbook(xlsx_file)
-        sheet = wb_obj.active
-        # lấy thông tin đơn hàng từ slot
-        name = str(tracker.get_slot("name"))
-        phone = str(tracker.get_slot("phone"))
-        product_name = str(tracker.get_slot("product_name_en"))
-        amount = str(tracker.get_slot("amount"))
-        total = str(tracker.get_slot("total"))
-        date = str(datetime.datetime.today())
-        address = str(tracker.get_slot("ward")) + ', ' + str(tracker.get_slot("district")) + ', ' + str(tracker.get_slot("province"))
-        # Thêm 1 hàng giá trị vào file
-        sheet.append([name, phone, product_name, amount, total, date, address])
-        # Lưu file
-        wb_obj.save('OrderList.xlsx')
-        # Hiển thị xác nhận đã lưu đơn
-        dispatcher.utter_message(
-            text="Đơn hàng của bạn đã được lưu lại✅\nShop sẽ liên hệ xác nhận trong vòng 24h, vui lòng chú ý điện thoại của bạn.\n")
-        return []
-
-
-# ----------------- Order Form ------------------------#
+# ----------------- Form Đặt hàng------------------------#
 
 class ActionOrderForm(Action):
 
@@ -100,7 +81,7 @@ class ActionOrderForm(Action):
             tracker: Tracker,
             domain: "DomainDict",
     ) -> List[Dict[Text, Any]]:
-        required_slots = ["name", "phone", "product_name_en", "amount", "province", "district", "ward"]
+        required_slots = ["phone", "name", "product_name_en", "amount", "province", "district", "ward"]
         for slot_name in required_slots:
             if tracker.get_slot(slot_name) is None:
                 # nếu như có một thành phần nào đó rỗng thì sẽ phải điền đủ
@@ -110,7 +91,7 @@ class ActionOrderForm(Action):
         # dispatcher.utter_message(text= tracker.get_slot("phone_number"))
 
 
-# ----------------- Validate From ------------------------#
+# ----------------- Validate dữu liệu From ------------------------#
 class ValidateActionOrderForm(FormValidationAction):
     id_province = ""
     id_district = ""
@@ -150,7 +131,7 @@ class ValidateActionOrderForm(FormValidationAction):
                     }
                     list_district.append(dict(disdic))
                 except:
-                    print("Có Quận/Huyện Đặc Biệt")
+                    print("Có Quận/Huyện Đặc Biệt ", district)
         return list_district
 
     def ward_db(self) -> List[dict]:
@@ -178,11 +159,18 @@ class ValidateActionOrderForm(FormValidationAction):
             tracker: "Tracker",
             domain: "DomainDict",
     ) -> List[EventType]:
+        #  TODO
+        list_district = ''
         for province in self.province_db():
             for namePro in province.get('NameExtension'):
                 if slot_value[0].lower() in str(namePro).lower():
-                    print('Tỉnh ', slot_value)
                     self.id_province = province['id_province']
+                    # lấy danh sách huyện của Tỉnh
+                    for district in self.district_db():
+                        list_district += '\n' + district['NameExtension'][0]
+                    print('Slot_province ', slot_value, "\nCác Huyện:\n", list_district)
+                    dispatcher.utter_message(response="utter_list_district",
+                                             list_district=list_district)
                     return {"province": slot_value[0], "district": None}
                 else:
                     continue
@@ -195,11 +183,18 @@ class ValidateActionOrderForm(FormValidationAction):
             tracker: "Tracker",
             domain: "DomainDict",
     ) -> List[EventType]:
+        list_ward = ''
+        print('Slot_district ', slot_value)
         for district in self.district_db():
             for nameDis in district['NameExtension']:
                 if slot_value[0].lower() in str(nameDis).lower():
-                    print('Huyện ', slot_value)
+                    print('Huyện: ', district, ' - ', slot_value[0])
                     self.id_district = district['id_district']
+                    # lấy danh sách Xã của Huyện
+                    for ward in self.ward_db():
+                        list_ward += '\n' + ward['NameExtension'][0]
+                    dispatcher.utter_message(response="utter_list_ward",
+                                             list_ward=list_ward)
                     return {"district": slot_value[0]}
                 else:
                     continue
@@ -215,12 +210,15 @@ class ValidateActionOrderForm(FormValidationAction):
         for ward in self.ward_db():
             for nameWard in ward['NameExtension']:
                 if slot_value[0].lower() in str(nameWard).lower():
-                    print('Xã ', slot_value)
-                    return {"ward": slot_value}
+                    print('Xã: ', ward, ' - ', slot_value[0])
+                    print('Slot_ward ', slot_value)
+                    return {"ward": slot_value[0]}
                 else:
                     continue
         return {"ward": None}
-# Kiểm tra số điện thoại #
+
+    # Kiểm tra số điện thoại #
+
     def validate_phone(
             self,
             slot_value: Any,
@@ -228,26 +226,41 @@ class ValidateActionOrderForm(FormValidationAction):
             tracker: "Tracker",
             domain: "DomainDict",
     ) -> List[EventType]:
+        #  TODO
+        phone_number_list = str(tracker.get_slot('phone'))
         countSDT = False
-        for match in slot_value.PhoneNumberMatcher(slot_value, "VN"):
+        for match in phonenumbers.PhoneNumberMatcher(phone_number_list, "VN"):
+            phone_number = str(match).split(' ')[2]
             countSDT = True
         if countSDT:
-            return {"phone": slot_value[1]}
+            # Lấy thông tin về tên và địa chỉ trong đơn hàng mới nhất của khách nếu có.(ID khách là phone_number)
+            infoCustomer = get_familiar_customers(phone_number)
+            if infoCustomer[0] is not None:
+                address = str(infoCustomer[1]).split(', ')
+                return {"phone": phone_number, "name": infoCustomer[0],
+                        "ward": address[0], "district": address[1], "province": address[2]}
+            else:
+                return {"phone": phone_number}
         return {"phone": None}
-# Kiểm tra số lượng đặt hàng #
+
+    # Kiểm tra số lượng đặt hàng #
     def validate_amount(
             self,
             slot_value: Any,
             dispatcher: "CollectingDispatcher",
             tracker: "Tracker",
             domain: "DomainDict",
-    ) -> List[EventType]:
-        if int(slot_value[1] > 0):
-            return {"amount": slot_value[1]}
+    ) -> List[Dict[Text, Any]]:
+        amount = str(tracker.get_slot('amount'))
+        print(amount)
+        amount = re.match(r'([^.0-9]*)?(\d{1,3})([^.0-9]*)?', amount)
+        if amount:
+            if int(amount.group(2)) > 0:
+                return {"amount": amount.group(2)}
         return {"amount": None}
 
 
-# ----------------- Submit Form ------------------------#
+# ----------------- View chi tiết đơn hàng ------------------------#
 
 class ActionSubmit(Action):
 
@@ -260,23 +273,52 @@ class ActionSubmit(Action):
             tracker: Tracker,
             domain: "DomainDict",
     ) -> List[Dict[Text, Any]]:
-        xlsx_file = Path('', 'Data.xlsx')  # file
-        wb_obj = openpyxl.load_workbook(xlsx_file)
-        sheet = wb_obj.active
-        if "bánh" in str(tracker.get_slot("productName")).lower():
-            a = str(int(tracker.get_slot("amount")) * int(sheet["D10"]))
-        elif "men" in str(tracker.get_slot("productName")).lower():
-            a = str(int(tracker.get_slot("amount")) * int(sheet["E10"]))
+        a = '0'
+        if "bánh" in str(tracker.get_slot("product_name_en")).lower():
+            a = str(int(tracker.get_slot("amount")) * int(sheet["D10"].value))
+        elif "men" in str(tracker.get_slot("product_name_en")).lower():
+            a = str(int(tracker.get_slot("amount")) * int(sheet["E10"].value))
         dispatcher.utter_message(response="utter_order_details",
                                  name=tracker.get_slot("name"),
                                  phone=tracker.get_slot("phone"),
                                  amount=tracker.get_slot("amount"),
                                  product_name_en=tracker.get_slot("product_name_en"),
-                                 total=a)
+                                 total=str(a))
         return [SlotSet('total', a)]
 
 
-# ----------------- Reset slot ------------------------#
+# ----------------- Lưu đơn hàng ------------------------#
+
+class ActionComfirm(Action):
+    def name(self) -> Text:
+        return "action_confirm_order"
+
+    def run(self,
+            dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        # lấy thông tin đơn hàng từ slot
+        name = str(tracker.get_slot("name"))
+        phone = str(tracker.get_slot("phone"))
+        product_name = str(tracker.get_slot("product_name_en"))
+        amount = str(tracker.get_slot("amount"))
+        total = str(tracker.get_slot("total"))
+        date = str(datetime.datetime.today())
+        address = str(tracker.get_slot("ward")) + ', ' + str(tracker.get_slot("district")) + ', ' + str(
+            tracker.get_slot("province"))
+        # Thêm 1 hàng giá trị vào file
+        saveSuccess = save_order([name, phone, product_name, amount, total, date, address])
+        # Hiển thị xác nhận đã lưu đơn
+        if saveSuccess:
+            dispatcher.utter_message(
+                text="Đơn hàng của bạn đã được lưu lại✅\nShop sẽ liên hệ xác nhận trong vòng 24h, vui lòng chú ý điện thoại của bạn.\n")
+        else:
+            dispatcher.utter_message(
+                text="Hệ thống đang bảo trì chức năng này. Xin lỗi vì sự bất tiện này! \nKhách hàng vui lòng trở lại sau 30 phút. \n")
+        return [FollowupAction('action_reset_slot', None)]
+
+
+# ----------------- Reset slot value------------------------#
 
 class ActionResetSlot(Action):
     def name(self) -> Text:
@@ -288,11 +330,11 @@ class ActionResetSlot(Action):
             tracker: Tracker,
             domain: "DomainDict",
     ) -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(text="tất cả thông tin đã được xóa rồi nhé bạn!")
+        dispatcher.utter_message(text="Đơn hàng của bạn đã Huỷ bỏ!")
         return [AllSlotsReset()]
 
 
-# ----------------- 1 Set value slot composition  ------------------------#
+# ----------------- 1 Set value slot hỏi thành phần sản phẩm ------------------------#
 class ActionSetSlotComposition(Action):
 
     def name(self) -> Text:
@@ -300,10 +342,10 @@ class ActionSetSlotComposition(Action):
 
     async def run(self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # custom behavior
-        return [SlotSet("request_counselling", "2")]
+        return [SlotSet("request_counselling", switchRequire.get('composition'))]
 
 
-# ----------------- 2  Set value slot ------------------------#
+# ----------------- 2  Set value slot hỏi Hương vị ------------------------#
 class ActionSetSlotTaste(Action):
 
     def name(self) -> Text:
@@ -311,10 +353,10 @@ class ActionSetSlotTaste(Action):
 
     async def run(self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # custom behavior
-        return [SlotSet("request_counselling", "3")]
+        return [SlotSet("request_counselling", switchRequire.get('taste'))]
 
 
-# ----------------- 3  Set value slot ------------------------#
+# ----------------- 3  Set value slot hỏi công dụng ------------------------#
 class ActionSetSlotEffects(Action):
 
     def name(self) -> Text:
@@ -322,10 +364,10 @@ class ActionSetSlotEffects(Action):
 
     async def run(self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # custom behavior
-        return [SlotSet("request_counselling", "4")]
+        return [SlotSet("request_counselling", switchRequire.get('effects'))]
 
 
-# ----------------- 4  Set value slot ------------------------#
+# ----------------- 4  Set value slot Chống chỉ định ------------------------#
 class ActionSetSlotContraindications(Action):
 
     def name(self) -> Text:
@@ -333,10 +375,10 @@ class ActionSetSlotContraindications(Action):
 
     async def run(self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # custom behavior
-        return [SlotSet("request_counselling", "5")]
+        return [SlotSet("request_counselling", switchRequire.get('contraindications'))]
 
 
-# ----------------- 5  Set value slot ------------------------#
+# ----------------- 5  Set value slot hỏi Hướng dẫn sử dụng------------------------#
 class ActionSetSlotUserManual(Action):
 
     def name(self) -> Text:
@@ -345,18 +387,18 @@ class ActionSetSlotUserManual(Action):
     async def run(self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # custom behavior
         if tracker.get_slot("age") is None:
-            return [SlotSet("request_counselling", "6")]
+            return [SlotSet("request_counselling", switchRequire.get('user_manual'))]
         else:
             age = int(tracker.get_slot("age"))
             if age < 2:
-                return [SlotSet("request_counselling", "16")]
+                return [SlotSet("request_counselling", switchRequire.get('year_gr1'))]
             elif age > 15:
-                return [SlotSet("request_counselling", "18")]
+                return [SlotSet("request_counselling", switchRequire.get('year_gr3'))]
             else:
-                return [SlotSet("request_counselling", "17")]
+                return [SlotSet("request_counselling", switchRequire.get('year_gr2'))]
 
 
-# ----------------- 6  Set value slot ------------------------#
+# ----------------- 6  Set value slot Hạn sử dụng------------------------#
 class ActionSetSlotStorage(Action):
 
     def name(self) -> Text:
@@ -364,10 +406,10 @@ class ActionSetSlotStorage(Action):
 
     async def run(self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # custom behavior
-        return [SlotSet("request_counselling", "7")]
+        return [SlotSet("request_counselling", switchRequire.get('storage'))]
 
 
-# ----------------- 7  Set value slot ------------------------#
+# ----------------- 7  Set value slot Xuất sứ------------------------#
 class ActionSetSlotMadeIn(Action):
 
     def name(self) -> Text:
@@ -375,10 +417,10 @@ class ActionSetSlotMadeIn(Action):
 
     async def run(self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # custom behavior
-        return [SlotSet("request_counselling", "8")]
+        return [SlotSet("request_counselling", switchRequire.get('made_in'))]
 
 
-# ----------------- 8  Set value slot ------------------------#
+# ----------------- 8  Set value slot Chương trình giảm giá------------------------#
 class ActionSetSlotSale(Action):
 
     def name(self) -> Text:
@@ -386,10 +428,10 @@ class ActionSetSlotSale(Action):
 
     async def run(self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # custom behavior
-        return [SlotSet("request_counselling", "9")]
+        return [SlotSet("request_counselling", switchRequire.get('sale'))]
 
 
-# ----------------- 9  Set value slot ------------------------#
+# ----------------- 9  Set value slot Giá------------------------#
 class ActionSetSlotPrice(Action):
 
     def name(self) -> Text:
@@ -397,10 +439,10 @@ class ActionSetSlotPrice(Action):
 
     async def run(self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # custom behavior
-        return [SlotSet("request_counselling", "10")]
+        return [SlotSet("request_counselling", switchRequire.get('price'))]
 
 
-# ----------------- 10  Set value slot ------------------------#
+# ----------------- 10  Set value slot Đề cử sản phẩm dùng kèm theo ------------------------#
 class ActionSetSlotNominations(Action):
 
     def name(self) -> Text:
@@ -408,10 +450,10 @@ class ActionSetSlotNominations(Action):
 
     async def run(self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # custom behavior
-        return [SlotSet("request_counselling", "11")]
+        return [SlotSet("request_counselling", switchRequire.get('nominations'))]
 
 
-# ----------------- 11  Set value slot ------------------------#
+# ----------------- 11  Set value slot Dấu hiệu nhận biết------------------------#
 class ActionSetSlotRecognizingSigns(Action):
 
     def name(self) -> Text:
@@ -419,10 +461,10 @@ class ActionSetSlotRecognizingSigns(Action):
 
     async def run(self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # custom behavior
-        return [SlotSet("request_counselling", "12")]
+        return [SlotSet("request_counselling", switchRequire.get('recognizing_signs'))]
 
 
-# ----------------- 12  Set value slot ------------------------#
+# ----------------- 12  Set value slot Giao hàng------------------------#
 class ActionSetSlotShip(Action):
 
     def name(self) -> Text:
@@ -430,10 +472,10 @@ class ActionSetSlotShip(Action):
 
     async def run(self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # custom behavior
-        return [SlotSet("request_counselling", "13")]
+        return [SlotSet("request_counselling", switchRequire.get('ship'))]
 
 
-# ----------------- 13  Set value slot ------------------------#
+# ----------------- 13  Set value slot Người dùng------------------------#
 class ActionSetSlotUserObject(Action):
 
     def name(self) -> Text:
@@ -441,4 +483,4 @@ class ActionSetSlotUserObject(Action):
 
     async def run(self, dispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # custom behavior
-        return [SlotSet("request_counselling", "14")]
+        return [SlotSet("request_counselling", switchRequire.get('user_object'))]

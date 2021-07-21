@@ -35,10 +35,10 @@ rules:
   - intent: unconfirm
   - action: action_reset_slot
 
-- rule: out_of_score
+- rule: nlu_fallback
   steps:
   - intent: nlu_fallback
-  - action: utter_out_of_scope
+  - action: utter_nlu_fallback
 
 - rule: Khi KH hoi muon Dat hang
   steps:
