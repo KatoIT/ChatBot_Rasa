@@ -12,9 +12,9 @@ def read_file():
     try:
         wb_obj = openpyxl.load_workbook(fileNameFullPath)
         sheet = wb_obj.active
-        print('Đọc file thành công')
+        print('## ----------------- Đọc file thành công')
     except Exception as e:
-        print('Đọc file thành công')
+        print('## ----------------- Đọc file thất bại')
         print('Lỗi: ', type(e), e)
         print(e.args)
     finally:
@@ -37,9 +37,9 @@ def save_order(order_customer_name, order_phone_number,
     # Lưu file
     try:
         wb_obj.save(fileNameFullPath)
-        print('Lưu đơn hàng thành công')
+        print('## ----------------- Lưu đơn hàng thành công')
     except Exception as e:
-        print('Lưu đơn hàng thất bại!')
+        print('## ----------------- Lưu đơn hàng thất bại!')
         print('Lỗi: ', type(e), e)
         print(e.args)
         return False

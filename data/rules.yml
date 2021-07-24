@@ -1,135 +1,146 @@
 version: "2.0"
 
 rules:
-
-- rule: Khi KH Chao hoi
-  conversation_start: true
+- rule: say hello anytime
   steps:
-  - intent: greet
-  - action: utter_greet
+    - intent: greet
+    - action: utter_greet
 
-- rule: Khi KH tam biet
+- rule: Say goodbye anytime the user says goodbye
   steps:
-  - intent: bye
-  - action: utter_bye
-  wait_for_user_input: false
-
-- rule: Khi KH cam on
-  steps:
-  - intent: thanks
-  - action: utter_thanks
-  wait_for_user_input: false
+    - intent: goodbye
+    - action: utter_goodbye
 
 - rule: Khi KH Chat ten san pham
   steps:
-  - intent: product_name
-  - action: action_answer
-
-- rule: Khi KH yeu cau luu don
-  steps:
-  - intent: confirm
-  - action: action_confirm_order
-
-- rule: Khi KH yeu cau huy don
-  steps:
-  - intent: unconfirm
-  - action: action_reset_slot
+    - intent: provide_product_name
+    - action: action_answer
 
 - rule: nlu_fallback
   steps:
-  - intent: nlu_fallback
-  - action: utter_nlu_fallback
+    - intent: nlu_fallback
+    - action: utter_nlu_fallback
 
-- rule: Khi KH hoi muon Dat hang
+- rule: ask name bot
   steps:
-  - intent: order
-  - action: action_order_form
-  - active_loop: action_order_form
+    - intent: ask_name_bot
+    - action: utter_ask_name_bot
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+    - intent: bot_challenge
+    - action: utter_bot_challenge
+
+- rule: ask func
+  steps:
+    - intent: ask_func
+    - action: utter_func
+
+- rule: ask composition
+  steps:
+    - intent: ask_composition
+    - action: action_set_slot_composition
+    - action: action_answer
+
+- rule: ask taste
+  steps:
+    - intent: ask_taste
+    - action: action_set_slot_taste
+    - action: action_answer
+
+- rule: ask effects
+  steps:
+    - intent: ask_effects
+    - action: action_set_slot_effects
+    - action: action_answer
+
+- rule: ask contraindications
+  steps:
+    - intent: ask_contraindications
+    - action: action_set_slot_contraindications
+    - action: action_answer
+
+- rule: ask_user_manual
+  steps:
+    - intent: ask_user_manual
+    - action: action_set_slot_user_manual
+    - action: action_answer
+
+- rule: ask_storage
+  steps:
+    - intent: ask_storage
+    - action: action_set_slot_storage
+    - action: action_answer
+
+- rule: ask_made_in
+  steps:
+    - intent: ask_made_in
+    - action: action_set_slot_made_in
+    - action: action_answer
+
+- rule: ask_sale
+  steps:
+    - intent: ask_sale
+    - action: action_set_slot_sale
+    - action: action_answer
+
+- rule: ask price
+  steps:
+    - intent: ask_price
+    - action: action_set_slot_price
+    - action: action_answer
+
+- rule: ask nominations
+  steps:
+    - intent: ask_nominations
+    - action: action_set_slot_nominations
+    - action: action_answer
+
+- rule: ask recognizing signs
+  steps:
+    - intent: ask_recognizing_signs
+    - action: action_set_slot_recognizing_signs
+    - action: action_answer
+
+- rule: ask ship
+  steps:
+    - intent: ask_ship
+    - action: action_set_slot_ship
+    - action: action_answer
+
+- rule: ask user object
+  steps:
+    - intent: ask_user_object
+    - action: action_set_slot_user_object
+    - action: action_answer
+
+- rule: reset slot
+  steps:
+    - intent: ask_reset_slot
+    - action: action_reset_slot
+
+- rule: yeu cau tu van
+  steps:
+    - intent: ask_advise
+    - action: utter_ask_product_name
 
 - rule: Khi KH hoan tat Dat hang
   condition:
-  - active_loop: action_order_form
+    - active_loop: customer_order_form
   steps:
-  - action: action_order_form
-  - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
-  - action: action_submit
+    - action: customer_order_form
+    - active_loop: null
+    - slot_was_set:
+        - requested_slot: null
+    - action: action_submit
 
-- rule: Khi KH hoi Thanh phan
+- rule: Khi KH yeu cau luu don
   steps:
-  - intent: composition
-  - action: action_set_slot_composition
-  - action: action_answer
+    - intent: confirm
+    - action: action_confirm_order
 
-- rule: Khi KH hoi Huong vi
+- rule: Khi KH yeu cau huy don
   steps:
-  - intent: taste
-  - action: action_set_slot_taste
-  - action: action_answer
-    
-- rule: Khi KH hoi Cong dung
-  steps:
-  - intent: effects
-  - action: action_set_slot_effects
-  - action: action_answer
-
-- rule: Khi KH hoi Luu y
-  steps:
-  - intent: contraindications
-  - action: action_set_slot_contraindications
-  - action: action_answer
-    
-- rule: Khi KH hoi Huong dan su dung
-  steps:
-  - intent: user_manual
-  - action: action_set_slot_user_manual
-  - action: action_answer
-
-- rule: Khi KH hoi Bao quan
-  steps:
-  - intent: storage
-  - action: action_set_slot_storage
-  - action: action_answer
-    
-- rule: Khi KH hoi Xuat su
-  steps:
-  - intent: made_in
-  - action: action_set_slot_made_in
-  - action: action_answer
-
-- rule: Khi KH hoi Uu dai
-  steps:
-  - intent: sale
-  - action: action_set_slot_sale
-  - action: action_answer
-    
-- rule: Khi KH hoi gia
-  steps:
-  - intent: price
-  - action: action_set_slot_price
-  - action: action_answer
-
-- rule: Khi KH hoi San pham de xuat
-  steps:
-  - intent: nominations
-  - action: action_set_slot_nominations
-  - action: action_answer
-    
-- rule: Khi KH hoi Nhan biet san pham
-  steps:
-  - intent: recognizing_signs
-  - action: action_set_slot_recognizing_signs
-  - action: action_answer
-
-- rule: Khi KH hoi Giao hang
-  steps:
-  - intent: ship
-  - action: action_set_slot_ship
-  - action: action_answer
-    
-- rule: Khi KH hoi Doi tuong su dung
-  steps:
-  - intent: user_object
-  - action: action_set_slot_user_object
-  - action: action_answer
+    - intent: unconfirm
+    - action: action_reset_slot
+    - action: utter_order_cancellation
