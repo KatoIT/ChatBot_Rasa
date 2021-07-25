@@ -17,8 +17,6 @@ stories:
   - intent: ask_price
   - action: action_set_slot_price
   - action: action_answer
-  - intent: provide_product_name
-  - action: action_answer
   - intent: thanks
   - action: utter_goodbye
 
@@ -26,8 +24,6 @@ stories:
   steps:
   - intent: ask_effects
   - action: action_set_slot_effects
-  - action: action_answer
-  - intent: provide_product_name
   - action: action_answer
   - intent: thanks
   - action: utter_goodbye
@@ -37,13 +33,5 @@ stories:
   - intent: ask_user_manual
   - action: action_set_slot_user_manual
   - action: action_answer
-  - intent: provide_product_name
-  - action: action_answer
   - intent: thanks
   - action: utter_goodbye
-
-- story: Yêu cầu đặt đơn hàng
-  steps:
-  - intent: ask_order
-  - action: customer_order_form
-  - active_loop: customer_order_form

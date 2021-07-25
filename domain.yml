@@ -153,8 +153,7 @@ responses:
         - payload: /provide_product_name{{"product_name":"Men vi khuẩn sống Việt Nhật"}}
           title: Men Việt Nhật 📦
       text: 'Vui lòng chọn sản phẩm!'
-      image: https://images.discordapp.net/avatars/812061306726645791/2d1a615c46f82ca3e870ef7f4bf35a59.png?size=128
-  utter_ask_customer_phone_numbercustomer_phone_number:
+  utter_ask_customer_phone_number:
     - text: ☎ Số điện thoại của bạn là...
     - text: ☎ Cho Shop xin số điện thoại của bạn ạ...
   utter_ask_customer_name:
@@ -162,7 +161,7 @@ responses:
     - text: Bạn cho Shop xin tên🤔🤔
     - text: Tên của bạn là gì?🤔🤔
   utter_ask_number_of_products:
-    - text: Bạn {name} mua bao nhiêu sản phẩm {product_name_en} ạ?
+    - text: Bạn {customer_name} mua bao nhiêu sản phẩm {product_name} ạ?
   utter_ask_province_name:
     - text: Bạn cần giao hàng đến Tỉnh/Thành phố nào?
   utter_ask_district_name:
@@ -194,7 +193,6 @@ responses:
     - text: Bạn đã Huỷ bỏ đơn hàng!
 # --------------- Actions -------------------
 actions:
-  - customer_order_form
   - validate_customer_order_form
   - action_submit
   - action_confirm_order
@@ -227,7 +225,7 @@ forms:
           intent: provide_customer_name
       product_name:
         - type: from_entity
-          entity: provide_product_name
+          entity: product_name
       number_of_products:
         - type: from_entity
           entity: number_of_products

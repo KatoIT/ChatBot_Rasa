@@ -46,30 +46,32 @@ class ActionAnswer(Action):
             dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        if tracker.get_slot("product_name") is None:
+        productName = tracker.get_slot("product_name")
+        requestCounselling = tracker.get_slot("request_counselling")
+        print('Slot_was_set:\n\t"product_name" = {},\n\t"request_counselling" = {}'.format(
+            productName, requestCounselling))
+        if productName is None:
             # nếu chưa nhận được tên sản phẩm sẽ yêu cầu khách hàng chọn sản phẩm cần tư vấn.
             dispatcher.utter_message(response="utter_ask_product_name")
-        elif tracker.get_slot("request_counselling") is None:
+        elif requestCounselling is None:
             # Nếu chưa nhận được yêu cầu tư vấn từ khách sẽ hỏi khách cần tư vấn gì?
             dispatcher.utter_message(response="utter_ask_request_counselling")
         else:
             # Xử lý yêu cầu của khách
-            requestCustomA = switchRequire.get('Banh') + str(tracker.get_slot("request_counselling"))
-            requestCustomB = switchRequire.get('Men') + str(tracker.get_slot("request_counselling"))
-            image = switchRequire.get('image') + str(tracker.get_slot("request_counselling"))
-            productName = tracker.get_slot("product_name")
+            requestCustomA = switchRequire.get('Banh') + requestCounselling
+            requestCustomB = switchRequire.get('Men') + requestCounselling
+            image = switchRequire.get('image') + requestCounselling
             content = "Rất xin lỗi!!!\nShop hiện chưa có thông tin về vấn đề này."
             #
             if "bánh" in str(productName).lower():
                 # Tư vấn theo sản phẩm Bánh dinh dưỡng Hebi
                 if sheet[requestCustomA].value is not None:
                     # Nếu vị trí đó không có thông tin sẽ trả về content ban đầu.
-                    content = str(sheet[requestCustomA].value)
+                    content = sheet[requestCustomA].value
             elif "men" in str(productName).lower():
                 # Tư vấn theo sản phẩm Men vi khuẩn sống Việt Nhật
                 if sheet[requestCustomB].value is not None:
-                    content = str(sheet[requestCustomB].value)
+                    content = sheet[requestCustomB].value
             # Trả về thông tin khách yêu cầu
             dispatcher.utter_message(text=content, image=str(sheet[image].value))
             # reset slot request_counselling
@@ -111,9 +113,10 @@ class ValidateActionCustomerOrderForm(FormValidationAction):
     def name(self) -> Text:
         return "validate_customer_order_form"
 
-    @staticmethod
     def province_db(self) -> List[dict]:
-        r = requests.get(url=self.urlApi + 'province', headers=self.header)
+        r = requests.get(
+            url=(self.urlApi + 'province'),
+            headers=self.header)
         data = r.json()['data']
         list_province = []
         for province in data:
@@ -127,14 +130,14 @@ class ValidateActionCustomerOrderForm(FormValidationAction):
                 print("Có Tỉnh/Thành Đặc Biệt", e.args)
         return list_province
 
-    @staticmethod
     def district_db(self) -> List[dict]:
         list_district = []
         if self.id_province:
             param = {'province_id': str(self.id_province)}
-            r = requests.get(url=self.urlApi + 'district',
-                             headers=self.header,
-                             params=param)
+            r = requests.get(
+                url=(self.urlApi + 'district'),
+                headers=self.header,
+                params=param)
             data = r.json()['data']
             for district in data:
                 try:
@@ -147,14 +150,14 @@ class ValidateActionCustomerOrderForm(FormValidationAction):
                     print("Có Quận/Huyện Đặc Biệt ", e.args)
         return list_district
 
-    @staticmethod
     def ward_db(self) -> List[dict]:
         list_ward = []
         if self.id_district:
             param = {'district_id': str(self.id_district)}
-            r = requests.get(url=self.urlApi + 'ward',
-                             headers=self.header,
-                             params=param)
+            r = requests.get(
+                url=(self.urlApi + 'ward'),
+                headers=self.header,
+                params=param)
             data = r.json()['data']
             for ward in data:
                 try:
@@ -174,19 +177,13 @@ class ValidateActionCustomerOrderForm(FormValidationAction):
             domain: "DomainDict",
     ) -> Dict[Text, Any]:
         """ Validate province value."""
-        list_district = ''
+        print('Slot province_name ', slot_value)
         for province in self.province_db():
             for namePro in province.get('NameExtension'):
-                if slot_value[0].lower() in str(namePro).lower():
+                if slot_value.lower() in str(namePro).lower():
                     self.id_province = province['id_province']
-                    # lấy danh sách huyện của Tỉnh
-                    for district in self.district_db():
-                        list_district += '\n' + district['NameExtension'][0]
-                    print('Slot province_name ', slot_value)
-                    if not isFamiliarCustomers:
-                        dispatcher.utter_message(response="utter_list_district",
-                                                 list_district=list_district)
-                    return {"province_name": slot_value[0]}
+                    print('Slot_was_set: "province_name" = ', slot_value)
+                    return {"province_name": slot_value}
                 else:
                     continue
         return {"province_name": None}
@@ -199,20 +196,14 @@ class ValidateActionCustomerOrderForm(FormValidationAction):
             domain: "DomainDict",
     ) -> Dict[Text, Any]:
         """ Validate district value."""
-        list_ward = ''
         print('Slot district_name: ', slot_value)
         for district in self.district_db():
+            print(district)
             for nameDis in district['NameExtension']:
-                if slot_value[0].lower() in str(nameDis).lower():
-                    print('Huyện: ', district, ' - ', slot_value[0])
+                if slot_value.lower() in str(nameDis).lower():
                     self.id_district = district['id_district']
-                    # lấy danh sách Xã của Huyện
-                    for ward in self.ward_db():
-                        list_ward += '\n' + ward['NameExtension'][0]
-                    if not isFamiliarCustomers:
-                        dispatcher.utter_message(response="utter_list_ward",
-                                                 list_ward=list_ward)
-                    return {"district_name": slot_value[0]}
+                    print('Slot_was_set: "district_name" = ', slot_value)
+                    return {"district_name": slot_value}
                 else:
                     continue
         return {"district_name": None}
@@ -225,17 +216,31 @@ class ValidateActionCustomerOrderForm(FormValidationAction):
             domain: "DomainDict",
     ) -> Dict[Text, Any]:
         """ Validate ward value."""
+        print('Slot ward_name: ', slot_value)
         for ward in self.ward_db():
+            print(ward)
             for nameWard in ward['NameExtension']:
-                if slot_value[0].lower() in str(nameWard).lower():
-                    print('Xã: ', ward, ' - ', slot_value[0])
-                    print('Slot ward_name: ', slot_value)
-                    return {"ward_name": slot_value[0]}
+                print(nameWard)
+                if slot_value.lower() in str(nameWard).lower():
+                    print('Slot_was_set: "ward_name" = ', slot_value)
+                    return {"ward_name": slot_value}
                 else:
                     continue
         return {"ward_name": None}
 
-    # Kiểm tra số điện thoại #
+    def validate_product_name(
+            self,
+            slot_value: Any,
+            dispatcher: "CollectingDispatcher",
+            tracker: "Tracker",
+            domain: "DomainDict",
+    ) -> Dict[Text, Any]:
+        """ Validate ward value."""
+        print('Slot product_name: ', slot_value)
+        if 'bánh' or 'men' in slot_value:
+            print('Slot_was_set: "product_name" = ', slot_value)
+            return {"product_name": slot_value}
+        return {"product_name": None}
 
     def validate_customer_phone_number(
             self,
@@ -246,23 +251,27 @@ class ValidateActionCustomerOrderForm(FormValidationAction):
     ) -> Dict[Text, Any]:
         #  TODO
         global isFamiliarCustomers
-        phone_number_list = str(tracker.get_slot('phone'))
         phone_number = None
+        print('Slot customer_phone_number: ', slot_value)
         # valid SDT và Tách lấy SDT
-        for match in phonenumbers.PhoneNumberMatcher(phone_number_list, "VN"):
-            phone_number = str(match).split(' ')[2]
+        for match in phonenumbers.PhoneNumberMatcher(slot_value, "VN"):
+            phone_number = match
         if phone_number is not None:
             # Lấy thông tin về tên và địa chỉ trong đơn hàng mới nhất của khách nếu có.(ID khách là phone_number)
-            infoCustomer = get_familiar_customers(phone_number)
+            infoCustomer = get_familiar_customers(slot_value)
             if infoCustomer[0] is not None:
                 isFamiliarCustomers = True
                 address = str(infoCustomer[1]).split(', ')
-                return {"customer_phone_number": phone_number, "customer_name": infoCustomer[0],
+                print(
+                    'Slot_was_set:\n\t"customer_phone_number" = {},\n\t"customer_name" = {},\n\t"province_name" = {},\n\t"district_name" = {},\n\t"ward_name" = {}'.format(
+                        slot_value, infoCustomer[0], address[2], address[1], address[0]))
+                return {"customer_phone_number": slot_value, "customer_name": infoCustomer[0],
                         "province_name": address[2], "district_name": address[1],
                         "ward_name": address[0]}
             else:
                 isFamiliarCustomers = False
-                return {"customer_phone_number": phone_number}
+                print('Slot_was_set: "customer_phone_number" = ', slot_value)
+                return {"customer_phone_number": slot_value}
         return {"customer_phone_number": None}
 
     # Kiểm tra số lượng đặt hàng #
@@ -273,11 +282,11 @@ class ValidateActionCustomerOrderForm(FormValidationAction):
             tracker: "Tracker",
             domain: "DomainDict",
     ) -> Dict[Text, Any]:
-        amount = str(tracker.get_slot('number_of_products'))
-        print('Slot number_of_products: ', amount)
+        print('Slot number_of_products: ', slot_value)
         amount = re.findall(r'\d+', str(slot_value))
         if amount is not None:
             if int(amount[0]) > 0:
+                print('Slot_was_set: "number_of_products" = ', amount[0])
                 return {"number_of_products": amount[0]}
         return {"number_of_products": None}
 
@@ -289,19 +298,19 @@ class ValidateActionCustomerOrderForm(FormValidationAction):
             domain: DomainDict,
     ) -> Dict[Text, Any]:
         """Validate age value."""
+        print('Slot number_of_products: ', slot_value)
         age = re.findall(r'\d+', str(slot_value))
         if age is not None:
             # validation succeeded, set the value of the "age" slot to value
             if 'tuổi' in slot_value:
+                print('Slot_was_set: "number_of_products" = ', age[0])
                 return {"age": age[0]}
             elif 'tháng' or 'm' or 'thag' in slot_value:
+                print('Slot_was_set: "number_of_products" = ', float(float(age[0]) / 12))
                 return {"age": float(float(age[0]) / 12)}
-            else:
-                return {"age": None}
-        else:
-            # validation failed, set this slot to None so that the
-            # user will be asked for the slot again
-            return {"age": None}
+        # validation failed, set this slot to None so that the
+        # user will be asked for the slot again
+        return {"age": None}
 
 
 # ----------------- View chi tiết đơn hàng ------------------------#
@@ -317,22 +326,25 @@ class ActionSubmit(Action):
             tracker: Tracker,
             domain: "DomainDict",
     ) -> List[Dict[Text, Any]]:
-        price = 0
-        total = ''
-        if "bánh" in str(tracker.get_slot("product_name_en")).lower():
-            price = int(sheet[switchRequire.get('Banh') + switchRequire.get('Gia')].value)
-        elif "men" in str(tracker.get_slot("product_name_en")).lower():
-            price = int(sheet[switchRequire.get('Men') + switchRequire.get('Gia')].value)
         amount = tracker.get_slot("number_of_products")
-        if amount:
-            total = str(amount * price)
+
+        price = 0
+        total = 'None'
+        if "bánh" in str(tracker.get_slot("product_name")).lower():
+            price = float(sheet[switchRequire.get('Banh') + switchRequire.get('Gia')].value)
+        elif "men" in str(tracker.get_slot("product_name")).lower():
+            price = float(sheet[switchRequire.get('Men') + switchRequire.get('Gia')].value)
+        if amount is not None:
+            print('Price = ', price)
+            total = str(int(amount) * price)
         dispatcher.utter_message(response="utter_order_details", total=total, )
+        print('Slot_was_set: "total" = ', total)
         return [SlotSet('total', total)]
 
 
 # ----------------- Lưu đơn hàng ------------------------#
 
-class ActionComfirm(Action):
+class ActionConfirm(Action):
     def name(self) -> Text:
         return "action_confirm_order"
 
@@ -341,16 +353,16 @@ class ActionComfirm(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # lấy thông tin đơn hàng từ slot
-        name = str(tracker.get_slot("customer_name"))
-        phone = str(tracker.get_slot("customer_phone_number"))
-        product_name = str(tracker.get_slot("product_name"))
-        amount = str(tracker.get_slot("number_of_products"))
-        total = str(tracker.get_slot("total"))
-        date = str(datetime.datetime.today())
-        address = str(tracker.get_slot("ward_name")) + ', ' + str(tracker.get_slot("district_name")) + ', ' + str(
-            tracker.get_slot("province_name"))
+        customerName = tracker.get_slot("customer_name")
+        customerPhoneNumber = tracker.get_slot("customer_phone_number")
+        productName = tracker.get_slot("product_name")
+        amount = tracker.get_slot("number_of_products")
+        total = tracker.get_slot("total")
+        date = datetime.datetime.today()
+        address = tracker.get_slot("ward_name") + ', ' + tracker.get_slot("district_name") + ', ' + tracker.get_slot(
+            "province_name")
         # Thêm 1 hàng giá trị vào file
-        saveSuccess = save_order(name, phone, product_name, amount, total, date, address)
+        saveSuccess = save_order(customerName, customerPhoneNumber, productName, amount, total, date, address)
         # Hiển thị xác nhận đã lưu đơn
         if saveSuccess:
             dispatcher.utter_message(
@@ -374,6 +386,7 @@ class ActionResetSlot(Action):
     ) -> List[Dict[Text, Any]]:
         global isFamiliarCustomers
         isFamiliarCustomers = False
+        print('Reset All Slots successful!')
         return [AllSlotsReset()]
 
 

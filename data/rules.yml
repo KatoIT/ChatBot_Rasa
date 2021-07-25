@@ -11,11 +11,6 @@ rules:
     - intent: goodbye
     - action: utter_goodbye
 
-- rule: Khi KH Chat ten san pham
-  steps:
-    - intent: provide_product_name
-    - action: action_answer
-
 - rule: nlu_fallback
   steps:
     - intent: nlu_fallback
@@ -124,7 +119,13 @@ rules:
     - intent: ask_advise
     - action: utter_ask_product_name
 
-- rule: Khi KH hoan tat Dat hang
+- rule: Yêu cầu đặt đơn hàng
+  steps:
+  - intent: ask_order
+  - action: customer_order_form
+  - active_loop: customer_order_form
+
+- rule: Khi KH Dat hang
   condition:
     - active_loop: customer_order_form
   steps:
@@ -144,3 +145,8 @@ rules:
     - intent: unconfirm
     - action: action_reset_slot
     - action: utter_order_cancellation
+
+- rule: Khi KH Chat ten san pham
+  steps:
+    - intent: provide_product_name
+    - action: action_answer

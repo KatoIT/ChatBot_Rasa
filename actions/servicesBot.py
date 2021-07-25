@@ -12,10 +12,10 @@ def read_file():
     try:
         wb_obj = openpyxl.load_workbook(fileNameFullPath)
         sheet = wb_obj.active
-        print('## ----------------- Đọc file thành công')
+        print('# --------- Read data successfully! ---------')
     except Exception as e:
-        print('## ----------------- Đọc file thất bại')
-        print('Lỗi: ', type(e), e)
+        print('# --------- Read data failed! ---------')
+        print('!!!Error: ', type(e), e)
         print(e.args)
     finally:
         return sheet
@@ -37,10 +37,10 @@ def save_order(order_customer_name, order_phone_number,
     # Lưu file
     try:
         wb_obj.save(fileNameFullPath)
-        print('## ----------------- Lưu đơn hàng thành công')
+        print('# --------- Order saved successfully! ---------')
     except Exception as e:
-        print('## ----------------- Lưu đơn hàng thất bại!')
-        print('Lỗi: ', type(e), e)
+        print('# --------- Order saved failed! ---------')
+        print('!!!Error: ', type(e), e)
         print(e.args)
         return False
     finally:
@@ -58,8 +58,8 @@ def get_familiar_customers(order_phone_number):
             order_customer_name = i[0].value
             order_address = i[6].value
     infoCustomer = [order_customer_name, order_address]
-    print('Thông tin khách đã từng mua: ', infoCustomer, ', ' , order_phone_number)
+    if order_phone_number is None:
+        print('Khách hàng mới: ', order_phone_number)
+    else:
+        print('Thông tin khách đã từng mua: ', infoCustomer, ', ', order_phone_number)
     return infoCustomer
-
-
-
