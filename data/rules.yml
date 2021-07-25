@@ -119,6 +119,13 @@ rules:
     - intent: ask_advise
     - action: utter_ask_product_name
 
+- rule: Yêu cầu sửa đơn hàng
+  steps:
+  - intent: ask_edit_order
+  - action: action_reset_slot
+  - action: customer_order_form
+  - active_loop: customer_order_form
+
 - rule: Yêu cầu đặt đơn hàng
   steps:
   - intent: ask_order

@@ -574,3 +574,14 @@ nlu:
     - ko
     - cancel
     - từ chối
+
+- intent: ask_edit_order
+  examples: |
+    - Sửa đơn hàng
+    - Sửa thông tin
+    - Sửa tên
+    - Sửa địa chỉ
+    - Sửa số điện thoại
+    - Sửa số lượng
+    - Sửa sản phẩm
+    - Sửa tên sản phẩm
