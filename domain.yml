@@ -147,15 +147,25 @@ responses:
   utter_default:
     - text: Xin lỗi, tôi chưa hiểu ý bạn. Bạn có thể diễn đạt lại không?
   utter_ask_product_name:
-    - buttons:
-        - payload: /provide_product_name{{"product_name":"Bánh dinh duỡng Hebi"}}
-          title: Bánh Hebi 🍪
-        - payload: /provide_product_name{{"product_name":"Men vi khuẩn sống Việt Nhật"}}
-          title: Men Việt Nhật 📦
-      text: 'Vui lòng chọn sản phẩm!'
+    - text: 'Vui lòng chọn sản phẩm!'
+      elements:
+        - title: Bánh dinh duỡng Hebi
+          image_url: https://salt.tikicdn.com/cache/w444/ts/product/17/d3/2e/39fdc6f2f02819a569358c4b6cbc21e7.jpg
+          buttons: # note the button limit still applies here
+            - title: Bánh dinh duỡng Hebi
+              payload: /provide_product_name
+        - title: Men vi khuẩn sống Việt Nhật
+          image_url: https://21dollars.net/uploads/products/89385361900207f274.jpg
+          buttons:
+            - title: Men vi khuẩn sống Việt Nhật
+              payload: /provide_product_name
   utter_ask_customer_phone_number:
     - text: ☎ Số điện thoại của bạn là...
     - text: ☎ Cho Shop xin số điện thoại của bạn ạ...
+      quick_replies:
+        - content_type: user_phone_number
+          title:
+          payload: /provide_customer_phone_number
   utter_ask_customer_name:
     - text: Cho Shop hỏi bạn tên gì?🤔🤔
     - text: Bạn cho Shop xin tên🤔🤔
@@ -164,6 +174,10 @@ responses:
     - text: Bạn {customer_name} mua bao nhiêu sản phẩm {product_name} ạ?
   utter_ask_province_name:
     - text: Bạn cần giao hàng đến Tỉnh/Thành phố nào?
+      quick_replies:
+        - content_type: location
+          title:
+          payload: /
   utter_ask_district_name:
     - text: Tên Quận/Huyện?
   utter_ask_ward_name:
@@ -176,7 +190,7 @@ responses:
     - buttons:
         - payload: /confirm
           title: Đặt hàng
-        - payload: /order_editing
+        - payload: /
           title: Sửa thông tin
         - payload: /unconfirm
           title: Hủy đơn
