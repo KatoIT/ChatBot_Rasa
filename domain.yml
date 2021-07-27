@@ -182,6 +182,10 @@ responses:
     - text: Bạn {customer_name} mua bao nhiêu sản phẩm {product_name} ạ?
   utter_ask_province_name:
     - text: Bạn cần giao hàng đến Tỉnh/Thành phố nào?
+      quick_replies:
+        - content_type: location
+          title:
+          payload: /
   utter_ask_district_name:
     - text: Tên Quận/Huyện?
   utter_ask_ward_name:
