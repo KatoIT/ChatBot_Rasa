@@ -437,6 +437,13 @@ nlu:
     - lấy [1](number_of_products) bì nhé
     - lấy [1](number_of_products) bọc nhé
     - [10](number_of_products) gói nhé
+    - lấy [1](number_of_products) cái nhé
+    - mua [1](number_of_products) cái
+    - mua [1](number_of_products) sản phẩm nhé
+    - mua [1](number_of_products) sản phẩm ạ
+    - mua [1](number_of_products) sản phẩm
+    - lấy [1](number_of_products) bọc nhé
+    - [10](number_of_products) cái nhé
 
 - intent: provide_province_name
   examples: |

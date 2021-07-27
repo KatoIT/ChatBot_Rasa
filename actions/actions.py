@@ -367,10 +367,11 @@ class ActionConfirm(Action):
         if saveSuccess:
             dispatcher.utter_message(
                 text="Đơn hàng của bạn đã được lưu lại✅\nShop sẽ liên hệ xác nhận trong vòng 24h, vui lòng chú ý điện thoại của bạn.\n")
+            return [AllSlotsReset()]
         else:
             dispatcher.utter_message(
                 text="Hệ thống đang bảo trì chức năng này. Xin lỗi vì sự bất tiện này! \nKhách hàng vui lòng trở lại sau 30 phút. \n")
-        return [AllSlotsReset()]
+            return []
 
 
 # ----------------- Reset slot value------------------------#
@@ -454,7 +455,7 @@ class ActionSetSlotUserManual(Action):
         else:
             dispatcher.utter_message(response="utter_ask_age")
             return []
-
+        print('Age = ', age)
         if age < 2:
             return [SlotSet("request_counselling", switchRequire.get('year_gr1'))]
         elif age > 15:
