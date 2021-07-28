@@ -1,0 +1,309 @@
+version: "2.0"
+# ------------- Intents -------------
+intents:
+  - greet
+  - goodbye
+  - thanks
+  - bot_challenge
+  - ask_name_bot
+  - ask_func
+  - ask_product_list
+  - ask_price
+  - ask_user_manual:
+      use_entities:
+        - age
+  - ask_user_object
+  - ask_ship
+  - ask_effects
+  - ask_composition
+  - ask_contraindications
+  - ask_storage
+  - ask_made_in
+  - ask_recognizing_signs
+  - ask_sale
+  - ask_for_product_quantity
+  - nlu_fallback
+  - provide_product_name:
+      use_entities:
+        - product_name
+  - ask_reset_slot
+  - ask_advise
+  - ask_order
+  - provide_customer_name
+  - provide_customer_phone_number
+  - provide_number_of_products
+  - provide_province_name
+  - provide_district_name
+  - provide_ward_name
+  - confirm
+  - unconfirm
+  - ask_edit_order
+# ------------- Entities ----------
+entities:
+  - age
+  - product_name
+  - customer_name
+  - customer_phone_number
+  - number_of_products
+  - province_name
+  - district_name
+  - ward_name
+# ------------- Slots -------------
+slots:
+  age:
+    type:  float
+    min_value: 1.0
+    max_value: 999.0
+    influence_conversation: false
+  product_name:
+    type: categorical
+    influence_conversation: true
+    values:
+      - product_name
+  request_counselling:
+    type: text
+    influence_conversation: true
+  customer_name:
+    type: text
+    influence_conversation: true
+  number_of_products:
+    type: float
+    min_value: 1.0
+    max_value: 999.0
+    influence_conversation: false
+  customer_phone_number:
+    type: text
+    influence_conversation: true
+  province_name:
+    type: categorical
+    influence_conversation: true
+    values:
+      - province_name
+  district_name:
+    type: categorical
+    influence_conversation: true
+    values:
+      - district_name
+  ward_name:
+    type: categorical
+    influence_conversation: true
+    values:
+      - ward_name
+  total:
+    type: text
+    influence_conversation: true
+# ------------- Responses -------------
+responses:
+  utter_greet:
+    - text: Xin chào Shop có thể giúp gì cho bạn?
+      image: https://images.discordapp.net/avatars/812061306726645791/2d1a615c46f82ca3e870ef7f4bf35a59.png?size=128
+
+  utter_goodbye:
+    - text: 👋Goodbye!
+    - text: 👋Cảm ơn bạn đã quan tâm đến các sản phẩm của Shop!
+    - text: 👋Tạm biệt! Chúc bạn một ngày tốt lành.
+
+  utter_bot_challenge:
+    - text: Vâng, Tôi là một trợ lý ảo.
+
+  utter_ask_name_bot:
+    - text: Tôi tên là PAT! Tôi là một trợ lý ảo.
+
+  utter_func:
+    - text: |-
+        Tôi có thể:
+        - Cung cấp thông tin về sản phẩm.
+        - Tư vấn về cách dùng sản phẩm.
+        - Hỗ trợ đặt hàng.
+
+  utter_ask_age:
+    - buttons:
+        - payload: /ask_user_manual{{"age":"1 tuổi"}}
+          title: Dưới 2 tuổi 👶
+        - payload: /ask_user_manual{{"age":"3 tuổi"}}
+          title: 2 đến 15 tuổi 👦
+        - payload: /ask_user_manual{{"age":"20 tuổi"}}
+          title: Trên 15 tuổi 👨
+      text: Người dùng ở độ tuổi nào trong 3 lựa chọn?
+
+  utter_ask_request_counselling:
+    - text: Bạn cần biết gì về sản phẩm {product_name}?
+      quick_replies:
+      - title: Giá
+        payload: /ask_price
+      - title: Giao hàng
+        payload: /ask_ship
+      - title: Đặt hàng
+        payload: /ask_order
+      - title: Công dụng
+        payload: /ask_effects
+      - title: Cách dùng
+        payload: /ask_user_manual
+      - title: Dùng cho ai
+        payload: /ask_user_object
+      - title: Thành phần
+        payload: /ask_composition
+      - title: Xuất sứ
+        payload: /ask_made_in
+      - title: Giảm giá
+        payload: /ask_sale
+      - title: Sản phẩm khác
+        payload: /ask_product_list
+
+  utter_request_counselling:
+    - text: Bạn đang tìm hiểu thông tin gì về sản phẩm?
+      quick_replies:
+      - title: Giá
+        payload: /ask_price
+      - title: Giao hàng
+        payload: /ask_ship
+      - title: Đặt hàng
+        payload: /ask_order
+      - title: Công dụng
+        payload: /ask_effects
+      - title: Cách dùng
+        payload: /ask_user_manual
+      - title: Dùng cho ai
+        payload: /ask_user_object
+      - title: Thành phần
+        payload: /ask_composition
+      - title: Xuất sứ
+        payload: /ask_made_in
+      - title: Giảm giá
+        payload: /ask_sale
+      - title: Sản phẩm khác
+        payload: /ask_product_list
+
+  utter_nlu_fallback:
+    - text: Xin lỗi, tôi không hiểu. Bạn có thể diễn đạt lại không?(Vui lòng không viết tắt)
+
+  utter_default:
+    - text: Xin lỗi, tôi chưa hiểu ý bạn. Bạn có thể diễn đạt lại không?(Vui lòng không viết tắt)
+
+  utter_ask_product_name:
+    - text: 'Mời bạn chọn sản phẩm!'
+      elements:
+        - title: Bánh dinh duỡng Hebi
+          image_url: https://github.com/KatoIT/ChatBot_Rasa/blob/An/Image/BanhHebi.jpg?raw=true
+          buttons: # note the button limit still applies here
+            - payload: '/provide_product_name{"product_name": "Bánh dinh duỡng Hebi"}'
+              title: Bánh Hebi
+        - title: Men vi khuẩn sống Việt Nhật
+          image_url: https://github.com/KatoIT/ChatBot_Rasa/blob/An/Image/MenVKSVietNhat.jpg?raw=true
+          buttons:
+            - payload: '/provide_product_name{"product_name": "Men vi khuẩn sống Việt Nhật"}'
+              title: Men Việt Nhật
+
+  utter_ask_customer_phone_number:
+    - text: ☎ Số Điện Thoại của bạn là?
+      quick_replies:
+        - content_type: user_phone_number
+          title:
+          payload: /provide_customer_phone_number
+    - text: ☎ Cho Shop xin số điện thoại của bạn ạ!
+      quick_replies:
+        - content_type: user_phone_number
+          title:
+          payload: /provide_customer_phone_number
+
+  utter_ask_customer_name:
+    - text: Cho Shop hỏi bạn tên gì?🤔🤔(❗ Tên đầy đủ)
+    - text: Cho Shop xin tên đầy đủ của bạn🤔🤔
+    - text: Vui lòng cho biết Tên của bạn!(❗ Tên đầy đủ)
+
+  utter_ask_number_of_products:
+    - text: Bạn {customer_name} mua bao nhiêu sản phẩm {product_name} ạ?
+    - text: Bạn mua bao nhiêu sản phẩm ạ?
+
+  utter_ask_province_name:
+    - text: |-
+        Bạn cần giao hàng đến Tỉnh/Thành phố nào?
+        Vui lòng ghi rõ (Tỉnh , TP.)
+        VD ✅ Tỉnh Ninh Bình, TP.Hà Nội
+
+  utter_ask_district_name:
+    - text: |-
+        Cho shop xin tên Quận/Huyện?
+        Vui lòng ghi rõ (Quận, Huyện, Thành Phố, Thị xã, Huyện đảo)
+        VD ✅ Huyện Yên Mô, Quận Ba Đình, Thành phố Ninh Bình
+
+  utter_ask_ward_name:
+    - text: |-
+        Cho shop xin tên Phường/Xã ạ?
+        Vui lòng ghi rõ (Xã, Phường, Thị trấn)
+        VD ✅ Xã Yên Lâm, Phường Đội Cấn)'
+
+  utter_order_details:
+    - buttons:
+        - payload: /confirm
+          title: Xác nhận
+        - payload: /ask_edit_order
+          title: Sửa thông tin
+        - payload: /unconfirm
+          title: Hủy đơn
+      text: |-
+        Đơn hàng bạn {customer_name}:
+         ☎ SĐT: {customer_phone_number}
+         📦 SP: {product_name}
+         🖊️ SL: {number_of_products}
+         Địa chỉ: {ward_name}, {district_name}, {province_name}
+         💵 Tổng tiền: {total} VNĐ
+         Vui lòng xác nhận đặt hàng!!
+
+  utter_order_cancellation:
+    - text: Bạn đã Huỷ bỏ đơn hàng!
+# --------------- Actions -------------------
+actions:
+  - validate_customer_order_form
+  - action_submit
+  - action_confirm_order
+  - action_reset_slot
+  - action_answer
+  - action_set_slot_composition
+  - action_set_slot_effects
+  - action_set_slot_contraindications
+  - action_set_slot_user_manual
+  - action_set_slot_storage
+  - action_set_slot_made_in
+  - action_set_slot_sale
+  - action_set_slot_price
+  - action_set_slot_recognizing_signs
+  - action_set_slot_ship
+  - action_set_slot_user_object
+  - action_set_slot_product_quantity
+# ------------- Forms -------------
+forms:
+  customer_order_form:
+    required_slots:
+      customer_phone_number:
+        - type: from_entity
+          entity: customer_phone_number
+          intent: provide_customer_phone_number
+      customer_name:
+        - type: from_entity
+          entity: customer_name
+          intent: provide_customer_name
+      product_name:
+        - type: from_entity
+          entity: product_name
+          intent: provide_product_name
+      number_of_products:
+        - type: from_entity
+          entity: number_of_products
+          intent: provide_number_of_products
+      province_name:
+        - type: from_entity
+          entity: province_name
+          intent: provide_province_name
+      district_name:
+        - type: from_entity
+          entity: district_name
+          intent: provide_district_name
+      ward_name:
+        - type: from_entity
+          entity: ward_name
+          intent: provide_ward_name
+# ------------- Session config -------------
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

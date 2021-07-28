@@ -1,0 +1,705 @@
+version: "2.0"
+nlu:
+- lookup: district_name
+  examples: |
+    -  Huyện A Lưới
+    -  Huyện An Biên
+    -  Huyện An Dương
+    -  Huyện An Lão
+    -  Huyện An Minh
+    -  Huyện An Phú
+    -  Huyện Anh Sơn
+    -  Huyện Ba Bể
+    -  Huyện Ba Chẽ
+    -  Huyện Ba Tri
+    -  Huyện Ba Tơ
+    -  Huyện Ba Vì
+    -  Huyện Buôn Đôn
+    -  Huyện Bàu Bàng
+    -  Huyện Bá Thước
+    -  Huyện Bác Ái
+    -  Huyện Bát Xát
+    -  Huyện Bình Chánh
+    -  Huyện Bình Gia
+    -  Huyện Bình Giang
+    -  Huyện Bình Liêu
+    -  Huyện Bình Lục
+    -  Huyện Bình Sơn
+    -  Huyện Bình Tân
+    -  Huyện Bình Xuyên
+    -  Huyện Bình Đại
+    -  Huyện Bù Gia Mập
+    -  Huyện Bù Đăng
+    -  Huyện Bù Đốp
+    -  Huyện Bạch Thông
+    -  Huyện Bảo Lâm
+    -  Huyện Bảo Lạc
+    -  Huyện Bảo Thắng
+    -  Huyện Bảo Yên
+    -  Huyện Bắc Bình
+    -  Huyện Bắc Hà
+    -  Huyện Bắc Mê
+    -  Huyện Bắc Quang
+    -  Huyện Bắc Sơn
+    -  Huyện Bắc Trà My
+    -  Huyện Bắc Tân Uyên
+    -  Huyện Bắc Yên
+    -  Huyện Bến Cầu
+    -  Huyện Bến Lức
+    -  Huyện Bố Trạch
+    -  Huyện Cai Lậy
+    -  Huyện Cam Lâm
+    -  Huyện Cam Lộ
+    -  Huyện Can Lộc
+    -  Huyện Cao Lãnh
+    -  Huyện Cao Lộc
+    -  Huyện Cao Phong
+    -  Huyện Chi Lăng
+    -  Huyện Chiêm Hóa
+    -  Huyện Châu Phú
+    -  Huyện Châu Thành
+    -  Huyện Châu Thành A
+    -  Huyện Châu Đức
+    -  Huyện Chơn Thành
+    -  Huyện Chư Prông
+    -  Huyện Chư Păh
+    -  Huyện Chư Pưh
+    -  Huyện Chư Sê
+    -  Huyện Chương Mỹ
+    -  Huyện Chợ Gạo
+    -  Huyện Chợ Lách
+    -  Huyện Chợ Mới
+    -  Huyện Chợ Đồn
+    -  Huyện Con Cuông
+    -  Huyện Càng Long
+    -  Huyện Cái Bè
+    -  Huyện Cái Nước
+    -  Huyện Cát Tiên
+    -  Huyện Cù Lao Dung
+    -  Huyện Cư Jút
+    -  Huyện Cư Kuin
+    -  Huyện Cư M gar
+    -  Huyện Cần Giuộc
+    -  Huyện Cần Giờ
+    -  Huyện Cần Đước
+    -  Huyện Cầu Kè
+    -  Huyện Cầu Ngang
+    -  Huyện Cẩm Giàng
+    -  Huyện Cẩm Khê
+    -  Huyện Cẩm Mỹ
+    -  Huyện Cẩm Thủy
+    -  Huyện Cẩm Xuyên
+    -  Huyện Cờ Đỏ
+    -  Huyện Củ Chi
+    -  Huyện Di Linh
+    -  Huyện Diên Khánh
+    -  Huyện Diễn Châu
+    -  Huyện Duy Tiên
+    -  Huyện Duy Xuyên
+    -  Huyện Duyên Hải
+    -  Huyện Dương Minh Châu
+    -  Huyện Dầu Tiếng
+    -  Huyện Ea H leo
+    -  Huyện Ea Kar
+    -  Huyện Ea Súp
+    -  Huyện Gia Bình
+    -  Huyện Gia Lâm
+    -  Huyện Gia Lộc
+    -  Huyện Gia Viễn
+    -  Huyện Giang Thành
+    -  Huyện Giao Thủy
+    -  Huyện Gio Linh
+    -  Huyện Giá Rai
+    -  Huyện Giồng Riềng
+    -  Huyện Giồng Trôm
+    -  Huyện Gò Công Tây
+    -  Huyện Gò Công Đông
+    -  Huyện Gò Dầu
+    -  Huyện Gò Quao
+    -  Huyện Hiệp Hòa
+    -  Huyện Hiệp Đức
+    -  Huyện Hoa Lư
+    -  Huyện Hoài Nhơn
+    -  Huyện Hoài Ân
+    -  Huyện Hoài Đức
+    -  Huyện Hoàng Su Phì
+    -  Huyện Hoành Bồ
+    -  Huyện Hoằng Hóa
+    -  Huyện Hà Quảng
+    -  Huyện Hà Trung
+    -  Huyện Hàm Thuận Bắc
+    -  Huyện Hàm Thuận Nam
+    -  Huyện Hàm Tân
+    -  Huyện Hàm Yên
+    -  Huyện Hòa An
+    -  Huyện Hòa Bình
+    -  Huyện Hòa Thành
+    -  Huyện Hòa Vang
+    -  Huyện Hòn Đất
+    -  Huyện Hóc Môn
+    -  Huyện Hưng Hà
+    -  Huyện Hưng Nguyên
+    -  Huyện Hương Khê
+    -  Huyện Hương Sơn
+    -  Huyện Hướng Hóa
+    -  Huyện Hạ Hòa
+    -  Huyện Hạ Lang
+    -  Huyện Hải Hà
+    -  Huyện Hải Hậu
+    -  Huyện Hải Lăng
+    -  Huyện Hậu Lộc
+    -  Huyện Hồng Dân
+    -  Huyện Hồng Ngự
+    -  Huyện Hớn Quản
+    -  Huyện Hữu Lũng
+    -  Huyện Ia Grai
+    -  Huyện Ia H Drai
+    -  Huyện Ia Pa
+    -  Huyện Kbang
+    -  Huyện Khoái Châu
+    -  Huyện Khánh Sơn
+    -  Huyện Khánh Vĩnh
+    -  Huyện Kim Bôi
+    -  Huyện Kim Bảng
+    -  Huyện Kim Sơn
+    -  Huyện Kim Thành
+    -  Huyện Kim Động
+    -  Huyện Kinh Môn
+    -  Huyện Kiên Lương
+    -  Huyện Kiến Thụy
+    -  Huyện Kiến Xương
+    -  Huyện Kon Plông
+    -  Huyện Kon Rẫy
+    -  Huyện Krông Ana
+    -  Huyện Krông Bông
+    -  Huyện Krông Búk
+    -  Huyện Krông Nô
+    -  Huyện Krông Năng
+    -  Huyện Krông Pa
+    -  Huyện Krông Pắc
+    -  Huyện Kông Chro
+    -  Huyện Kế Sách
+    -  Huyện Kỳ Anh
+    -  Huyện Kỳ Sơn
+    -  Huyện Lai Vung
+    -  Huyện Lang Chánh
+    -  Huyện Long Hồ
+    -  Huyện Long Mỹ
+    -  Huyện Long Phú
+    -  Huyện Long Thành
+    -  Huyện Long Điền
+    -  Huyện Lâm Bình
+    -  Huyện Lâm Hà
+    -  Huyện Lâm Thao
+    -  Huyện Lý Nhân
+    -  Huyện Lý Sơn
+    -  Huyện Lương Sơn
+    -  Huyện Lương Tài
+    -  Huyện Lạc Dương
+    -  Huyện Lạc Sơn
+    -  Huyện Lạc Thủy
+    -  Huyện Lạng Giang
+    -  Huyện Lấp Vò
+    -  Huyện Lập Thạch
+    -  Huyện Lắk
+    -  Huyện Lệ Thủy
+    -  Huyện Lộc Bình
+    -  Huyện Lộc Hà
+    -  Huyện Lộc Ninh
+    -  Huyện Lục Nam
+    -  Huyện Lục Ngạn
+    -  Huyện Lục Yên
+    -  Huyện M Đrắk
+    -  Huyện Mai Châu
+    -  Huyện Mai Sơn
+    -  Huyện Mang Thít
+    -  Huyện Mang Yang
+    -  Huyện Minh Hóa
+    -  Huyện Minh Long
+    -  Huyện Mèo Vạc
+    -  Huyện Mê Linh
+    -  Huyện Mù Cang Chải
+    -  Huyện Mường Chà
+    -  Huyện Mường Khương
+    -  Huyện Mường La
+    -  Huyện Mường Lát
+    -  Huyện Mường Nhé
+    -  Huyện Mường Tè
+    -  Huyện Mường Ảng
+    -  Huyện Mỏ Cày Bắc
+    -  Huyện Mỏ Cày Nam
+    -  Huyện Mộ Đức
+    -  Huyện Mộc Châu
+    -  Huyện Mộc Hóa
+    -  Huyện Mỹ Hào
+    -  Huyện Mỹ Lộc
+    -  Huyện Mỹ Tú
+    -  Huyện Mỹ Xuyên
+    -  Huyện Mỹ Đức
+    -  Huyện Na Hang
+    -  Huyện Na Rì
+    -  Huyện Nam Giang
+    -  Huyện Nam Sách
+    -  Huyện Nam Trà My
+    -  Huyện Nam Trực
+    -  Huyện Nam Đàn
+    -  Huyện Nam Đông
+    -  Huyện Nga Sơn
+    -  Huyện Nghi Lộc
+    -  Huyện Nghi Xuân
+    -  Huyện Nghĩa Hành
+    -  Huyện Nghĩa Hưng
+    -  Huyện Nghĩa Đàn
+    -  Huyện Nguyên Bình
+    -  Huyện Ngân Sơn
+    -  Huyện Ngọc Hiển
+    -  Huyện Ngọc Hồi
+    -  Huyện Ngọc Lặc
+    -  Huyện Nho Quan
+    -  Huyện Nhà Bè
+    -  Huyện Nhơn Trạch
+    -  Huyện Như Thanh
+    -  Huyện Như Xuân
+    -  Huyện Ninh Giang
+    -  Huyện Ninh Hải
+    -  Huyện Ninh Phước
+    -  Huyện Ninh Sơn
+    -  Huyện Nông Cống
+    -  Huyện Nông Sơn
+    -  Huyện Núi Thành
+    -  Huyện Năm Căn
+    -  Huyện Nậm Nhùm
+    -  Huyện Nậm Pồ
+    -  Huyện Phong Thổ
+    -  Huyện Phong Điền
+    -  Huyện Phù Cát
+    -  Huyện Phù Cừ
+    -  Huyện Phù Mỹ
+    -  Huyện Phù Ninh
+    -  Huyện Phù Yên
+    -  Huyện Phú Bình
+    -  Huyện Phú Giáo
+    -  Huyện Phú Hòa
+    -  Huyện Phú Lương
+    -  Huyện Phú Lộc
+    -  Huyện Phú Ninh
+    -  Huyện Phú Riềng
+    -  Huyện Phú Thiện
+    -  Huyện Phú Tân
+    -  Huyện Phú Vang
+    -  Huyện Phú Xuyên
+    -  Huyện Phúc Thọ
+    -  Huyện Phước Long
+    -  Huyện Phước Sơn
+    -  Huyện Phổ Yên
+    -  Huyện Phục Hòa
+    -  Huyện Phụng Hiệp
+    -  Huyện Pác Nặm
+    -  Huyện Quan Hóa
+    -  Huyện Quan Sơn
+    -  Huyện Quang Bình
+    -  Huyện Quản Bạ
+    -  Huyện Quảng Hòa
+    -  Huyện Quảng Ninh
+    -  Huyện Quảng Trạch
+    -  Huyện Quảng Uyên
+    -  Huyện Quảng Xương
+    -  Huyện Quảng Điền
+    -  Huyện Quế Phong
+    -  Huyện Quế Sơn
+    -  Huyện Quế Võ
+    -  Huyện Quốc Oai
+    -  Huyện Quỳ Châu
+    -  Huyện Quỳ Hợp
+    -  Huyện Quỳnh Lưu
+    -  Huyện Quỳnh Nhai
+    -  Huyện Quỳnh Phụ
+    -  Huyện Sa Pa
+    -  Huyện Sa Thầy
+    -  Huyện Sìn Hồ
+    -  Huyện Sóc Sơn
+    -  Huyện Sông Hinh
+    -  Huyện Sông Lô
+    -  Huyện Sông Mã
+    -  Huyện Sốp Cộp
+    -  Huyện Sơn Dương
+    -  Huyện Sơn Hà
+    -  Huyện Sơn Hòa
+    -  Huyện Sơn Tây
+    -  Huyện Sơn Tịnh
+    -  Huyện Sơn Động
+    -  Huyện Tam Bình
+    -  Huyện Tam Dương
+    -  Huyện Tam Nông
+    -  Huyện Tam Đường
+    -  Huyện Tam Đảo
+    -  Huyện Than Uyên
+    -  Huyện Thanh Ba
+    -  Huyện Thanh Bình
+    -  Huyện Thanh Chương
+    -  Huyện Thanh Hà
+    -  Huyện Thanh Liêm
+    -  Huyện Thanh Miện
+    -  Huyện Thanh Oai
+    -  Huyện Thanh Sơn
+    -  Huyện Thanh Thủy
+    -  Huyện Thanh Trì
+    -  Huyện Thiệu Hóa
+    -  Huyện Thoại Sơn
+    -  Huyện Thuận Bắc
+    -  Huyện Thuận Châu
+    -  Huyện Thuận Nam
+    -  Huyện Thuận Thành
+    -  Huyện Thái Thụy
+    -  Huyện Tháp Mười
+    -  Huyện Thông Nông
+    -  Huyện Thăng Bình
+    -  Huyện Thường Tín
+    -  Huyện Thường Xuân
+    -  Huyện Thạch An
+    -  Huyện Thạch Hà
+    -  Huyện Thạch Thành
+    -  Huyện Thạch Thất
+    -  Huyện Thạnh Hóa
+    -  Huyện Thạnh Phú
+    -  Huyện Thạnh Trị
+    -  Huyện Thọ Xuân
+    -  Huyện Thống Nhất
+    -  Huyện Thới Bình
+    -  Huyện Thới Lai
+    -  Huyện Thủ Thừa
+    -  Huyện Thủy Nguyên
+    -  Huyện Tiên Du
+    -  Huyện Tiên Lãng
+    -  Huyện Tiên Lữ
+    -  Huyện Tiên Phước
+    -  Huyện Tiên Yên
+    -  Huyện Tiền Hải
+    -  Huyện Tiểu Cần
+    -  Huyện Tri Tôn
+    -  Huyện Triệu Phong
+    -  Huyện Triệu Sơn
+    -  Huyện Trà Bồng
+    -  Huyện Trà Cú
+    -  Huyện Trà Lĩnh
+    -  Huyện Trà Ôn
+    -  Huyện Tràng Định
+    -  Huyện Trùng Khánh
+    -  Huyện Trạm Tấu
+    -  Huyện Trảng Bom
+    -  Huyện Trảng Bàng
+    -  Huyện Trấn Yên
+    -  Huyện Trần Văn Thời
+    -  Huyện Trần Đề
+    -  Huyện Trực Ninh
+    -  Huyện Tu Mơ Rông
+    -  Huyện Tuy An
+    -  Huyện Tuy Phong
+    -  Huyện Tuy Phước
+    -  Huyện Tuy Đức
+    -  Huyện Tuyên Hóa
+    -  Huyện Tuần Giáo
+    -  Huyện Tánh Linh
+    -  Huyện Tân Biên
+    -  Huyện Tân Châu
+    -  Huyện Tân Hiệp
+    -  Huyện Tân Hưng
+    -  Huyện Tân Hồng
+    -  Huyện Tân Kỳ
+    -  Huyện Tân Lạc
+    -  Huyện Tân Phú
+    -  Huyện Tân Phú Đông
+    -  Huyện Tân Phước
+    -  Huyện Tân Sơn
+    -  Huyện Tân Thạnh
+    -  Huyện Tân Trụ
+    -  Huyện Tân Uyên
+    -  Huyện Tân Yên
+    -  Huyện Tây Giang
+    -  Huyện Tây Hòa
+    -  Huyện Tây Sơn
+    -  Huyện Tây Trà
+    -  Huyện Tĩnh Gia
+    -  Huyện Tư Nghĩa
+    -  Huyện Tương Dương
+    -  Huyện Tịnh Biên
+    -  Huyện Tủa Chùa
+    -  Huyện Tứ Kỳ
+    -  Huyện U Minh
+    -  Huyện U Minh Thượng
+    -  Huyện Việt Yên
+    -  Huyện Vân Canh
+    -  Huyện Vân Hồ
+    -  Huyện Võ Nhai
+    -  Huyện Văn Bàn
+    -  Huyện Văn Chấn
+    -  Huyện Văn Giang
+    -  Huyện Văn Lâm
+    -  Huyện Văn Lãng
+    -  Huyện Văn Quan
+    -  Huyện Văn Yên
+    -  Huyện Vĩnh Bảo
+    -  Huyện Vĩnh Cửu
+    -  Huyện Vĩnh Hưng
+    -  Huyện Vĩnh Linh
+    -  Huyện Vĩnh Lộc
+    -  Huyện Vĩnh Lợi
+    -  Huyện Vĩnh Thuận
+    -  Huyện Vĩnh Thạnh
+    -  Huyện Vĩnh Tường
+    -  Huyện Vũ Quang
+    -  Huyện Vũ Thư
+    -  Huyện Vũng Liêm
+    -  Huyện Vạn Ninh
+    -  Huyện Vị Thuỷ
+    -  Huyện Vị Xuyên
+    -  Huyện Vụ Bản
+    -  Huyện Xi Ma Cai
+    -  Huyện Xuyên Mộc
+    -  Huyện Xuân Lộc
+    -  Huyện Xuân Trường
+    -  Huyện Xín Mần
+    -  Huyện Yên Bình
+    -  Huyện Yên Châu
+    -  Huyện Yên Dũng
+    -  Huyện Yên Khánh
+    -  Huyện Yên Lạc
+    -  Huyện Yên Lập
+    -  Huyện Yên Minh
+    -  Huyện Yên Mô
+    -  Huyện Yên Mỹ
+    -  Huyện Yên Phong
+    -  Huyện Yên Sơn
+    -  Huyện Yên Thành
+    -  Huyện Yên Thế
+    -  Huyện Yên Thủy
+    -  Huyện Yên Định
+    -  Huyện Ân Thi
+    -  Huyện Ý Yên
+    -  Huyện Đa Krông
+    -  Huyện Đam Rông
+    -  Huyện Đan Phượng
+    -  Huyện Điện Biên
+    -  Huyện Điện Biên Đông
+    -  Huyện Điện Bàn
+    -  Huyện Đoan Hùng
+    -  Huyện Đà Bắc
+    -  Huyện Đình Lập
+    -  Huyện Đô Lương
+    -  Huyện Đông Anh
+    -  Huyện Đông Giang
+    -  Huyện Đông Hòa
+    -  Huyện Đông Hưng
+    -  Huyện Đông Hải
+    -  Huyện Đông Sơn
+    -  Huyện Đông Triều
+    -  Huyện Đơn Dương
+    -  Huyện Đạ Huoai
+    -  Huyện Đạ Tẻh
+    -  Huyện Đại Lộc
+    -  Huyện Đại Từ
+    -  Huyện Đất Đỏ
+    -  Huyện Đầm Dơi
+    -  Huyện Đầm Hà
+    -  Huyện Đắk Glei
+    -  Huyện Đắk Glong
+    -  Huyện Đắk Hà
+    -  Huyện Đắk Mil
+    -  Huyện Đắk Pơ
+    -  Huyện Đắk R lấp
+    -  Huyện Đắk Song
+    -  Huyện Đắk Tô
+    -  Huyện Đắk Đoa
+    -  Huyện Định Hóa
+    -  Huyện Định Quán
+    -  Huyện Đồng Hỷ
+    -  Huyện Đồng Phú
+    -  Huyện Đồng Văn
+    -  Huyện Đồng Xuân
+    -  Huyện Đức Cơ
+    -  Huyện Đức Huệ
+    -  Huyện Đức Hòa
+    -  Huyện Đức Linh
+    -  Huyện Đức Phổ
+    -  Huyện Đức Thọ
+    -  Huyện Đức Trọng
+    -  Huyện đảo Bạch Long Vĩ
+    -  Huyện đảo Cát Hải
+    -  Huyện đảo Cô Tô
+    -  Huyện đảo Côn Đảo
+    -  Huyện đảo Cồn Cỏ
+    -  Huyện đảo Hoàng Sa
+    -  Huyện đảo Kiên Hải
+    -  Huyện đảo Phú Quý
+    -  Huyện đảo Phú Quốc
+    -  Huyện đảo Trường Sa
+    -  Huyện đảo Vân Đồn
+    -  Huyện Ứng Hòa
+    -  Quận 1
+    -  Quận 10
+    -  Quận 11
+    -  Quận 12
+    -  Quận 2
+    -  Quận 3
+    -  Quận 4
+    -  Quận 5
+    -  Quận 6
+    -  Quận 7
+    -  Quận 8
+    -  Quận 9
+    -  Quận Ba Đình
+    -  Quận Bình Thạnh
+    -  Quận Bình Thủy
+    -  Quận Bình Tân
+    -  Quận Bắc Từ Liêm
+    -  Quận Cái Răng
+    -  Quận Cầu Giấy
+    -  Quận Cẩm Lệ
+    -  Quận Dương Kinh
+    -  Quận Gò Vấp
+    -  Quận Hai Bà Trưng
+    -  Quận Hoàn Kiếm
+    -  Quận Hoàng Mai
+    -  Quận Hà Đông
+    -  Quận Hải An
+    -  Quận Hải Châu
+    -  Quận Hồng Bàng
+    -  Quận Kiến An
+    -  Quận Liên Chiểu
+    -  Quận Long Biên
+    -  Quận Lê Chân
+    -  Quận Nam Từ Liêm
+    -  Quận Ngô Quyền
+    -  Quận Ngũ Hành Sơn
+    -  Quận Ninh Kiều
+    -  Quận Phú Nhuận
+    -  Quận Sơn Trà
+    -  Quận Thanh Khê
+    -  Quận Thanh Xuân
+    -  Quận Thốt Nốt
+    -  Quận Tân Bình
+    -  Quận Tân Phú
+    -  Quận Tây Hồ
+    -  Quận Vật Tư HCM
+    -  Quận Vật Tư HN
+    -  Quận Ô Môn
+    -  Quận Đặc Biệt
+    -  Quận Đặc Biệt DC
+    -  Quận Đống Đa
+    -  Quận Đồ Sơn
+    -  TP Thủ Đức
+    -  TT Phú Mỹ - cũ
+    -  Thành phố Biên Hòa
+    -  Thành phố Buôn Ma Thuột
+    -  Thành phố Bà Rịa
+    -  Thành phố Bạc Liêu
+    -  Thành phố Bảo Lộc
+    -  Thành phố Bắc Giang
+    -  Thành phố Bắc Kạn
+    -  Thành phố Bắc Ninh
+    -  Thành phố Bến Tre
+    -  Thành phố Cam Ranh
+    -  Thành phố Cao Bằng
+    -  Thành phố Cao Lãnh
+    -  Thành phố Châu Đốc
+    -  Thành phố Cà Mau
+    -  Thành phố Cẩm Phả
+    -  Thành phố Huế
+    -  Thành phố Hà Giang
+    -  Thành phố Hà Tĩnh
+    -  Thành phố Hòa Bình
+    -  Thành phố Hưng Yên
+    -  Thành phố Hạ Long
+    -  Thành phố Hải Dương
+    -  Thành phố Hội An
+    -  Thành phố Kon Tum
+    -  Thành phố Lai Châu
+    -  Thành phố Long Xuyên
+    -  Thành phố Lào Cai
+    -  Thành phố Lạng Sơn
+    -  Thành phố Móng Cái
+    -  Thành phố Mỹ Tho
+    -  Thành phố Nam Định
+    -  Thành phố Nha Trang
+    -  Thành phố Ninh Bình
+    -  Thành phố Phan Rang – Tháp Chàm
+    -  Thành phố Phan Thiết
+    -  Thành phố Phủ Lý
+    -  Thành phố Pleiku
+    -  Thành phố Quy Nhơn
+    -  Thành phố Quảng Ngãi
+    -  Thành phố Rạch Giá
+    -  Thành phố Sa Đéc
+    -  Thành phố Sóc Trăng
+    -  Thành phố Sơn La
+    -  Thành phố Tam Kỳ
+    -  Thành phố Thanh Hóa
+    -  Thành phố Thái Bình
+    -  Thành phố Thái Nguyên
+    -  Thành phố Thủ Dầu Một
+    -  Thành phố Trà Vinh
+    -  Thành phố Tuy Hòa
+    -  Thành phố Tuyên Quang
+    -  Thành phố Tân An
+    -  Thành phố Tây Ninh
+    -  Thành phố Uông Bí
+    -  Thành phố Vinh
+    -  Thành phố Việt Trì
+    -  Thành phố Vĩnh Long
+    -  Thành phố Vĩnh Yên
+    -  Thành phố Vũng Tàu
+    -  Thành phố Vị Thanh
+    -  Thành phố Yên Bái
+    -  Thành phố Điện Biên Phủ
+    -  Thành phố Đà Lạt
+    -  Thành phố Đông Hà
+    -  Thành phố Đồng Hới
+    -  Thị Xã Phú Mỹ
+    -  Thị Xã Sông Cầu
+    -  Thị xã An Khê
+    -  Thị xã An Nhơn
+    -  Thị xã Ayun Pa
+    -  Thị xã Ba Đồn
+    -  Thị xã Buôn Hồ
+    -  Thị xã Bình Long
+    -  Thị xã Bình Minh
+    -  Thị xã Bến Cát
+    -  Thị xã Bỉm Sơn
+    -  Thị xã Cai Lậy
+    -  Thị xã Chí Linh
+    -  Thị xã Cửa Lò
+    -  Thị xã Duyên Hải
+    -  Thị xã Dĩ An
+    -  Thị xã Gia Nghĩa
+    -  Thị xã Gò Công
+    -  Thị xã Hoàng Mai
+    -  Thị xã Hà Tiên
+    -  Thị xã Hương Thủy
+    -  Thị xã Hương Trà
+    -  Thị xã Hồng Lĩnh
+    -  Thị xã Hồng Ngự
+    -  Thị xã Kiến Tường
+    -  Thị xã Kỳ Anh
+    -  Thị xã La Gi
+    -  Thị xã Long Khánh
+    -  Thị xã Long Mỹ
+    -  Thị xã Mường Lay
+    -  Thị xã Nghĩa Lộ
+    -  Thị xã Ngã Bảy
+    -  Thị xã Ngã Năm
+    -  Thị xã Ninh Hòa
+    -  Thị xã Phú Thọ
+    -  Thị xã Phúc Yên
+    -  Thị xã Phước Long
+    -  Thị xã Quảng Trị
+    -  Thị xã Quảng Yên
+    -  Thị xã Sông Công
+    -  Thị xã Sơn Tây
+    -  Thị xã Sầm Sơn
+    -  Thị xã Tam Điệp
+    -  Thị xã Thuận An
+    -  Thị xã Thái Hòa
+    -  Thị xã Tân Uyên
+    -  Thị xã Từ Sơn
+    -  Thị xã Vĩnh Châu
+    -  Thị xã Đồng Xoài

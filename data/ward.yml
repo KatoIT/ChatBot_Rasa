@@ -1,0 +1,8408 @@
+version: "2.0"
+nlu:
+- lookup: ward_name
+  examples: |
+    -  Dế Xu Phình
+    -  Phường An Khánh
+    -  Phường An Lợi Đông
+    -  Phường An Phú
+    -  Phường Bình Chiểu
+    -  Phường Bình Thọ
+    -  Phường Bình Trưng Tây
+    -  Phường Bình Trưng Đông
+    -  Phường Cát Lái
+    -  Phường Hiệp Bình Chánh
+    -  Phường Hiệp Bình Phước
+    -  Phường Hiệp Phú
+    -  Phường Linh Chiểu
+    -  Phường Linh Trung
+    -  Phường Linh Tây
+    -  Phường Linh Xuân
+    -  Phường Linh Đông
+    -  Phường Long Bình
+    -  Phường Long Phước
+    -  Phường Long Thạnh Mỹ
+    -  Phường Long Trường
+    -  Phường Phú Hữu
+    -  Phường Phước Bình
+    -  Phường Phước Long A
+    -  Phường Phước Long B
+    -  Phường Quỳnh Lâm
+    -  Phường Tam Bình
+    -  Phường Tam Phú
+    -  Phường Thạnh Mỹ Lợi
+    -  Phường Thảo Điền
+    -  Phường Thủ Thiêm
+    -  Phường Trường Thạnh
+    -  Phường Trường Thọ
+    -  Phường Tân Phú
+    -  Phường Tăng Nhơn Phú A
+    -  Phường Tăng Nhơn Phú B
+    -  Phường  An Lạc
+    -  Phường 1
+    -  Phường 10
+    -  Phường 11
+    -  Phường 12
+    -  Phường 13
+    -  Phường 14
+    -  Phường 15
+    -  Phường 16
+    -  Phường 17
+    -  Phường 18
+    -  Phường 19
+    -  Phường 2
+    -  Phường 21
+    -  Phường 22
+    -  Phường 24
+    -  Phường 25
+    -  Phường 26
+    -  Phường 27
+    -  Phường 28
+    -  Phường 3
+    -  Phường 4
+    -  Phường 5
+    -  Phường 6
+    -  Phường 7
+    -  Phường 8
+    -  Phường 9
+    -  Phường An Biên
+    -  Phường An Bình
+    -  Phường An Cư
+    -  Phường An Cựu
+    -  Phường An Dương
+    -  Phường An Hoà
+    -  Phường An Hoạch
+    -  Phường An Hòa
+    -  Phường An Hưng
+    -  Phường An Hải Bắc
+    -  Phường An Hải Tây
+    -  Phường An Hải Đông
+    -  Phường An Hội
+    -  Phường An Khánh
+    -  Phường An Khê
+    -  Phường An Lưu
+    -  Phường An Lạc
+    -  Phường An Lạc A
+    -  Phường An Lộc
+    -  Phường An Lợi Đông
+    -  Phường An Mỹ
+    -  Phường An Nghiệp
+    -  Phường An Phú
+    -  Phường An Phú Đông
+    -  Phường An Phước
+    -  Phường An Sơn
+    -  Phường An Thạnh
+    -  Phường An Thới
+    -  Phường An Tân
+    -  Phường An Tây
+    -  Phường An Tảo
+    -  Phường An Xuân
+    -  Phường An Đôn
+    -  Phường An Đông
+    -  Phường Anh Dũng
+    -  Phường B'lao
+    -  Phường Ba Hàng
+    -  Phường Ba Láng
+    -  Phường Ba Ngòi
+    -  Phường Ba Đình
+    -  Phường Ba Đồn
+    -  Phường Biên Giang
+    -  Phường Bà Triệu
+    -  Phường Bàng La
+    -  Phường Bách Khoa
+    -  Phường Bách Quang
+    -  Phường Bãi Bông
+    -  Phường Bãi Cháy
+    -  Phường Bình An
+    -  Phường Bình Chuẩn
+    -  Phường Bình Hiên
+    -  Phường Bình Hàn
+    -  Phường Bình Hòa
+    -  Phường Bình Hưng
+    -  Phường Bình Hưng Hoà A
+    -  Phường Bình Hưng Hoà B
+    -  Phường Bình Hưng Hòa
+    -  Phường Bình Khánh
+    -  Phường Bình Minh
+    -  Phường Bình Ngọc
+    -  Phường Bình Nhâm
+    -  Phường Bình San
+    -  Phường Bình Thuận
+    -  Phường Bình Thạnh
+    -  Phường Bình Thắng
+    -  Phường Bình Thủy
+    -  Phường Bình Trưng Tây
+    -  Phường Bình Trưng Đông
+    -  Phường Bình Trị Đông
+    -  Phường Bình Trị Đông A
+    -  Phường Bình Trị Đông B
+    -  Phường Bình Tân
+    -  Phường Bình Đa
+    -  Phường Bình Định
+    -  Phường Bình Đức
+    -  Phường Bích Đào
+    -  Phường Bùi Hữu Nghĩa
+    -  Phường Bùi Thị Xuân
+    -  Phường Bưởi
+    -  Phường Bạch Hạc
+    -  Phường Bạch Mai
+    -  Phường Bạch Đằng
+    -  Phường Bảo An
+    -  Phường Bắc Cường
+    -  Phường Bắc Hà
+    -  Phường Bắc Hồng
+    -  Phường Bắc Lý
+    -  Phường Bắc Lệnh
+    -  Phường Bắc Nghĩa
+    -  Phường Bắc Sơn
+    -  Phường Bến Gót
+    -  Phường Bến Nghé
+    -  Phường Bến Thành
+    -  Phường Bến Thủy
+    -  Phường Bến Tắm
+    -  Phường Bồ Xuyên
+    -  Phường Bồ Đề
+    -  Phường Bửu Hòa
+    -  Phường Bửu Long
+    -  Phường Cam Giá
+    -  Phường Cam Linh
+    -  Phường Cam Lộc
+    -  Phường Cam Lợi
+    -  Phường Cam Nghĩa
+    -  Phường Cam Phú
+    -  Phường Cam Phúc Bắc
+    -  Phường Cam Phúc Nam
+    -  Phường Cam Thuận
+    -  Phường Cao Thắng
+    -  Phường Cao Xanh
+    -  Phường Cheo Reo
+    -  Phường Chi Lăng
+    -  Phường Chiềng An
+    -  Phường Chiềng Cơi
+    -  Phường Chiềng Lề
+    -  Phường Chiềng Sinh
+    -  Phường Chánh Lộ
+    -  Phường Chánh Mỹ
+    -  Phường Chánh Nghĩa
+    -  Phường Chánh Phú Hòa
+    -  Phường Châu Khê
+    -  Phường Châu Phú A
+    -  Phường Châu Phú B
+    -  Phường Châu Sơn
+    -  Phường Châu Văn Liêm
+    -  Phường Chí Minh
+    -  Phường Chính Gián
+    -  Phường Chùa Hang
+    -  Phường Chăm Mát
+    -  Phường Chương Dương Độ
+    -  Phường Cái Khế
+    -  Phường Cái Vồn
+    -  Phường Cát Bi
+    -  Phường Cát Dài
+    -  Phường Cát Linh
+    -  Phường Cát Lái
+    -  Phường Cô Giang
+    -  Phường Cải Đan
+    -  Phường Cầu Diễn
+    -  Phường Cầu Dền
+    -  Phường Cầu Kho
+    -  Phường Cầu Mây
+    -  Phường Cầu Thia
+    -  Phường Cầu Tre
+    -  Phường Cầu Ông Lãnh
+    -  Phường Cầu Đất
+    -  Phường Cẩm An
+    -  Phường Cẩm Bình
+    -  Phường Cẩm Châu
+    -  Phường Cẩm Nam
+    -  Phường Cẩm Phô
+    -  Phường Cẩm Phú
+    -  Phường Cẩm Sơn
+    -  Phường Cẩm Thành
+    -  Phường Cẩm Thượng
+    -  Phường Cẩm Thạch
+    -  Phường Cẩm Thịnh
+    -  Phường Cẩm Thủy
+    -  Phường Cẩm Trung
+    -  Phường Cẩm Tây
+    -  Phường Cẩm Đông
+    -  Phường Cốc Lếu
+    -  Phường Cống Vị
+    -  Phường Cổ Nhuế 1
+    -  Phường Cổ Nhuế 2
+    -  Phường Cộng Hoà
+    -  Phường Cộng Hòa
+    -  Phường Cửa Bắc
+    -  Phường Cửa Nam
+    -  Phường Cửa Ông
+    -  Phường Cửa Đông
+    -  Phường Cửa Đại
+    -  Phường Cự Khối
+    -  Phường Diên Hồng
+    -  Phường Duy Tân
+    -  Phường Duyên Hải
+    -  Phường Duyệt Trung
+    -  Phường Dĩ An
+    -  Phường Dĩnh Kế
+    -  Phường Dư Hàng
+    -  Phường Dư Hàng Kênh
+    -  Phường Dương Nội
+    -  Phường Dịch Vọng
+    -  Phường Dịch Vọng Hậu
+    -  Phường Dữu Lâu
+    -  Phường Eatam
+    -  Phường Ghềnh Ráng
+    -  Phường Gia Cẩm
+    -  Phường Gia Sàng
+    -  Phường Gia Thụy
+    -  Phường Gia Viên
+    -  Phường Giang Biên
+    -  Phường Giáp Bát
+    -  Phường Giảng Võ
+    -  Phường Giếng Đáy
+    -  Phường Hai Bà Trưng
+    -  Phường Him Lam
+    -  Phường Hiến Nam
+    -  Phường Hiệp An
+    -  Phường Hiệp Ninh
+    -  Phường Hiệp Phú
+    -  Phường Hiệp Thành
+    -  Phường Hiệp Tân
+    -  Phường Hoa Lư
+    -  Phường Hoà Chung
+    -  Phường Hoà Hiếu
+    -  Phường Hoà Hải
+    -  Phường Hoà Lạc
+    -  Phường Hoà Nghĩa
+    -  Phường Hoà Phú
+    -  Phường Hoà Quý
+    -  Phường Hoà Thuận
+    -  Phường Hoàng Diệu
+    -  Phường Hoàng Liệt
+    -  Phường Hoàng Tân
+    -  Phường Hoàng Văn Thụ
+    -  Phường Hoành Bồ
+    -  Phường Huyền Tụng
+    -  Phường Hà An
+    -  Phường Hà Cầu
+    -  Phường Hà Huy Tập
+    -  Phường Hà Khánh
+    -  Phường Hà Khẩu
+    -  Phường Hà Lầm
+    -  Phường Hà Phong
+    -  Phường Hà Trung
+    -  Phường Hà Tu
+    -  Phường Hàm Rồng
+    -  Phường Hàm Tiến
+    -  Phường Hàng Buồm
+    -  Phường Hàng Bài
+    -  Phường Hàng Bông
+    -  Phường Hàng Bạc
+    -  Phường Hàng Bồ
+    -  Phường Hàng Bột
+    -  Phường Hàng Gai
+    -  Phường Hàng Kênh
+    -  Phường Hàng Mã
+    -  Phường Hàng Trống
+    -  Phường Hàng Đào
+    -  Phường Hòa An
+    -  Phường Hòa Bình
+    -  Phường Hòa Cường Bắc
+    -  Phường Hòa Cường Nam
+    -  Phường Hòa Hiệp Bắc
+    -  Phường Hòa Hiệp Nam
+    -  Phường Hòa Hương
+    -  Phường Hòa Khánh Bắc
+    -  Phường Hòa Khánh Nam
+    -  Phường Hòa Khê
+    -  Phường Hòa Lợi
+    -  Phường Hòa Minh
+    -  Phường Hòa Phát
+    -  Phường Hòa Thuận Tây
+    -  Phường Hòa Thuận Đông
+    -  Phường Hòa Thạnh
+    -  Phường Hòa Thọ Tây
+    -  Phường Hòa Thọ Đông
+    -  Phường Hòa Xuân
+    -  Phường Hùng Thắng
+    -  Phường Hùng Vương
+    -  Phường Hưng Bình
+    -  Phường Hưng Chiến
+    -  Phường Hưng Dũng
+    -  Phường Hưng Long
+    -  Phường Hưng Lợi
+    -  Phường Hưng Phú
+    -  Phường Hưng Phúc
+    -  Phường Hưng Thành
+    -  Phường Hưng Thạnh
+    -  Phường Hưng Trí
+    -  Phường Hưng Đạo
+    -  Phường Hưng Định
+    -  Phường Hương An
+    -  Phường Hương Chữ
+    -  Phường Hương Hồ
+    -  Phường Hương Long
+    -  Phường Hương Sơ
+    -  Phường Hương Sơn
+    -  Phường Hương Vân
+    -  Phường Hương Văn
+    -  Phường Hương Xuân
+    -  Phường Hạ Long
+    -  Phường Hạ Lý
+    -  Phường Hạ Đình
+    -  Phường Hạp Lĩnh
+    -  Phường Hải Châu 1
+    -  Phường Hải Châu II
+    -  Phường Hải Cảng
+    -  Phường Hải Hoà
+    -  Phường Hải Sơn
+    -  Phường Hải Thành
+    -  Phường Hải Tân
+    -  Phường Hải Yên
+    -  Phường Hải Đình
+    -  Phường Hố Nai 1
+    -  Phường Hồ Nam
+    -  Phường Hồng Châu
+    -  Phường Hồng Gai
+    -  Phường Hồng Hà
+    -  Phường Hồng Hải
+    -  Phường Hồng Sơn
+    -  Phường Hội Hợp
+    -  Phường Hội Phú
+    -  Phường Hội Thương
+    -  Phường Hợp Giang
+    -  Phường Hợp Minh
+    -  Phường Hợp Đức
+    -  Phường Hữu Nghị
+    -  Phường Ia Kring
+    -  Phường Ka Long
+    -  Phường Khai Quang
+    -  Phường Khuê Mỹ
+    -  Phường Khuê Trung
+    -  Phường Khánh Bình
+    -  Phường Khánh Hòa
+    -  Phường Khánh Hậu
+    -  Phường Khánh Xuân
+    -  Phường Khâm Thiên
+    -  Phường Khúc Xuyên
+    -  Phường Khương Mai
+    -  Phường Khương Thượng
+    -  Phường Khương Trung
+    -  Phường Khương Đình
+    -  Phường Khắc Niệm
+    -  Phường Kim Dinh
+    -  Phường Kim Giang
+    -  Phường Kim Liên
+    -  Phường Kim Long
+    -  Phường Kim Mã
+    -  Phường Kim Sơn
+    -  Phường Kim Tân
+    -  Phường Kinh Bắc
+    -  Phường Kinh Dinh
+    -  Phường Kiến Hưng
+    -  Phường Kênh Dương
+    -  Phường Kỳ Bá
+    -  Phường Kỳ Liên
+    -  Phường Kỳ Long
+    -  Phường Kỳ Phương
+    -  Phường Kỳ Sơn
+    -  Phường Kỳ Thịnh
+    -  Phường Kỳ Trinh
+    -  Phường La Khê
+    -  Phường Lam Hà
+    -  Phường Lam Hạ
+    -  Phường Lam Sơn
+    -  Phường Liêm Chính
+    -  Phường Liên Bảo
+    -  Phường Liên Mạc
+    -  Phường Liễu Giai
+    -  Phường Long Biên
+    -  Phường Long Bình
+    -  Phường Long Bình Tân
+    -  Phường Long Châu
+    -  Phường Long Hoa
+    -  Phường Long Hòa
+    -  Phường Long Hưng
+    -  Phường Long Hương
+    -  Phường Long Phú
+    -  Phường Long Phước
+    -  Phường Long Sơn
+    -  Phường Long Thạnh
+    -  Phường Long Thạnh Mỹ
+    -  Phường Long Thủy
+    -  Phường Long Toàn
+    -  Phường Long Trường
+    -  Phường Long Tuyền
+    -  Phường Long Tâm
+    -  Phường Lào Cai
+    -  Phường Lái Hiếu
+    -  Phường Lái Thiêu
+    -  Phường Láng Hạ
+    -  Phường Láng Thượng
+    -  Phường Láng Tròn
+    -  Phường Lãm Hà
+    -  Phường Lê Bình
+    -  Phường Lê Hồng Phong
+    -  Phường Lê Lợi
+    -  Phường Lê Mao
+    -  Phường Lê Thanh Nghị
+    -  Phường Lê Đại Hành
+    -  Phường Lý Thái Tổ
+    -  Phường Lý Thường Kiệt
+    -  Phường Lĩnh Nam
+    -  Phường Lương Châu
+    -  Phường Lương Khánh Thiện
+    -  Phường Lương Sơn
+    -  Phường Lạc Viên
+    -  Phường Lạc Đạo
+    -  Phường Lạch Tray
+    -  Phường Lộc Hạ
+    -  Phường Lộc Phát
+    -  Phường Lộc Sơn
+    -  Phường Lộc Thọ
+    -  Phường Lộc Tiến
+    -  Phường Lộc Vượng
+    -  Phường Mai Dịch
+    -  Phường Mai Hùng
+    -  Phường Mai Động
+    -  Phường Minh An
+    -  Phường Minh Khai
+    -  Phường Minh Nông
+    -  Phường Minh Phương
+    -  Phường Minh Thành
+    -  Phường Minh Tân
+    -  Phường Minh Xuân
+    -  Phường Minh Đức
+    -  Phường Máy Chai
+    -  Phường Máy Tơ
+    -  Phường Mân Thái
+    -  Phường Mông Dương
+    -  Phường Mũi Né
+    -  Phường Mường Thanh
+    -  Phường Mạo Khê
+    -  Phường Mễ Trì
+    -  Phường Mỏ Chè
+    -  Phường Mộ Lao
+    -  Phường Mỹ An
+    -  Phường Mỹ Bình
+    -  Phường Mỹ Hòa
+    -  Phường Mỹ Hương
+    -  Phường Mỹ Hải
+    -  Phường Mỹ Long
+    -  Phường Mỹ Lâm
+    -  Phường Mỹ Phú
+    -  Phường Mỹ Phước
+    -  Phường Mỹ Quý
+    -  Phường Mỹ Thạnh
+    -  Phường Mỹ Thới
+    -  Phường Mỹ Xuyên
+    -  Phường Mỹ Đình 1
+    -  Phường Mỹ Đình 2
+    -  Phường Mỹ Đông
+    -  Phường Mỹ Độ
+    -  Phường Na Lay
+    -  Phường Nam Bình
+    -  Phường Nam Cường
+    -  Phường Nam Dương
+    -  Phường Nam Hoà
+    -  Phường Nam Hà
+    -  Phường Nam Hải
+    -  Phường Nam Hồng
+    -  Phường Nam Khê
+    -  Phường Nam Lý
+    -  Phường Nam Ngạn
+    -  Phường Nam Sơn
+    -  Phường Nam Thanh
+    -  Phường Nam Thành
+    -  Phường Nam Đồng
+    -  Phường Nghi Hòa
+    -  Phường Nghi Hương
+    -  Phường Nghi Hải
+    -  Phường Nghi Thu
+    -  Phường Nghi Thuỷ
+    -  Phường Nghi Tân
+    -  Phường Nghĩa Chánh
+    -  Phường Nghĩa Lộ
+    -  Phường Nghĩa Phú
+    -  Phường Nghĩa Thành
+    -  Phường Nghĩa Trung
+    -  Phường Nghĩa Tân
+    -  Phường Nghĩa Xá
+    -  Phường Nghĩa Đô
+    -  Phường Nghĩa Đức
+    -  Phường Nguyễn An Ninh
+    -  Phường Nguyễn Cư Trinh
+    -  Phường Nguyễn Du
+    -  Phường Nguyễn Nghiêm
+    -  Phường Nguyễn Phúc
+    -  Phường Nguyễn Thái Bình
+    -  Phường Nguyễn Thái Học
+    -  Phường Nguyễn Thị Minh Khai
+    -  Phường Nguyễn Trung Trực
+    -  Phường Nguyễn Trãi
+    -  Phường Nguyễn Văn Cừ
+    -  Phường Ngã Bảy
+    -  Phường Ngã Tư Sở
+    -  Phường Ngô Mây
+    -  Phường Ngô Quyền
+    -  Phường Ngô Thì Nhậm
+    -  Phường Ngọc Châu
+    -  Phường Ngọc Hiệp
+    -  Phường Ngọc Hà
+    -  Phường Ngọc Hải
+    -  Phường Ngọc Khánh
+    -  Phường Ngọc Lâm
+    -  Phường Ngọc Sơn
+    -  Phường Ngọc Thụy
+    -  Phường Ngọc Trạo
+    -  Phường Ngọc Xuyên
+    -  Phường Ngọc Xuân
+    -  Phường Nhà Mát
+    -  Phường Nhân Chính
+    -  Phường Nhơn Bình
+    -  Phường Nhơn Hoà
+    -  Phường Nhơn Hưng
+    -  Phường Nhơn Phú
+    -  Phường Nhơn Thành
+    -  Phường Nhật Tân
+    -  Phường Nhị Châu
+    -  Phường Nhị Mỹ
+    -  Phường Ninh Diêm
+    -  Phường Ninh Dương
+    -  Phường Ninh Giang
+    -  Phường Ninh Hiệp
+    -  Phường Ninh Hà
+    -  Phường Ninh Hải
+    -  Phường Ninh Khánh
+    -  Phường Ninh Phong
+    -  Phường Ninh Sơn
+    -  Phường Ninh Thạnh
+    -  Phường Ninh Thủy
+    -  Phường Ninh Xá
+    -  Phường Ninh Đa
+    -  Phường Niệm Nghĩa
+    -  Phường Noong Bua
+    -  Phường Nông Tiến
+    -  Phường Nông Trang
+    -  Phường Núi Sam
+    -  Phường Năng Tĩnh
+    -  Phường Nại Hiên Đông
+    -  Phường Phan Bội Châu
+    -  Phường Phan Chu Trinh
+    -  Phường Phan Si Păng
+    -  Phường Phan Thiết
+    -  Phường Phan Đình Phùng
+    -  Phường Phong Châu
+    -  Phường Phong Cốc
+    -  Phường Phong Hải
+    -  Phường Phong Khê
+    -  Phường Pháo Đài
+    -  Phường Phù Liễn
+    -  Phường Phù Đổng
+    -  Phường Phùng Chí Kiên
+    -  Phường Phú Bài
+    -  Phường Phú Bình
+    -  Phường Phú Cát
+    -  Phường Phú Cường
+    -  Phường Phú Diễn
+    -  Phường Phú Hiệp
+    -  Phường Phú Hài
+    -  Phường Phú Hòa
+    -  Phường Phú Hải
+    -  Phường Phú Hậu
+    -  Phường Phú Hội
+    -  Phường Phú Hữu
+    -  Phường Phú Khánh
+    -  Phường Phú Khương
+    -  Phường Phú La
+    -  Phường Phú Lâm
+    -  Phường Phú Lãm
+    -  Phường Phú Lương
+    -  Phường Phú Lợi
+    -  Phường Phú Mỹ
+    -  Phường Phú Nhuận
+    -  Phường Phú Sơn
+    -  Phường Phú Thuận
+    -  Phường Phú Thượng
+    -  Phường Phú Thạnh
+    -  Phường Phú Thịnh
+    -  Phường Phú Thọ
+    -  Phường Phú Thọ Hòa
+    -  Phường Phú Thủy
+    -  Phường Phú Thứ
+    -  Phường Phú Trinh
+    -  Phường Phú Trung
+    -  Phường Phú Tài
+    -  Phường Phú Tân
+    -  Phường Phú Xá
+    -  Phường Phú Đô
+    -  Phường Phú Đông
+    -  Phường Phú Đức
+    -  Phường Phúc Diễn
+    -  Phường Phúc La
+    -  Phường Phúc Lợi
+    -  Phường Phúc Thành
+    -  Phường Phúc Thắng
+    -  Phường Phúc Tân
+    -  Phường Phúc Xá
+    -  Phường Phúc Đồng
+    -  Phường Phương Canh
+    -  Phường Phương Liên
+    -  Phường Phương Liệt
+    -  Phường Phương Lâm
+    -  Phường Phương Mai
+    -  Phường Phương Nam
+    -  Phường Phương Sài
+    -  Phường Phương Sơn
+    -  Phường Phương Đông
+    -  Phường Phước Bình
+    -  Phường Phước Hiệp
+    -  Phường Phước Hòa
+    -  Phường Phước Hưng
+    -  Phường Phước Hải
+    -  Phường Phước Hội
+    -  Phường Phước Long
+    -  Phường Phước Long A
+    -  Phường Phước Long B
+    -  Phường Phước Lộc
+    -  Phường Phước Mỹ
+    -  Phường Phước Nguyên
+    -  Phường Phước Ninh
+    -  Phường Phước Thới
+    -  Phường Phước Tiến
+    -  Phường Phước Trung
+    -  Phường Phước Tân
+    -  Phường Phước Vĩnh
+    -  Phường Phường Đúc
+    -  Phường Phạm Hồng Thái
+    -  Phường Phạm Ngũ Lão
+    -  Phường Phạm Thái
+    -  Phường Phạm Đình Hổ
+    -  Phường Phả Lại
+    -  Phường Phố Cò
+    -  Phường Phố Huế
+    -  Phường Phố Mới
+    -  Phường Phủ Hà
+    -  Phường Pom Hán
+    -  Phường Pú Trạng
+    -  Phường Quan Hoa
+    -  Phường Quang Hanh
+    -  Phường Quang Phong
+    -  Phường Quang Tiến
+    -  Phường Quang Trung
+    -  Phường Quang Vinh
+    -  Phường Quyết Thắng
+    -  Phường Quyết Tiến
+    -  Phường Quyết Tâm
+    -  Phường Quán Bàu
+    -  Phường Quán Thánh
+    -  Phường Quán Toan
+    -  Phường Quán Triều
+    -  Phường Quán Trữ
+    -  Phường Quảng An
+    -  Phường Quảng Hưng
+    -  Phường Quảng Long
+    -  Phường Quảng Phong
+    -  Phường Quảng Phú
+    -  Phường Quảng Phúc
+    -  Phường Quảng Thuận
+    -  Phường Quảng Thành
+    -  Phường Quảng Thắng
+    -  Phường Quảng Thọ
+    -  Phường Quảng Tiến
+    -  Phường Quảng Yên
+    -  Phường Quốc Tử Giám
+    -  Phường Quỳnh Dị
+    -  Phường Quỳnh Lôi
+    -  Phường Quỳnh Mai
+    -  Phường Quỳnh Phương
+    -  Phường Quỳnh Thiện
+    -  Phường Quỳnh Xuân
+    -  Phường Rạch Dừa
+    -  Phường Rạch Sỏi
+    -  Phường Sao Đỏ
+    -  Phường Suối Hoa
+    -  Phường Sài Đồng
+    -  Phường Sông Bằng
+    -  Phường Sông Bờ
+    -  Phường Sông Cầu
+    -  Phường Sông Hiến
+    -  Phường Sông Trí
+    -  Phường Sông Đà
+    -  Phường Sơn Giang
+    -  Phường Sơn Kỳ
+    -  Phường Sơn Lộc
+    -  Phường Sơn Phong
+    -  Phường Sở Dầu
+    -  Phường Tam Hiệp
+    -  Phường Tam Hòa
+    -  Phường Tam Thanh
+    -  Phường Tam Thuận
+    -  Phường Thanh Bình
+    -  Phường Thanh Châu
+    -  Phường Thanh Hà
+    -  Phường Thanh Hải
+    -  Phường Thanh Khê Tây
+    -  Phường Thanh Khê Đông
+    -  Phường Thanh Lương
+    -  Phường Thanh Miếu
+    -  Phường Thanh Nhàn
+    -  Phường Thanh Sơn
+    -  Phường Thanh Trì
+    -  Phường Thanh Trường
+    -  Phường Thanh Tuyền
+    -  Phường Thanh Vinh
+    -  Phường Thanh Xuân Bắc
+    -  Phường Thanh Xuân Nam
+    -  Phường Thanh Xuân Trung
+    -  Phường Thiện An
+    -  Phường Thu Thuỷ
+    -  Phường Thuận An
+    -  Phường Thuận Giao
+    -  Phường Thuận Hòa
+    -  Phường Thuận Hưng
+    -  Phường Thuận Lộc
+    -  Phường Thuận Phước
+    -  Phường Thuận Thành
+    -  Phường Thuỷ Biều
+    -  Phường Thuỷ Xuân
+    -  Phường Thành Công
+    -  Phường Thành Nhất
+    -  Phường Thành Phước
+    -  Phường Thành Tô
+    -  Phường Thác Mơ
+    -  Phường Thái Bình
+    -  Phường Thái Hòa
+    -  Phường Thái Học
+    -  Phường Thường Thạnh
+    -  Phường Thượng Cát
+    -  Phường Thượng Lý
+    -  Phường Thượng Thanh
+    -  Phường Thượng Đình
+    -  Phường Thạc Gián
+    -  Phường Thạch Bàn
+    -  Phường Thạch Khôi
+    -  Phường Thạch Linh
+    -  Phường Thạch Quý
+    -  Phường Thạch Thang
+    -  Phường Thạnh Hoà
+    -  Phường Thạnh Lộc
+    -  Phường Thạnh Mỹ Lợi
+    -  Phường Thạnh Phước
+    -  Phường Thạnh Xuân
+    -  Phường Thảo Điền
+    -  Phường Thắng Lợi
+    -  Phường Thắng Nhì
+    -  Phường Thắng Nhất
+    -  Phường Thắng Tam
+    -  Phường Thị Cầu
+    -  Phường Thị Nại
+    -  Phường Thịnh Lang
+    -  Phường Thịnh Liệt
+    -  Phường Thịnh Quang
+    -  Phường Thịnh Đán
+    -  Phường Thọ Quang
+    -  Phường Thọ Sơn
+    -  Phường Thọ Xương
+    -  Phường Thống Nhất
+    -  Phường Thốt Nốt
+    -  Phường Thổ Quan
+    -  Phường Thới An
+    -  Phường Thới An Đông
+    -  Phường Thới Bình
+    -  Phường Thới Hòa
+    -  Phường Thới Long
+    -  Phường Thới Thuận
+    -  Phường Thụy Khuê
+    -  Phường Thụy Phương
+    -  Phường Thủ Thiêm
+    -  Phường Thủy Châu
+    -  Phường Thủy Dương
+    -  Phường Thủy Lương
+    -  Phường Thủy Phương
+    -  Phường Tiên Cát
+    -  Phường Tiền An
+    -  Phường Tiền Phong
+    -  Phường Trang Hạ
+    -  Phường Trung Dũng
+    -  Phường Trung Hoà
+    -  Phường Trung Hưng
+    -  Phường Trung Kiên
+    -  Phường Trung Liệt
+    -  Phường Trung Lương
+    -  Phường Trung Mỹ Tây
+    -  Phường Trung Nhứt
+    -  Phường Trung Phụng
+    -  Phường Trung Sơn
+    -  Phường Trung Sơn Trầm
+    -  Phường Trung Thành
+    -  Phường Trung Tâm
+    -  Phường Trung Tự
+    -  Phường Trung Văn
+    -  Phường Trung Đô
+    -  Phường Trà An
+    -  Phường Trà Bá
+    -  Phường Trà Cổ
+    -  Phường Trà Lồng
+    -  Phường Trà Nóc
+    -  Phường Tràng Cát
+    -  Phường Tràng Minh
+    -  Phường Tràng Tiền
+    -  Phường Trúc Bạch
+    -  Phường Trưng Nhị
+    -  Phường Trưng Trắc
+    -  Phường Trưng Vương
+    -  Phường Trương Quang Trọng
+    -  Phường Trương Định
+    -  Phường Trường An
+    -  Phường Trường Chinh
+    -  Phường Trường Lạc
+    -  Phường Trường Sơn
+    -  Phường Trường Thi
+    -  Phường Trường Thạnh
+    -  Phường Trường Thịnh
+    -  Phường Trường Xuân
+    -  Phường Trại Cau
+    -  Phường Trại Chuối
+    -  Phường Trảng Dài
+    -  Phường Trần Hưng Đạo
+    -  Phường Trần Lãm
+    -  Phường Trần Nguyên Hãn
+    -  Phường Trần Phú
+    -  Phường Trần Quang Diệu
+    -  Phường Trần Quang Khải
+    -  Phường Trần Thành Ngọ
+    -  Phường Trần Tế Xương
+    -  Phường Trần Đăng Ninh
+    -  Phường Tuần Châu
+    -  Phường Tào Xuyên
+    -  Phường Tân An
+    -  Phường Tân Biên
+    -  Phường Tân Bình
+    -  Phường Tân Chánh Hiệp
+    -  Phường Tân Chính
+    -  Phường Tân Dân
+    -  Phường Tân Giang
+    -  Phường Tân Hiệp
+    -  Phường Tân Hà
+    -  Phường Tân Hòa
+    -  Phường Tân Hưng
+    -  Phường Tân Hưng Thuận
+    -  Phường Tân Hồng
+    -  Phường Tân Khánh
+    -  Phường Tân Kiểng
+    -  Phường Tân Long
+    -  Phường Tân Lập
+    -  Phường Tân Lộc
+    -  Phường Tân Lợi
+    -  Phường Tân Mai
+    -  Phường Tân Phong
+    -  Phường Tân Phú
+    -  Phường Tân Phước Khánh
+    -  Phường Tân Quang
+    -  Phường Tân Quy
+    -  Phường Tân Quy Đông
+    -  Phường Tân Quý
+    -  Phường Tân Sơn
+    -  Phường Tân Sơn Nhì
+    -  Phường Tân Thanh
+    -  Phường Tân Thiện
+    -  Phường Tân Thuận Tây
+    -  Phường Tân Thuận Đông
+    -  Phường Tân Thành
+    -  Phường Tân Thạnh
+    -  Phường Tân Thịnh
+    -  Phường Tân Thới Hiệp
+    -  Phường Tân Thới Hòa
+    -  Phường Tân Thới Nhất
+    -  Phường Tân Tiến
+    -  Phường Tân Tạo
+    -  Phường Tân Tạo A
+    -  Phường Tân Vạn
+    -  Phường Tân Xuyên
+    -  Phường Tân Xuân
+    -  Phường Tân Đông Hiệp
+    -  Phường Tân Định
+    -  Phường Tân Đồng
+    -  Phường Tây Lộc
+    -  Phường Tây Mỗ
+    -  Phường Tây Sơn
+    -  Phường Tây Thạnh
+    -  Phường Tây Tựu
+    -  Phường Tích Lương
+    -  Phường Tích Sơn
+    -  Phường Tô Châu
+    -  Phường Tô Hiệu
+    -  Phường Túc Duyên
+    -  Phường Tăng Nhơn Phú A
+    -  Phường Tăng Nhơn Phú B
+    -  Phường Tương Bình Hiệp
+    -  Phường Tương Mai
+    -  Phường Tấn Tài
+    -  Phường Tứ Hạ
+    -  Phường Tứ Liên
+    -  Phường Tứ Minh
+    -  Phường Tự An
+    -  Phường Uyên Hưng
+    -  Phường V
+    -  Phường Vinh Tân
+    -  Phường Viên Sơn
+    -  Phường Việt Hoà
+    -  Phường Việt Hưng
+    -  Phường Vàng Danh
+    -  Phường Vân Cơ
+    -  Phường Vân Dương
+    -  Phường Vân Giang
+    -  Phường Vân Phú
+    -  Phường Võ Cường
+    -  Phường Văn An
+    -  Phường Văn Chương
+    -  Phường Văn Hải
+    -  Phường Văn Miếu
+    -  Phường Văn Quán
+    -  Phường Văn Yên
+    -  Phường Văn Đẩu
+    -  Phường Vĩ Dạ
+    -  Phường Vĩnh Bảo
+    -  Phường Vĩnh Hiệp
+    -  Phường Vĩnh Hòa
+    -  Phường Vĩnh Hưng
+    -  Phường Vĩnh Hải
+    -  Phường Vĩnh Lạc
+    -  Phường Vĩnh Lợi
+    -  Phường Vĩnh Mỹ
+    -  Phường Vĩnh Nguyên
+    -  Phường Vĩnh Ngươn
+    -  Phường Vĩnh Ninh
+    -  Phường Vĩnh Niệm
+    -  Phường Vĩnh Phú
+    -  Phường Vĩnh Phúc
+    -  Phường Vĩnh Phước
+    -  Phường Vĩnh Quang
+    -  Phường Vĩnh Thanh
+    -  Phường Vĩnh Thanh Vân
+    -  Phường Vĩnh Thông
+    -  Phường Vĩnh Thọ
+    -  Phường Vĩnh Trung
+    -  Phường Vĩnh Trường
+    -  Phường Vĩnh Trại
+    -  Phường Vĩnh Tuy
+    -  Phường Vĩnh Tường
+    -  Phường Vĩnh Điện
+    -  Phường Vũ Ninh
+    -  Phường Vạn An
+    -  Phường Vạn Hương
+    -  Phường Vạn Mỹ
+    -  Phường Vạn Phúc
+    -  Phường Vạn Sơn
+    -  Phường Vạn Thạnh
+    -  Phường Vạn Thắng
+    -  Phường Vệ An
+    -  Phường Vị Hoàng
+    -  Phường Vị Xuyên
+    -  Phường Xuân An
+    -  Phường Xuân Bình
+    -  Phường Xuân Hoà
+    -  Phường Xuân Hà
+    -  Phường Xuân Khanh
+    -  Phường Xuân Khánh
+    -  Phường Xuân La
+    -  Phường Xuân Phú
+    -  Phường Xuân Phương
+    -  Phường Xuân Sơn
+    -  Phường Xuân Thanh
+    -  Phường Xuân Thành
+    -  Phường Xuân Trung
+    -  Phường Xuân Tăng
+    -  Phường Xuân Tảo
+    -  Phường Xuân Yên
+    -  Phường Xuân Đài
+    -  Phường Xuân Đỉnh
+    -  Phường Xuất Hóa
+    -  Phường Xương Giang
+    -  Phường Xương Huân
+    -  Phường Yên Bình
+    -  Phường Yên Giang
+    -  Phường Yên Hoà
+    -  Phường Yên Hải
+    -  Phường Yên Nghĩa
+    -  Phường Yên Ninh
+    -  Phường Yên Phụ
+    -  Phường Yên Sở
+    -  Phường Yên Thanh
+    -  Phường Yên Thế
+    -  Phường Yên Thịnh
+    -  Phường Yên Đỗ
+    -  Phường Yết Kiêu
+    -  Phường Ái Quốc
+    -  Phường Âu Cơ
+    -  Phường Ô Chợ Dừa
+    -  Phường Ô Quý Hồ
+    -  Phường Đa Mai
+    -  Phường Đa Phúc
+    -  Phường Đakao
+    -  Phường Điện An
+    -  Phường Điện Biên
+    -  Phường Điện Dương
+    -  Phường Điện Nam Bắc
+    -  Phường Điện Nam Trung
+    -  Phường Điện Nam Đông
+    -  Phường Điện Ngọc
+    -  Phường Đoàn Kết
+    -  Phường Đài Sơn
+    -  Phường Đáp Cầu
+    -  Phường Đình Bảng
+    -  Phường Đô Vinh
+    -  Phường Đông Cương
+    -  Phường Đông Giang
+    -  Phường Đông Hòa
+    -  Phường Đông Hưng Thuận
+    -  Phường Đông Hương
+    -  Phường Đông Hải
+    -  Phường Đông Hải 1
+    -  Phường Đông Hải 2
+    -  Phường Đông Hồ
+    -  Phường Đông Khê
+    -  Phường Đông Kinh
+    -  Phường Đông Lương
+    -  Phường Đông Lễ
+    -  Phường Đông Mai
+    -  Phường Đông Ngàn
+    -  Phường Đông Ngạc
+    -  Phường Đông Phong
+    -  Phường Đông Sơn
+    -  Phường Đông Thanh
+    -  Phường Đông Thuận
+    -  Phường Đông Thành
+    -  Phường Đông Thọ
+    -  Phường Đông Triều
+    -  Phường Đông Vĩnh
+    -  Phường Đông Vệ
+    -  Phường Đông Xuyên
+    -  Phường Đại Kim
+    -  Phường Đại Mỗ
+    -  Phường Đại Nài
+    -  Phường Đại Phúc
+    -  Phường Đại Yên
+    -  Phường Đạo Long
+    -  Phường Đạt Hiếu
+    -  Phường Đập Đá
+    -  Phường Đậu Liêu
+    -  Phường Đằng Giang
+    -  Phường Đằng Hải
+    -  Phường Đằng Lâm
+    -  Phường Đề Thám
+    -  Phường Định Công
+    -  Phường Định Hoà
+    -  Phường Đống Mác
+    -  Phường Đống Đa
+    -  Phường Đồng Hoà
+    -  Phường Đồng Hải
+    -  Phường Đồng Kỵ
+    -  Phường Đồng Mai
+    -  Phường Đồng Mỹ
+    -  Phường Đồng Nguyên
+    -  Phường Đồng Nhân
+    -  Phường Đồng Phú
+    -  Phường Đồng Quang
+    -  Phường Đồng Sơn
+    -  Phường Đồng Tiến
+    -  Phường Đồng Tâm
+    -  Phường Đồng Xuân
+    -  Phường Đổng Quốc Bình
+    -  Phường Đội Cung
+    -  Phường Đội Cấn
+    -  Phường Đức Chính
+    -  Phường Đức Giang
+    -  Phường Đức Long
+    -  Phường Đức Nghĩa
+    -  Phường Đức Ninh Đông
+    -  Phường Đức Thuận
+    -  Phường Đức Thắng
+    -  Phường Đức Xuân
+    -  Phường đặc biệt
+    -  Phường đặc biệt DC
+    -  Phường Ỷ La
+    -  TT.Thanh An
+    -  Thị Trấn Ba Hàng Đồi
+    -  Thị Trấn Bút Sơn
+    -  Thị Trấn Châu Ổ
+    -  Thị Trấn Cẩm Khê
+    -  Thị Trấn Diên Sanh
+    -  Thị Trấn Dầu Giây
+    -  Thị Trấn Giồng Riềng
+    -  Thị Trấn Hòa Thuận
+    -  Thị Trấn Kiến Xương
+    -  Thị Trấn Long Bình
+    -  Thị Trấn Lộc Hà
+    -  Thị Trấn Mãn Đức
+    -  Thị Trấn Măng Đen
+    -  Thị Trấn Mường Chà
+    -  Thị Trấn Ngã Sáu
+    -  Thị Trấn Ngọc Lặc
+    -  Thị Trấn Nham Biền
+    -  Thị Trấn Ninh Cường
+    -  Thị Trấn Nông Trường Việt Trung
+    -  Thị Trấn Năm Căn
+    -  Thị Trấn Nưa
+    -  Thị Trấn Phong Nha
+    -  Thị Trấn Phong Sơn
+    -  Thị Trấn Phú Hoà
+    -  Thị Trấn Phước Cát
+    -  Thị Trấn Plei Kần
+    -  Thị Trấn Quảng Uyên
+    -  Thị Trấn Simacai
+    -  Thị Trấn Thiệu Hóa
+    -  Thị Trấn Thông Nông
+    -  Thị Trấn Thổ Tang
+    -  Thị Trấn Tiên Điền
+    -  Thị Trấn Trà Lĩnh
+    -  Thị Trấn Trới
+    -  Thị Trấn Tà Lùng
+    -  Thị Trấn Tân Bình
+    -  Thị Trấn Tân Phong
+    -  Thị Trấn Tân Thanh
+    -  Thị Trấn Tây Yên Tử
+    -  Thị Trấn Tằng Lỏng
+    -  Thị Trấn Ái Nghĩa
+    -  Thị Trấn Ái Tử
+    -  Thị Trấn Óc Eo
+    -  Thị Trấn Đồng Tâm
+    -  Thị trấn  Bích Động
+    -  Thị trấn  Tam Quan
+    -  Thị trấn  Tây Sơn
+    -  Thị trấn A Lưới
+    -  Thị trấn An Bài
+    -  Thị trấn An Châu
+    -  Thị trấn An Dương
+    -  Thị trấn An Lão
+    -  Thị trấn An Lạc Thôn
+    -  Thị trấn An Phú
+    -  Thị trấn An Thới
+    -  Thị trấn Anh Sơn
+    -  Thị trấn Ba Chúc
+    -  Thị trấn Ba Chẽ
+    -  Thị trấn Ba Sao
+    -  Thị trấn Ba Tri
+    -  Thị trấn Ba Tơ
+    -  Thị trấn Bo
+    -  Thị trấn Buôn Trấp
+    -  Thị trấn Bát Xát
+    -  Thị trấn Bình Dương
+    -  Thị trấn Bình Gia
+    -  Thị trấn Bình Liêu
+    -  Thị trấn Bình Minh
+    -  Thị trấn Bình Mỹ
+    -  Thị trấn Bình Đại
+    -  Thị trấn Búng Tàu
+    -  Thị trấn Bảo Lạc
+    -  Thị trấn Bảy Ngàn
+    -  Thị trấn Bần Yên Nhân
+    -  Thị trấn Bắc Hà
+    -  Thị trấn Bắc Sơn
+    -  Thị trấn Bắc Yên
+    -  Thị trấn Bằng Lũng
+    -  Thị trấn Bến Cầu
+    -  Thị trấn Bến Lức
+    -  Thị trấn Bến Quan
+    -  Thị trấn Bến Sung
+    -  Thị trấn Bố Hạ
+    -  Thị trấn Bồng Sơn
+    -  Thị trấn Cam Lộ
+    -  Thị trấn Cam Đức
+    -  Thị trấn Cao Lộc
+    -  Thị trấn Cao Phong
+    -  Thị trấn Cao Thượng
+    -  Thị trấn Chi Lăng
+    -  Thị trấn Chi Nê
+    -  Thị trấn Chi Đông
+    -  Thị trấn Châu Hưng
+    -  Thị trấn Châu Thành
+    -  Thị trấn Chí Thạnh
+    -  Thị trấn Chùa Hang
+    -  Thị trấn Chúc Sơn
+    -  Thị trấn Chũ
+    -  Thị trấn Chơn Thành
+    -  Thị trấn Chư Prông
+    -  Thị trấn Chư Sê
+    -  Thị trấn Chư Ty
+    -  Thị trấn Chờ
+    -  Thị trấn Chợ Chu
+    -  Thị trấn Chợ Chùa
+    -  Thị trấn Chợ Gạo
+    -  Thị trấn Chợ Lách
+    -  Thị trấn Chợ Lầu
+    -  Thị trấn Chợ Mới
+    -  Thị trấn Chợ Rã
+    -  Thị trấn Chợ Vàm
+    -  Thị trấn Con Cuông
+    -  Thị trấn Càng Long
+    -  Thị trấn Cành Nàng
+    -  Thị trấn Cái Bè
+    -  Thị trấn Cái Dầu
+    -  Thị trấn Cái Nhum
+    -  Thị trấn Cái Nước
+    -  Thị trấn Cái Rồng
+    -  Thị trấn Cái Tàu Hạ
+    -  Thị trấn Cái Tắc
+    -  Thị trấn Cái Đôi Vàm
+    -  Thị trấn Cát Bà
+    -  Thị trấn Cát Hải
+    -  Thị trấn Cát Thành
+    -  Thị trấn Cát Tiên
+    -  Thị trấn Cây Dương
+    -  Thị trấn Cô Tô
+    -  Thị trấn Cù Lao Dung
+    -  Thị trấn Cần Giuộc
+    -  Thị trấn Cần Thạnh
+    -  Thị trấn Cần Đước
+    -  Thị trấn Cầu Giát
+    -  Thị trấn Cầu Gồ
+    -  Thị trấn Cầu Kè
+    -  Thị trấn Cầu Ngang
+    -  Thị trấn Cầu Quan
+    -  Thị trấn Cẩm Giàng
+    -  Thị trấn Cẩm Thủy
+    -  Thị trấn Cẩm Xuyên
+    -  Thị trấn Cốc Pài
+    -  Thị trấn Cồn
+    -  Thị trấn Cổ Lễ
+    -  Thị trấn Cổ Phúc
+    -  Thị trấn Cờ Đỏ
+    -  Thị trấn Củ Chi
+    -  Thị trấn Củng Sơn
+    -  Thị trấn Cửa Tùng
+    -  Thị trấn Cửa Việt
+    -  Thị trấn D'Ran
+    -  Thị trấn Di Linh
+    -  Thị trấn Di Lăng
+    -  Thị trấn Diêm Điền
+    -  Thị trấn Diên Khánh
+    -  Thị trấn Diêu Trì
+    -  Thị trấn Diễn Châu
+    -  Thị trấn Dương Minh Châu
+    -  Thị trấn Dương Đông
+    -  Thị trấn Dầu Tiếng
+    -  Thị trấn Ea Drăng
+    -  Thị trấn Ea Kar
+    -  Thị trấn Ea Knốp
+    -  Thị trấn Ea Pốk
+    -  Thị trấn Ea Súp
+    -  Thị trấn Ea T'Ling
+    -  Thị trấn Gia Bình
+    -  Thị trấn Gia Khánh
+    -  Thị trấn Gia Lộc
+    -  Thị trấn Gia Ray
+    -  Thị trấn Giang Tiên
+    -  Thị trấn Gio Linh
+    -  Thị trấn Giồng Trôm
+    -  Thị trấn Gành Hào
+    -  Thị trấn Gò Dầu
+    -  Thị trấn Gò Quao
+    -  Thị trấn Gôi
+    -  Thị trấn Hai Riêng
+    -  Thị trấn Hiệp Hòa
+    -  Thị trấn Hoa Sơn
+    -  Thị trấn Hoà Hiệp Trung
+    -  Thị trấn Hoà Thuận
+    -  Thị trấn Hoà Vinh
+    -  Thị trấn Hoàn Lão
+    -  Thị trấn Hoằng Hóa
+    -  Thị trấn Huỳnh Hữu Nghĩa
+    -  Thị trấn Hà Lam
+    -  Thị trấn Hà Trung
+    -  Thị trấn Hàng Trạm
+    -  Thị trấn Hát Lót
+    -  Thị trấn Hòa Bình
+    -  Thị trấn Hòa Mạc
+    -  Thị trấn Hòa Thành
+    -  Thị trấn Hòn Đất
+    -  Thị trấn Hóc Môn
+    -  Thị trấn Hùng Quốc
+    -  Thị trấn Hùng Sơn
+    -  Thị trấn Hưng Hoá
+    -  Thị trấn Hưng Hà
+    -  Thị trấn Hưng Lợi
+    -  Thị trấn Hưng Nguyên
+    -  Thị trấn Hưng Nhân
+    -  Thị trấn Hương Canh
+    -  Thị trấn Hương Khê
+    -  Thị trấn Hương Sơn
+    -  Thị trấn Hạ Hoà
+    -  Thị trấn Hải Lăng
+    -  Thị trấn Hậu Lộc
+    -  Thị trấn Hậu Nghĩa
+    -  Thị trấn Hồ
+    -  Thị trấn Hồ Xá
+    -  Thị trấn Hồi Xuân
+    -  Thị trấn Hộ Phòng
+    -  Thị trấn Hợp Hòa
+    -  Thị trấn Hữu Lũng
+    -  Thị trấn Ia Kha
+    -  Thị trấn Ia Ly
+    -  Thị trấn KBang
+    -  Thị trấn Khe Sanh
+    -  Thị trấn Khe Tre
+    -  Thị trấn Khoái Châu
+    -  Thị trấn Khánh Hải
+    -  Thị trấn Khánh Vĩnh
+    -  Thị trấn Khánh Yên
+    -  Thị trấn Khâm Đức
+    -  Thị trấn Kim Bài
+    -  Thị trấn Kim Sơn
+    -  Thị trấn Kim Tân
+    -  Thị trấn Kinh Cùng
+    -  Thị trấn Kinh Môn
+    -  Thị trấn Kiên Lương
+    -  Thị trấn Kiến Giang
+    -  Thị trấn Kiến Đức
+    -  Thị trấn Kiện Khê
+    -  Thị trấn Kon Dơng
+    -  Thị trấn Krông Klang
+    -  Thị trấn Krông Kmar
+    -  Thị trấn Krông Năng
+    -  Thị trấn Kép
+    -  Thị trấn Kông Chro
+    -  Thị trấn Kẻ Sặt
+    -  Thị trấn Kế Sách
+    -  Thị trấn Kỳ Sơn
+    -  Thị trấn La Hai
+    -  Thị trấn La Hà
+    -  Thị trấn Lai Cách
+    -  Thị trấn Lai Vung
+    -  Thị trấn Lam Sơn
+    -  Thị trấn Lang Chánh
+    -  Thị trấn Lao Bảo
+    -  Thị trấn Lim
+    -  Thị trấn Liên Hương
+    -  Thị trấn Liên Nghĩa
+    -  Thị trấn Liên Quan
+    -  Thị trấn Liên Sơn
+    -  Thị trấn Liễu Đề
+    -  Thị trấn Long Hải
+    -  Thị trấn Long Hồ
+    -  Thị trấn Long Thành
+    -  Thị trấn Long Điền
+    -  Thị trấn Lâm
+    -  Thị trấn Lâm Thao
+    -  Thị trấn Lăng Cô
+    -  Thị trấn Lương Bằng
+    -  Thị trấn Lương Sơn
+    -  Thị trấn Lạc Dương
+    -  Thị trấn Lạc Tánh
+    -  Thị trấn Lấp Vò
+    -  Thị trấn Lập Thạch
+    -  Thị trấn Lịch Hội Thượng
+    -  Thị trấn Lộc Bình
+    -  Thị trấn Lộc Ninh
+    -  Thị trấn Lộc Thắng
+    -  Thị trấn Lục Nam
+    -  Thị trấn M'Đrắk
+    -  Thị trấn Ma Lâm
+    -  Thị trấn Ma Đa Guôi
+    -  Thị trấn Mai Châu
+    -  Thị trấn Me
+    -  Thị trấn Minh Lương
+    -  Thị trấn Minh Tân
+    -  Thị trấn Minh Đức
+    -  Thị trấn Mái Dầm
+    -  Thị trấn Mèo Vạc
+    -  Thị trấn Mù Căng Chải
+    -  Thị trấn Mường Khương
+    -  Thị trấn Mường Khến
+    -  Thị trấn Mường Lát
+    -  Thị trấn Mường Tè
+    -  Thị trấn Mường Xén
+    -  Thị trấn Mường Ảng
+    -  Thị trấn Mậu A
+    -  Thị trấn Mỏ Cày
+    -  Thị trấn Mộ Đức
+    -  Thị trấn Mộc Châu
+    -  Thị trấn Một Ngàn
+    -  Thị trấn Mỹ An
+    -  Thị trấn Mỹ Long
+    -  Thị trấn Mỹ Luông
+    -  Thị trấn Mỹ Lộc
+    -  Thị trấn Mỹ Phước
+    -  Thị trấn Mỹ Thọ
+    -  Thị trấn Mỹ Xuyên
+    -  Thị trấn N.T Phong Hải
+    -  Thị trấn NT Liên Sơn
+    -  Thị trấn NT Lệ Ninh
+    -  Thị trấn NT Mộc Châu
+    -  Thị trấn NT Nghĩa Lộ
+    -  Thị trấn NT Thái Bình
+    -  Thị trấn NT Trần Phú
+    -  Thị trấn Na Dương
+    -  Thị trấn Na Sầm
+    -  Thị trấn Nam Ban
+    -  Thị trấn Nam Giang
+    -  Thị trấn Nam Phước
+    -  Thị trấn Nam Sách
+    -  Thị trấn Nam Đàn
+    -  Thị trấn Neo
+    -  Thị trấn Nga Sơn
+    -  Thị trấn Ngan Dừa
+    -  Thị trấn Nghi Xuân
+    -  Thị trấn Nghèn
+    -  Thị trấn Nghĩa Đàn
+    -  Thị trấn Nguyên Bình
+    -  Thị trấn Ngãi Giao
+    -  Thị trấn Ngô Mây
+    -  Thị trấn Ngô Đồng
+    -  Thị trấn Nho Quan
+    -  Thị trấn Nhà Bàng
+    -  Thị trấn Nhà Bè
+    -  Thị trấn Nhã Nam
+    -  Thị trấn Nhơn Hoà
+    -  Thị trấn Như Quỳnh
+    -  Thị trấn Ninh Giang
+    -  Thị trấn Nà Hang
+    -  Thị trấn Nà Phặc
+    -  Thị trấn Nàng Mau
+    -  Thị trấn Nông Cống
+    -  Thị trấn Nông Trường Việt Lâm
+    -  Thị trấn Núi Sập
+    -  Thị trấn Núi Thành
+    -  Thị trấn Núi Đèo
+    -  Thị trấn Núi Đối
+    -  Thị trấn Nước Hai
+    -  Thị trấn Nậm Nhùn
+    -  Thị trấn Nếnh
+    -  Thị trấn P Rao
+    -  Thị trấn Phan Rí Cửa
+    -  Thị trấn Phong Châu
+    -  Thị trấn Phong Thổ
+    -  Thị trấn Phong Điền
+    -  Thị trấn Phát Diệm
+    -  Thị trấn Phó Bảng
+    -  Thị trấn Phù Mỹ
+    -  Thị trấn Phù Yên
+    -  Thị trấn Phùng
+    -  Thị trấn Phú Hoà
+    -  Thị trấn Phú Hòa
+    -  Thị trấn Phú Long
+    -  Thị trấn Phú Lộc
+    -  Thị trấn Phú Minh
+    -  Thị trấn Phú Mỹ
+    -  Thị trấn Phú Phong
+    -  Thị trấn Phú Thiện
+    -  Thị trấn Phú Thái
+    -  Thị trấn Phú Thịnh
+    -  Thị trấn Phú Thứ
+    -  Thị trấn Phú Túc
+    -  Thị trấn Phú Xuyên
+    -  Thị trấn Phú Đa
+    -  Thị trấn Phúc Thọ
+    -  Thị trấn Phước An
+    -  Thị trấn Phước Bửu
+    -  Thị trấn Phước Dân
+    -  Thị trấn Phước Hải
+    -  Thị trấn Phước Long
+    -  Thị trấn Phước Vĩnh
+    -  Thị trấn Phố Châu
+    -  Thị trấn Phố Lu
+    -  Thị trấn Phố Mới
+    -  Thị trấn Phố Ràng
+    -  Thị trấn Phủ Thông
+    -  Thị trấn Pác Miầu
+    -  Thị trấn Quan Hóa
+    -  Thị trấn Quan Sơn
+    -  Thị trấn Quang Minh
+    -  Thị trấn Quy Đạt
+    -  Thị trấn Quán Hành
+    -  Thị trấn Quán Hàu
+    -  Thị trấn Quán Lào
+    -  Thị trấn Quân Chu
+    -  Thị trấn Quảng Hà
+    -  Thị trấn Quảng Phú
+    -  Thị trấn Quảng Uyên
+    -  Thị trấn Quảng Xương
+    -  Thị trấn Quất Lâm
+    -  Thị trấn Quế
+    -  Thị trấn Quốc Oai
+    -  Thị trấn Quỳ Hợp
+    -  Thị trấn Quỳnh Côi
+    -  Thị trấn Quỹ Nhất
+    -  Thị trấn Rạch Gòi
+    -  Thị trấn Rạch Gốc
+    -  Thị trấn Rạng Đông
+    -  Thị trấn Rừng Thông
+    -  Thị trấn Sa Pa
+    -  Thị trấn Sa Rài
+    -  Thị trấn Sa Thầy
+    -  Thị trấn Sao Vàng
+    -  Thị trấn Sìn Hồ
+    -  Thị trấn Sóc Sơn
+    -  Thị trấn Sông Cầu
+    -  Thị trấn Sông Mã
+    -  Thị trấn Sông Thao
+    -  Thị trấn Sông Vệ
+    -  Thị trấn Sông Đốc
+    -  Thị trấn Sơn Dương
+    -  Thị trấn Sơn Lư
+    -  Thị trấn Sịa
+    -  Thị trấn Tam Bình
+    -  Thị trấn Tam Sơn
+    -  Thị trấn Tam Đường
+    -  Thị trấn Tam Đảo
+    -  Thị trấn Than Uyên
+    -  Thị trấn Thanh Ba
+    -  Thị trấn Thanh Bình
+    -  Thị trấn Thanh Chương
+    -  Thị trấn Thanh Hà
+    -  Thị trấn Thanh Lãng
+    -  Thị trấn Thanh Miện
+    -  Thị trấn Thanh Nhật
+    -  Thị trấn Thanh Nê
+    -  Thị trấn Thanh Sơn
+    -  Thị trấn Thanh Thủy
+    -  Thị trấn Thiên Cầm
+    -  Thị trấn Thiên Tôn
+    -  Thị trấn Thuận An
+    -  Thị trấn Thuận Châu
+    -  Thị trấn Thuận Nam
+    -  Thị trấn Thác Bà
+    -  Thị trấn Thông Nông
+    -  Thị trấn Thường Tín
+    -  Thị trấn Thường Xuân
+    -  Thị trấn Thạch Hà
+    -  Thị trấn Thạnh Hóa
+    -  Thị trấn Thạnh Mỹ
+    -  Thị trấn Thạnh Phú
+    -  Thị trấn Thất Khê
+    -  Thị trấn Thắng
+    -  Thị trấn Thị Trấn Long Phú
+    -  Thị trấn Thịnh Long
+    -  Thị trấn Thọ Xuân
+    -  Thị trấn Thống Nhất
+    -  Thị trấn Thới Bình
+    -  Thị trấn Thới Lai
+    -  Thị trấn Thủ Thừa
+    -  Thị trấn Thứ 11
+    -  Thị trấn Thứ Ba
+    -  Thị trấn Thứa
+    -  Thị trấn Tiên Kỳ
+    -  Thị trấn Tiên Lãng
+    -  Thị trấn Tiên Yên
+    -  Thị trấn Tiền Hải
+    -  Thị trấn Tiểu Cần
+    -  Thị trấn Tri Tôn
+    -  Thị trấn Triệu Sơn
+    -  Thị trấn Trà Cú
+    -  Thị trấn Trà My
+    -  Thị trấn Trà Xuân
+    -  Thị trấn Trà Ôn
+    -  Thị trấn Tràm Chim
+    -  Thị trấn Trâu Quỳ
+    -  Thị trấn Trùng Khánh
+    -  Thị trấn Trường Sa
+    -  Thị trấn Trường Sơn
+    -  Thị trấn Trại Cau
+    -  Thị trấn Trạm Trôi
+    -  Thị trấn Trạm Tấu
+    -  Thị trấn Trảng Bom
+    -  Thị trấn Trảng Bàng
+    -  Thị trấn Trần Cao
+    -  Thị trấn Trần Văn Thời
+    -  Thị trấn Trần Đề
+    -  Thị trấn Trới
+    -  Thị trấn Tuy Phước
+    -  Thị trấn Tuần Giáo
+    -  Thị trấn Tà Lùng
+    -  Thị trấn Tân An
+    -  Thị trấn Tân Biên
+    -  Thị trấn Tân Bình
+    -  Thị trấn Tân Châu
+    -  Thị trấn Tân Dân
+    -  Thị trấn Tân Hiệp
+    -  Thị trấn Tân Hòa
+    -  Thị trấn Tân Hưng
+    -  Thị trấn Tân Kỳ
+    -  Thị trấn Tân Lạc
+    -  Thị trấn Tân Minh
+    -  Thị trấn Tân Nghĩa
+    -  Thị trấn Tân Phú
+    -  Thị trấn Tân Sơn
+    -  Thị trấn Tân Thạnh
+    -  Thị trấn Tân Trụ
+    -  Thị trấn Tân Túc
+    -  Thị trấn Tân Uyên
+    -  Thị trấn Tân Yên
+    -  Thị trấn Tây Hòa
+    -  Thị trấn Tây Đằng
+    -  Thị trấn Tô Hạp
+    -  Thị trấn Tăng Bạt Hổ
+    -  Thị trấn Tĩnh Gia
+    -  Thị trấn Tĩnh Túc
+    -  Thị trấn Tầm Vu
+    -  Thị trấn Tịnh Biên
+    -  Thị trấn Tủa Chùa
+    -  Thị trấn Tứ Kỳ
+    -  Thị trấn Tứ Trưng
+    -  Thị trấn U Minh
+    -  Thị trấn Vinh Quang
+    -  Thị trấn Việt Quang
+    -  Thị trấn Vàm Láng
+    -  Thị trấn Vân Canh
+    -  Thị trấn Vân Du
+    -  Thị trấn Vân Đình
+    -  Thị trấn Vôi
+    -  Thị trấn Võ Xu
+    -  Thị trấn Văn Giang
+    -  Thị trấn Văn Quan
+    -  Thị trấn Văn Điển
+    -  Thị trấn Vĩnh An
+    -  Thị trấn Vĩnh Bình
+    -  Thị trấn Vĩnh Bảo
+    -  Thị trấn Vĩnh Hưng
+    -  Thị trấn Vĩnh Lộc
+    -  Thị trấn Vĩnh Thuận
+    -  Thị trấn Vĩnh Thạnh
+    -  Thị trấn Vĩnh Trụ
+    -  Thị trấn Vĩnh Tuy
+    -  Thị trấn Vĩnh Tường
+    -  Thị trấn Vũ Quang
+    -  Thị trấn Vũ Thư
+    -  Thị trấn Vũng Liêm
+    -  Thị trấn Vương
+    -  Thị trấn Vạn Giã
+    -  Thị trấn Vạn Hà
+    -  Thị trấn Vị Xuyên
+    -  Thị trấn Vụ Bản
+    -  Thị trấn Xuân An
+    -  Thị trấn Xuân Hòa
+    -  Thị trấn Xuân Mai
+    -  Thị trấn Xuân Trường
+    -  Thị trấn Yên Bình
+    -  Thị trấn Yên Châu
+    -  Thị trấn Yên Cát
+    -  Thị trấn Yên Lạc
+    -  Thị trấn Yên Lập
+    -  Thị trấn Yên Minh
+    -  Thị trấn Yên Mỹ
+    -  Thị trấn Yên Ninh
+    -  Thị trấn Yên Phú
+    -  Thị trấn Yên Thành
+    -  Thị trấn Yên Thế
+    -  Thị trấn Yên Thịnh
+    -  Thị trấn Yên Viên
+    -  Thị trấn Yên Định
+    -  Thị trấn Yến Lạc
+    -  Thị trấn Ân Thi
+    -  Thị trấn Ít Ong
+    -  Thị trấn Đak Pơ
+    -  Thị trấn Đinh Văn
+    -  Thị trấn Điện Biên Đông
+    -  Thị trấn Đoan Hùng
+    -  Thị trấn Đu
+    -  Thị trấn Đà Bắc
+    -  Thị trấn Đình Cả
+    -  Thị trấn Đình Lập
+    -  Thị trấn Đô Lương
+    -  Thị trấn Đông Anh
+    -  Thị trấn Đông Hưng
+    -  Thị trấn Đông Khê
+    -  Thị trấn Đông Phú
+    -  Thị trấn Đông Thành
+    -  Thị trấn Đăk Đoa
+    -  Thị trấn Đạ M'ri
+    -  Thị trấn Đạ Tẻh
+    -  Thị trấn Đại Nghĩa
+    -  Thị trấn Đại Ngãi
+    -  Thị trấn Đất Đỏ
+    -  Thị trấn Đầm Dơi
+    -  Thị trấn Đầm Hà
+    -  Thị trấn Đắk Glei
+    -  Thị trấn Đắk Hà
+    -  Thị trấn Đắk Mil
+    -  Thị trấn Đắk Mâm
+    -  Thị trấn Đắk Rve
+    -  Thị trấn Đắk Tô
+    -  Thị trấn Định An
+    -  Thị trấn Định Quán
+    -  Thị trấn Đồi Ngô
+    -  Thị trấn Đồng Lê
+    -  Thị trấn Đồng Mỏ
+    -  Thị trấn Đồng Tâm
+    -  Thị trấn Đồng Văn
+    -  Thị trấn Đồng Đăng
+    -  Thị trấn Đức An
+    -  Thị trấn Đức Hòa
+    -  Thị trấn Đức Phong
+    -  Thị trấn Đức Phổ
+    -  Thị trấn Đức Thọ
+    -  Thị trấn Đức Tài
+    -  Võ Thị Sáu
+    -  Xã  A Dơi
+    -  Xã  Bắc Sơn
+    -  Xã  Hoàng Văn Thụ
+    -  Xã  Hòa Thuận
+    -  Xã  Mỹ Lộc
+    -  Xã  Tư
+    -  Xã A Bung
+    -  Xã A Dơk
+    -  Xã A Lù
+    -  Xã A Mú Sung
+    -  Xã A Ngo
+    -  Xã A Nông
+    -  Xã A Rooi
+    -  Xã A Roằng
+    -  Xã A Ting
+    -  Xã A Tiêng
+    -  Xã A Túc
+    -  Xã A Vao
+    -  Xã A Vương
+    -  Xã A Xan
+    -  Xã A Xing
+    -  Xã A Đớt
+    -  Xã AL Bá
+    -  Xã AYun
+    -  Xã An Bá
+    -  Xã An Bình
+    -  Xã An Bình A
+    -  Xã An Bình B
+    -  Xã An Bình Tây
+    -  Xã An Bồi
+    -  Xã An Châu
+    -  Xã An Chấn
+    -  Xã An Cơ
+    -  Xã An Cư
+    -  Xã An Cầu
+    -  Xã An Dân
+    -  Xã An Dũng
+    -  Xã An Dương
+    -  Xã An Dục
+    -  Xã An Hiệp
+    -  Xã An Hoà
+    -  Xã An Hà
+    -  Xã An Hòa
+    -  Xã An Hòa Hải
+    -  Xã An Hòa Thịnh
+    -  Xã An Hòa Tây
+    -  Xã An Hóa
+    -  Xã An Hùng
+    -  Xã An Hưng
+    -  Xã An Hải
+    -  Xã An Hảo
+    -  Xã An Hồng
+    -  Xã An Hữu
+    -  Xã An Khang
+    -  Xã An Khánh
+    -  Xã An Khê
+    -  Xã An Khương
+    -  Xã An Linh
+    -  Xã An Long
+    -  Xã An Lâm
+    -  Xã An Lão
+    -  Xã An Lĩnh
+    -  Xã An Lư
+    -  Xã An Lương
+    -  Xã An Lạc
+    -  Xã An Lạc Tây
+    -  Xã An Lập
+    -  Xã An Lễ
+    -  Xã An Lộc
+    -  Xã An Lục Long
+    -  Xã An Minh Bắc
+    -  Xã An Mỹ
+    -  Xã An Nghiệp
+    -  Xã An Nghĩa
+    -  Xã An Ngãi
+    -  Xã An Ngãi Trung
+    -  Xã An Ngãi Tây
+    -  Xã An Nhơn
+    -  Xã An Nhơn Tây
+    -  Xã An Nhứt
+    -  Xã An Nhựt Tân
+    -  Xã An Ninh
+    -  Xã An Ninh Tây
+    -  Xã An Ninh Đông
+    -  Xã An Nông
+    -  Xã An Nội
+    -  Xã An Phong
+    -  Xã An Phú
+    -  Xã An Phú Thuận
+    -  Xã An Phú Trung
+    -  Xã An Phú Tân
+    -  Xã An Phú Tây
+    -  Xã An Phúc
+    -  Xã An Phước
+    -  Xã An Phượng
+    -  Xã An Phụ
+    -  Xã An Quang
+    -  Xã An Quy
+    -  Xã An Quí
+    -  Xã An Quảng Hữu
+    -  Xã An Sinh
+    -  Xã An Sơn
+    -  Xã An Thanh
+    -  Xã An Thuận
+    -  Xã An Thành
+    -  Xã An Thái
+    -  Xã An Thái Trung
+    -  Xã An Thái Đông
+    -  Xã An Thượng
+    -  Xã An Thạch
+    -  Xã An Thạnh
+    -  Xã An Thạnh 1
+    -  Xã An Thạnh 2
+    -  Xã An Thạnh Iii
+    -  Xã An Thạnh Nam
+    -  Xã An Thạnh Thủy
+    -  Xã An Thạnh Trung
+    -  Xã An Thạnh Tây
+    -  Xã An Thạnh Đông
+    -  Xã An Thắng
+    -  Xã An Thịnh
+    -  Xã An Thọ
+    -  Xã An Thới
+    -  Xã An Thới Đông
+    -  Xã An Thủy
+    -  Xã An Tiến
+    -  Xã An Toàn
+    -  Xã An Trung
+    -  Xã An Tràng
+    -  Xã An Trường
+    -  Xã An Trường A
+    -  Xã An Trạch
+    -  Xã An Trạch A
+    -  Xã An Tân
+    -  Xã An Tây
+    -  Xã An Tường
+    -  Xã An Tịnh
+    -  Xã An Tức
+    -  Xã An Vinh
+    -  Xã An Viên
+    -  Xã An Viễn
+    -  Xã An Vĩ
+    -  Xã An Vĩnh
+    -  Xã An Vĩnh Ngãi
+    -  Xã An Vũ
+    -  Xã An Xuyên
+    -  Xã An Xuân
+    -  Xã An Điền
+    -  Xã An Đạo
+    -  Xã An Định
+    -  Xã An Đồng
+    -  Xã An Đổ
+    -  Xã An Đức
+    -  Xã An Ấp
+    -  Xã Anh Sơn
+    -  Xã Ayun
+    -  Xã Ayun Hạ
+    -  Xã B' Lá
+    -  Xã Ba
+    -  Xã Ba Bích
+    -  Xã Ba Chùa
+    -  Xã Ba Cung
+    -  Xã Ba Cụm Bắc
+    -  Xã Ba Cụm Nam
+    -  Xã Ba Dinh
+    -  Xã Ba Giang
+    -  Xã Ba Khan
+    -  Xã Ba Khâm
+    -  Xã Ba Liên
+    -  Xã Ba Lòng
+    -  Xã Ba Lế
+    -  Xã Ba Nam
+    -  Xã Ba Nang
+    -  Xã Ba Ngạc
+    -  Xã Ba Sao
+    -  Xã Ba Thành
+    -  Xã Ba Tiêu
+    -  Xã Ba Trang
+    -  Xã Ba Trinh
+    -  Xã Ba Trại
+    -  Xã Ba Tô
+    -  Xã Ba Tầng
+    -  Xã Ba Vinh
+    -  Xã Ba Vì
+    -  Xã Ba Xa
+    -  Xã Ba Điền
+    -  Xã Ba Đình
+    -  Xã Ba Động
+    -  Xã Ban Công
+    -  Xã Bao La
+    -  Xã Bar Măih
+    -  Xã Bha Lê
+    -  Xã Biên Giới
+    -  Xã Biên Sơn
+    -  Xã Biển Bạch
+    -  Xã Biển Bạch Đông
+    -  Xã Biển Hồ
+    -  Xã Biển Động
+    -  Xã Bok Tới
+    -  Xã Bom Bo
+    -  Xã Bon Phặng
+    -  Xã Bum Nưa
+    -  Xã Bun Tở
+    -  Xã Buôn Choah
+    -  Xã Buôn Triết
+    -  Xã Buôn Tría
+    -  Xã Bà Điểm
+    -  Xã Bài Sơn
+    -  Xã Bàn Giản
+    -  Xã Bàn Long
+    -  Xã Bàn Thạch
+    -  Xã Bàn Tân Định
+    -  Xã Bàn Đạt
+    -  Xã Bành Trạch
+    -  Xã Bàu Chinh
+    -  Xã Bàu Cạn
+    -  Xã Bàu Hàm
+    -  Xã Bàu Hàm 2
+    -  Xã Bàu Lâm
+    -  Xã Bàu Năng
+    -  Xã Bàu Sen
+    -  Xã Bàu Trâm
+    -  Xã Bàu Đồn
+    -  Xã Bá Hiến
+    -  Xã Bá Xuyên
+    -  Xã Bách Thuận
+    -  Xã Báo Đáp
+    -  Xã Bát Mọt
+    -  Xã Bát Trang
+    -  Xã Bát Tràng
+    -  Xã Bát Đại Sơn
+    -  Xã Bãi Sậy
+    -  Xã Bãi Thơm
+    -  Xã Bãi Trành
+    -  Xã Bình An
+    -  Xã Bình Ba
+    -  Xã Bình Bộ
+    -  Xã Bình Chuẩn
+    -  Xã Bình Chánh
+    -  Xã Bình Chân
+    -  Xã Bình Châu
+    -  Xã Bình Chương
+    -  Xã Bình Cảng
+    -  Xã Bình Dân
+    -  Xã Bình Dương
+    -  Xã Bình Giang
+    -  Xã Bình Giáo
+    -  Xã Bình Giã
+    -  Xã Bình Hiệp
+    -  Xã Bình Hoà
+    -  Xã Bình Hàng Trung
+    -  Xã Bình Hàng Tây
+    -  Xã Bình Hòa
+    -  Xã Bình Hòa Bắc
+    -  Xã Bình Hòa Hưng
+    -  Xã Bình Hòa Nam
+    -  Xã Bình Hòa Phước
+    -  Xã Bình Hòa Trung
+    -  Xã Bình Hòa Tây
+    -  Xã Bình Hòa Đông
+    -  Xã Bình Hưng
+    -  Xã Bình Hải
+    -  Xã Bình Hẻm
+    -  Xã Bình Khánh
+    -  Xã Bình Khánh Tây
+    -  Xã Bình Khánh Đông
+    -  Xã Bình Khê
+    -  Xã Bình Khương
+    -  Xã Bình Kiến
+    -  Xã Bình Kiều
+    -  Xã Bình La
+    -  Xã Bình Long
+    -  Xã Bình Lâm
+    -  Xã Bình Lãng
+    -  Xã Bình Lãnh
+    -  Xã Bình Lăng
+    -  Xã Bình Lư
+    -  Xã Bình Lương
+    -  Xã Bình Lộc
+    -  Xã Bình Lợi
+    -  Xã Bình Minh
+    -  Xã Bình Mỹ
+    -  Xã Bình Nam
+    -  Xã Bình Nghi
+    -  Xã Bình Nghĩa
+    -  Xã Bình Nghị
+    -  Xã Bình Nguyên
+    -  Xã Bình Ngọc
+    -  Xã Bình Nhân
+    -  Xã Bình Nhì
+    -  Xã Bình Ninh
+    -  Xã Bình Phan
+    -  Xã Bình Phong Thạnh
+    -  Xã Bình Phú
+    -  Xã Bình Phúc
+    -  Xã Bình Phước
+    -  Xã Bình Phước Xuân
+    -  Xã Bình Phục
+    -  Xã Bình Phục Nhứt
+    -  Xã Bình Quý
+    -  Xã Bình Quế
+    -  Xã Bình Quới
+    -  Xã Bình Sa
+    -  Xã Bình Sơn
+    -  Xã Bình Thanh
+    -  Xã Bình Thanh Tây
+    -  Xã Bình Thanh Đông
+    -  Xã Bình Thuận
+    -  Xã Bình Thành
+    -  Xã Bình Thạnh
+    -  Xã Bình Thạnh Trung
+    -  Xã Bình Thạnh Đông
+    -  Xã Bình Thắng
+    -  Xã Bình Thới
+    -  Xã Bình Thủy
+    -  Xã Bình Tiến
+    -  Xã Bình Trinh Đông
+    -  Xã Bình Triều
+    -  Xã Bình Trung
+    -  Xã Bình Trưng
+    -  Xã Bình Trị
+    -  Xã Bình Tâm
+    -  Xã Bình Tân
+    -  Xã Bình Tân Phú
+    -  Xã Bình Tú
+    -  Xã Bình Tường
+    -  Xã Bình Tấn
+    -  Xã Bình Tịnh
+    -  Xã Bình Văn
+    -  Xã Bình Xa
+    -  Xã Bình Xuyên
+    -  Xã Bình Xuân
+    -  Xã Bình Yên
+    -  Xã Bình Ân
+    -  Xã Bình Điền
+    -  Xã Bình Đào
+    -  Xã Bình Đông
+    -  Xã Bình Định
+    -  Xã Bình Định Bắc
+    -  Xã Bình Định Nam
+    -  Xã Bình Đức
+    -  Xã Bích Hòa
+    -  Xã Bích Sơn
+    -  Xã Bính Xá
+    -  Xã Bó Mười
+    -  Xã Bó Sinh
+    -  Xã Bông Krang
+    -  Xã Bông Trang
+    -  Xã Bù Gia Mập
+    -  Xã Bù Nho
+    -  Xã Bùi La Nhân
+    -  Xã Bùi Xá
+    -  Xã Búng Lao
+    -  Xã Băng A Drênh
+    -  Xã Bưng Riềng
+    -  Xã Bạch Hà
+    -  Xã Bạch Hạ
+    -  Xã Bạch Long
+    -  Xã Bạch Lưu
+    -  Xã Bạch Ngọc
+    -  Xã Bạch Sam
+    -  Xã Bạch Thượng
+    -  Xã Bạch Xa
+    -  Xã Bạch Đích
+    -  Xã Bạch Đằng
+    -  Xã Bản Bo
+    -  Xã Bản Cái
+    -  Xã Bản Công
+    -  Xã Bản Cầm
+    -  Xã Bản Díu
+    -  Xã Bản Giang
+    -  Xã Bản Già
+    -  Xã Bản Hon
+    -  Xã Bản Hồ
+    -  Xã Bản Khoang
+    -  Xã Bản Lang
+    -  Xã Bản Liền
+    -  Xã Bản Luốc
+    -  Xã Bản Lầm
+    -  Xã Bản Lầu
+    -  Xã Bản Máy
+    -  Xã Bản Mù
+    -  Xã Bản Mế
+    -  Xã Bản Ngoại
+    -  Xã Bản Nguyên
+    -  Xã Bản Ngò
+    -  Xã Bản Nhùng
+    -  Xã Bản Phiệt
+    -  Xã Bản Phùng
+    -  Xã Bản Phố
+    -  Xã Bản Péo
+    -  Xã Bản Qua
+    -  Xã Bản Rịa
+    -  Xã Bản Sen
+    -  Xã Bản Thi
+    -  Xã Bản Vược
+    -  Xã Bản Xèo
+    -  Xã Bảo Bình
+    -  Xã Bảo Cường
+    -  Xã Bảo Hiệu
+    -  Xã Bảo Hoà
+    -  Xã Bảo Hà
+    -  Xã Bảo Hưng
+    -  Xã Bảo Khê
+    -  Xã Bảo Linh
+    -  Xã Bảo Lâm
+    -  Xã Bảo Lý
+    -  Xã Bảo Nam
+    -  Xã Bảo Nhai
+    -  Xã Bảo Ninh
+    -  Xã Bảo Quang
+    -  Xã Bảo Sơn
+    -  Xã Bảo Thanh
+    -  Xã Bảo Thuận
+    -  Xã Bảo Thành
+    -  Xã Bảo Thạnh
+    -  Xã Bảo Thắng
+    -  Xã Bảo Toàn
+    -  Xã Bảo Vinh
+    -  Xã Bảo Yên
+    -  Xã Bảo Ái
+    -  Xã Bảo Đài
+    -  Xã Bắc An
+    -  Xã Bắc Bình
+    -  Xã Bắc Hòa
+    -  Xã Bắc Hùng
+    -  Xã Bắc Hưng
+    -  Xã Bắc Hải
+    -  Xã Bắc Hồng
+    -  Xã Bắc Hợp
+    -  Xã Bắc La
+    -  Xã Bắc Lãng
+    -  Xã Bắc Lý
+    -  Xã Bắc Lũng
+    -  Xã Bắc Lương
+    -  Xã Bắc Ngà
+    -  Xã Bắc Phong
+    -  Xã Bắc Phú
+    -  Xã Bắc Quỳnh
+    -  Xã Bắc Ruộng
+    -  Xã Bắc Sơn
+    -  Xã Bắc Thành
+    -  Xã Bắc Thủy
+    -  Xã Bắc Trạch
+    -  Xã Bắc Việt
+    -  Xã Bắc Xa
+    -  Xã Bắc Ái
+    -  Xã Bằng An
+    -  Xã Bằng Cả
+    -  Xã Bằng Cốc
+    -  Xã Bằng Doãn
+    -  Xã Bằng Giã
+    -  Xã Bằng Hành
+    -  Xã Bằng Hữu
+    -  Xã Bằng Khánh
+    -  Xã Bằng Lang
+    -  Xã Bằng Luân
+    -  Xã Bằng Lãng
+    -  Xã Bằng Mạc
+    -  Xã Bằng Phúc
+    -  Xã Bằng Thành
+    -  Xã Bằng Vân
+    -  Xã Bế Triều
+    -  Xã Bế Văn Đàn
+    -  Xã Bến Củi
+    -  Xã Bố Hạ
+    -  Xã Bối Cầu
+    -  Xã Bồ Lý
+    -  Xã Bồ Sao
+    -  Xã Bồ Đề
+    -  Xã Bồi Sơn
+    -  Xã Bồng Am
+    -  Xã Bồng Khê
+    -  Xã Bồng Lai
+    -  Xã Bộc Bố
+    -  Xã Bộc Nhiêu
+    -  Xã Bột Xuyên
+    -  Xã Bờ Ngoong
+    -  Xã Ca Thành
+    -  Xã Ca Đình
+    -  Xã Cai Bộ
+    -  Xã Cai Kinh
+    -  Xã Cam An
+    -  Xã Cam An Bắc
+    -  Xã Cam An Nam
+    -  Xã Cam Bình
+    -  Xã Cam Chính
+    -  Xã Cam Cọn
+    -  Xã Cam Hiếu
+    -  Xã Cam Hiệp Bắc
+    -  Xã Cam Hiệp Nam
+    -  Xã Cam Hòa
+    -  Xã Cam Hải Tây
+    -  Xã Cam Hải Đông
+    -  Xã Cam Lâm
+    -  Xã Cam Lập
+    -  Xã Cam Nghĩa
+    -  Xã Cam Phước Tây
+    -  Xã Cam Phước Đông
+    -  Xã Cam Thanh
+    -  Xã Cam Thành
+    -  Xã Cam Thành Bắc
+    -  Xã Cam Thành Nam
+    -  Xã Cam Thượng
+    -  Xã Cam Thịnh Tây
+    -  Xã Cam Thịnh Đông
+    -  Xã Cam Thủy
+    -  Xã Cam Tuyền
+    -  Xã Cam Tân
+    -  Xã Cam Đường
+    -  Xã Canh Hiển
+    -  Xã Canh Hiệp
+    -  Xã Canh Hòa
+    -  Xã Canh Liên
+    -  Xã Canh Nậu
+    -  Xã Canh Thuận
+    -  Xã Canh Tân
+    -  Xã Canh Vinh
+    -  Xã Cao An
+    -  Xã Cao Bồ
+    -  Xã Cao Chương
+    -  Xã Cao Dương
+    -  Xã Cao Kỳ
+    -  Xã Cao Lâu
+    -  Xã Cao Minh
+    -  Xã Cao Mã Pờ
+    -  Xã Cao Ngạn
+    -  Xã Cao Ngọc
+    -  Xã Cao Nhân
+    -  Xã Cao Phong
+    -  Xã Cao Phạ
+    -  Xã Cao Quảng
+    -  Xã Cao Răm
+    -  Xã Cao Sơn
+    -  Xã Cao Thành
+    -  Xã Cao Thăng
+    -  Xã Cao Thượng
+    -  Xã Cao Thắng
+    -  Xã Cao Thịnh
+    -  Xã Cao Trĩ
+    -  Xã Cao Tân
+    -  Xã Cao Viên
+    -  Xã Cao Xá
+    -  Xã Cao Đại
+    -  Xã Cao Đức
+    -  Xã Ch'ơm
+    -  Xã Chi Khê
+    -  Xã Chi Lăng
+    -  Xã Chi Lăng Bắc
+    -  Xã Chi Lăng Nam
+    -  Xã Chi Thiết
+    -  Xã Chim Vàn
+    -  Xã Chiên Sơn
+    -  Xã Chiêu Lưu
+    -  Xã Chiêu Vũ
+    -  Xã Chiêu Yên
+    -  Xã Chiến Phố
+    -  Xã Chiến Thắng
+    -  Xã Chiềng Ban
+    -  Xã Chiềng Bôm
+    -  Xã Chiềng Bằng
+    -  Xã Chiềng Cang
+    -  Xã Chiềng Chung
+    -  Xã Chiềng Châu
+    -  Xã Chiềng Chăn
+    -  Xã Chiềng Công
+    -  Xã Chiềng Cọ
+    -  Xã Chiềng Dong
+    -  Xã Chiềng En
+    -  Xã Chiềng Hoa
+    -  Xã Chiềng Hắc
+    -  Xã Chiềng Hặc
+    -  Xã Chiềng Ken
+    -  Xã Chiềng Khay
+    -  Xã Chiềng Kheo
+    -  Xã Chiềng Khoa
+    -  Xã Chiềng Khoang
+    -  Xã Chiềng Khoi
+    -  Xã Chiềng Khoong
+    -  Xã Chiềng Khương
+    -  Xã Chiềng Khừa
+    -  Xã Chiềng La
+    -  Xã Chiềng Lao
+    -  Xã Chiềng Ly
+    -  Xã Chiềng Lương
+    -  Xã Chiềng Mai
+    -  Xã Chiềng Mung
+    -  Xã Chiềng Muôn
+    -  Xã Chiềng Ngàm
+    -  Xã Chiềng Ngần
+    -  Xã Chiềng Nơi
+    -  Xã Chiềng On
+    -  Xã Chiềng Pha
+    -  Xã Chiềng Phung
+    -  Xã Chiềng Pấc
+    -  Xã Chiềng Pằn
+    -  Xã Chiềng San
+    -  Xã Chiềng Sinh
+    -  Xã Chiềng Sung
+    -  Xã Chiềng Sàng
+    -  Xã Chiềng Sơ
+    -  Xã Chiềng Sơn
+    -  Xã Chiềng Sại
+    -  Xã Chiềng Tương
+    -  Xã Chiềng Ve
+    -  Xã Chiềng Xuân
+    -  Xã Chiềng Xôm
+    -  Xã Chiềng Yên
+    -  Xã Chiềng Ân
+    -  Xã Chiềng Đen
+    -  Xã Chiềng Đông
+    -  Xã Chiềng Ơn
+    -  Xã Chrôh Pơnan
+    -  Xã Chu Hóa
+    -  Xã Chu Hương
+    -  Xã Chu Minh
+    -  Xã Chu Phan
+    -  Xã Chu Trinh
+    -  Xã Chu Túc
+    -  Xã Chu Điện
+    -  Xã Chung Chải
+    -  Xã Chuyên Mỹ
+    -  Xã Chuyên Ngoại
+    -  Xã Chuế Lưu
+    -  Xã Chà Cang
+    -  Xã Chà Là
+    -  Xã Chà Nưa
+    -  Xã Chà Tở
+    -  Xã Chà Vàl
+    -  Xã Chàng Sơn
+    -  Xã Chánh An
+    -  Xã Chánh Hội
+    -  Xã Chân Lý
+    -  Xã Chân Mộng
+    -  Xã Chân Sơn
+    -  Xã Châu Bình
+    -  Xã Châu Bính
+    -  Xã Châu Can
+    -  Xã Châu Cường
+    -  Xã Châu Giang
+    -  Xã Châu Hoàn
+    -  Xã Châu Hòa
+    -  Xã Châu Hóa
+    -  Xã Châu Hưng
+    -  Xã Châu Hưng A
+    -  Xã Châu Hạnh
+    -  Xã Châu Hồng
+    -  Xã Châu Hội
+    -  Xã Châu Khánh
+    -  Xã Châu Khê
+    -  Xã Châu Kim
+    -  Xã Châu Lý
+    -  Xã Châu Lăng
+    -  Xã Châu Lộc
+    -  Xã Châu Minh
+    -  Xã Châu Nga
+    -  Xã Châu Nhân
+    -  Xã Châu Pha
+    -  Xã Châu Phong
+    -  Xã Châu Quang
+    -  Xã Châu Quế Hạ
+    -  Xã Châu Quế Thượng
+    -  Xã Châu Sơn
+    -  Xã Châu Thuận
+    -  Xã Châu Thành
+    -  Xã Châu Thái
+    -  Xã Châu Thôn
+    -  Xã Châu Thắng
+    -  Xã Châu Thới
+    -  Xã Châu Tiến
+    -  Xã Châu Điền
+    -  Xã Châu Đình
+    -  Xã Chí Cà
+    -  Xã Chí Công
+    -  Xã Chí Hòa
+    -  Xã Chí Minh
+    -  Xã Chí Thiện
+    -  Xã Chí Thảo
+    -  Xã Chí Tiên
+    -  Xã Chí Tân
+    -  Xã Chí Viễn
+    -  Xã Chí Đám
+    -  Xã Chí Đạo
+    -  Xã Chính Công
+    -  Xã Chính Lý
+    -  Xã Chính Mỹ
+    -  Xã Chính Nghĩa
+    -  Xã Chính Tâm
+    -  Xã Chăn Nưa
+    -  Xã Chơ Chun
+    -  Xã Chơ Long
+    -  Xã Chư A Thai
+    -  Xã Chư Băh
+    -  Xã Chư Don
+    -  Xã Chư Drăng
+    -  Xã Chư Gu
+    -  Xã Chư HDrông
+    -  Xã Chư Hreng
+    -  Xã Chư Jôr
+    -  Xã Chư KBô
+    -  Xã Chư Krêy
+    -  Xã Chư Mố
+    -  Xã Chư Ngọc
+    -  Xã Chư Pơng
+    -  Xã Chư Rcăm
+    -  Xã Chư Răng
+    -  Xã Chư Á
+    -  Xã Chư Đăng Ya
+    -  Xã Chương Dương
+    -  Xã Chương Xá
+    -  Xã Chấn Hưng
+    -  Xã Chấn Thịnh
+    -  Xã Chất Bình
+    -  Xã Chế Cu Nha
+    -  Xã Chế Là
+    -  Xã Chế Tạo
+    -  Xã Chỉ Đạo
+    -  Xã Co Mạ
+    -  Xã Co Tòng
+    -  Xã Cuebuor
+    -  Xã Cun Pheo
+    -  Xã Cuor Đăng
+    -  Xã Cuôr KNia
+    -  Xã Cuối Hạ
+    -  Xã Cà Dy
+    -  Xã Cà Lúi
+    -  Xã Cà Nàng
+    -  Xã Cà Ná
+    -  Xã Các Sơn
+    -  Xã Cách Bi
+    -  Xã Cách Linh
+    -  Xã Cái Chiên
+    -  Xã Cán Chu Phìn
+    -  Xã Cán Cấu
+    -  Xã Cán Hồ
+    -  Xã Cán Khê
+    -  Xã Cán Tỷ
+    -  Xã Cáo Điền
+    -  Xã Cát Chánh
+    -  Xã Cát Hanh
+    -  Xã Cát Hiệp
+    -  Xã Cát Hưng
+    -  Xã Cát Hải
+    -  Xã Cát Khánh
+    -  Xã Cát Lâm
+    -  Xã Cát Minh
+    -  Xã Cát Nhơn
+    -  Xã Cát Nê
+    -  Xã Cát Quế
+    -  Xã Cát Sơn
+    -  Xã Cát Thành
+    -  Xã Cát Thắng
+    -  Xã Cát Thịnh
+    -  Xã Cát Tiến
+    -  Xã Cát Trinh
+    -  Xã Cát Trù
+    -  Xã Cát Tài
+    -  Xã Cát Tân
+    -  Xã Cát Tường
+    -  Xã Cát Vân
+    -  Xã Cát Văn
+    -  Xã Cây Gáo
+    -  Xã Cây Thị
+    -  Xã Cây Trường II
+    -  Xã Cò Nòi
+    -  Xã Cô Ba
+    -  Xã Cô Mười
+    -  Xã Cô Ngân
+    -  Xã Cô Tô
+    -  Xã Côn Lôn
+    -  Xã Côn Minh
+    -  Xã Côn Đảo
+    -  Xã Công Bình
+    -  Xã Công Bằng
+    -  Xã Công Chính
+    -  Xã Công Hải
+    -  Xã Công Liêm
+    -  Xã Công Lý
+    -  Xã Công Sơn
+    -  Xã Công Thành
+    -  Xã Công Trừng
+    -  Xã Công Đa
+    -  Xã Cù Bị
+    -  Xã Cù Vân
+    -  Xã Cúc Phương
+    -  Xã Cúc Đường
+    -  Xã Căm Muộn
+    -  Xã Căn Co
+    -  Xã Cư A Mung
+    -  Xã Cư An
+    -  Xã Cư Bao
+    -  Xã Cư Bông
+    -  Xã Cư Dliê M'nông
+    -  Xã Cư Drăm
+    -  Xã Cư ELang
+    -  Xã Cư Huê
+    -  Xã Cư Jang
+    -  Xã Cư K Róa
+    -  Xã Cư KBang
+    -  Xã Cư KTy
+    -  Xã Cư Klông
+    -  Xã Cư Knia
+    -  Xã Cư Lễ
+    -  Xã Cư M'Lan
+    -  Xã Cư M'gar
+    -  Xã Cư M'ta
+    -  Xã Cư Mốt
+    -  Xã Cư Ni
+    -  Xã Cư Né
+    -  Xã Cư Prao
+    -  Xã Cư Prông
+    -  Xã Cư Pui
+    -  Xã Cư Pơng
+    -  Xã Cư San
+    -  Xã Cư Suê
+    -  Xã Cư Yên
+    -  Xã Cư Ê Wi
+    -  Xã Cương Chính
+    -  Xã Cương Gián
+    -  Xã Cương Sơn
+    -  Xã Cường Lợi
+    -  Xã Cường Thịnh
+    -  Xã Cải Viên
+    -  Xã Cảm Nhân
+    -  Xã Cảm Ân
+    -  Xã Cảnh Dương
+    -  Xã Cảnh Hóa
+    -  Xã Cảnh Hưng
+    -  Xã Cảnh Thụy
+    -  Xã Cảnh Tiên
+    -  Xã Cấm Sơn
+    -  Xã Cấn Hữu
+    -  Xã Cấp Dẫn
+    -  Xã Cấp Tiến
+    -  Xã Cần Kiệm
+    -  Xã Cần Nông
+    -  Xã Cần Yên
+    -  Xã Cần Đăng
+    -  Xã Cầu Bà
+    -  Xã Cầu Khởi
+    -  Xã Cầu Lộc
+    -  Xã Cẩm Bình
+    -  Xã Cẩm Châu
+    -  Xã Cẩm Chế
+    -  Xã Cẩm Duệ
+    -  Xã Cẩm Dương
+    -  Xã Cẩm Giang
+    -  Xã Cẩm Giàng
+    -  Xã Cẩm Hoàng
+    -  Xã Cẩm Huy
+    -  Xã Cẩm Hà
+    -  Xã Cẩm Hòa
+    -  Xã Cẩm Hưng
+    -  Xã Cẩm Hải
+    -  Xã Cẩm Kim
+    -  Xã Cẩm La
+    -  Xã Cẩm Liên
+    -  Xã Cẩm Long
+    -  Xã Cẩm Lý
+    -  Xã Cẩm Lĩnh
+    -  Xã Cẩm Lương
+    -  Xã Cẩm Lạc
+    -  Xã Cẩm Lộc
+    -  Xã Cẩm Minh
+    -  Xã Cẩm Mỹ
+    -  Xã Cẩm Nam
+    -  Xã Cẩm Ngọc
+    -  Xã Cẩm Nhượng
+    -  Xã Cẩm Ninh
+    -  Xã Cẩm Phong
+    -  Xã Cẩm Phú
+    -  Xã Cẩm Phúc
+    -  Xã Cẩm Quan
+    -  Xã Cẩm Quang
+    -  Xã Cẩm Quý
+    -  Xã Cẩm Sơn
+    -  Xã Cẩm Thanh
+    -  Xã Cẩm Thành
+    -  Xã Cẩm Thăng
+    -  Xã Cẩm Thạch
+    -  Xã Cẩm Thịnh
+    -  Xã Cẩm Trung
+    -  Xã Cẩm Tâm
+    -  Xã Cẩm Tân
+    -  Xã Cẩm Tú
+    -  Xã Cẩm Vân
+    -  Xã Cẩm Văn
+    -  Xã Cẩm Vĩnh
+    -  Xã Cẩm Vũ
+    -  Xã Cẩm Xá
+    -  Xã Cẩm Yên
+    -  Xã Cẩm Điền
+    -  Xã Cẩm Đoài
+    -  Xã Cẩm Đàn
+    -  Xã Cẩm Đình
+    -  Xã Cẩm Đông
+    -  Xã Cẩm Đường
+    -  Xã Cẩm Định
+    -  Xã Cố Nghĩa
+    -  Xã Cốc Ly
+    -  Xã Cốc Lầu
+    -  Xã Cốc Mỳ
+    -  Xã Cốc Pàng
+    -  Xã Cốc Rế
+    -  Xã Cốc San
+    -  Xã Cốc Đán
+    -  Xã Cồn Thoi
+    -  Xã Cổ Am
+    -  Xã Cổ Bi
+    -  Xã Cổ Dũng
+    -  Xã Cổ Linh
+    -  Xã Cổ Loa
+    -  Xã Cổ Lũng
+    -  Xã Cổ Thành
+    -  Xã Cổ Tiết
+    -  Xã Cổ Đô
+    -  Xã Cổ Đông
+    -  Xã Cỗ Đạm
+    -  Xã Cộng Hiền
+    -  Xã Cộng Hòa
+    -  Xã Cộng Lạc
+    -  Xã Cửa Cạn
+    -  Xã Cửa Dương
+    -  Xã Cửu An
+    -  Xã Cửu Cao
+    -  Xã Cự Khê
+    -  Xã Cự Nẫm
+    -  Xã Cự Thắng
+    -  Xã Cự Đồng
+    -  Xã Dak Lua
+    -  Xã Dak Mang
+    -  Xã Dang
+    -  Xã Dang Kang
+    -  Xã Danh Sỹ
+    -  Xã Danh Thắng
+    -  Xã Di Trạch
+    -  Xã Diên An
+    -  Xã Diên Bình
+    -  Xã Diên Hòa
+    -  Xã Diên Hồng
+    -  Xã Diên Lâm
+    -  Xã Diên Lãm
+    -  Xã Diên Lạc
+    -  Xã Diên Lộc
+    -  Xã Diên Phú
+    -  Xã Diên Phước
+    -  Xã Diên Sơn
+    -  Xã Diên Thạnh
+    -  Xã Diên Thọ
+    -  Xã Diên Toàn
+    -  Xã Diên Tân
+    -  Xã Diên Xuân
+    -  Xã Diên Điền
+    -  Xã Diên Đồng
+    -  Xã Diễn An
+    -  Xã Diễn Bình
+    -  Xã Diễn Bích
+    -  Xã Diễn Cát
+    -  Xã Diễn Hoa
+    -  Xã Diễn Hoàng
+    -  Xã Diễn Hùng
+    -  Xã Diễn Hạnh
+    -  Xã Diễn Hải
+    -  Xã Diễn Hồng
+    -  Xã Diễn Kim
+    -  Xã Diễn Kỷ
+    -  Xã Diễn Liên
+    -  Xã Diễn Lâm
+    -  Xã Diễn Lộc
+    -  Xã Diễn Lợi
+    -  Xã Diễn Minh
+    -  Xã Diễn Mỹ
+    -  Xã Diễn Nguyên
+    -  Xã Diễn Ngọc
+    -  Xã Diễn Phong
+    -  Xã Diễn Phú
+    -  Xã Diễn Phúc
+    -  Xã Diễn Quảng
+    -  Xã Diễn Thành
+    -  Xã Diễn Thái
+    -  Xã Diễn Tháp
+    -  Xã Diễn Thắng
+    -  Xã Diễn Thịnh
+    -  Xã Diễn Thọ
+    -  Xã Diễn Trung
+    -  Xã Diễn Trường
+    -  Xã Diễn Tân
+    -  Xã Diễn Vạn
+    -  Xã Diễn Xuân
+    -  Xã Diễn Yên
+    -  Xã Diễn Đoài
+    -  Xã Diễn Đồng
+    -  Xã Dlê Yang
+    -  Xã Do Nhân
+    -  Xã Dray Bhăng
+    -  Xã Dray Sáp
+    -  Xã Du Già
+    -  Xã Du Lễ
+    -  Xã Du Tiến
+    -  Xã Dun
+    -  Xã Dur KMăl
+    -  Xã Duy Châu
+    -  Xã Duy Hòa
+    -  Xã Duy Hải
+    -  Xã Duy Minh
+    -  Xã Duy Nghĩa
+    -  Xã Duy Nhất
+    -  Xã Duy Ninh
+    -  Xã Duy Phiên
+    -  Xã Duy Phú
+    -  Xã Duy Phước
+    -  Xã Duy Sơn
+    -  Xã Duy Thu
+    -  Xã Duy Thành
+    -  Xã Duy Trinh
+    -  Xã Duy Trung
+    -  Xã Duy Tân
+    -  Xã Duy Vinh
+    -  Xã Duyên Hà
+    -  Xã Duyên Hải
+    -  Xã Duyên Thái
+    -  Xã Dào San
+    -  Xã Dân Chủ
+    -  Xã Dân Hòa
+    -  Xã Dân Hóa
+    -  Xã Dân Hạ
+    -  Xã Dân Lý
+    -  Xã Dân Lực
+    -  Xã Dân Quyền
+    -  Xã Dân Thành
+    -  Xã Dân Tiến
+    -  Xã Dìn Chin
+    -  Xã Dĩnh Trì
+    -  Xã Dũng Liệt
+    -  Xã Dũng Nghĩa
+    -  Xã Dũng Phong
+    -  Xã Dũng Tiến
+    -  Xã Dương Huy
+    -  Xã Dương Hà
+    -  Xã Dương Hòa
+    -  Xã Dương Hưu
+    -  Xã Dương Hồng Thủy
+    -  Xã Dương Liễu
+    -  Xã Dương Phong
+    -  Xã Dương Phúc
+    -  Xã Dương Quan
+    -  Xã Dương Quang
+    -  Xã Dương Quỳ
+    -  Xã Dương Sơn
+    -  Xã Dương Thành
+    -  Xã Dương Thủy
+    -  Xã Dương Tơ
+    -  Xã Dương Xuân Hội
+    -  Xã Dương Xá
+    -  Xã Dương Đức
+    -  Xã Dưỡng Điềm
+    -  Xã Dạ Trạch
+    -  Xã Dần Thàng
+    -  Xã Dậu Dương
+    -  Xã Dế Su Phình
+    -  Xã Dền Sáng
+    -  Xã Dền Thàng
+    -  Xã Dị Chế
+    -  Xã Dị Nậu
+    -  Xã Dị Sử
+    -  Xã Dồm Cang
+    -  Xã Dục Tú
+    -  Xã Dực Yên
+    -  Xã Ea BHốk
+    -  Xã Ea Bar
+    -  Xã Ea Blang
+    -  Xã Ea Bung
+    -  Xã Ea Bá
+    -  Xã Ea Bông
+    -  Xã Ea D'Rơng
+    -  Xã Ea Drông
+    -  Xã Ea Dăh
+    -  Xã Ea H'MLay
+    -  Xã Ea H'leo
+    -  Xã Ea H'đinh
+    -  Xã Ea Hiao
+    -  Xã Ea Hiu
+    -  Xã Ea Hu
+    -  Xã Ea Huar
+    -  Xã Ea Hồ
+    -  Xã Ea KNuec
+    -  Xã Ea KPam
+    -  Xã Ea Khal
+    -  Xã Ea Kiết
+    -  Xã Ea Kly
+    -  Xã Ea Kmút
+    -  Xã Ea Ktur
+    -  Xã Ea Kuêh
+    -  Xã Ea Kuăng
+    -  Xã Ea Kênh
+    -  Xã Ea Lai
+    -  Xã Ea Lâm
+    -  Xã Ea Lê
+    -  Xã Ea M' Doal
+    -  Xã Ea M'DRóh
+    -  Xã Ea M'nang
+    -  Xã Ea Na
+    -  Xã Ea Nam
+    -  Xã Ea Ngai
+    -  Xã Ea Ning
+    -  Xã Ea Nuôl
+    -  Xã Ea Phê
+    -  Xã Ea Pil
+    -  Xã Ea Puk
+    -  Xã Ea Pô
+    -  Xã Ea Păl
+    -  Xã Ea R'Bin
+    -  Xã Ea Ral
+    -  Xã Ea Riêng
+    -  Xã Ea Rốk
+    -  Xã Ea Sar
+    -  Xã Ea Sin
+    -  Xã Ea Siên
+    -  Xã Ea Sol
+    -  Xã Ea Sô
+    -  Xã Ea Tam
+    -  Xã Ea Tar
+    -  Xã Ea Tih
+    -  Xã Ea Tir
+    -  Xã Ea Tiêu
+    -  Xã Ea Trang
+    -  Xã Ea Trul
+    -  Xã Ea Tul
+    -  Xã Ea Tân
+    -  Xã Ea Tóh
+    -  Xã Ea Uy
+    -  Xã Ea Wer
+    -  Xã Ea Wy
+    -  Xã Ea Yiêng
+    -  Xã Ea Yông
+    -  Xã Ea Ô
+    -  Xã Ea Đar
+    -  Xã EaBar
+    -  Xã EaBia
+    -  Xã EaTrol
+    -  Xã Eachà Rang
+    -  Xã Eakao
+    -  Xã Ealy
+    -  Xã Eatu
+    -  Xã Ga Ri
+    -  Xã Gia An
+    -  Xã Gia Bình
+    -  Xã Gia Bắc
+    -  Xã Gia Canh
+    -  Xã Gia Cát
+    -  Xã Gia Hanh
+    -  Xã Gia Hiệp
+    -  Xã Gia Huynh
+    -  Xã Gia Hòa
+    -  Xã Gia Hòa 1
+    -  Xã Gia Hòa 2
+    -  Xã Gia Hưng
+    -  Xã Gia Hội
+    -  Xã Gia Khánh
+    -  Xã Gia Kiệm
+    -  Xã Gia Luận
+    -  Xã Gia Lâm
+    -  Xã Gia Lương
+    -  Xã Gia Lạc
+    -  Xã Gia Lập
+    -  Xã Gia Lộc
+    -  Xã Gia Minh
+    -  Xã Gia Miễn
+    -  Xã Gia Mô
+    -  Xã Gia Ninh
+    -  Xã Gia Phong
+    -  Xã Gia Phù
+    -  Xã Gia Phú
+    -  Xã Gia Phương
+    -  Xã Gia Phố
+    -  Xã Gia Sinh
+    -  Xã Gia Sơn
+    -  Xã Gia Thanh
+    -  Xã Gia Thuận
+    -  Xã Gia Thắng
+    -  Xã Gia Thịnh
+    -  Xã Gia Thủy
+    -  Xã Gia Tiến
+    -  Xã Gia Trung
+    -  Xã Gia Trấn
+    -  Xã Gia Tân
+    -  Xã Gia Tân 1
+    -  Xã Gia Tân 2
+    -  Xã Gia Tân 3
+    -  Xã Gia Tường
+    -  Xã Gia Viễn
+    -  Xã Gia Vân
+    -  Xã Gia Vượng
+    -  Xã Gia Xuyên
+    -  Xã Gia Xuân
+    -  Xã Gia Điền
+    -  Xã Gia Đông
+    -  Xã Gia Đức
+    -  Xã Giai Phạm
+    -  Xã Giai Xuân
+    -  Xã Giang Biên
+    -  Xã Giang Hải
+    -  Xã Giang Ly
+    -  Xã Giang Ma
+    -  Xã Giang Sơn
+    -  Xã Giang Sơn Tây
+    -  Xã Giang Sơn Đông
+    -  Xã Giang Điền
+    -  Xã Giao An
+    -  Xã Giao Châu
+    -  Xã Giao Hà
+    -  Xã Giao Hòa
+    -  Xã Giao Hương
+    -  Xã Giao Hải
+    -  Xã Giao Long
+    -  Xã Giao Lạc
+    -  Xã Giao Nhân
+    -  Xã Giao Phong
+    -  Xã Giao Thanh
+    -  Xã Giao Thiện
+    -  Xã Giao Thạnh
+    -  Xã Giao Thịnh
+    -  Xã Giao Tiến
+    -  Xã Giao Tân
+    -  Xã Giao Xuân
+    -  Xã Giao Yến
+    -  Xã Gio An
+    -  Xã Gio Bình
+    -  Xã Gio Châu
+    -  Xã Gio Hòa
+    -  Xã Gio Hải
+    -  Xã Gio Mai
+    -  Xã Gio Mỹ
+    -  Xã Gio Phong
+    -  Xã Gio Quang
+    -  Xã Gio Sơn
+    -  Xã Gio Thành
+    -  Xã Gio Việt
+    -  Xã Giàng Chu Phìn
+    -  Xã Giáo Hiệu
+    -  Xã Giáo Liêm
+    -  Xã Giáp Lai
+    -  Xã Giáp Sơn
+    -  Xã Giáp Trung
+    -  Xã Giáp Đắt
+    -  Xã Giới Phiên
+    -  Xã Giục Tượng
+    -  Xã Glar
+    -  Xã Gung Ré
+    -  Xã Gành Dầu
+    -  Xã Gào
+    -  Xã Gáo Giồng
+    -  Xã H Bông
+    -  Xã H' Neng
+    -  Xã HNol
+    -  Xã Hang Chú
+    -  Xã Hang Kia
+    -  Xã Hanh Cù
+    -  Xã Hiên Vân
+    -  Xã Hiến Sơn
+    -  Xã Hiến Thành
+    -  Xã Hiếu
+    -  Xã Hiếu Liêm
+    -  Xã Hiếu Nghĩa
+    -  Xã Hiếu Nhơn
+    -  Xã Hiếu Phụng
+    -  Xã Hiếu Thuận
+    -  Xã Hiếu Thành
+    -  Xã Hiếu Trung
+    -  Xã Hiếu Tử
+    -  Xã Hiền Chung
+    -  Xã Hiền Giang
+    -  Xã Hiền Hào
+    -  Xã Hiền Kiệt
+    -  Xã Hiền Lương
+    -  Xã Hiền Ninh
+    -  Xã Hiền Quan
+    -  Xã Hiền Thành
+    -  Xã Hiền Đa
+    -  Xã Hiển Khánh
+    -  Xã Hiệp An
+    -  Xã Hiệp Cát
+    -  Xã Hiệp Cường
+    -  Xã Hiệp Hoà
+    -  Xã Hiệp Hòa
+    -  Xã Hiệp Hưng
+    -  Xã Hiệp Hạ
+    -  Xã Hiệp Lợi
+    -  Xã Hiệp Lực
+    -  Xã Hiệp Mỹ Tây
+    -  Xã Hiệp Mỹ Đông
+    -  Xã Hiệp Phước
+    -  Xã Hiệp Sơn
+    -  Xã Hiệp Thuận
+    -  Xã Hiệp Thành
+    -  Xã Hiệp Thạnh
+    -  Xã Hiệp Tân
+    -  Xã Hiệp Tùng
+    -  Xã Hiệp Xương
+    -  Xã Hiệp Đức
+    -  Xã Hoa Lư
+    -  Xã Hoa Lộc
+    -  Xã Hoa Nam
+    -  Xã Hoa Sơn
+    -  Xã Hoa Thành
+    -  Xã Hoa Thám
+    -  Xã Hoa Thủy
+    -  Xã Hoa Động
+    -  Xã Hoang Thèn
+    -  Xã Hoà An
+    -  Xã Hoà Bình
+    -  Xã Hoà Chánh
+    -  Xã Hoà Long
+    -  Xã Hoà Lạc
+    -  Xã Hoà Lộc
+    -  Xã Hoà Lợi
+    -  Xã Hoà Mạc
+    -  Xã Hoà Mục
+    -  Xã Hoà Mỹ
+    -  Xã Hoà Tân
+    -  Xã Hoài Châu
+    -  Xã Hoài Châu Bắc
+    -  Xã Hoài Hương
+    -  Xã Hoài Hải
+    -  Xã Hoài Hảo
+    -  Xã Hoài Mỹ
+    -  Xã Hoài Phú
+    -  Xã Hoài Sơn
+    -  Xã Hoài Thanh
+    -  Xã Hoài Thanh Tây
+    -  Xã Hoài Thượng
+    -  Xã Hoài Tân
+    -  Xã Hoài Xuân
+    -  Xã Hoài Đức
+    -  Xã Hoàn Long
+    -  Xã Hoàn Sơn
+    -  Xã Hoàn Trạch
+    -  Xã Hoàng An
+    -  Xã Hoàng Châu
+    -  Xã Hoàng Cương
+    -  Xã Hoàng Diệu
+    -  Xã Hoàng Giang
+    -  Xã Hoàng Hanh
+    -  Xã Hoàng Hoa
+    -  Xã Hoàng Hoa Thám
+    -  Xã Hoàng Hải
+    -  Xã Hoàng Khai
+    -  Xã Hoàng Kim
+    -  Xã Hoàng Liên
+    -  Xã Hoàng Long
+    -  Xã Hoàng Lâu
+    -  Xã Hoàng Lương
+    -  Xã Hoàng Nam
+    -  Xã Hoàng Ninh
+    -  Xã Hoàng Nông
+    -  Xã Hoàng Quế
+    -  Xã Hoàng Sa
+    -  Xã Hoàng Sơn
+    -  Xã Hoàng Thanh
+    -  Xã Hoàng Thu Phố
+    -  Xã Hoàng Thắng
+    -  Xã Hoàng Tiến
+    -  Xã Hoàng Trĩ
+    -  Xã Hoàng Tung
+    -  Xã Hoàng Tân
+    -  Xã Hoàng Tây
+    -  Xã Hoàng Việt
+    -  Xã Hoàng Vân
+    -  Xã Hoàng Văn Thụ
+    -  Xã Hoàng Xá
+    -  Xã Hoàng Đan
+    -  Xã Hoàng Đông
+    -  Xã Hoàng Đồng
+    -  Xã Hoàng Động
+    -  Xã Hoành Mô
+    -  Xã Hoành Sơn
+    -  Xã Hoạt Giang
+    -  Xã Hoả Lựu
+    -  Xã Hoả Tiến
+    -  Xã Hoằng Anh
+    -  Xã Hoằng Châu
+    -  Xã Hoằng Cát
+    -  Xã Hoằng Giang
+    -  Xã Hoằng Hà
+    -  Xã Hoằng Hải
+    -  Xã Hoằng Hợp
+    -  Xã Hoằng Khánh
+    -  Xã Hoằng Khê
+    -  Xã Hoằng Kim
+    -  Xã Hoằng Long
+    -  Xã Hoằng Lý
+    -  Xã Hoằng Lưu
+    -  Xã Hoằng Lương
+    -  Xã Hoằng Lộc
+    -  Xã Hoằng Minh
+    -  Xã Hoằng Ngọc
+    -  Xã Hoằng Phong
+    -  Xã Hoằng Phú
+    -  Xã Hoằng Phúc
+    -  Xã Hoằng Phượng
+    -  Xã Hoằng Phụ
+    -  Xã Hoằng Quang
+    -  Xã Hoằng Quý
+    -  Xã Hoằng Quỳ
+    -  Xã Hoằng Sơn
+    -  Xã Hoằng Thanh
+    -  Xã Hoằng Thành
+    -  Xã Hoằng Thái
+    -  Xã Hoằng Thắng
+    -  Xã Hoằng Thịnh
+    -  Xã Hoằng Tiến
+    -  Xã Hoằng Trinh
+    -  Xã Hoằng Trung
+    -  Xã Hoằng Trường
+    -  Xã Hoằng Trạch
+    -  Xã Hoằng Tân
+    -  Xã Hoằng Vinh
+    -  Xã Hoằng Xuyên
+    -  Xã Hoằng Xuân
+    -  Xã Hoằng Yến
+    -  Xã Hoằng Đông
+    -  Xã Hoằng Đại
+    -  Xã Hoằng Đạo
+    -  Xã Hoằng Đạt
+    -  Xã Hoằng Đồng
+    -  Xã Hoằng Đức
+    -  Xã Hua Bun
+    -  Xã Hua La
+    -  Xã Hua Nhàn
+    -  Xã Hua Nà
+    -  Xã Hua Păng
+    -  Xã Hua Thanh
+    -  Xã Hua Trai
+    -  Xã Huy Bắc
+    -  Xã Huy Giáp
+    -  Xã Huy Hạ
+    -  Xã Huy Khiêm
+    -  Xã Huy Thượng
+    -  Xã Huy Tân
+    -  Xã Huy Tường
+    -  Xã Huyền Hội
+    -  Xã Huyền Sơn
+    -  Xã Huống Thượng
+    -  Xã Huồi Tụ
+    -  Xã Huổi Luông
+    -  Xã Huổi Lèng
+    -  Xã Huổi Lếnh
+    -  Xã Huổi Mí
+    -  Xã Huổi Một
+    -  Xã Huổi Só
+    -  Xã Hy Cương
+    -  Xã Hà Bình
+    -  Xã Hà Bầu
+    -  Xã Hà Bắc
+    -  Xã Hà Châu
+    -  Xã Hà Dương
+    -  Xã Hà Giang
+    -  Xã Hà Hiệu
+    -  Xã Hà Hải
+    -  Xã Hà Hồi
+    -  Xã Hà Kỳ
+    -  Xã Hà Lai
+    -  Xã Hà Lan
+    -  Xã Hà Lang
+    -  Xã Hà Linh
+    -  Xã Hà Long
+    -  Xã Hà Lâm
+    -  Xã Hà Lâu
+    -  Xã Hà Lĩnh
+    -  Xã Hà Lương
+    -  Xã Hà Lộc
+    -  Xã Hà Mãn
+    -  Xã Hà Mòn
+    -  Xã Hà Ngọc
+    -  Xã Hà Ninh
+    -  Xã Hà Phong
+    -  Xã Hà Phú
+    -  Xã Hà Ra
+    -  Xã Hà Sơn
+    -  Xã Hà Tam
+    -  Xã Hà Thanh
+    -  Xã Hà Thái
+    -  Xã Hà Thượng
+    -  Xã Hà Thạch
+    -  Xã Hà Tiến
+    -  Xã Hà Toại
+    -  Xã Hà Trì
+    -  Xã Hà Tân
+    -  Xã Hà Tây
+    -  Xã Hà Vinh
+    -  Xã Hà Vân
+    -  Xã Hà Vị
+    -  Xã Hà Yên
+    -  Xã Hà Đông
+    -  Xã Hàm Chính
+    -  Xã Hàm Cường
+    -  Xã Hàm Cần
+    -  Xã Hàm Giang
+    -  Xã Hàm Hiệp
+    -  Xã Hàm Kiệm
+    -  Xã Hàm Liêm
+    -  Xã Hàm Minh
+    -  Xã Hàm Mỹ
+    -  Xã Hàm Ninh
+    -  Xã Hàm Phú
+    -  Xã Hàm Rồng
+    -  Xã Hàm Thạnh
+    -  Xã Hàm Thắng
+    -  Xã Hàm Trí
+    -  Xã Hàm Tân
+    -  Xã Hàm Tử
+    -  Xã Hàm Đức
+    -  Xã Hàng Gòn
+    -  Xã Hàng Vịnh
+    -  Xã Hành Dũng
+    -  Xã Hành Minh
+    -  Xã Hành Nhân
+    -  Xã Hành Phước
+    -  Xã Hành Thiện
+    -  Xã Hành Thuận
+    -  Xã Hành Thịnh
+    -  Xã Hành Trung
+    -  Xã Hành Tín  Đông
+    -  Xã Hành Tín Tây
+    -  Xã Hành Đức
+    -  Xã Hào Lý
+    -  Xã Hào Phú
+    -  Xã Hán Quảng
+    -  Xã Hán Đà
+    -  Xã Háng Lìa
+    -  Xã Háng Đồng
+    -  Xã Hát Lìu
+    -  Xã Hát Lót
+    -  Xã Hát Môn
+    -  Xã Hòa An
+    -  Xã Hòa Bình
+    -  Xã Hòa Bình 1
+    -  Xã Hòa Bình Thạnh
+    -  Xã Hòa Bắc
+    -  Xã Hòa Châu
+    -  Xã Hòa Chính
+    -  Xã Hòa Cuông
+    -  Xã Hòa Cư
+    -  Xã Hòa Hiệp
+    -  Xã Hòa Hiệp Bắc
+    -  Xã Hòa Hiệp Nam
+    -  Xã Hòa Hưng
+    -  Xã Hòa Hải
+    -  Xã Hòa Hậu
+    -  Xã Hòa Hội
+    -  Xã Hòa Khánh
+    -  Xã Hòa Khánh Nam
+    -  Xã Hòa Khánh Tây
+    -  Xã Hòa Khánh Đông
+    -  Xã Hòa Khương
+    -  Xã Hòa Kiến
+    -  Xã Hòa Liên
+    -  Xã Hòa Long
+    -  Xã Hòa Lâm
+    -  Xã Hòa Lạc
+    -  Xã Hòa Lễ
+    -  Xã Hòa Lộc
+    -  Xã Hòa Lợi
+    -  Xã Hòa Minh
+    -  Xã Hòa Mỹ
+    -  Xã Hòa Mỹ Tây
+    -  Xã Hòa Mỹ Đông
+    -  Xã Hòa Nam
+    -  Xã Hòa Nghĩa
+    -  Xã Hòa Nhơn
+    -  Xã Hòa Ninh
+    -  Xã Hòa Phong
+    -  Xã Hòa Phú
+    -  Xã Hòa Phước
+    -  Xã Hòa Quang Bắc
+    -  Xã Hòa Quang Nam
+    -  Xã Hòa Sơn
+    -  Xã Hòa Thuận
+    -  Xã Hòa Thành
+    -  Xã Hòa Thạch
+    -  Xã Hòa Thạnh
+    -  Xã Hòa Thắng
+    -  Xã Hòa Thịnh
+    -  Xã Hòa Tiến
+    -  Xã Hòa Trung
+    -  Xã Hòa Trạch
+    -  Xã Hòa Trị
+    -  Xã Hòa Tâm
+    -  Xã Hòa Tân
+    -  Xã Hòa Tân Tây
+    -  Xã Hòa Tân Đông
+    -  Xã Hòa Tú 1
+    -  Xã Hòa Tú II
+    -  Xã Hòa Tịnh
+    -  Xã Hòa Xuân
+    -  Xã Hòa Xuân Nam
+    -  Xã Hòa Xuân Tây
+    -  Xã Hòa Xuân Đông
+    -  Xã Hòa Xá
+    -  Xã Hòa Ân
+    -  Xã Hòa Điền
+    -  Xã Hòa Đông
+    -  Xã Hòa Định
+    -  Xã Hòa Định Tây
+    -  Xã Hòa Định Đông
+    -  Xã Hòa Đồng
+    -  Xã Hòn Nghệ
+    -  Xã Hòn Thơm
+    -  Xã Hòn Tre
+    -  Xã Hóa An
+    -  Xã Hóa Hợp
+    -  Xã Hóa Phúc
+    -  Xã Hóa Quỳ
+    -  Xã Hóa Sơn
+    -  Xã Hóa Thanh
+    -  Xã Hóa Thượng
+    -  Xã Hóa Tiến
+    -  Xã Hóa Trung
+    -  Xã Hùng An
+    -  Xã Hùng Cường
+    -  Xã Hùng Dũng
+    -  Xã Hùng Hòa
+    -  Xã Hùng Long
+    -  Xã Hùng Lô
+    -  Xã Hùng Lợi
+    -  Xã Hùng Mỹ
+    -  Xã Hùng Quan
+    -  Xã Hùng Sơn
+    -  Xã Hùng Thành
+    -  Xã Hùng Thắng
+    -  Xã Hùng Tiến
+    -  Xã Hùng Việt
+    -  Xã Hùng Xuyên
+    -  Xã Hùng Đô
+    -  Xã Hùng Đức
+    -  Xã Húc
+    -  Xã Húc Nghì
+    -  Xã Húc Động
+    -  Xã Hơ Moong
+    -  Xã Hưng Bình
+    -  Xã Hưng Châu
+    -  Xã Hưng Chính
+    -  Xã Hưng Công
+    -  Xã Hưng Hà
+    -  Xã Hưng Hòa
+    -  Xã Hưng Hội
+    -  Xã Hưng Khánh
+    -  Xã Hưng Khánh Trung A
+    -  Xã Hưng Khánh Trung B
+    -  Xã Hưng Lam
+    -  Xã Hưng Long
+    -  Xã Hưng Lĩnh
+    -  Xã Hưng Lễ
+    -  Xã Hưng Lộc
+    -  Xã Hưng Lợi
+    -  Xã Hưng Mỹ
+    -  Xã Hưng Nghĩa
+    -  Xã Hưng Nhân
+    -  Xã Hưng Nhượng
+    -  Xã Hưng Phong
+    -  Xã Hưng Phú
+    -  Xã Hưng Phúc
+    -  Xã Hưng Phước
+    -  Xã Hưng Thi
+    -  Xã Hưng Thuận
+    -  Xã Hưng Thành
+    -  Xã Hưng Thái
+    -  Xã Hưng Thông
+    -  Xã Hưng Thạnh
+    -  Xã Hưng Thắng
+    -  Xã Hưng Thịnh
+    -  Xã Hưng Thủy
+    -  Xã Hưng Tiến
+    -  Xã Hưng Trung
+    -  Xã Hưng Trạch
+    -  Xã Hưng Tân
+    -  Xã Hưng Tây
+    -  Xã Hưng Vũ
+    -  Xã Hưng Xuân
+    -  Xã Hưng Xá
+    -  Xã Hưng Yên
+    -  Xã Hưng Yên Bắc
+    -  Xã Hưng Điền
+    -  Xã Hưng Điền A
+    -  Xã Hưng Điền B
+    -  Xã Hưng Đông
+    -  Xã Hưng Đạo
+    -  Xã Hương An
+    -  Xã Hương Bình
+    -  Xã Hương Cần
+    -  Xã Hương Giang
+    -  Xã Hương Gián
+    -  Xã Hương Hòa
+    -  Xã Hương Hóa
+    -  Xã Hương Hữu
+    -  Xã Hương Liên
+    -  Xã Hương Long
+    -  Xã Hương Lung
+    -  Xã Hương Lâm
+    -  Xã Hương Lạc
+    -  Xã Hương Lộc
+    -  Xã Hương Mai
+    -  Xã Hương Minh
+    -  Xã Hương Mạc
+    -  Xã Hương Mỹ
+    -  Xã Hương Nguyên
+    -  Xã Hương Ngải
+    -  Xã Hương Nha
+    -  Xã Hương Nhượng
+    -  Xã Hương Nê
+    -  Xã Hương Nộn
+    -  Xã Hương Phong
+    -  Xã Hương Phú
+    -  Xã Hương Quang
+    -  Xã Hương Sơn
+    -  Xã Hương Thọ
+    -  Xã Hương Thủy
+    -  Xã Hương Toàn
+    -  Xã Hương Trà
+    -  Xã Hương Trạch
+    -  Xã Hương Vinh
+    -  Xã Hương Vĩ
+    -  Xã Hương Vĩnh
+    -  Xã Hương Xuân
+    -  Xã Hương Xạ
+    -  Xã Hương Điền
+    -  Xã Hương Đô
+    -  Xã Hướng Hiệp
+    -  Xã Hướng Linh
+    -  Xã Hướng Lập
+    -  Xã Hướng Lộc
+    -  Xã Hướng Phùng
+    -  Xã Hướng Sơn
+    -  Xã Hướng Thọ Phú
+    -  Xã Hướng Tân
+    -  Xã Hướng Việt
+    -  Xã Hướng Đạo
+    -  Xã Hạ Bì
+    -  Xã Hạ Bằng
+    -  Xã Hạ Giáp
+    -  Xã Hạ Long
+    -  Xã Hạ Lễ
+    -  Xã Hạ Mỗ
+    -  Xã Hạ Sơn
+    -  Xã Hạ Thôn
+    -  Xã Hạ Trung
+    -  Xã Hạ Trạch
+    -  Xã Hạnh Dịch
+    -  Xã Hạnh Lâm
+    -  Xã Hạnh Phúc
+    -  Xã Hạnh Sơn
+    -  Xã Hải An
+    -  Xã Hải Anh
+    -  Xã Hải Ba
+    -  Xã Hải Bình
+    -  Xã Hải Bắc
+    -  Xã Hải Bối
+    -  Xã Hải Chánh
+    -  Xã Hải Châu
+    -  Xã Hải Chính
+    -  Xã Hải Cường
+    -  Xã Hải Dương
+    -  Xã Hải Giang
+    -  Xã Hải Hà
+    -  Xã Hải Hòa
+    -  Xã Hải Hưng
+    -  Xã Hải Khê
+    -  Xã Hải Long
+    -  Xã Hải Lâm
+    -  Xã Hải Lý
+    -  Xã Hải Lĩnh
+    -  Xã Hải Lạng
+    -  Xã Hải Lệ
+    -  Xã Hải Lộc
+    -  Xã Hải Lựu
+    -  Xã Hải Minh
+    -  Xã Hải Nam
+    -  Xã Hải Nhân
+    -  Xã Hải Ninh
+    -  Xã Hải Phong
+    -  Xã Hải Phú
+    -  Xã Hải Phúc
+    -  Xã Hải Phương
+    -  Xã Hải Quang
+    -  Xã Hải Quy
+    -  Xã Hải Quế
+    -  Xã Hải Sơn
+    -  Xã Hải Thanh
+    -  Xã Hải Thiện
+    -  Xã Hải Thành
+    -  Xã Hải Thái
+    -  Xã Hải Thượng
+    -  Xã Hải Thọ
+    -  Xã Hải Tiến
+    -  Xã Hải Toàn
+    -  Xã Hải Triều
+    -  Xã Hải Trung
+    -  Xã Hải Trường
+    -  Xã Hải Trạch
+    -  Xã Hải Tân
+    -  Xã Hải Tây
+    -  Xã Hải Vân
+    -  Xã Hải Vĩnh
+    -  Xã Hải Xuân
+    -  Xã Hải Yang
+    -  Xã Hải Yến
+    -  Xã Hải Đông
+    -  Xã Hải Đường
+    -  Xã Hải Định
+    -  Xã Hảo Nghĩa
+    -  Xã Hảo Đước
+    -  Xã Hầu Thào
+    -  Xã Hậu Bổng
+    -  Xã Hậu Lộc
+    -  Xã Hậu Mỹ Bắc A
+    -  Xã Hậu Mỹ Bắc B
+    -  Xã Hậu Mỹ Phú
+    -  Xã Hậu Mỹ Trinh
+    -  Xã Hậu Thành
+    -  Xã Hậu Thạnh
+    -  Xã Hậu Thạnh Tây
+    -  Xã Hậu Thạnh Đông
+    -  Xã Hắc Dịch
+    -  Xã Hẹ Muông
+    -  Xã Hố Mít
+    -  Xã Hố Nai 3
+    -  Xã Hố Quáng Phìn
+    -  Xã Hồ Bốn
+    -  Xã Hồ Sơn
+    -  Xã Hồ Thầu
+    -  Xã Hồ Thị Kỷ
+    -  Xã Hồ Tùng Mậu
+    -  Xã Hồ Đắc Kiện
+    -  Xã Hồi Ninh
+    -  Xã Hồi Xuân
+    -  Xã Hồng An
+    -  Xã Hồng Bạch
+    -  Xã Hồng Bắc
+    -  Xã Hồng Ca
+    -  Xã Hồng Châu
+    -  Xã Hồng Dũng
+    -  Xã Hồng Dương
+    -  Xã Hồng Dụ
+    -  Xã Hồng Giang
+    -  Xã Hồng Hà
+    -  Xã Hồng Hóa
+    -  Xã Hồng Hưng
+    -  Xã Hồng Hạ
+    -  Xã Hồng Khê
+    -  Xã Hồng Kim
+    -  Xã Hồng Kỳ
+    -  Xã Hồng Liêm
+    -  Xã Hồng Long
+    -  Xã Hồng Lý
+    -  Xã Hồng Lĩnh
+    -  Xã Hồng Lạc
+    -  Xã Hồng Lộc
+    -  Xã Hồng Minh
+    -  Xã Hồng Nam
+    -  Xã Hồng Ngài
+    -  Xã Hồng Phong
+    -  Xã Hồng Phúc
+    -  Xã Hồng Phương
+    -  Xã Hồng Quang
+    -  Xã Hồng Quảng
+    -  Xã Hồng Quỳnh
+    -  Xã Hồng Sĩ
+    -  Xã Hồng Sơn
+    -  Xã Hồng Sỹ
+    -  Xã Hồng Thu
+    -  Xã Hồng Thuận
+    -  Xã Hồng Thành
+    -  Xã Hồng Thái
+    -  Xã Hồng Thái Tây
+    -  Xã Hồng Thái Đông
+    -  Xã Hồng Thượng
+    -  Xã Hồng Thủy
+    -  Xã Hồng Tiến
+    -  Xã Hồng Trung
+    -  Xã Hồng Trị
+    -  Xã Hồng Việt
+    -  Xã Hồng Vân
+    -  Xã Hồng Đà
+    -  Xã Hồng Đại
+    -  Xã Hồng Định
+    -  Xã Hồng Đức
+    -  Xã Hộ Hải
+    -  Xã Hộ Đáp
+    -  Xã Hộ Độ
+    -  Xã Hội An
+    -  Xã Hội An Đông
+    -  Xã Hội Hoan
+    -  Xã Hội Nghĩa
+    -  Xã Hội Sơn
+    -  Xã Hội Xuân
+    -  Xã Hợp Châu
+    -  Xã Hợp Hòa
+    -  Xã Hợp Hưng
+    -  Xã Hợp Hải
+    -  Xã Hợp Kim
+    -  Xã Hợp Lý
+    -  Xã Hợp Nhất
+    -  Xã Hợp Phong
+    -  Xã Hợp Thanh
+    -  Xã Hợp Thành
+    -  Xã Hợp Thắng
+    -  Xã Hợp Thịnh
+    -  Xã Hợp Tiến
+    -  Xã Hợp Đồng
+    -  Xã Hợp Đức
+    -  Xã Hừa Ngài
+    -  Xã Hữu Bằng
+    -  Xã Hữu Hoà
+    -  Xã Hữu Khuông
+    -  Xã Hữu Khánh
+    -  Xã Hữu Kiên
+    -  Xã Hữu Kiệm
+    -  Xã Hữu Liên
+    -  Xã Hữu Lân
+    -  Xã Hữu Lập
+    -  Xã Hữu Lễ
+    -  Xã Hữu Lợi
+    -  Xã Hữu Sản
+    -  Xã Hữu Thác
+    -  Xã Hữu Vinh
+    -  Xã Hữu Văn
+    -  Xã Hữu Vĩnh
+    -  Xã Hữu Đô
+    -  Xã Hữu Đạo
+    -  Xã Hữu Định
+    -  Xã Hựu Thành
+    -  Xã Hựu Thạnh
+    -  Xã Ia Ake
+    -  Xã Ia BLứ
+    -  Xã Ia Bang
+    -  Xã Ia Blang
+    -  Xã Ia Boòng
+    -  Xã Ia Broăi
+    -  Xã Ia Bă
+    -  Xã Ia Băng
+    -  Xã Ia Chia
+    -  Xã Ia Chim
+    -  Xã Ia Dal
+    -  Xã Ia Din
+    -  Xã Ia Dom
+    -  Xã Ia Dreng
+    -  Xã Ia Drăng
+    -  Xã Ia Dêr
+    -  Xã Ia Dơk
+    -  Xã Ia Ga
+    -  Xã Ia Glai
+    -  Xã Ia Grăng
+    -  Xã Ia HDreh
+    -  Xã Ia HLốp
+    -  Xã Ia Hiao
+    -  Xã Ia Hla
+    -  Xã Ia Hrung
+    -  Xã Ia Hrú
+    -  Xã Ia JLơi
+    -  Xã Ia KDăm
+    -  Xã Ia KRai
+    -  Xã Ia Ka
+    -  Xã Ia Khai
+    -  Xã Ia Khươl
+    -  Xã Ia Kla
+    -  Xã Ia Kly
+    -  Xã Ia Ko
+    -  Xã Ia Kreng
+    -  Xã Ia Kriêng
+    -  Xã Ia Krêl
+    -  Xã Ia Kênh
+    -  Xã Ia Lang
+    -  Xã Ia Le
+    -  Xã Ia Lâu
+    -  Xã Ia Lốp
+    -  Xã Ia Ma Rơn
+    -  Xã Ia Me
+    -  Xã Ia Mláh
+    -  Xã Ia Mơ
+    -  Xã Ia Mơ Nông
+    -  Xã Ia Nan
+    -  Xã Ia Nhin
+    -  Xã Ia O
+    -  Xã Ia Pal
+    -  Xã Ia Peng
+    -  Xã Ia Phang
+    -  Xã Ia Phìn
+    -  Xã Ia Phí
+    -  Xã Ia Pia
+    -  Xã Ia Piar
+    -  Xã Ia Piơr
+    -  Xã Ia Pnôn
+    -  Xã Ia Púch
+    -  Xã Ia Pếch
+    -  Xã Ia Pết
+    -  Xã Ia RBol
+    -  Xã Ia RMok
+    -  Xã Ia RSai
+    -  Xã Ia RSươm
+    -  Xã Ia RTô
+    -  Xã Ia RVê
+    -  Xã Ia Rong
+    -  Xã Ia Sao
+    -  Xã Ia Sol
+    -  Xã Ia Tiêm
+    -  Xã Ia Trok
+    -  Xã Ia Tul
+    -  Xã Ia Tô
+    -  Xã Ia Tôr
+    -  Xã Ia Tơi
+    -  Xã Ia Vê
+    -  Xã Ia Yeng
+    -  Xã Ia Yok
+    -  Xã Jơ Ngây
+    -  Xã K' Dang
+    -  Xã KRong
+    -  Xã KRông Búk
+    -  Xã Ka Dăng
+    -  Xã Ka Lăng
+    -  Xã Ka Đô
+    -  Xã Ka Đơn
+    -  Xã Kan Hồ
+    -  Xã Keng Đu
+    -  Xã Keo Lôm
+    -  Xã Kha Sơn
+    -  Xã Khai Sơn
+    -  Xã Khai Thái
+    -  Xã Khai Trung
+    -  Xã Khang Ninh
+    -  Xã Khao Mang
+    -  Xã Khau Tinh
+    -  Xã Khe Mo
+    -  Xã Khoan Dụ
+    -  Xã Khoen On
+    -  Xã Khun Há
+    -  Xã Khuyến Nông
+    -  Xã Khuê Ngọc Điền
+    -  Xã Khuôn Hà
+    -  Xã Khuôn Lùng
+    -  Xã Khuất Xá
+    -  Xã Khám Lạng
+    -  Xã Kháng Chiến
+    -  Xã Kháng Nhật
+    -  Xã Khánh An
+    -  Xã Khánh Bình
+    -  Xã Khánh Bình Tây
+    -  Xã Khánh Bình Tây Bắc
+    -  Xã Khánh Bình Đông
+    -  Xã Khánh Công
+    -  Xã Khánh Cư
+    -  Xã Khánh Cường
+    -  Xã Khánh Dương
+    -  Xã Khánh Hiệp
+    -  Xã Khánh Hoà
+    -  Xã Khánh Hà
+    -  Xã Khánh Hòa
+    -  Xã Khánh Hưng
+    -  Xã Khánh Hải
+    -  Xã Khánh Hồng
+    -  Xã Khánh Hội
+    -  Xã Khánh Hợp
+    -  Xã Khánh Khê
+    -  Xã Khánh Long
+    -  Xã Khánh Lâm
+    -  Xã Khánh Lộc
+    -  Xã Khánh Lợi
+    -  Xã Khánh Mậu
+    -  Xã Khánh Nam
+    -  Xã Khánh Nhạc
+    -  Xã Khánh Phú
+    -  Xã Khánh Sơn
+    -  Xã Khánh Thiện
+    -  Xã Khánh Thuận
+    -  Xã Khánh Thành
+    -  Xã Khánh Thượng
+    -  Xã Khánh Thạnh Tân
+    -  Xã Khánh Thịnh
+    -  Xã Khánh Thủy
+    -  Xã Khánh Tiên
+    -  Xã Khánh Tiến
+    -  Xã Khánh Trung
+    -  Xã Khánh Vân
+    -  Xã Khánh Vĩnh Yên
+    -  Xã Khánh Xuân
+    -  Xã Khánh Yên Hạ
+    -  Xã Khánh Yên Thượng
+    -  Xã Khánh Yên Trung
+    -  Xã Khánh Đông
+    -  Xã Khâm Thành
+    -  Xã Khâu Vai
+    -  Xã Khôi Kỳ
+    -  Xã Khả Cửu
+    -  Xã Khả Phong
+    -  Xã Khải Xuân
+    -  Xã Khổng Lào
+    -  Xã Khởi Nghĩa
+    -  Xã Kim An
+    -  Xã Kim Anh
+    -  Xã Kim Bon
+    -  Xã Kim Bình
+    -  Xã Kim Bôi
+    -  Xã Kim Chung
+    -  Xã Kim Chân
+    -  Xã Kim Chính
+    -  Xã Kim Cúc
+    -  Xã Kim Giang
+    -  Xã Kim Hoa
+    -  Xã Kim Hòa
+    -  Xã Kim Hóa
+    -  Xã Kim Hải
+    -  Xã Kim Hỷ
+    -  Xã Kim Khê
+    -  Xã Kim Lan
+    -  Xã Kim Linh
+    -  Xã Kim Liên
+    -  Xã Kim Loan
+    -  Xã Kim Long
+    -  Xã Kim Lũ
+    -  Xã Kim Lư
+    -  Xã Kim Lương
+    -  Xã Kim Lập
+    -  Xã Kim Lộc
+    -  Xã Kim Mỹ
+    -  Xã Kim Ngọc
+    -  Xã Kim Nọi
+    -  Xã Kim Nỗ
+    -  Xã Kim Phú
+    -  Xã Kim Phượng
+    -  Xã Kim Quan
+    -  Xã Kim Song Trường
+    -  Xã Kim Sơn
+    -  Xã Kim Thành
+    -  Xã Kim Thái
+    -  Xã Kim Thư
+    -  Xã Kim Thượng
+    -  Xã Kim Thạch
+    -  Xã Kim Thủy
+    -  Xã Kim Tiến
+    -  Xã Kim Trung
+    -  Xã Kim Truy
+    -  Xã Kim Tân
+    -  Xã Kim Xuyên
+    -  Xã Kim Xá
+    -  Xã Kim Đính
+    -  Xã Kim Đông
+    -  Xã Kim Đường
+    -  Xã Kim Định
+    -  Xã Kim Đồng
+    -  Xã Kim Đức
+    -  Xã Kinh Kệ
+    -  Xã Kiên Bình
+    -  Xã Kiên Lao
+    -  Xã Kiên Mộc
+    -  Xã Kiên Thành
+    -  Xã Kiên Thọ
+    -  Xã Kiên Đài
+    -  Xã Kiêu Kỵ
+    -  Xã Kiến An
+    -  Xã Kiến Bình
+    -  Xã Kiến Quốc
+    -  Xã Kiến Thiết
+    -  Xã Kiến Thành
+    -  Xã Kiền Bái
+    -  Xã Kiểng Phước
+    -  Xã Kiệt Sơn
+    -  Xã Kon Chiêng
+    -  Xã Kon Gang
+    -  Xã Kon Pne
+    -  Xã Kon Thụp
+    -  Xã Kon Đào
+    -  Xã Kroong
+    -  Xã Krông Jing
+    -  Xã Krông Na
+    -  Xã Krông Nô
+    -  Xã Krông Năng
+    -  Xã Krông Pa
+    -  Xã Krông Á
+    -  Xã Kéo Yên
+    -  Xã Kênh Giang
+    -  Xã Kông HTok
+    -  Xã Kông Lơng Khơng
+    -  Xã Kông Pla
+    -  Xã Kông Yang
+    -  Xã Ký Phú
+    -  Xã Kế An
+    -  Xã Kế Thành
+    -  Xã Kỳ Anh
+    -  Xã Kỳ Bắc
+    -  Xã Kỳ Châu
+    -  Xã Kỳ Giang
+    -  Xã Kỳ Hoa
+    -  Xã Kỳ Hà
+    -  Xã Kỳ Hưng
+    -  Xã Kỳ Hải
+    -  Xã Kỳ Hợp
+    -  Xã Kỳ Khang
+    -  Xã Kỳ Lâm
+    -  Xã Kỳ Lạc
+    -  Xã Kỳ Lợi
+    -  Xã Kỳ Nam
+    -  Xã Kỳ Ninh
+    -  Xã Kỳ Phong
+    -  Xã Kỳ Phú
+    -  Xã Kỳ Sơn
+    -  Xã Kỳ Thư
+    -  Xã Kỳ Thượng
+    -  Xã Kỳ Thọ
+    -  Xã Kỳ Tiến
+    -  Xã Kỳ Trung
+    -  Xã Kỳ Tân
+    -  Xã Kỳ Tây
+    -  Xã Kỳ Văn
+    -  Xã Kỳ Xuân
+    -  Xã Kỳ Đồng
+    -  Xã La Bằng
+    -  Xã La Dêê
+    -  Xã La Dạ
+    -  Xã La Hiên
+    -  Xã La Ngà
+    -  Xã La Ngâu
+    -  Xã La Pan Tẩn
+    -  Xã La Phù
+    -  Xã La Pán Tẩn
+    -  Xã La Sơn
+    -  Xã Lai Hòa
+    -  Xã Lai Hưng
+    -  Xã Lai Hạ
+    -  Xã Lai Thành
+    -  Xã Lai Uyên
+    -  Xã Lai Vu
+    -  Xã Lai Đồng
+    -  Xã Lam Cốt
+    -  Xã Lam Sơn
+    -  Xã Lam Vỹ
+    -  Xã Lam Điền
+    -  Xã Lan Giới
+    -  Xã Lan Mẫu
+    -  Xã Lang Minh
+    -  Xã Lang Môn
+    -  Xã Lang Quán
+    -  Xã Lang Sơn
+    -  Xã Lang Thíp
+    -  Xã Lao Chải
+    -  Xã Lao Và Chải
+    -  Xã Lao Xả Phình
+    -  Xã Lay Nưa
+    -  Xã Laêê
+    -  Xã Leng Su Sìn
+    -  Xã Linh Hải
+    -  Xã Linh Hồ
+    -  Xã Linh Phú
+    -  Xã Linh Sơn
+    -  Xã Linh Thông
+    -  Xã Linh Thượng
+    -  Xã Linh Trường
+    -  Xã Liêm Chung
+    -  Xã Liêm Cần
+    -  Xã Liêm Hải
+    -  Xã Liêm Phong
+    -  Xã Liêm Phú
+    -  Xã Liêm Sơn
+    -  Xã Liêm Thuận
+    -  Xã Liêm Thuỷ
+    -  Xã Liêm Tiết
+    -  Xã Liêm Tuyền
+    -  Xã Liêm Túc
+    -  Xã Liên Am
+    -  Xã Liên Bão
+    -  Xã Liên Bạt
+    -  Xã Liên Bảo
+    -  Xã Liên Chung
+    -  Xã Liên Châu
+    -  Xã Liên Giang
+    -  Xã Liên Hiệp
+    -  Xã Liên Hoa
+    -  Xã Liên Hoà
+    -  Xã Liên Hà
+    -  Xã Liên Hòa
+    -  Xã Liên Hồng
+    -  Xã Liên Hội
+    -  Xã Liên Hợp
+    -  Xã Liên Khê
+    -  Xã Liên Lộc
+    -  Xã Liên Minh
+    -  Xã Liên Mạc
+    -  Xã Liên Nghĩa
+    -  Xã Liên Ninh
+    -  Xã Liên Phương
+    -  Xã Liên Sang
+    -  Xã Liên Sơn
+    -  Xã Liên Thành
+    -  Xã Liên Thủy
+    -  Xã Liên Trung
+    -  Xã Liên Trường
+    -  Xã Liên Trạch
+    -  Xã Liên Vũ
+    -  Xã Liên Vị
+    -  Xã Liên Đầm
+    -  Xã Liêng Srônh
+    -  Xã Liêu Tú
+    -  Xã Liêu Xá
+    -  Xã Liễn Sơn
+    -  Xã Liễu Đô
+    -  Xã Liệp Tuyết
+    -  Xã Liệp Tè
+    -  Xã Loan Mỹ
+    -  Xã Long An
+    -  Xã Long Anh
+    -  Xã Long Bình
+    -  Xã Long Bình Điền
+    -  Xã Long Cang
+    -  Xã Long Chánh
+    -  Xã Long Châu
+    -  Xã Long Chữ
+    -  Xã Long Cốc
+    -  Xã Long Giang
+    -  Xã Long Giao
+    -  Xã Long Hiệp
+    -  Xã Long Hoà
+    -  Xã Long Hà
+    -  Xã Long Hòa
+    -  Xã Long Hưng
+    -  Xã Long Hưng A
+    -  Xã Long Hưng B
+    -  Xã Long Hải
+    -  Xã Long Hậu
+    -  Xã Long Hẹ
+    -  Xã Long Hữu
+    -  Xã Long Hựu Tây
+    -  Xã Long Hựu Đông
+    -  Xã Long Khánh
+    -  Xã Long Khánh A
+    -  Xã Long Khánh B
+    -  Xã Long Khê
+    -  Xã Long Kiến
+    -  Xã Long Mai
+    -  Xã Long Môn
+    -  Xã Long Mỹ
+    -  Xã Long Nguyên
+    -  Xã Long Phú
+    -  Xã Long Phúc
+    -  Xã Long Phước
+    -  Xã Long Phụng
+    -  Xã Long Sơn
+    -  Xã Long Thuận
+    -  Xã Long Thành
+    -  Xã Long Thành Bắc
+    -  Xã Long Thành Nam
+    -  Xã Long Thành Trung
+    -  Xã Long Thượng
+    -  Xã Long Thạnh
+    -  Xã Long Thắng
+    -  Xã Long Thọ
+    -  Xã Long Thới
+    -  Xã Long Tiên
+    -  Xã Long Toàn
+    -  Xã Long Trung
+    -  Xã Long Trì
+    -  Xã Long Trạch
+    -  Xã Long Trị
+    -  Xã Long Trị A
+    -  Xã Long Tân
+    -  Xã Long Vĩnh
+    -  Xã Long Xuyên
+    -  Xã Long Xá
+    -  Xã Long Điền
+    -  Xã Long Điền A
+    -  Xã Long Điền B
+    -  Xã Long Điền Tây
+    -  Xã Long Điền Đông
+    -  Xã Long Điền Đông A
+    -  Xã Long Định
+    -  Xã Long Đống
+    -  Xã Long Đức
+    -  Xã Luân Giới
+    -  Xã Luận Khê
+    -  Xã Luận Thành
+    -  Xã Làng Chếu
+    -  Xã Làng Giàng
+    -  Xã Làng Mô
+    -  Xã Làng Nhì
+    -  Xã Láng Biển
+    -  Xã Láng Dài
+    -  Xã Láng Lớn
+    -  Xã Lát
+    -  Xã Lâm Ca
+    -  Xã Lâm Giang
+    -  Xã Lâm Hóa
+    -  Xã Lâm Hải
+    -  Xã Lâm Hợp
+    -  Xã Lâm Kiết
+    -  Xã Lâm Lợi
+    -  Xã Lâm Phú
+    -  Xã Lâm Sa
+    -  Xã Lâm San
+    -  Xã Lâm Sơn
+    -  Xã Lâm Thao
+    -  Xã Lâm Thượng
+    -  Xã Lâm Thủy
+    -  Xã Lâm Trung Thủy
+    -  Xã Lâm Trạch
+    -  Xã Lâm Tân
+    -  Xã Lâm Xuyên
+    -  Xã Lâm Động
+    -  Xã Lâm Đớt
+    -  Xã Lâu Thượng
+    -  Xã Lãng Công
+    -  Xã Lãng Ngâm
+    -  Xã Lãng Sơn
+    -  Xã Lão Hộ
+    -  Xã Lê Chung
+    -  Xã Lê Chánh
+    -  Xã Lê Hóa
+    -  Xã Lê Hồ
+    -  Xã Lê Hồng
+    -  Xã Lê Lai
+    -  Xã Lê Lợi
+    -  Xã Lê Minh Xuân
+    -  Xã Lê Ninh
+    -  Xã Lê Thanh
+    -  Xã Lê Thiện
+    -  Xã Lê Trì
+    -  Xã Lìa
+    -  Xã Lình Huỳnh
+    -  Xã Lóng Luông
+    -  Xã Lóng Phiêng
+    -  Xã Lóng Sập
+    -  Xã Lô Giang
+    -  Xã Lùng Cải
+    -  Xã Lùng Khấu Nhin
+    -  Xã Lùng Phình
+    -  Xã Lùng Sui
+    -  Xã Lùng Thàng
+    -  Xã Lùng Thẩn
+    -  Xã Lùng Tám
+    -  Xã Lùng Vai
+    -  Xã Lý Bôn
+    -  Xã Lý Học
+    -  Xã Lý Nhân
+    -  Xã Lý Nhơn
+    -  Xã Lý Quốc
+    -  Xã Lý Thành
+    -  Xã Lý Thường Kiệt
+    -  Xã Lý Trạch
+    -  Xã Lý Văn Lâm
+    -  Xã Lăng
+    -  Xã Lăng Can
+    -  Xã Lăng Hiếu
+    -  Xã Lăng Thành
+    -  Xã Lăng Yên
+    -  Xã Lĩnh Sơn
+    -  Xã Lĩnh Toại
+    -  Xã Lũng Cao
+    -  Xã Lũng Chinh
+    -  Xã Lũng Cú
+    -  Xã Lũng Hoà
+    -  Xã Lũng Hồ
+    -  Xã Lũng Niêm
+    -  Xã Lũng Nặm
+    -  Xã Lũng Phìn
+    -  Xã Lũng Pù
+    -  Xã Lũng Thầu
+    -  Xã Lũng Táo
+    -  Xã Lũng Vân
+    -  Xã Lơ Ku
+    -  Xã Lơ Pang
+    -  Xã Lưu Hoàng
+    -  Xã Lưu Kiếm
+    -  Xã Lưu Kiền
+    -  Xã Lưu Kỳ
+    -  Xã Lưu Nghiệp Anh
+    -  Xã Lưu Ngọc
+    -  Xã Lưu Phương
+    -  Xã Lưu Sơn
+    -  Xã Lưu Vĩnh Sơn
+    -  Xã Lương An Trà
+    -  Xã Lương Bình
+    -  Xã Lương Bằng
+    -  Xã Lương Can
+    -  Xã Lương Hoà A
+    -  Xã Lương Hòa
+    -  Xã Lương Hòa Lạc
+    -  Xã Lương Hạ
+    -  Xã Lương Lỗ
+    -  Xã Lương Mông
+    -  Xã Lương Nghĩa
+    -  Xã Lương Ngoại
+    -  Xã Lương Nha
+    -  Xã Lương Ninh
+    -  Xã Lương Năng
+    -  Xã Lương Nội
+    -  Xã Lương Phi
+    -  Xã Lương Phong
+    -  Xã Lương Phú
+    -  Xã Lương Quới
+    -  Xã Lương Sơn
+    -  Xã Lương Thiện
+    -  Xã Lương Thành
+    -  Xã Lương Thông
+    -  Xã Lương Thượng
+    -  Xã Lương Thế Trân
+    -  Xã Lương Thịnh
+    -  Xã Lương Trung
+    -  Xã Lương Tài
+    -  Xã Lương Tâm
+    -  Xã Lương Điền
+    -  Xã Lưỡng Minh
+    -  Xã Lưỡng Vượng
+    -  Xã Lạc An
+    -  Xã Lạc Hòa
+    -  Xã Lạc Hưng
+    -  Xã Lạc Hồng
+    -  Xã Lạc Long
+    -  Xã Lạc Lâm
+    -  Xã Lạc Lương
+    -  Xã Lạc Nông
+    -  Xã Lạc Quới
+    -  Xã Lạc Sơn
+    -  Xã Lạc Sỹ
+    -  Xã Lạc Thịnh
+    -  Xã Lạc Tấn
+    -  Xã Lạc Vân
+    -  Xã Lạc Vệ
+    -  Xã Lạc Xuân
+    -  Xã Lạc Đạo
+    -  Xã Lại Sơn
+    -  Xã Lại Thượng
+    -  Xã Lại Xuân
+    -  Xã Lại Yên
+    -  Xã Lạng Khê
+    -  Xã Lạng Phong
+    -  Xã Lạng San
+    -  Xã Lạng Sơn
+    -  Xã Lả Nhì Thàng
+    -  Xã Lầu Thí Ngài
+    -  Xã Lập Chiệng
+    -  Xã Lập Lễ
+    -  Xã Lệ Chi
+    -  Xã Lệ Mỹ
+    -  Xã Lệ Viễn
+    -  Xã Lệ Xá
+    -  Xã Lệnh Khanh
+    -  Xã Lịch Hội Thượng
+    -  Xã Lỗ Sơn
+    -  Xã Lộ 25
+    -  Xã Lộc An
+    -  Xã Lộc Bình
+    -  Xã Lộc Bảo
+    -  Xã Lộc Bắc
+    -  Xã Lộc Bổn
+    -  Xã Lộc Châu
+    -  Xã Lộc Giang
+    -  Xã Lộc Hiệp
+    -  Xã Lộc Hòa
+    -  Xã Lộc Hưng
+    -  Xã Lộc Khánh
+    -  Xã Lộc Lâm
+    -  Xã Lộc Nam
+    -  Xã Lộc Nga
+    -  Xã Lộc Ngãi
+    -  Xã Lộc Ninh
+    -  Xã Lộc Phú
+    -  Xã Lộc Quang
+    -  Xã Lộc Quảng
+    -  Xã Lộc Sơn
+    -  Xã Lộc Thanh
+    -  Xã Lộc Thiện
+    -  Xã Lộc Thuận
+    -  Xã Lộc Thành
+    -  Xã Lộc Thái
+    -  Xã Lộc Thạnh
+    -  Xã Lộc Thịnh
+    -  Xã Lộc Thủy
+    -  Xã Lộc Tiến
+    -  Xã Lộc Trì
+    -  Xã Lộc Tân
+    -  Xã Lộc Tấn
+    -  Xã Lộc Vĩnh
+    -  Xã Lộc Yên
+    -  Xã Lộc Điền
+    -  Xã Lộc Đức
+    -  Xã Lợi An
+    -  Xã Lợi Bác
+    -  Xã Lợi Bình Nhơn
+    -  Xã Lợi Hải
+    -  Xã Lợi Thuận
+    -  Xã Lục Ba
+    -  Xã Lục Bình
+    -  Xã Lục Dạ
+    -  Xã Lục Hồn
+    -  Xã Lục Sơn
+    -  Xã Lục Sỹ Thành
+    -  Xã Lục Thôn
+    -  Xã Lử Thẩn
+    -  Xã Lực Hành
+    -  Xã Ma Li Chải
+    -  Xã Ma Ly Pho
+    -  Xã Ma Nới
+    -  Xã Ma Quai
+    -  Xã Ma Thì Hồ
+    -  Xã Ma Đa Guôi
+    -  Xã Mai Hóa
+    -  Xã Mai Hạ
+    -  Xã Mai Hịch
+    -  Xã Mai Long
+    -  Xã Mai Lâm
+    -  Xã Mai Lạp
+    -  Xã Mai Pha
+    -  Xã Mai Phụ
+    -  Xã Mai Sao
+    -  Xã Mai Sơn
+    -  Xã Mai Thủy
+    -  Xã Mai Trung
+    -  Xã Mai Tùng
+    -  Xã Mai Đình
+    -  Xã Mai Động
+    -  Xã Mi Hòa
+    -  Xã Minh An
+    -  Xã Minh Bảo
+    -  Xã Minh Chuẩn
+    -  Xã Minh Châu
+    -  Xã Minh Côi
+    -  Xã Minh Cường
+    -  Xã Minh Cầm
+    -  Xã Minh Diệu
+    -  Xã Minh Dân
+    -  Xã Minh Hiệp
+    -  Xã Minh Hoà
+    -  Xã Minh Hoàng
+    -  Xã Minh Hòa
+    -  Xã Minh Hóa
+    -  Xã Minh Hưng
+    -  Xã Minh Hương
+    -  Xã Minh Hạc
+    -  Xã Minh Hải
+    -  Xã Minh Hợp
+    -  Xã Minh Khai
+    -  Xã Minh Khôi
+    -  Xã Minh Khương
+    -  Xã Minh Long
+    -  Xã Minh Lãng
+    -  Xã Minh Lương
+    -  Xã Minh Lập
+    -  Xã Minh Lộc
+    -  Xã Minh Nghĩa
+    -  Xã Minh Ngọc
+    -  Xã Minh Phát
+    -  Xã Minh Phú
+    -  Xã Minh Phương
+    -  Xã Minh Phượng
+    -  Xã Minh Quang
+    -  Xã Minh Quán
+    -  Xã Minh Quân
+    -  Xã Minh Sơn
+    -  Xã Minh Thanh
+    -  Xã Minh Thuận
+    -  Xã Minh Thành
+    -  Xã Minh Thạnh
+    -  Xã Minh Thắng
+    -  Xã Minh Tiến
+    -  Xã Minh Trí
+    -  Xã Minh Tâm
+    -  Xã Minh Tân
+    -  Xã Minh Xuân
+    -  Xã Minh Đài
+    -  Xã Minh Đạo
+    -  Xã Minh Đức
+    -  Xã Miền Đồi
+    -  Xã Mo Ray
+    -  Xã Mong Thọ
+    -  Xã Mong Thọ A
+    -  Xã Mong Thọ B
+    -  Xã Muội Nọi
+    -  Xã Mà Cooi
+    -  Xã Má Lé
+    -  Xã Mã Ba
+    -  Xã Mã Thành
+    -  Xã Mã Đà
+    -  Xã Mãn Đức
+    -  Xã Mão Điền
+    -  Xã Mê Linh
+    -  Xã Mê Pu
+    -  Xã Mò Ó
+    -  Xã Môn Sơn
+    -  Xã Mông Hóa
+    -  Xã Mông Sơn
+    -  Xã Mông Ân
+    -  Xã Mù Cả
+    -  Xã Mù Sang
+    -  Xã Mùn Chung
+    -  Xã Măng Buk
+    -  Xã Măng Cành
+    -  Xã Măng Ri
+    -  Xã Măng Tố
+    -  Xã Mương Mán
+    -  Xã Mương Tranh
+    -  Xã Mường Bang
+    -  Xã Mường Bo
+    -  Xã Mường Bon
+    -  Xã Mường Bám
+    -  Xã Mường Báng
+    -  Xã Mường Bú
+    -  Xã Mường Bằng
+    -  Xã Mường Cai
+    -  Xã Mường Cang
+    -  Xã Mường Chanh
+    -  Xã Mường Chiên
+    -  Xã Mường Chiềng
+    -  Xã Mường Chùm
+    -  Xã Mường Cơi
+    -  Xã Mường Do
+    -  Xã Mường Giàng
+    -  Xã Mường Giôn
+    -  Xã Mường Hoa
+    -  Xã Mường Hoong
+    -  Xã Mường Hum
+    -  Xã Mường Hung
+    -  Xã Mường Khiêng
+    -  Xã Mường Khoa
+    -  Xã Mường Khong
+    -  Xã Mường Kim
+    -  Xã Mường Lai
+    -  Xã Mường Lang
+    -  Xã Mường Luân
+    -  Xã Mường Lèo
+    -  Xã Mường Lói
+    -  Xã Mường Lý
+    -  Xã Mường Lạn
+    -  Xã Mường Lầm
+    -  Xã Mường Lống
+    -  Xã Mường Lựm
+    -  Xã Mường Men
+    -  Xã Mường Mìn
+    -  Xã Mường Mít
+    -  Xã Mường Mô
+    -  Xã Mường Mùn
+    -  Xã Mường Mươn
+    -  Xã Mường Nhà
+    -  Xã Mường Nhé
+    -  Xã Mường Nọc
+    -  Xã Mường Phăng
+    -  Xã Mường Pồn
+    -  Xã Mường Sai
+    -  Xã Mường Sang
+    -  Xã Mường So
+    -  Xã Mường Sại
+    -  Xã Mường Than
+    -  Xã Mường Thín
+    -  Xã Mường Thải
+    -  Xã Mường Toong
+    -  Xã Mường Trai
+    -  Xã Mường Tuổng
+    -  Xã Mường Tè
+    -  Xã Mường Típ
+    -  Xã Mường Tùng
+    -  Xã Mường Vi
+    -  Xã Mường Và
+    -  Xã Mường é
+    -  Xã Mường Đun
+    -  Xã Mường Đăng
+    -  Xã Mường Ải
+    -  Xã Mạn Lạn
+    -  Xã Mản Thẩn
+    -  Xã Mẫu Sơn
+    -  Xã Mậu Duệ
+    -  Xã Mậu Long
+    -  Xã Mậu Lâm
+    -  Xã Mậu Đông
+    -  Xã Mậu Đức
+    -  Xã Mễ Sở
+    -  Xã Mỏ Công
+    -  Xã Mỏ Vàng
+    -  Xã Mồ Dề
+    -  Xã Mồ Sì San
+    -  Xã Mộ Đạo
+    -  Xã Mộc Bắc
+    -  Xã Mộc Nam
+    -  Xã Mỹ An
+    -  Xã Mỹ An Hưng A
+    -  Xã Mỹ An Hưng B
+    -  Xã Mỹ Bình
+    -  Xã Mỹ Bằng
+    -  Xã Mỹ Chánh
+    -  Xã Mỹ Chánh Tây
+    -  Xã Mỹ Châu
+    -  Xã Mỹ Cát
+    -  Xã Mỹ Cẩm
+    -  Xã Mỹ Gia
+    -  Xã Mỹ Hiệp
+    -  Xã Mỹ Hiệp Sơn
+    -  Xã Mỹ Hoà Hưng
+    -  Xã Mỹ Hà
+    -  Xã Mỹ Hòa
+    -  Xã Mỹ Hưng
+    -  Xã Mỹ Hương
+    -  Xã Mỹ Hạnh Bắc
+    -  Xã Mỹ Hạnh Nam
+    -  Xã Mỹ Hạnh Trung
+    -  Xã Mỹ Hạnh Đông
+    -  Xã Mỹ Hội
+    -  Xã Mỹ Hội Đông
+    -  Xã Mỹ Khánh
+    -  Xã Mỹ Long
+    -  Xã Mỹ Long Bắc
+    -  Xã Mỹ Long Nam
+    -  Xã Mỹ Lung
+    -  Xã Mỹ Lâm
+    -  Xã Mỹ Lý
+    -  Xã Mỹ Lương
+    -  Xã Mỹ Lạc
+    -  Xã Mỹ Lệ
+    -  Xã Mỹ Lộc
+    -  Xã Mỹ Lợi
+    -  Xã Mỹ Lợi A
+    -  Xã Mỹ Lợi B
+    -  Xã Mỹ Ngãi
+    -  Xã Mỹ Nhơn
+    -  Xã Mỹ Phong
+    -  Xã Mỹ Phú
+    -  Xã Mỹ Phú Đông
+    -  Xã Mỹ Phúc
+    -  Xã Mỹ Phương
+    -  Xã Mỹ Phước
+    -  Xã Mỹ Phước Tây
+    -  Xã Mỹ Quang
+    -  Xã Mỹ Quý
+    -  Xã Mỹ Quý Tây
+    -  Xã Mỹ Quý Đông
+    -  Xã Mỹ Quới
+    -  Xã Mỹ Sơn
+    -  Xã Mỹ Thanh
+    -  Xã Mỹ Thuận
+    -  Xã Mỹ Thành
+    -  Xã Mỹ Thành Bắc
+    -  Xã Mỹ Thành Nam
+    -  Xã Mỹ Thái
+    -  Xã Mỹ Thạnh
+    -  Xã Mỹ Thạnh An
+    -  Xã Mỹ Thạnh Bắc
+    -  Xã Mỹ Thạnh Trung
+    -  Xã Mỹ Thạnh Tây
+    -  Xã Mỹ Thạnh Đông
+    -  Xã Mỹ Thắng
+    -  Xã Mỹ Thịnh
+    -  Xã Mỹ Thọ
+    -  Xã Mỹ Thủy
+    -  Xã Mỹ Tiến
+    -  Xã Mỹ Trinh
+    -  Xã Mỹ Trung
+    -  Xã Mỹ Trà
+    -  Xã Mỹ Trạch
+    -  Xã Mỹ Tài
+    -  Xã Mỹ Tân
+    -  Xã Mỹ Tú
+    -  Xã Mỹ Tịnh An
+    -  Xã Mỹ Xuân
+    -  Xã Mỹ Xá
+    -  Xã Mỹ Xương
+    -  Xã Mỹ Yên
+    -  Xã Mỹ Đông
+    -  Xã Mỹ Đồng
+    -  Xã Mỹ Đức
+    -  Xã Mỹ Đức Tây
+    -  Xã Mỹ Đức Đông
+    -  Xã N'Thol Hạ
+    -  Xã Na Cô Sa
+    -  Xã Na Hối
+    -  Xã Na Khê
+    -  Xã Na Loi
+    -  Xã Na Mao
+    -  Xã Na Mèo
+    -  Xã Na Ngoi
+    -  Xã Na Sang
+    -  Xã Na Son
+    -  Xã Na Tông
+    -  Xã Na Ư
+    -  Xã Nam Anh
+    -  Xã Nam Bình
+    -  Xã Nam Cao
+    -  Xã Nam Chính
+    -  Xã Nam Cát
+    -  Xã Nam Cát Tiên
+    -  Xã Nam Cường
+    -  Xã Nam Dong
+    -  Xã Nam Du
+    -  Xã Nam Dương
+    -  Xã Nam Giang
+    -  Xã Nam Hoa
+    -  Xã Nam Hà
+    -  Xã Nam Hòa
+    -  Xã Nam Hóa
+    -  Xã Nam Hùng
+    -  Xã Nam Hưng
+    -  Xã Nam Hương
+    -  Xã Nam Hải
+    -  Xã Nam Hồng
+    -  Xã Nam Ka
+    -  Xã Nam Kim
+    -  Xã Nam La
+    -  Xã Nam Lĩnh
+    -  Xã Nam Lộc
+    -  Xã Nam Lợi
+    -  Xã Nam Mẫu
+    -  Xã Nam Mỹ
+    -  Xã Nam Nghĩa
+    -  Xã Nam Ninh
+    -  Xã Nam Phong
+    -  Xã Nam Phú
+    -  Xã Nam Phúc
+    -  Xã Nam Phúc Thăng
+    -  Xã Nam Phương Tiến
+    -  Xã Nam Quan
+    -  Xã Nam Quang
+    -  Xã Nam Sơn
+    -  Xã Nam Thanh
+    -  Xã Nam Thành
+    -  Xã Nam Thái
+    -  Xã Nam Thái A
+    -  Xã Nam Thái Sơn
+    -  Xã Nam Thượng
+    -  Xã Nam Thắng
+    -  Xã Nam Thịnh
+    -  Xã Nam Tiến
+    -  Xã Nam Toàn
+    -  Xã Nam Triều
+    -  Xã Nam Trung
+    -  Xã Nam Trạch
+    -  Xã Nam Tuấn
+    -  Xã Nam Tân
+    -  Xã Nam Viêm
+    -  Xã Nam Vân
+    -  Xã Nam Xuân
+    -  Xã Nam Yang
+    -  Xã Nam Yên
+    -  Xã Nam Điền
+    -  Xã Nam Đà
+    -  Xã Nam Đồng
+    -  Xã Nam Động
+    -  Xã Nga An
+    -  Xã Nga Bạch
+    -  Xã Nga Giáp
+    -  Xã Nga Hoàng
+    -  Xã Nga Hưng
+    -  Xã Nga Hải
+    -  Xã Nga Liên
+    -  Xã Nga Lĩnh
+    -  Xã Nga My
+    -  Xã Nga Mỹ
+    -  Xã Nga Nhân
+    -  Xã Nga Phú
+    -  Xã Nga Phượng
+    -  Xã Nga Quán
+    -  Xã Nga Thanh
+    -  Xã Nga Thiện
+    -  Xã Nga Thành
+    -  Xã Nga Thái
+    -  Xã Nga Thạch
+    -  Xã Nga Thắng
+    -  Xã Nga Thủy
+    -  Xã Nga Tiến
+    -  Xã Nga Trung
+    -  Xã Nga Trường
+    -  Xã Nga Tân
+    -  Xã Nga Văn
+    -  Xã Nga Vịnh
+    -  Xã Nga Yên
+    -  Xã Nga Điền
+    -  Xã Ngam La
+    -  Xã Nghi Công Bắc
+    -  Xã Nghi Công Nam
+    -  Xã Nghi Diên
+    -  Xã Nghi Hoa
+    -  Xã Nghi Hưng
+    -  Xã Nghi Hợp
+    -  Xã Nghi Khánh
+    -  Xã Nghi Kim
+    -  Xã Nghi Kiều
+    -  Xã Nghi Liên
+    -  Xã Nghi Long
+    -  Xã Nghi Lâm
+    -  Xã Nghi Mỹ
+    -  Xã Nghi Phong
+    -  Xã Nghi Phú
+    -  Xã Nghi Phương
+    -  Xã Nghi Quang
+    -  Xã Nghi Sơn
+    -  Xã Nghi Thiết
+    -  Xã Nghi Thuận
+    -  Xã Nghi Thái
+    -  Xã Nghi Thạch
+    -  Xã Nghi Thịnh
+    -  Xã Nghi Tiến
+    -  Xã Nghi Trung
+    -  Xã Nghi Trường
+    -  Xã Nghi Văn
+    -  Xã Nghi Vạn
+    -  Xã Nghi Xuân
+    -  Xã Nghi Xá
+    -  Xã Nghi Yên
+    -  Xã Nghi Ân
+    -  Xã Nghi Đồng
+    -  Xã Nghi Đức
+    -  Xã Nghinh Tường
+    -  Xã Nghinh Xuyên
+    -  Xã Nghiêm Xuyên
+    -  Xã Nghiên Loan
+    -  Xã Nghĩa An
+    -  Xã Nghĩa Bình
+    -  Xã Nghĩa Châu
+    -  Xã Nghĩa Dân
+    -  Xã Nghĩa Dõng
+    -  Xã Nghĩa Dũng
+    -  Xã Nghĩa Hiếu
+    -  Xã Nghĩa Hiệp
+    -  Xã Nghĩa Hoàn
+    -  Xã Nghĩa Hà
+    -  Xã Nghĩa Hành
+    -  Xã Nghĩa Hòa
+    -  Xã Nghĩa Hùng
+    -  Xã Nghĩa Hưng
+    -  Xã Nghĩa Hương
+    -  Xã Nghĩa Hải
+    -  Xã Nghĩa Hồ
+    -  Xã Nghĩa Hồng
+    -  Xã Nghĩa Hội
+    -  Xã Nghĩa Hợp
+    -  Xã Nghĩa Khánh
+    -  Xã Nghĩa Kỳ
+    -  Xã Nghĩa Liên
+    -  Xã Nghĩa Long
+    -  Xã Nghĩa Lâm
+    -  Xã Nghĩa Lạc
+    -  Xã Nghĩa Lộ
+    -  Xã Nghĩa Lộc
+    -  Xã Nghĩa Lợi
+    -  Xã Nghĩa Mai
+    -  Xã Nghĩa Minh
+    -  Xã Nghĩa Mỹ
+    -  Xã Nghĩa Ninh
+    -  Xã Nghĩa Phong
+    -  Xã Nghĩa Phú
+    -  Xã Nghĩa Phúc
+    -  Xã Nghĩa Phương
+    -  Xã Nghĩa Sơn
+    -  Xã Nghĩa Thuận
+    -  Xã Nghĩa Thành
+    -  Xã Nghĩa Thái
+    -  Xã Nghĩa Thương
+    -  Xã Nghĩa Thắng
+    -  Xã Nghĩa Thịnh
+    -  Xã Nghĩa Thọ
+    -  Xã Nghĩa Tiến
+    -  Xã Nghĩa Trung
+    -  Xã Nghĩa Trụ
+    -  Xã Nghĩa Tá
+    -  Xã Nghĩa Tâm
+    -  Xã Nghĩa Tân
+    -  Xã Nghĩa Xuân
+    -  Xã Nghĩa Yên
+    -  Xã Nghĩa Điền
+    -  Xã Nghĩa Đô
+    -  Xã Nghĩa Đạo
+    -  Xã Nghĩa Đồng
+    -  Xã Nghĩa Đức
+    -  Xã Nghị Đức
+    -  Xã Ngok Réo
+    -  Xã Ngok Tem
+    -  Xã Ngok Wang
+    -  Xã Ngok Yêu
+    -  Xã Nguyên Bình
+    -  Xã Nguyên Giáp
+    -  Xã Nguyên Hòa
+    -  Xã Nguyên Khê
+    -  Xã Nguyên Lý
+    -  Xã Nguyên Phúc
+    -  Xã Nguyên Xá
+    -  Xã Nguyễn Huân
+    -  Xã Nguyễn Huệ
+    -  Xã Nguyễn Phích
+    -  Xã Nguyễn Trãi
+    -  Xã Nguyễn Việt Khái
+    -  Xã Nguyễn Văn Thảnh
+    -  Xã Nguyễn Úy
+    -  Xã Nguyệt Hóa
+    -  Xã Nguyệt Đức
+    -  Xã Nguyệt Ấn
+    -  Xã Ngàm Đăng Vài
+    -  Xã Ngán Chiên
+    -  Xã Ngân Thủy
+    -  Xã Ngãi Hùng
+    -  Xã Ngãi Tứ
+    -  Xã Ngãi Xuyên
+    -  Xã Ngãi Đăng
+    -  Xã Ngòi A
+    -  Xã Ngòi Hoa
+    -  Xã Ngô Quyền
+    -  Xã Ngô Xá
+    -  Xã Ngũ Chỉ Sơn
+    -  Xã Ngũ Hiệp
+    -  Xã Ngũ Hùng
+    -  Xã Ngũ Kiên
+    -  Xã Ngũ Lão
+    -  Xã Ngũ Lạc
+    -  Xã Ngũ Phúc
+    -  Xã Ngũ Phụng
+    -  Xã Ngũ Thái
+    -  Xã Ngũ Đoan
+    -  Xã Ngư Hóa
+    -  Xã Ngư Lộc
+    -  Xã Ngư Thủy
+    -  Xã Ngư Thủy Bắc
+    -  Xã Ngư Thủy Nam
+    -  Xã Ngư Thủy Trung
+    -  Xã Ngải Thầu
+    -  Xã Ngọc Biên
+    -  Xã Ngọc Chiến
+    -  Xã Ngọc Chung
+    -  Xã Ngọc Chánh
+    -  Xã Ngọc Châu
+    -  Xã Ngọc Chúc
+    -  Xã Ngọc Chấn
+    -  Xã Ngọc Côn
+    -  Xã Ngọc Hoà
+    -  Xã Ngọc Hòa
+    -  Xã Ngọc Hồi
+    -  Xã Ngọc Hội
+    -  Xã Ngọc Khê
+    -  Xã Ngọc Kỳ
+    -  Xã Ngọc Linh
+    -  Xã Ngọc Liên
+    -  Xã Ngọc Liệp
+    -  Xã Ngọc Long
+    -  Xã Ngọc Lâm
+    -  Xã Ngọc Lâu
+    -  Xã Ngọc Lý
+    -  Xã Ngọc Lĩnh
+    -  Xã Ngọc Lũ
+    -  Xã Ngọc Lương
+    -  Xã Ngọc Lập
+    -  Xã Ngọc Minh
+    -  Xã Ngọc Mỹ
+    -  Xã Ngọc Phái
+    -  Xã Ngọc Phụng
+    -  Xã Ngọc Quan
+    -  Xã Ngọc Sơn
+    -  Xã Ngọc Thanh
+    -  Xã Ngọc Thiện
+    -  Xã Ngọc Thuận
+    -  Xã Ngọc Thành
+    -  Xã Ngọc Trung
+    -  Xã Ngọc Trạo
+    -  Xã Ngọc Tảo
+    -  Xã Ngọc Tố
+    -  Xã Ngọc Vân
+    -  Xã Ngọc Vừng
+    -  Xã Ngọc Xá
+    -  Xã Ngọc Đào
+    -  Xã Ngọc Đông
+    -  Xã Ngọc Đường
+    -  Xã Ngọc Định
+    -  Xã Ngọc Đồng
+    -  Xã Ngọc Động
+    -  Xã Ngọk Bay
+    -  Xã Ngọk Lây
+    -  Xã Ngọk Tụ
+    -  Xã Ngối Cáy
+    -  Xã Ngổ Luông
+    -  Xã Nha Bích
+    -  Xã Nham Sơn
+    -  Xã Nhi Sơn
+    -  Xã Nhuận Phú Tân
+    -  Xã Nhuận Trạch
+    -  Xã Nhuận Đức
+    -  Xã Nhuế Dương
+    -  Xã Nhâm
+    -  Xã Nhân Bình
+    -  Xã Nhân Chính
+    -  Xã Nhân Cơ
+    -  Xã Nhân Hoà
+    -  Xã Nhân Huệ
+    -  Xã Nhân Hòa
+    -  Xã Nhân Hưng
+    -  Xã Nhân Khang
+    -  Xã Nhân La
+    -  Xã Nhân Lý
+    -  Xã Nhân Mục
+    -  Xã Nhân Mỹ
+    -  Xã Nhân Nghĩa
+    -  Xã Nhân Quyền
+    -  Xã Nhân Sơn
+    -  Xã Nhân Thành
+    -  Xã Nhân Thắng
+    -  Xã Nhân Thịnh
+    -  Xã Nhân Trạch
+    -  Xã Nhân Đạo
+    -  Xã Nhã Lộng
+    -  Xã Nhã Nam
+    -  Xã Nhôn Mai
+    -  Xã Nhơn An
+    -  Xã Nhơn Bình
+    -  Xã Nhơn Châu
+    -  Xã Nhơn Hoà
+    -  Xã Nhơn Hòa Lập
+    -  Xã Nhơn Hưng
+    -  Xã Nhơn Hạnh
+    -  Xã Nhơn Hải
+    -  Xã Nhơn Hậu
+    -  Xã Nhơn Hội
+    -  Xã Nhơn Khánh
+    -  Xã Nhơn Lý
+    -  Xã Nhơn Lộc
+    -  Xã Nhơn Mỹ
+    -  Xã Nhơn Nghĩa
+    -  Xã Nhơn Nghĩa A
+    -  Xã Nhơn Ninh
+    -  Xã Nhơn Phong
+    -  Xã Nhơn Phú
+    -  Xã Nhơn Phúc
+    -  Xã Nhơn Sơn
+    -  Xã Nhơn Thạnh
+    -  Xã Nhơn Thạnh Trung
+    -  Xã Nhơn Thọ
+    -  Xã Nhơn Tân
+    -  Xã Nhơn Ái
+    -  Xã Nhơn Đức
+    -  Xã Như Cố
+    -  Xã Như Hòa
+    -  Xã Như Khuê
+    -  Xã Như Thụy
+    -  Xã Nhượng Bạn
+    -  Xã Nhạc Kỳ
+    -  Xã Nhạn Môn
+    -  Xã Nhạo Sơn
+    -  Xã Nhất Hòa
+    -  Xã Nhất Tiến
+    -  Xã Nhật Quang
+    -  Xã Nhật Tiến
+    -  Xã Nhật Tân
+    -  Xã Nhật Tựu
+    -  Xã Nhị Bình
+    -  Xã Nhị Hà
+    -  Xã Nhị Khê
+    -  Xã Nhị Long
+    -  Xã Nhị Long Phú
+    -  Xã Nhị Mỹ
+    -  Xã Nhị Quý
+    -  Xã Nhị Thành
+    -  Xã Nhị Trường
+    -  Xã Nhữ Hán
+    -  Xã Nhữ Khê
+    -  Xã Nhựt Chánh
+    -  Xã Nhựt Ninh
+    -  Xã Ninh An
+    -  Xã Ninh Bình
+    -  Xã Ninh Dân
+    -  Xã Ninh Gia
+    -  Xã Ninh Giang
+    -  Xã Ninh Hiệp
+    -  Xã Ninh Hòa
+    -  Xã Ninh Hưng
+    -  Xã Ninh Hải
+    -  Xã Ninh Khang
+    -  Xã Ninh Lai
+    -  Xã Ninh Loan
+    -  Xã Ninh Lộc
+    -  Xã Ninh Mỹ
+    -  Xã Ninh Nhất
+    -  Xã Ninh Phú
+    -  Xã Ninh Phúc
+    -  Xã Ninh Phước
+    -  Xã Ninh Phụng
+    -  Xã Ninh Quang
+    -  Xã Ninh Quới
+    -  Xã Ninh Quới A
+    -  Xã Ninh Sim
+    -  Xã Ninh Sơn
+    -  Xã Ninh Sở
+    -  Xã Ninh Thành
+    -  Xã Ninh Thân
+    -  Xã Ninh Thượng
+    -  Xã Ninh Thạnh Lợi
+    -  Xã Ninh Thạnh Lợi A
+    -  Xã Ninh Thắng
+    -  Xã Ninh Thọ
+    -  Xã Ninh Thới
+    -  Xã Ninh Tiến
+    -  Xã Ninh Trung
+    -  Xã Ninh Tân
+    -  Xã Ninh Tây
+    -  Xã Ninh Vân
+    -  Xã Ninh Xuân
+    -  Xã Ninh Xá
+    -  Xã Ninh Ích
+    -  Xã Ninh Điền
+    -  Xã Ninh Đông
+    -  Xã Niêm Sơn
+    -  Xã Niêm Tòng
+    -  Xã Nong Lay
+    -  Xã Nong Luông
+    -  Xã Nong U
+    -  Xã Noong Hẻo
+    -  Xã Noong Luống
+    -  Xã Noọng Hẹt
+    -  Xã Nuông Dăm
+    -  Xã Nà Bủng
+    -  Xã Nà Hẩu
+    -  Xã Nà Hỳ
+    -  Xã Nà Khoa
+    -  Xã Nà Khương
+    -  Xã Nà Mèo
+    -  Xã Nà Mường
+    -  Xã Nà Nghịu
+    -  Xã Nà Nhạn
+    -  Xã Nà Phòn
+    -  Xã Nà Pó
+    -  Xã Nà Sác
+    -  Xã Nà Sáy
+    -  Xã Nà Trì
+    -  Xã Nà Tòng
+    -  Xã Nà Tăm
+    -  Xã Nà Tấu
+    -  Xã Nà Ơt
+    -  Xã Nàn Ma
+    -  Xã Nàn Sán
+    -  Xã Nàn Xín
+    -  Xã Nàn Xỉn
+    -  Xã Nàng Đôn
+    -  Xã Nánh Nghê
+    -  Xã Nâm N'Jang
+    -  Xã Nâm N'Đir
+    -  Xã Nâm Nung
+    -  Xã Nông Hạ
+    -  Xã Nông Thượng
+    -  Xã Nông Thịnh
+    -  Xã Nông Trường
+    -  Xã Nùng Nàng
+    -  Xã Núa Ngam
+    -  Xã Núi Tô
+    -  Xã Núi Tượng
+    -  Xã Núi Voi
+    -  Xã Năng Khả
+    -  Xã Năng Yên
+    -  Xã Nấm Dẩn
+    -  Xã Nấm Lư
+    -  Xã Nậm Ban
+    -  Xã Nậm Búng
+    -  Xã Nậm Cang
+    -  Xã Nậm Cha
+    -  Xã Nậm Chua
+    -  Xã Nậm Chà
+    -  Xã Nậm Chạc
+    -  Xã Nậm Chảy
+    -  Xã Nậm Chầy
+    -  Xã Nậm Cuổi
+    -  Xã Nậm Càn
+    -  Xã Nậm Có
+    -  Xã Nậm Cần
+    -  Xã Nậm Cắn
+    -  Xã Nậm Dịch
+    -  Xã Nậm Giôn
+    -  Xã Nậm Giải
+    -  Xã Nậm Hàng
+    -  Xã Nậm Hăn
+    -  Xã Nậm Khao
+    -  Xã Nậm Khánh
+    -  Xã Nậm Khòa
+    -  Xã Nậm Khăn
+    -  Xã Nậm Khắt
+    -  Xã Nậm Kè
+    -  Xã Nậm Loỏng
+    -  Xã Nậm Lành
+    -  Xã Nậm Lúc
+    -  Xã Nậm Lạnh
+    -  Xã Nậm Lầu
+    -  Xã Nậm Manh
+    -  Xã Nậm Mòn
+    -  Xã Nậm Mười
+    -  Xã Nậm Mạ
+    -  Xã Nậm Mả
+    -  Xã Nậm Mằn
+    -  Xã Nậm Nhoóng
+    -  Xã Nậm Nhừ
+    -  Xã Nậm Nèn
+    -  Xã Nậm Pung
+    -  Xã Nậm Pì
+    -  Xã Nậm Păm
+    -  Xã Nậm Rạng
+    -  Xã Nậm Sài
+    -  Xã Nậm Sỏ
+    -  Xã Nậm Tha
+    -  Xã Nậm Tin
+    -  Xã Nậm Ty
+    -  Xã Nậm Tăm
+    -  Xã Nậm Tỵ
+    -  Xã Nậm Vì
+    -  Xã Nậm Xe
+    -  Xã Nậm Xây
+    -  Xã Nậm Xé
+    -  Xã Nậm ét
+    -  Xã Nậm Đét
+    -  Xã Nật Sơn
+    -  Xã Nặm Lịch
+    -  Xã Nội Duệ
+    -  Xã Nội Hoàng
+    -  Xã Nội Thôn
+    -  Xã Pa Cheo
+    -  Xã Pa Ham
+    -  Xã Pa Khoá
+    -  Xã Pa Thơm
+    -  Xã Pa Tần
+    -  Xã Pa Vây Sử
+    -  Xã Pa Vệ Sử
+    -  Xã Pa ủ
+    -  Xã Pha Long
+    -  Xã Pha Mu
+    -  Xã Phan
+    -  Xã Phan Dũng
+    -  Xã Phan Hiệp
+    -  Xã Phan Hòa
+    -  Xã Phan Lâm
+    -  Xã Phan Rí Thành
+    -  Xã Phan Sào Nam
+    -  Xã Phan Sơn
+    -  Xã Phan Thanh
+    -  Xã Phan Tiến
+    -  Xã Phan Điền
+    -  Xã Phan Đình Phùng
+    -  Xã Phi Hải
+    -  Xã Phi Liêng
+    -  Xã Phi Mô
+    -  Xã Phi Thông
+    -  Xã Phi Tô
+    -  Xã Phiêng Ban
+    -  Xã Phiêng Cằm
+    -  Xã Phiêng Khoài
+    -  Xã Phiêng Kôn
+    -  Xã Phiêng Luông
+    -  Xã Phiêng Pằn
+    -  Xã Phong An
+    -  Xã Phong Bình
+    -  Xã Phong Châu
+    -  Xã Phong Chương
+    -  Xã Phong Dụ
+    -  Xã Phong Dụ Hạ
+    -  Xã Phong Dụ Thượng
+    -  Xã Phong Hiền
+    -  Xã Phong Huân
+    -  Xã Phong Hòa
+    -  Xã Phong Hóa
+    -  Xã Phong Hải
+    -  Xã Phong Lạc
+    -  Xã Phong Lộc
+    -  Xã Phong Minh
+    -  Xã Phong Mẫn
+    -  Xã Phong Mỹ
+    -  Xã Phong Niên
+    -  Xã Phong Nẫm
+    -  Xã Phong Nậm
+    -  Xã Phong Phú
+    -  Xã Phong Quang
+    -  Xã Phong Sơn
+    -  Xã Phong Thu
+    -  Xã Phong Thạnh
+    -  Xã Phong Thạnh A
+    -  Xã Phong Thạnh Tây
+    -  Xã Phong Thạnh Tây A
+    -  Xã Phong Thạnh Tây B
+    -  Xã Phong Thạnh Đông
+    -  Xã Phong Thịnh
+    -  Xã Phong Thủy
+    -  Xã Phong Tân
+    -  Xã Phong Vân
+    -  Xã Phong Xuân
+    -  Xã Phong Điền
+    -  Xã Phong Đông
+    -  Xã Phu Luông
+    -  Xã Phà Đánh
+    -  Xã Phì Nhừ
+    -  Xã Phì Điền
+    -  Xã Phìn Hồ
+    -  Xã Phìn Ngan
+    -  Xã Phình Giàng
+    -  Xã Phình Hồ
+    -  Xã Phình Sáng
+    -  Xã Phù Chẩn
+    -  Xã Phù Hóa
+    -  Xã Phù Khê
+    -  Xã Phù Linh
+    -  Xã Phù Long
+    -  Xã Phù Lãng
+    -  Xã Phù Lưu
+    -  Xã Phù Lưu Tế
+    -  Xã Phù Lương
+    -  Xã Phù Lỗ
+    -  Xã Phù Ngọc
+    -  Xã Phù Nham
+    -  Xã Phù Ninh
+    -  Xã Phù Việt
+    -  Xã Phù Vân
+    -  Xã Phù Đổng
+    -  Xã Phù Ủng
+    -  Xã Phùng Chí Kiên
+    -  Xã Phùng Giáo
+    -  Xã Phùng Hưng
+    -  Xã Phùng Minh
+    -  Xã Phùng Nguyên
+    -  Xã Phùng Xá
+    -  Xã Phú An
+    -  Xã Phú An Hòa
+    -  Xã Phú Bình
+    -  Xã Phú Chánh
+    -  Xã Phú Châu
+    -  Xã Phú Cát
+    -  Xã Phú Cường
+    -  Xã Phú Cần
+    -  Xã Phú Diên
+    -  Xã Phú Dương
+    -  Xã Phú Gia
+    -  Xã Phú Hiệp
+    -  Xã Phú Hòa
+    -  Xã Phú Hòa Đông
+    -  Xã Phú Hưng
+    -  Xã Phú Hải
+    -  Xã Phú Hồ
+    -  Xã Phú Hộ
+    -  Xã Phú Hội
+    -  Xã Phú Hữu
+    -  Xã Phú Hựu
+    -  Xã Phú Khánh
+    -  Xã Phú Khê
+    -  Xã Phú Kim
+    -  Xã Phú Kiết
+    -  Xã Phú Lai
+    -  Xã Phú Linh
+    -  Xã Phú Long
+    -  Xã Phú Lâm
+    -  Xã Phú Lão
+    -  Xã Phú Lý
+    -  Xã Phú Lũng
+    -  Xã Phú Lương
+    -  Xã Phú Lạc
+    -  Xã Phú Lập
+    -  Xã Phú Lễ
+    -  Xã Phú Lệ
+    -  Xã Phú Lộc
+    -  Xã Phú Lợi
+    -  Xã Phú Minh
+    -  Xã Phú Mãn
+    -  Xã Phú Mậu
+    -  Xã Phú Mỡ
+    -  Xã Phú Mỹ
+    -  Xã Phú Mỹ Hưng
+    -  Xã Phú Nam
+    -  Xã Phú Nam An
+    -  Xã Phú Nghiêm
+    -  Xã Phú Nghĩa
+    -  Xã Phú Ngãi
+    -  Xã Phú Ngãi Trị
+    -  Xã Phú Ngọc
+    -  Xã Phú Nham
+    -  Xã Phú Nhuận
+    -  Xã Phú Ninh
+    -  Xã Phú Phong
+    -  Xã Phú Phúc
+    -  Xã Phú Phương
+    -  Xã Phú Phụng
+    -  Xã Phú Quý
+    -  Xã Phú Quới
+    -  Xã Phú Riềng
+    -  Xã Phú Sơn
+    -  Xã Phú Thanh
+    -  Xã Phú Thuận
+    -  Xã Phú Thuận A
+    -  Xã Phú Thuận B
+    -  Xã Phú Thành
+    -  Xã Phú Thành A
+    -  Xã Phú Thành B
+    -  Xã Phú Thượng
+    -  Xã Phú Thạnh
+    -  Xã Phú Thị
+    -  Xã Phú Thịnh
+    -  Xã Phú Thọ
+    -  Xã Phú Thủy
+    -  Xã Phú Thứ
+    -  Xã Phú Tiến
+    -  Xã Phú Trung
+    -  Xã Phú Trạch
+    -  Xã Phú Tâm
+    -  Xã Phú Tân
+    -  Xã Phú Túc
+    -  Xã Phú Vang
+    -  Xã Phú Vinh
+    -  Xã Phú Văn
+    -  Xã Phú Vĩnh
+    -  Xã Phú Xuyên
+    -  Xã Phú Xuân
+    -  Xã Phú Xá
+    -  Xã Phú Yên
+    -  Xã Phú Đa
+    -  Xã Phú Điền
+    -  Xã Phú Đình
+    -  Xã Phú Đô
+    -  Xã Phú Đông
+    -  Xã Phú Định
+    -  Xã Phú Đức
+    -  Xã Phúc An
+    -  Xã Phúc Chu
+    -  Xã Phúc Do
+    -  Xã Phúc Hà
+    -  Xã Phúc Hòa
+    -  Xã Phúc Khoa
+    -  Xã Phúc Khánh
+    -  Xã Phúc Lai
+    -  Xã Phúc Lâm
+    -  Xã Phúc Lương
+    -  Xã Phúc Lộc
+    -  Xã Phúc Lợi
+    -  Xã Phúc Ninh
+    -  Xã Phúc Sen
+    -  Xã Phúc Sơn
+    -  Xã Phúc Sạn
+    -  Xã Phúc Than
+    -  Xã Phúc Thuận
+    -  Xã Phúc Thành
+    -  Xã Phúc Thành A
+    -  Xã Phúc Thành B
+    -  Xã Phúc Thắng
+    -  Xã Phúc Thịnh
+    -  Xã Phúc Thọ
+    -  Xã Phúc Tiến
+    -  Xã Phúc Trìu
+    -  Xã Phúc Trạch
+    -  Xã Phúc Tuy
+    -  Xã Phúc Tân
+    -  Xã Phúc Xuân
+    -  Xã Phúc Yên
+    -  Xã Phúc Đường
+    -  Xã Phúc Đồng
+    -  Xã Phúc Ứng
+    -  Xã Phăng Sô Lin
+    -  Xã Phương Bình
+    -  Xã Phương Chiểu
+    -  Xã Phương Công
+    -  Xã Phương Giao
+    -  Xã Phương Hưng
+    -  Xã Phương Hải
+    -  Xã Phương Khoan
+    -  Xã Phương Linh
+    -  Xã Phương Liễu
+    -  Xã Phương Lĩnh
+    -  Xã Phương Mỹ
+    -  Xã Phương Phú
+    -  Xã Phương Sơn
+    -  Xã Phương Thiện
+    -  Xã Phương Thạnh
+    -  Xã Phương Thịnh
+    -  Xã Phương Tiến
+    -  Xã Phương Trung
+    -  Xã Phương Trà
+    -  Xã Phương Tú
+    -  Xã Phương Viên
+    -  Xã Phương Xá
+    -  Xã Phương Điền
+    -  Xã Phương Đình
+    -  Xã Phương Định
+    -  Xã Phương Độ
+    -  Xã Phước An
+    -  Xã Phước Bình
+    -  Xã Phước Chiến
+    -  Xã Phước Chánh
+    -  Xã Phước Chính
+    -  Xã Phước Chỉ
+    -  Xã Phước Cát 1
+    -  Xã Phước Cát 2
+    -  Xã Phước Công
+    -  Xã Phước Dinh
+    -  Xã Phước Diêm
+    -  Xã Phước Gia
+    -  Xã Phước Hiệp
+    -  Xã Phước Hoà
+    -  Xã Phước Hà
+    -  Xã Phước Hòa
+    -  Xã Phước Hưng
+    -  Xã Phước Hải
+    -  Xã Phước Hảo
+    -  Xã Phước Hậu
+    -  Xã Phước Hội
+    -  Xã Phước Hữu
+    -  Xã Phước Kháng
+    -  Xã Phước Khánh
+    -  Xã Phước Kim
+    -  Xã Phước Kiểng
+    -  Xã Phước Long
+    -  Xã Phước Long Thọ
+    -  Xã Phước Lâm
+    -  Xã Phước Lý
+    -  Xã Phước Lưu
+    -  Xã Phước Lại
+    -  Xã Phước Lập
+    -  Xã Phước Lộc
+    -  Xã Phước Lợi
+    -  Xã Phước Minh
+    -  Xã Phước Mỹ
+    -  Xã Phước Mỹ Trung
+    -  Xã Phước Nam
+    -  Xã Phước Nghĩa
+    -  Xã Phước Ngãi
+    -  Xã Phước Ninh
+    -  Xã Phước Năng
+    -  Xã Phước Quang
+    -  Xã Phước Sang
+    -  Xã Phước Sơn
+    -  Xã Phước Thiền
+    -  Xã Phước Thiện
+    -  Xã Phước Thuận
+    -  Xã Phước Thành
+    -  Xã Phước Thái
+    -  Xã Phước Thạnh
+    -  Xã Phước Thắng
+    -  Xã Phước Thể
+    -  Xã Phước Tiến
+    -  Xã Phước Trung
+    -  Xã Phước Trà
+    -  Xã Phước Trạch
+    -  Xã Phước Tuy
+    -  Xã Phước Tân
+    -  Xã Phước Tân Hưng
+    -  Xã Phước Tín
+    -  Xã Phước Tỉnh
+    -  Xã Phước Vinh
+    -  Xã Phước Vân
+    -  Xã Phước Vĩnh An
+    -  Xã Phước Vĩnh Tây
+    -  Xã Phước Vĩnh Đông
+    -  Xã Phước Xuân
+    -  Xã Phước Đông
+    -  Xã Phước Đại
+    -  Xã Phước Đồng
+    -  Xã Phước Đức
+    -  Xã Phượng Cách
+    -  Xã Phượng Dực
+    -  Xã Phượng Hoàng
+    -  Xã Phượng Kỳ
+    -  Xã Phượng Lâu
+    -  Xã Phượng Mao
+    -  Xã Phượng Nghi
+    -  Xã Phượng Sơn
+    -  Xã Phượng Tiến
+    -  Xã Phượng Vĩ
+    -  Xã Phạm Kha
+    -  Xã Phạm Mệnh
+    -  Xã Phạm Ngũ Lão
+    -  Xã Phạm Trấn
+    -  Xã Phạm Văn Cội
+    -  Xã Phạm Văn Hai
+    -  Xã Phả Lễ
+    -  Xã Phấn Mễ
+    -  Xã Phật Tích
+    -  Xã Phỏng Lái
+    -  Xã Phỏng Lập
+    -  Xã Phố Cáo
+    -  Xã Phố Lu
+    -  Xã Phố Là
+    -  Xã Phồn Xương
+    -  Xã Phổ An
+    -  Xã Phổ Châu
+    -  Xã Phổ Cường
+    -  Xã Phổ Hòa
+    -  Xã Phổ Khánh
+    -  Xã Phổ Minh
+    -  Xã Phổ Nhơn
+    -  Xã Phổ Ninh
+    -  Xã Phổ Phong
+    -  Xã Phổ Quang
+    -  Xã Phổ Thuận
+    -  Xã Phổ Thạnh
+    -  Xã Phổ Vinh
+    -  Xã Phổ Văn
+    -  Xã Phổng Lăng
+    -  Xã Phụ Khánh
+    -  Xã Phục Linh
+    -  Xã Phục Lễ
+    -  Xã Phụng Châu
+    -  Xã Phụng Công
+    -  Xã Phụng Hiệp
+    -  Xã Phụng Thượng
+    -  Xã Phủ Lý
+    -  Xã Pi Toong
+    -  Xã Piềng Vế
+    -  Xã Pom Lót
+    -  Xã Pró
+    -  Xã Pu Sam Cáp
+    -  Xã Pà Cò
+    -  Xã Pà Vầy Sủ
+    -  Xã Pá Hu
+    -  Xã Pá Khoang
+    -  Xã Pá Lau
+    -  Xã Pá Lông
+    -  Xã Pá Ma Pha Khinh
+    -  Xã Pá Mỳ
+    -  Xã Pô Kô
+    -  Xã Pù Nhi
+    -  Xã Pù Pin
+    -  Xã Pú Hồng
+    -  Xã Pú Nhi
+    -  Xã Pú Nhung
+    -  Xã Pú Pẩu
+    -  Xã Pú Xi
+    -  Xã Pú Đao
+    -  Xã Púng Bánh
+    -  Xã Púng Luông
+    -  Xã Púng Tra
+    -  Xã Pơng Drang
+    -  Xã Pả Vi
+    -  Xã Pải Lủng
+    -  Xã Pắc Ta
+    -  Xã Pố Lồ
+    -  Xã Pờ Ly Ngài
+    -  Xã Pờ Tó
+    -  Xã Pờ Y
+    -  Xã Pờ Ê
+    -  Xã Quan Bản
+    -  Xã Quan Hồ Thẩn
+    -  Xã Quan Lạn
+    -  Xã Quan Sơn
+    -  Xã Quan Thần Sán
+    -  Xã Quang Bình
+    -  Xã Quang Chiểu
+    -  Xã Quang Châu
+    -  Xã Quang Diệm
+    -  Xã Quang Hiến
+    -  Xã Quang Huy
+    -  Xã Quang Hán
+    -  Xã Quang Húc
+    -  Xã Quang Hưng
+    -  Xã Quang Khải
+    -  Xã Quang Kim
+    -  Xã Quang Lang
+    -  Xã Quang Long
+    -  Xã Quang Lãng
+    -  Xã Quang Lịch
+    -  Xã Quang Lộc
+    -  Xã Quang Minh
+    -  Xã Quang Phong
+    -  Xã Quang Phú
+    -  Xã Quang Phục
+    -  Xã Quang Sơn
+    -  Xã Quang Thiện
+    -  Xã Quang Thuận
+    -  Xã Quang Thành
+    -  Xã Quang Thịnh
+    -  Xã Quang Thọ
+    -  Xã Quang Tiến
+    -  Xã Quang Trung
+    -  Xã Quang Trọng
+    -  Xã Quang Vinh
+    -  Xã Quang Vĩnh
+    -  Xã Quang Yên
+    -  Xã Qui Hướng
+    -  Xã Quy Hóa
+    -  Xã Quy Hậu
+    -  Xã Quy Kỳ
+    -  Xã Quy Mông
+    -  Xã Quy Mỹ
+    -  Xã Quy Đức
+    -  Xã Quyết Chiến
+    -  Xã Quyết Thắng
+    -  Xã Quyết Tiến
+    -  Xã Quài Cang
+    -  Xã Quài Nưa
+    -  Xã Quài Tở
+    -  Xã Quách Phẩm
+    -  Xã Quách Phẩm Bắc
+    -  Xã Quân Bình
+    -  Xã Quân Chu
+    -  Xã Quân Hà
+    -  Xã Quân Khê
+    -  Xã Quê Mỹ Thạnh
+    -  Xã Quí Lộc
+    -  Xã Quí Quân
+    -  Xã Quý Hòa
+    -  Xã Quý Quân
+    -  Xã Quý Sơn
+    -  Xã Quơn Long
+    -  Xã Quản Bạ
+    -  Xã Quảng An
+    -  Xã Quảng Bình
+    -  Xã Quảng Bạch
+    -  Xã Quảng Bị
+    -  Xã Quảng Chu
+    -  Xã Quảng Châu
+    -  Xã Quảng Chính
+    -  Xã Quảng Cát
+    -  Xã Quảng Công
+    -  Xã Quảng Cư
+    -  Xã Quảng Giao
+    -  Xã Quảng Hiệp
+    -  Xã Quảng Hoà
+    -  Xã Quảng Hòa
+    -  Xã Quảng Hùng
+    -  Xã Quảng Hưng
+    -  Xã Quảng Hải
+    -  Xã Quảng Hợp
+    -  Xã Quảng Khê
+    -  Xã Quảng Kim
+    -  Xã Quảng La
+    -  Xã Quảng Liên
+    -  Xã Quảng Long
+    -  Xã Quảng Lâm
+    -  Xã Quảng Lãng
+    -  Xã Quảng Lĩnh
+    -  Xã Quảng Lưu
+    -  Xã Quảng Lạc
+    -  Xã Quảng Lập
+    -  Xã Quảng Lộc
+    -  Xã Quảng Lợi
+    -  Xã Quảng Minh
+    -  Xã Quảng Nghiệp
+    -  Xã Quảng Nghĩa
+    -  Xã Quảng Nguyên
+    -  Xã Quảng Ngãi
+    -  Xã Quảng Ngạn
+    -  Xã Quảng Ngần
+    -  Xã Quảng Ngọc
+    -  Xã Quảng Nham
+    -  Xã Quảng Nhâm
+    -  Xã Quảng Nhân
+    -  Xã Quảng Ninh
+    -  Xã Quảng Nạp
+    -  Xã Quảng Phong
+    -  Xã Quảng Phú
+    -  Xã Quảng Phú Cầu
+    -  Xã Quảng Phúc
+    -  Xã Quảng Phương
+    -  Xã Quảng Phước
+    -  Xã Quảng Sơn
+    -  Xã Quảng Thanh
+    -  Xã Quảng Thành
+    -  Xã Quảng Thái
+    -  Xã Quảng Thạch
+    -  Xã Quảng Thắng
+    -  Xã Quảng Thịnh
+    -  Xã Quảng Thọ
+    -  Xã Quảng Thủy
+    -  Xã Quảng Tiên
+    -  Xã Quảng Tiến
+    -  Xã Quảng Trung
+    -  Xã Quảng Trường
+    -  Xã Quảng Trạch
+    -  Xã Quảng Trị
+    -  Xã Quảng Trực
+    -  Xã Quảng Tâm
+    -  Xã Quảng Tân
+    -  Xã Quảng Tín
+    -  Xã Quảng Tùng
+    -  Xã Quảng Vinh
+    -  Xã Quảng Văn
+    -  Xã Quảng Vọng
+    -  Xã Quảng Xuân
+    -  Xã Quảng Yên
+    -  Xã Quảng Điền
+    -  Xã Quảng Đông
+    -  Xã Quảng Đại
+    -  Xã Quảng Định
+    -  Xã Quảng Đức
+    -  Xã Quất Lưu
+    -  Xã Quất Động
+    -  Xã Quế An
+    -  Xã Quế Bình
+    -  Xã Quế Châu
+    -  Xã Quế Cường
+    -  Xã Quế Hiệp
+    -  Xã Quế Long
+    -  Xã Quế Lâm
+    -  Xã Quế Lưu
+    -  Xã Quế Lộc
+    -  Xã Quế Minh
+    -  Xã Quế Mỹ
+    -  Xã Quế Nham
+    -  Xã Quế Ninh
+    -  Xã Quế Phong
+    -  Xã Quế Phú
+    -  Xã Quế Phước
+    -  Xã Quế Sơn
+    -  Xã Quế Thuận
+    -  Xã Quế Thọ
+    -  Xã Quế Trung
+    -  Xã Quế Tân
+    -  Xã Quế Xuân 1
+    -  Xã Quế Xuân 2
+    -  Xã Quốc Dân
+    -  Xã Quốc Khánh
+    -  Xã Quốc Oai
+    -  Xã Quốc Phong
+    -  Xã Quốc Thái
+    -  Xã Quốc Toản
+    -  Xã Quốc Tuấn
+    -  Xã Quốc Việt
+    -  Xã Quới An
+    -  Xã Quới Thiện
+    -  Xã Quới Thành
+    -  Xã Quới Điền
+    -  Xã Quỳnh Bá
+    -  Xã Quỳnh Bảng
+    -  Xã Quỳnh Bảo
+    -  Xã Quỳnh Châu
+    -  Xã Quỳnh Diện
+    -  Xã Quỳnh Giang
+    -  Xã Quỳnh Giao
+    -  Xã Quỳnh Hoa
+    -  Xã Quỳnh Hoàng
+    -  Xã Quỳnh Hưng
+    -  Xã Quỳnh Hải
+    -  Xã Quỳnh Hậu
+    -  Xã Quỳnh Hồng
+    -  Xã Quỳnh Hội
+    -  Xã Quỳnh Khê
+    -  Xã Quỳnh Liên
+    -  Xã Quỳnh Long
+    -  Xã Quỳnh Lâm
+    -  Xã Quỳnh Lưu
+    -  Xã Quỳnh Lương
+    -  Xã Quỳnh Lập
+    -  Xã Quỳnh Lộc
+    -  Xã Quỳnh Minh
+    -  Xã Quỳnh Mỹ
+    -  Xã Quỳnh Nghĩa
+    -  Xã Quỳnh Nguyên
+    -  Xã Quỳnh Ngọc
+    -  Xã Quỳnh Phú
+    -  Xã Quỳnh Sơn
+    -  Xã Quỳnh Tam
+    -  Xã Quỳnh Thanh
+    -  Xã Quỳnh Thuận
+    -  Xã Quỳnh Thạch
+    -  Xã Quỳnh Thắng
+    -  Xã Quỳnh Thọ
+    -  Xã Quỳnh Trang
+    -  Xã Quỳnh Tân
+    -  Xã Quỳnh Vinh
+    -  Xã Quỳnh Văn
+    -  Xã Quỳnh Xá
+    -  Xã Quỳnh Yên
+    -  Xã Quỳnh Đôi
+    -  Xã Qưới Sơn
+    -  Xã Rã Bản
+    -  Xã Rô Men
+    -  Xã Rơ Kơi
+    -  Xã Rạch Chèo
+    -  Xã Rạng Đông
+    -  Xã SRó
+    -  Xã Sa Bình
+    -  Xã Sa Loong
+    -  Xã Sa Lông
+    -  Xã Sa Nghĩa
+    -  Xã Sa Nhơn
+    -  Xã Sa Pả
+    -  Xã Sa Sơn
+    -  Xã Sai Nga
+    -  Xã Sam Kha
+    -  Xã Sam Mứn
+    -  Xã San Sả Hồ
+    -  Xã San Thàng
+    -  Xã Sen Chiểu
+    -  Xã Sen Phương
+    -  Xã Sen Thượng
+    -  Xã Sen Thủy
+    -  Xã Si Pa Phìn
+    -  Xã Sin Suối Hồ
+    -  Xã Sinh Long
+    -  Xã Sinh Tồn
+    -  Xã Song An
+    -  Xã Song Bình
+    -  Xã Song Giang
+    -  Xã Song Giáp
+    -  Xã Song Hồ
+    -  Xã Song Khê
+    -  Xã Song Khủa
+    -  Xã Song Liễu
+    -  Xã Song Lãng
+    -  Xã Song Lộc
+    -  Xã Song Mai
+    -  Xã Song Pe
+    -  Xã Song Phú
+    -  Xã Song Phương
+    -  Xã Song Phượng
+    -  Xã Song Phụng
+    -  Xã Song Thuận
+    -  Xã Song Tử Tây
+    -  Xã Song Vân
+    -  Xã Suối Bau
+    -  Xã Suối Bu
+    -  Xã Suối Bàng
+    -  Xã Suối Bạc
+    -  Xã Suối Cao
+    -  Xã Suối Cát
+    -  Xã Suối Dây
+    -  Xã Suối Giàng
+    -  Xã Suối Hiệp
+    -  Xã Suối Hoa
+    -  Xã Suối Kiết
+    -  Xã Suối Nghệ
+    -  Xã Suối Ngô
+    -  Xã Suối Nho
+    -  Xã Suối Nánh
+    -  Xã Suối Quyền
+    -  Xã Suối Rao
+    -  Xã Suối Thầu
+    -  Xã Suối Tiên
+    -  Xã Suối Trai
+    -  Xã Suối Tre
+    -  Xã Suối Trầu
+    -  Xã Suối Tân
+    -  Xã Suối Tọ
+    -  Xã Suối Đá
+    -  Xã Sà Dề Phìn
+    -  Xã Sài Sơn
+    -  Xã Sàn Viên
+    -  Xã Sàng Ma Sáo
+    -  Xã Sào Báy
+    -  Xã Sán Chải
+    -  Xã Sán Xả Hồ
+    -  Xã Sáng Nhè
+    -  Xã Sì Lờ Lầu
+    -  Xã Sì Lở Lầu
+    -  Xã Sín Chéng
+    -  Xã Sín Thầu
+    -  Xã Sính Lủng
+    -  Xã Sính Phình
+    -  Xã Sóc Hà
+    -  Xã Sóc Đăng
+    -  Xã Sông Bình
+    -  Xã Sông Cầu
+    -  Xã Sông Hinh
+    -  Xã Sông Khoai
+    -  Xã Sông Kôn
+    -  Xã Sông Lô
+    -  Xã Sông Lũy
+    -  Xã Sông Nhạn
+    -  Xã Sông Phan
+    -  Xã Sông Ray
+    -  Xã Sông Thao
+    -  Xã Sông Trà
+    -  Xã Sông Trầu
+    -  Xã Sông Xoài
+    -  Xã Sùng Nhơn
+    -  Xã Sùng Phài
+    -  Xã Sùng Đô
+    -  Xã Săm Khóe
+    -  Xã Sĩ Bình
+    -  Xã Sĩ Hai
+    -  Xã Sơ Pai
+    -  Xã Sơn A
+    -  Xã Sơn An
+    -  Xã Sơn Ba
+    -  Xã Sơn Bao
+    -  Xã Sơn Bua
+    -  Xã Sơn Bình
+    -  Xã Sơn Bằng
+    -  Xã Sơn Cao
+    -  Xã Sơn Châu
+    -  Xã Sơn Công
+    -  Xã Sơn Cương
+    -  Xã Sơn Cẩm
+    -  Xã Sơn Diệm
+    -  Xã Sơn Dung
+    -  Xã Sơn Dương
+    -  Xã Sơn Giang
+    -  Xã Sơn Hiệp
+    -  Xã Sơn Hà
+    -  Xã Sơn Hàm
+    -  Xã Sơn Hòa
+    -  Xã Sơn Hóa
+    -  Xã Sơn Hùng
+    -  Xã Sơn Hạ
+    -  Xã Sơn Hải
+    -  Xã Sơn Hồng
+    -  Xã Sơn Hội
+    -  Xã Sơn Kim 1
+    -  Xã Sơn Kim 2
+    -  Xã Sơn Kiên
+    -  Xã Sơn Kỳ
+    -  Xã Sơn Lai
+    -  Xã Sơn Lang
+    -  Xã Sơn Linh
+    -  Xã Sơn Liên
+    -  Xã Sơn Long
+    -  Xã Sơn Lâm
+    -  Xã Sơn Lôi
+    -  Xã Sơn Lĩnh
+    -  Xã Sơn Lư
+    -  Xã Sơn Lương
+    -  Xã Sơn Lập
+    -  Xã Sơn Lễ
+    -  Xã Sơn Lộ
+    -  Xã Sơn Lộc
+    -  Xã Sơn Mai
+    -  Xã Sơn Màu
+    -  Xã Sơn Mùa
+    -  Xã Sơn Mỹ
+    -  Xã Sơn Nam
+    -  Xã Sơn Nga
+    -  Xã Sơn Nguyên
+    -  Xã Sơn Nham
+    -  Xã Sơn Ninh
+    -  Xã Sơn Phú
+    -  Xã Sơn Phúc
+    -  Xã Sơn Phước
+    -  Xã Sơn Quang
+    -  Xã Sơn Thuỷ
+    -  Xã Sơn Thành
+    -  Xã Sơn Thành Tây
+    -  Xã Sơn Thành Đông
+    -  Xã Sơn Thái
+    -  Xã Sơn Thượng
+    -  Xã Sơn Thịnh
+    -  Xã Sơn Thọ
+    -  Xã Sơn Thủy
+    -  Xã Sơn Tinh
+    -  Xã Sơn Tiến
+    -  Xã Sơn Trung
+    -  Xã Sơn Trà
+    -  Xã Sơn Trường
+    -  Xã Sơn Trạch
+    -  Xã Sơn Tân
+    -  Xã Sơn Tây
+    -  Xã Sơn Tình
+    -  Xã Sơn Vi
+    -  Xã Sơn Viên
+    -  Xã Sơn Vĩ
+    -  Xã Sơn Xuân
+    -  Xã Sơn Điền
+    -  Xã Sơn Điện
+    -  Xã Sơn Đà
+    -  Xã Sơn Đông
+    -  Xã Sơn Định
+    -  Xã Sơn Đồng
+    -  Xã Sảng Mộc
+    -  Xã Sảng Tủng
+    -  Xã Sầm Dương
+    -  Xã Sập Vạt
+    -  Xã Sập Xa
+    -  Xã Sốp Cộp
+    -  Xã Sủng Là
+    -  Xã Sủng Máng
+    -  Xã Sủng Thài
+    -  Xã Sủng Trà
+    -  Xã Sủng Trái
+    -  Xã Sủng Tráng
+    -  Xã Sử Pán
+    -  Xã Sửi Ngòi
+    -  Xã Ta Ma
+    -  Xã Tam An
+    -  Xã Tam Anh Bắc
+    -  Xã Tam Anh Nam
+    -  Xã Tam Bình
+    -  Xã Tam Bố
+    -  Xã Tam Chung
+    -  Xã Tam Cường
+    -  Xã Tam Dân
+    -  Xã Tam Dị
+    -  Xã Tam Gia
+    -  Xã Tam Giang
+    -  Xã Tam Giang Tây
+    -  Xã Tam Giang Đông
+    -  Xã Tam Hiệp
+    -  Xã Tam Hòa
+    -  Xã Tam Hưng
+    -  Xã Tam Hải
+    -  Xã Tam Hồng
+    -  Xã Tam Hợp
+    -  Xã Tam Kim
+    -  Xã Tam Kỳ
+    -  Xã Tam Lãnh
+    -  Xã Tam Lư
+    -  Xã Tam Lập
+    -  Xã Tam Lộc
+    -  Xã Tam Mỹ Tây
+    -  Xã Tam Mỹ Đông
+    -  Xã Tam Nghĩa
+    -  Xã Tam Ngãi
+    -  Xã Tam Ngọc
+    -  Xã Tam Phú
+    -  Xã Tam Phúc
+    -  Xã Tam Phước
+    -  Xã Tam Quan
+    -  Xã Tam Quan Bắc
+    -  Xã Tam Quan Nam
+    -  Xã Tam Quang
+    -  Xã Tam Sơn
+    -  Xã Tam Thanh
+    -  Xã Tam Thuấn
+    -  Xã Tam Thành
+    -  Xã Tam Thái
+    -  Xã Tam Thôn Hiệp
+    -  Xã Tam Thăng
+    -  Xã Tam Thạnh
+    -  Xã Tam Tiến
+    -  Xã Tam Trà
+    -  Xã Tam Vinh
+    -  Xã Tam Văn
+    -  Xã Tam Xuân 1
+    -  Xã Tam Xuân II
+    -  Xã Tam Đa
+    -  Xã Tam Đàn
+    -  Xã Tam Đình
+    -  Xã Tam Đại
+    -  Xã Tam Đồng
+    -  Xã Tham Đôn
+    -  Xã Thanh
+    -  Xã Thanh An
+    -  Xã Thanh Bình
+    -  Xã Thanh Bình Thịnh
+    -  Xã Thanh Bính
+    -  Xã Thanh Cao
+    -  Xã Thanh Chi
+    -  Xã Thanh Chăn
+    -  Xã Thanh Cường
+    -  Xã Thanh Dương
+    -  Xã Thanh Giang
+    -  Xã Thanh Hà
+    -  Xã Thanh Hòa
+    -  Xã Thanh Hóa
+    -  Xã Thanh Hưng
+    -  Xã Thanh Hương
+    -  Xã Thanh Hải
+    -  Xã Thanh Hối
+    -  Xã Thanh Hồng
+    -  Xã Thanh Khai
+    -  Xã Thanh Khê
+    -  Xã Thanh Khương
+    -  Xã Thanh Kim
+    -  Xã Thanh Kỳ
+    -  Xã Thanh Lang
+    -  Xã Thanh Liên
+    -  Xã Thanh Liệt
+    -  Xã Thanh Long
+    -  Xã Thanh Luông
+    -  Xã Thanh Luận
+    -  Xã Thanh Lâm
+    -  Xã Thanh Lân
+    -  Xã Thanh Lòa
+    -  Xã Thanh Lĩnh
+    -  Xã Thanh Lưu
+    -  Xã Thanh Lương
+    -  Xã Thanh Lạc
+    -  Xã Thanh Lộc
+    -  Xã Thanh Mai
+    -  Xã Thanh Minh
+    -  Xã Thanh Mỹ
+    -  Xã Thanh Nga
+    -  Xã Thanh Nghị
+    -  Xã Thanh Nguyên
+    -  Xã Thanh Ngọc
+    -  Xã Thanh Nho
+    -  Xã Thanh Ninh
+    -  Xã Thanh Nông
+    -  Xã Thanh Nưa
+    -  Xã Thanh Phong
+    -  Xã Thanh Phát
+    -  Xã Thanh Phú
+    -  Xã Thanh Phú Long
+    -  Xã Thanh Phước
+    -  Xã Thanh Quang
+    -  Xã Thanh Quân
+    -  Xã Thanh Sơn
+    -  Xã Thanh Thùy
+    -  Xã Thanh Thạch
+    -  Xã Thanh Thịnh
+    -  Xã Thanh Thủy
+    -  Xã Thanh Tiên
+    -  Xã Thanh Trù
+    -  Xã Thanh Trạch
+    -  Xã Thanh Tuyền
+    -  Xã Thanh Tâm
+    -  Xã Thanh Tân
+    -  Xã Thanh Tùng
+    -  Xã Thanh Tương
+    -  Xã Thanh Tường
+    -  Xã Thanh Uyên
+    -  Xã Thanh Vân
+    -  Xã Thanh Văn
+    -  Xã Thanh Vĩnh Đông
+    -  Xã Thanh Vận
+    -  Xã Thanh Xuân
+    -  Xã Thanh Xá
+    -  Xã Thanh Xương
+    -  Xã Thanh Yên
+    -  Xã Thanh Đa
+    -  Xã Thanh Điền
+    -  Xã Thanh Đình
+    -  Xã Thanh Định
+    -  Xã Thanh Đồng
+    -  Xã Thanh Đức
+    -  Xã Thi Sơn
+    -  Xã Thiên Hương
+    -  Xã Thiên Lộc
+    -  Xã Thiên Phủ
+    -  Xã Thiết Kế
+    -  Xã Thiết Ống
+    -  Xã Thiện Hòa
+    -  Xã Thiện Hưng
+    -  Xã Thiện Kế
+    -  Xã Thiện Kỵ
+    -  Xã Thiện Long
+    -  Xã Thiện Mỹ
+    -  Xã Thiện Nghiệp
+    -  Xã Thiện Phiến
+    -  Xã Thiện Thuật
+    -  Xã Thiện Trung
+    -  Xã Thiện Trí
+    -  Xã Thiện Tân
+    -  Xã Thiệu Châu
+    -  Xã Thiệu Chính
+    -  Xã Thiệu Công
+    -  Xã Thiệu Duy
+    -  Xã Thiệu Dương
+    -  Xã Thiệu Giang
+    -  Xã Thiệu Giao
+    -  Xã Thiệu Hòa
+    -  Xã Thiệu Hợp
+    -  Xã Thiệu Khánh
+    -  Xã Thiệu Long
+    -  Xã Thiệu Lý
+    -  Xã Thiệu Minh
+    -  Xã Thiệu Nguyên
+    -  Xã Thiệu Ngọc
+    -  Xã Thiệu Phú
+    -  Xã Thiệu Phúc
+    -  Xã Thiệu Quang
+    -  Xã Thiệu Thành
+    -  Xã Thiệu Thịnh
+    -  Xã Thiệu Tiến
+    -  Xã Thiệu Toán
+    -  Xã Thiệu Trung
+    -  Xã Thiệu Tâm
+    -  Xã Thiệu Tân
+    -  Xã Thiệu Viên
+    -  Xã Thiệu Vân
+    -  Xã Thiệu Vũ
+    -  Xã Thiệu Vận
+    -  Xã Thiệu Đô
+    -  Xã Thoại Giang
+    -  Xã Thu Cúc
+    -  Xã Thu Lũm
+    -  Xã Thu Ngạc
+    -  Xã Thu Phong
+    -  Xã Thu Tà
+    -  Xã Thung Khe
+    -  Xã Thung Nai
+    -  Xã Thuần Hưng
+    -  Xã Thuần Lộc
+    -  Xã Thuần Mang
+    -  Xã Thuần Mỹ
+    -  Xã Thuần Thiện
+    -  Xã Thuần Thành
+    -  Xã Thuận
+    -  Xã Thuận An
+    -  Xã Thuận Bình
+    -  Xã Thuận Hoà
+    -  Xã Thuận Hà
+    -  Xã Thuận Hòa
+    -  Xã Thuận Hóa
+    -  Xã Thuận Hưng
+    -  Xã Thuận Hạnh
+    -  Xã Thuận Lộc
+    -  Xã Thuận Lợi
+    -  Xã Thuận Minh
+    -  Xã Thuận Mỹ
+    -  Xã Thuận Nghĩa Hòa
+    -  Xã Thuận Phú
+    -  Xã Thuận Quí
+    -  Xã Thuận Sơn
+    -  Xã Thuận Thiên
+    -  Xã Thuận Thành
+    -  Xã Thuận Thới
+    -  Xã Thuận Yên
+    -  Xã Thuận Điền
+    -  Xã Thuận Đức
+    -  Xã Thuỵ Hương
+    -  Xã Thuỵ Lâm
+    -  Xã Thuỷ Sơn
+    -  Xã Thuỷ Triều
+    -  Xã Thuỷ Đường
+    -  Xã Thài Phìn Tủng
+    -  Xã Thàng Tín
+    -  Xã Thành An
+    -  Xã Thành Công
+    -  Xã Thành Hòa
+    -  Xã Thành Hưng
+    -  Xã Thành Hải
+    -  Xã Thành Kim
+    -  Xã Thành Long
+    -  Xã Thành Lâm
+    -  Xã Thành Lập
+    -  Xã Thành Lộc
+    -  Xã Thành Lợi
+    -  Xã Thành Minh
+    -  Xã Thành Mỹ
+    -  Xã Thành Sơn
+    -  Xã Thành Thọ
+    -  Xã Thành Thới A
+    -  Xã Thành Thới B
+    -  Xã Thành Tiến
+    -  Xã Thành Triệu
+    -  Xã Thành Trung
+    -  Xã Thành Trực
+    -  Xã Thành Tâm
+    -  Xã Thành Tân
+    -  Xã Thành Vinh
+    -  Xã Thành Vân
+    -  Xã Thành Yên
+    -  Xã Thành Đông
+    -  Xã Thào Chư Phìn
+    -  Xã Thái An
+    -  Xã Thái Bình
+    -  Xã Thái Bình Trung
+    -  Xã Thái Bảo
+    -  Xã Thái Cường
+    -  Xã Thái Dương
+    -  Xã Thái Giang
+    -  Xã Thái Hà
+    -  Xã Thái Hòa
+    -  Xã Thái Hưng
+    -  Xã Thái Học
+    -  Xã Thái Hồng
+    -  Xã Thái Long
+    -  Xã Thái Mỹ
+    -  Xã Thái Nguyên
+    -  Xã Thái Ninh
+    -  Xã Thái Niên
+    -  Xã Thái Phúc
+    -  Xã Thái Phương
+    -  Xã Thái Sơn
+    -  Xã Thái Thuần
+    -  Xã Thái Thành
+    -  Xã Thái Thượng
+    -  Xã Thái Thịnh
+    -  Xã Thái Thọ
+    -  Xã Thái Thủy
+    -  Xã Thái Trị
+    -  Xã Thái Tân
+    -  Xã Thái Xuyên
+    -  Xã Thái Yên
+    -  Xã Thái Đào
+    -  Xã Thái Đô
+    -  Xã Thái Đức
+    -  Xã Thân Cửu Nghĩa
+    -  Xã Thân Giáp
+    -  Xã Thân Thuộc
+    -  Xã Thèn Chu Phìn
+    -  Xã Thèn Phàng
+    -  Xã Thèn Sin
+    -  Xã Thôn Mòn
+    -  Xã Thông Bình
+    -  Xã Thông Hoè
+    -  Xã Thông Hòa
+    -  Xã Thông Nguyên
+    -  Xã Thông Thụ
+    -  Xã Thúc Kháng
+    -  Xã Thúy Sơn
+    -  Xã Thăng Bình
+    -  Xã Thăng Hưng
+    -  Xã Thăng Long
+    -  Xã Thăng Phước
+    -  Xã Thăng Thọ
+    -  Xã Thư Phú
+    -  Xã Thường Lạc
+    -  Xã Thường Nga
+    -  Xã Thường Phước 1
+    -  Xã Thường Phước 2
+    -  Xã Thường Thắng
+    -  Xã Thường Thới Hậu A
+    -  Xã Thường Thới Hậu B
+    -  Xã Thường Thới Tiền
+    -  Xã Thường Tân
+    -  Xã Thượng Bì
+    -  Xã Thượng Bình
+    -  Xã Thượng Bằng La
+    -  Xã Thượng Cường
+    -  Xã Thượng Cốc
+    -  Xã Thượng Cửu
+    -  Xã Thượng Giáo
+    -  Xã Thượng Giáp
+    -  Xã Thượng Hiền
+    -  Xã Thượng Hà
+    -  Xã Thượng Hòa
+    -  Xã Thượng Hóa
+    -  Xã Thượng Kiệm
+    -  Xã Thượng Lan
+    -  Xã Thượng Long
+    -  Xã Thượng Lâm
+    -  Xã Thượng Lộ
+    -  Xã Thượng Lộc
+    -  Xã Thượng Mỗ
+    -  Xã Thượng Nhật
+    -  Xã Thượng Ninh
+    -  Xã Thượng Nung
+    -  Xã Thượng Nông
+    -  Xã Thượng Phùng
+    -  Xã Thượng Quan
+    -  Xã Thượng Quảng
+    -  Xã Thượng Quận
+    -  Xã Thượng Sơn
+    -  Xã Thượng Thôn
+    -  Xã Thượng Tiến
+    -  Xã Thượng Trưng
+    -  Xã Thượng Trạch
+    -  Xã Thượng Tân
+    -  Xã Thượng Tân Lộc
+    -  Xã Thượng Vũ
+    -  Xã Thượng Vực
+    -  Xã Thượng Yên Công
+    -  Xã Thượng Ân
+    -  Xã Thượng Đình
+    -  Xã Thượng Đạt
+    -  Xã Thượng Ấm
+    -  Xã Thạch Bàn
+    -  Xã Thạch Bình
+    -  Xã Thạch Bằng
+    -  Xã Thạch Châu
+    -  Xã Thạch Cẩm
+    -  Xã Thạch Giám
+    -  Xã Thạch Hòa
+    -  Xã Thạch Hóa
+    -  Xã Thạch Hưng
+    -  Xã Thạch Hương
+    -  Xã Thạch Hạ
+    -  Xã Thạch Hải
+    -  Xã Thạch Hội
+    -  Xã Thạch Khoán
+    -  Xã Thạch Khê
+    -  Xã Thạch Kim
+    -  Xã Thạch Kiệt
+    -  Xã Thạch Kênh
+    -  Xã Thạch Liên
+    -  Xã Thạch Long
+    -  Xã Thạch Lâm
+    -  Xã Thạch Lưu
+    -  Xã Thạch Lương
+    -  Xã Thạch Lạc
+    -  Xã Thạch Lập
+    -  Xã Thạch Lỗi
+    -  Xã Thạch Môn
+    -  Xã Thạch Mỹ
+    -  Xã Thạch Ngàn
+    -  Xã Thạch Ngọc
+    -  Xã Thạch Quảng
+    -  Xã Thạch Sơn
+    -  Xã Thạch Thanh
+    -  Xã Thạch Thán
+    -  Xã Thạch Thắng
+    -  Xã Thạch Tiến
+    -  Xã Thạch Trung
+    -  Xã Thạch Trị
+    -  Xã Thạch Tân
+    -  Xã Thạch Tượng
+    -  Xã Thạch Văn
+    -  Xã Thạch Vĩnh
+    -  Xã Thạch Xuân
+    -  Xã Thạch Xá
+    -  Xã Thạch Yên
+    -  Xã Thạch Điền
+    -  Xã Thạch Đà
+    -  Xã Thạch Đài
+    -  Xã Thạch Đạn
+    -  Xã Thạch Đỉnh
+    -  Xã Thạch Định
+    -  Xã Thạch Đồng
+    -  Xã Thạnh An
+    -  Xã Thạnh Bình
+    -  Xã Thạnh Bắc
+    -  Xã Thạnh Hoà
+    -  Xã Thạnh Hòa
+    -  Xã Thạnh Hòa Sơn
+    -  Xã Thạnh Hưng
+    -  Xã Thạnh Hải
+    -  Xã Thạnh Hội
+    -  Xã Thạnh Lộc
+    -  Xã Thạnh Lợi
+    -  Xã Thạnh Mỹ
+    -  Xã Thạnh Mỹ Tây
+    -  Xã Thạnh Ngãi
+    -  Xã Thạnh Nhựt
+    -  Xã Thạnh Phong
+    -  Xã Thạnh Phú
+    -  Xã Thạnh Phú Đông
+    -  Xã Thạnh Phước
+    -  Xã Thạnh Quới
+    -  Xã Thạnh Qưới
+    -  Xã Thạnh Thắng
+    -  Xã Thạnh Thới An
+    -  Xã Thạnh Thới Thuận
+    -  Xã Thạnh Tiến
+    -  Xã Thạnh Trị
+    -  Xã Thạnh Tân
+    -  Xã Thạnh Tây
+    -  Xã Thạnh Xuân
+    -  Xã Thạnh Yên
+    -  Xã Thạnh Yên A
+    -  Xã Thạnh Đông
+    -  Xã Thạnh Đông A
+    -  Xã Thạnh Đông B
+    -  Xã Thạnh Đức
+    -  Xã Thải Giàng Phố
+    -  Xã Thất Hùng
+    -  Xã Thần Xa
+    -  Xã Thẩm Dương
+    -  Xã Thắng Cương
+    -  Xã Thắng Hải
+    -  Xã Thắng Lợi
+    -  Xã Thắng Mố
+    -  Xã Thắng Quân
+    -  Xã Thắng Sơn
+    -  Xã Thắng Thuỷ
+    -  Xã Thể Dục
+    -  Xã Thị Hoa
+    -  Xã Thị Ngân
+    -  Xã Thịnh Hưng
+    -  Xã Thịnh Lộc
+    -  Xã Thịnh Minh
+    -  Xã Thịnh Sơn
+    -  Xã Thịnh Thành
+    -  Xã Thịnh Vượng
+    -  Xã Thịnh Đức
+    -  Xã Thọ An
+    -  Xã Thọ Bình
+    -  Xã Thọ Cường
+    -  Xã Thọ Diên
+    -  Xã Thọ Dân
+    -  Xã Thọ Hải
+    -  Xã Thọ Hợp
+    -  Xã Thọ Lâm
+    -  Xã Thọ Lập
+    -  Xã Thọ Lộc
+    -  Xã Thọ Minh
+    -  Xã Thọ Nghiệp
+    -  Xã Thọ Nguyên
+    -  Xã Thọ Ngọc
+    -  Xã Thọ Phú
+    -  Xã Thọ Sơn
+    -  Xã Thọ Thanh
+    -  Xã Thọ Thành
+    -  Xã Thọ Thắng
+    -  Xã Thọ Thế
+    -  Xã Thọ Tiến
+    -  Xã Thọ Trường
+    -  Xã Thọ Tân
+    -  Xã Thọ Vinh
+    -  Xã Thọ Văn
+    -  Xã Thọ Vực
+    -  Xã Thọ Xuân
+    -  Xã Thọ Xương
+    -  Xã Thọ Điền
+    -  Xã Thống Kênh
+    -  Xã Thống Nhất
+    -  Xã Thổ Bình
+    -  Xã Thổ Châu
+    -  Xã Thổ Sơn
+    -  Xã Thới An Hội
+    -  Xã Thới Bình
+    -  Xã Thới Hòa
+    -  Xã Thới Hưng
+    -  Xã Thới Lai
+    -  Xã Thới Quản
+    -  Xã Thới Sơn
+    -  Xã Thới Tam Thôn
+    -  Xã Thới Thuận
+    -  Xã Thới Thạnh
+    -  Xã Thới Tân
+    -  Xã Thới Xuân
+    -  Xã Thới Đông
+    -  Xã Thục Luyện
+    -  Xã Thụy An
+    -  Xã Thụy Bình
+    -  Xã Thụy Chính
+    -  Xã Thụy Duyên
+    -  Xã Thụy Dân
+    -  Xã Thụy Dũng
+    -  Xã Thụy Dương
+    -  Xã Thụy Hà
+    -  Xã Thụy Hòa
+    -  Xã Thụy Hùng
+    -  Xã Thụy Hưng
+    -  Xã Thụy Hương
+    -  Xã Thụy Hải
+    -  Xã Thụy Hồng
+    -  Xã Thụy Liên
+    -  Xã Thụy Liễu
+    -  Xã Thụy Lôi
+    -  Xã Thụy Lương
+    -  Xã Thụy Ninh
+    -  Xã Thụy Phong
+    -  Xã Thụy Phú
+    -  Xã Thụy Phúc
+    -  Xã Thụy Quỳnh
+    -  Xã Thụy Sơn
+    -  Xã Thụy Thanh
+    -  Xã Thụy Trình
+    -  Xã Thụy Trường
+    -  Xã Thụy Tân
+    -  Xã Thụy Việt
+    -  Xã Thụy Vân
+    -  Xã Thụy Văn
+    -  Xã Thụy Xuân
+    -  Xã Thủ Sỹ
+    -  Xã Thủy An
+    -  Xã Thủy Bằng
+    -  Xã Thủy Liễu
+    -  Xã Thủy Phù
+    -  Xã Thủy Thanh
+    -  Xã Thủy Tân
+    -  Xã Thủy Tây
+    -  Xã Thủy Vân
+    -  Xã Thủy Xuân Tiên
+    -  Xã Thủy Đông
+    -  Xã Thừa Đức
+    -  Xã Tinh Nhuệ
+    -  Xã Tiên An
+    -  Xã Tiên Châu
+    -  Xã Tiên Cường
+    -  Xã Tiên Cảnh
+    -  Xã Tiên Cẩm
+    -  Xã Tiên Du
+    -  Xã Tiên Dương
+    -  Xã Tiên Dược
+    -  Xã Tiên Hiệp
+    -  Xã Tiên Hoàng
+    -  Xã Tiên Hà
+    -  Xã Tiên Hưng
+    -  Xã Tiên Hải
+    -  Xã Tiên Hội
+    -  Xã Tiên Kiên
+    -  Xã Tiên Kiều
+    -  Xã Tiên Kỳ
+    -  Xã Tiên Long
+    -  Xã Tiên Lãng
+    -  Xã Tiên Lãnh
+    -  Xã Tiên Lương
+    -  Xã Tiên Lập
+    -  Xã Tiên Lộc
+    -  Xã Tiên Lục
+    -  Xã Tiên Lữ
+    -  Xã Tiên Minh
+    -  Xã Tiên Mỹ
+    -  Xã Tiên Ngoại
+    -  Xã Tiên Nguyên
+    -  Xã Tiên Ngọc
+    -  Xã Tiên Nha
+    -  Xã Tiên Nội
+    -  Xã Tiên Phong
+    -  Xã Tiên Phú
+    -  Xã Tiên Phương
+    -  Xã Tiên Sơn
+    -  Xã Tiên Thanh
+    -  Xã Tiên Thuận
+    -  Xã Tiên Thành
+    -  Xã Tiên Thắng
+    -  Xã Tiên Thọ
+    -  Xã Tiên Thủy
+    -  Xã Tiên Tiến
+    -  Xã Tiên Trang
+    -  Xã Tiên Tân
+    -  Xã Tiên Yên
+    -  Xã Tiên Điền
+    -  Xã Tiên Động
+    -  Xã Tiêu Sơn
+    -  Xã Tiêu Động
+    -  Xã Tiến Bộ
+    -  Xã Tiến Dũng
+    -  Xã Tiến Hóa
+    -  Xã Tiến Hưng
+    -  Xã Tiến Lộc
+    -  Xã Tiến Lợi
+    -  Xã Tiến Nông
+    -  Xã Tiến Sơn
+    -  Xã Tiến Thành
+    -  Xã Tiến Thắng
+    -  Xã Tiến Thịnh
+    -  Xã Tiến Thủy
+    -  Xã Tiến Tới
+    -  Xã Tiến Xuân
+    -  Xã Tiến Đức
+    -  Xã Tiền An
+    -  Xã Tiền Châu
+    -  Xã Tiền Phong
+    -  Xã Tiền Tiến
+    -  Xã Tiền Yên
+    -  Xã Toàn Sơn
+    -  Xã Toàn Thắng
+    -  Xã Tr'Hy
+    -  Xã Trang
+    -  Xã Tri Hải
+    -  Xã Tri Lễ
+    -  Xã Tri Phú
+    -  Xã Tri Phương
+    -  Xã Tri Thủy
+    -  Xã Tri Trung
+    -  Xã Trinh Phú
+    -  Xã Triêu Dương
+    -  Xã Triệu An
+    -  Xã Triệu Giang
+    -  Xã Triệu Hòa
+    -  Xã Triệu Hải
+    -  Xã Triệu Long
+    -  Xã Triệu Lăng
+    -  Xã Triệu Lộc
+    -  Xã Triệu Nguyên
+    -  Xã Triệu Phước
+    -  Xã Triệu Sơn
+    -  Xã Triệu Thuận
+    -  Xã Triệu Thành
+    -  Xã Triệu Thượng
+    -  Xã Triệu Trung
+    -  Xã Triệu Trạch
+    -  Xã Triệu Tài
+    -  Xã Triệu Vân
+    -  Xã Triệu Ái
+    -  Xã Triệu Đông
+    -  Xã Triệu Đại
+    -  Xã Triệu Đề
+    -  Xã Triệu Độ
+    -  Xã Triệu ẩu
+    -  Xã Trung An
+    -  Xã Trung Bì
+    -  Xã Trung Bình
+    -  Xã Trung Chánh
+    -  Xã Trung Châu
+    -  Xã Trung Chính
+    -  Xã Trung Chải
+    -  Xã Trung Dũng
+    -  Xã Trung Giang
+    -  Xã Trung Giáp
+    -  Xã Trung Giã
+    -  Xã Trung Hiếu
+    -  Xã Trung Hiệp
+    -  Xã Trung Hoà
+    -  Xã Trung Hà
+    -  Xã Trung Hòa
+    -  Xã Trung Hóa
+    -  Xã Trung Hưng
+    -  Xã Trung Hạ
+    -  Xã Trung Hải
+    -  Xã Trung Hội
+    -  Xã Trung Kiên
+    -  Xã Trung Kênh
+    -  Xã Trung Lèng Hồ
+    -  Xã Trung Lý
+    -  Xã Trung Lương
+    -  Xã Trung Lập
+    -  Xã Trung Lập Hạ
+    -  Xã Trung Lập Thượng
+    -  Xã Trung Lễ
+    -  Xã Trung Lộc
+    -  Xã Trung Minh
+    -  Xã Trung Môn
+    -  Xã Trung Mầu
+    -  Xã Trung Mỹ
+    -  Xã Trung Nam
+    -  Xã Trung Nghĩa
+    -  Xã Trung Nguyên
+    -  Xã Trung Ngãi
+    -  Xã Trung Phúc
+    -  Xã Trung Phúc Cường
+    -  Xã Trung Sơn
+    -  Xã Trung Thu
+    -  Xã Trung Thành
+    -  Xã Trung Thành Tây
+    -  Xã Trung Thành Đông
+    -  Xã Trung Thượng
+    -  Xã Trung Thạnh
+    -  Xã Trung Thịnh
+    -  Xã Trung Tiến
+    -  Xã Trung Trạch
+    -  Xã Trung Trực
+    -  Xã Trung Tâm
+    -  Xã Trung Tú
+    -  Xã Trung Xuân
+    -  Xã Trung Yên
+    -  Xã Trung Ý
+    -  Xã Trung Đông
+    -  Xã Trung Đồng
+    -  Xã Truông Mít
+    -  Xã Trà Bui
+    -  Xã Trà Bình
+    -  Xã Trà Bùi
+    -  Xã Trà Cang
+    -  Xã Trà Côn
+    -  Xã Trà Cổ
+    -  Xã Trà Don
+    -  Xã Trà Dơn
+    -  Xã Trà Dương
+    -  Xã Trà Giang
+    -  Xã Trà Giác
+    -  Xã Trà Giáp
+    -  Xã Trà Hiệp
+    -  Xã Trà Ka
+    -  Xã Trà Khê
+    -  Xã Trà Kót
+    -  Xã Trà Leng
+    -  Xã Trà Linh
+    -  Xã Trà Lâm
+    -  Xã Trà Lãnh
+    -  Xã Trà Mai
+    -  Xã Trà Nam
+    -  Xã Trà Nham
+    -  Xã Trà Nú
+    -  Xã Trà Phong
+    -  Xã Trà Phú
+    -  Xã Trà Quân
+    -  Xã Trà Sơn
+    -  Xã Trà Thanh
+    -  Xã Trà Thọ
+    -  Xã Trà Thủy
+    -  Xã Trà Trung
+    -  Xã Trà Tân
+    -  Xã Trà Tây
+    -  Xã Trà Tập
+    -  Xã Trà Vinh
+    -  Xã Trà Vong
+    -  Xã Trà Vân
+    -  Xã Trà Xinh
+    -  Xã Trà Đa
+    -  Xã Trà Đông
+    -  Xã Trà Đốc
+    -  Xã Tràng An
+    -  Xã Tràng Các
+    -  Xã Tràng Lương
+    -  Xã Tràng Phái
+    -  Xã Tràng Sơn
+    -  Xã Tràng Xá
+    -  Xã Tràng Đà
+    -  Xã Trác Văn
+    -  Xã Tráng Liệt
+    -  Xã Tráng Việt
+    -  Xã Trân Châu
+    -  Xã Trì Quang
+    -  Xã Trí Bình
+    -  Xã Trí Lực
+    -  Xã Trí Nang
+    -  Xã Trí Phải
+    -  Xã Trí Quả
+    -  Xã Trí Yên
+    -  Xã Trù Hựu
+    -  Xã Trù Sơn
+    -  Xã Trùng Khánh
+    -  Xã Trùng Quán
+    -  Xã Trúc Lâm
+    -  Xã Trúc Lâu
+    -  Xã Trúc Sơn
+    -  Xã Trưng Trắc
+    -  Xã Trưng Vương
+    -  Xã Trương Lương
+    -  Xã Trương Vương
+    -  Xã Trường An
+    -  Xã Trường Bình
+    -  Xã Trường Giang
+    -  Xã Trường Hà
+    -  Xã Trường Hòa
+    -  Xã Trường Khánh
+    -  Xã Trường Long
+    -  Xã Trường Long A
+    -  Xã Trường Long Hòa
+    -  Xã Trường Long Tây
+    -  Xã Trường Lâm
+    -  Xã Trường Lộc
+    -  Xã Trường Minh
+    -  Xã Trường Sinh
+    -  Xã Trường Sơn
+    -  Xã Trường Thành
+    -  Xã Trường Thắng
+    -  Xã Trường Thịnh
+    -  Xã Trường Thọ
+    -  Xã Trường Thủy
+    -  Xã Trường Trung
+    -  Xã Trường Tây
+    -  Xã Trường Xuân
+    -  Xã Trường Xuân A
+    -  Xã Trường Xuân B
+    -  Xã Trường Yên
+    -  Xã Trường Đông
+    -  Xã Trạch Mỹ Lộc
+    -  Xã Trạm Hành
+    -  Xã Trạm Lộ
+    -  Xã Trạm Thản
+    -  Xã Trạm Tấu
+    -  Xã Trấn Dương
+    -  Xã Trấn Ninh
+    -  Xã Trấn Yên
+    -  Xã Trầm Lộng
+    -  Xã Trần Hưng Đạo
+    -  Xã Trần Hợi
+    -  Xã Trần Phán
+    -  Xã Trần Phú
+    -  Xã Trần Thới
+    -  Xã Trị An
+    -  Xã Trị Quận
+    -  Xã Trịnh Tường
+    -  Xã Trịnh Xá
+    -  Xã Trọng Con
+    -  Xã Trọng Hóa
+    -  Xã Trọng Quan
+    -  Xã Trừ Văn Thố
+    -  Xã Trừng Xá
+    -  Xã Trực Chính
+    -  Xã Trực Cường
+    -  Xã Trực Hùng
+    -  Xã Trực Hưng
+    -  Xã Trực Khang
+    -  Xã Trực Mỹ
+    -  Xã Trực Nội
+    -  Xã Trực Phú
+    -  Xã Trực Thanh
+    -  Xã Trực Thuận
+    -  Xã Trực Thái
+    -  Xã Trực Thắng
+    -  Xã Trực Tuấn
+    -  Xã Trực Đại
+    -  Xã Trực Đạo
+    -  Xã Tu Lý
+    -  Xã Tu Mơ Rông
+    -  Xã Tu Tra
+    -  Xã Tu Vũ
+    -  Xã Tung Chung Phố
+    -  Xã Tuy Lai
+    -  Xã Tuy Lộc
+    -  Xã Tuyên Bình
+    -  Xã Tuyên Bình Tây
+    -  Xã Tuyên Thạnh
+    -  Xã Tuyết Nghĩa
+    -  Xã Tuân Chính
+    -  Xã Tuân Lộ
+    -  Xã Tuân Tức
+    -  Xã Tuân Đạo
+    -  Xã Tuấn Hưng
+    -  Xã Tuấn Mậu
+    -  Xã Tuấn Việt
+    -  Xã Tuấn Đạo
+    -  Xã Tà Bhinh
+    -  Xã Tà Chải
+    -  Xã Tà Cạ
+    -  Xã Tà Gia
+    -  Xã Tà Hine
+    -  Xã Tà Hộc
+    -  Xã Tà Hừa
+    -  Xã Tà Lai
+    -  Xã Tà Long
+    -  Xã Tà Lu
+    -  Xã Tà Lài
+    -  Xã Tà Lèng
+    -  Xã Tà Mung
+    -  Xã Tà Mít
+    -  Xã Tà Nung
+    -  Xã Tà Năng
+    -  Xã Tà Pơơ
+    -  Xã Tà Rụt
+    -  Xã Tà Si Láng
+    -  Xã Tà Tổng
+    -  Xã Tà Xùa
+    -  Xã Tà Đảnh
+    -  Xã Tài Văn
+    -  Xã Tào Sơn
+    -  Xã Tá Bạ
+    -  Xã Tái Sơn
+    -  Xã Tát Ngà
+    -  Xã Tâm Thắng
+    -  Xã Tân  Khánh Trung
+    -  Xã Tân An
+    -  Xã Tân An Hội
+    -  Xã Tân An Luông
+    -  Xã Tân An Thạnh
+    -  Xã Tân Bình
+    -  Xã Tân Bình Thạnh
+    -  Xã Tân Bắc
+    -  Xã Tân Bằng
+    -  Xã Tân Bửu
+    -  Xã Tân Chi
+    -  Xã Tân Chánh
+    -  Xã Tân Châu
+    -  Xã Tân Công Chí
+    -  Xã Tân Công Sính
+    -  Xã Tân Cương
+    -  Xã Tân Cảnh
+    -  Xã Tân Duyệt
+    -  Xã Tân Dân
+    -  Xã Tân Dĩnh
+    -  Xã Tân Dương
+    -  Xã Tân Hiệp
+    -  Xã Tân Hiệp A
+    -  Xã Tân Hiệp B
+    -  Xã Tân Hoa
+    -  Xã Tân Hoà
+    -  Xã Tân Huề
+    -  Xã Tân Hà
+    -  Xã Tân Hào
+    -  Xã Tân Hòa
+    -  Xã Tân Hòa Thành
+    -  Xã Tân Hòa Tây
+    -  Xã Tân Hòa Đông
+    -  Xã Tân Hóa
+    -  Xã Tân Hùng
+    -  Xã Tân Hưng
+    -  Xã Tân Hưng Tây
+    -  Xã Tân Hưng Đông
+    -  Xã Tân Hương
+    -  Xã Tân Hạnh
+    -  Xã Tân Hải
+    -  Xã Tân Học
+    -  Xã Tân Hồng
+    -  Xã Tân Hộ Cơ
+    -  Xã Tân Hội
+    -  Xã Tân Hội Trung
+    -  Xã Tân Hội Đông
+    -  Xã Tân Hợp
+    -  Xã Tân Khai
+    -  Xã Tân Khang
+    -  Xã Tân Khánh
+    -  Xã Tân Khánh Hòa
+    -  Xã Tân Khánh Đông
+    -  Xã Tân Kim
+    -  Xã Tân Kiên
+    -  Xã Tân Kiều
+    -  Xã Tân Kỳ
+    -  Xã Tân Lang
+    -  Xã Tân Linh
+    -  Xã Tân Liên
+    -  Xã Tân Liễu
+    -  Xã Tân Long
+    -  Xã Tân Long Hội
+    -  Xã Tân Lâm
+    -  Xã Tân Lâm Hương
+    -  Xã Tân Lân
+    -  Xã Tân Lãng
+    -  Xã Tân Lý Tây
+    -  Xã Tân Lý Đông
+    -  Xã Tân Lĩnh
+    -  Xã Tân Lược
+    -  Xã Tân Lạc
+    -  Xã Tân Lập
+    -  Xã Tân Lập 1
+    -  Xã Tân Lập 2
+    -  Xã Tân Lễ
+    -  Xã Tân Lộc
+    -  Xã Tân Lộc Bắc
+    -  Xã Tân Lộc Đông
+    -  Xã Tân Lợi
+    -  Xã Tân Lợi Thạnh
+    -  Xã Tân Mai
+    -  Xã Tân Minh
+    -  Xã Tân Mộc
+    -  Xã Tân Mỹ
+    -  Xã Tân Mỹ Chánh
+    -  Xã Tân Mỹ Hà
+    -  Xã Tân Nam
+    -  Xã Tân Nghĩa
+    -  Xã Tân Nguyên
+    -  Xã Tân Ngãi
+    -  Xã Tân Nhuận Đông
+    -  Xã Tân Nhựt
+    -  Xã Tân Ninh
+    -  Xã Tân Pheo
+    -  Xã Tân Phong
+    -  Xã Tân Phú
+    -  Xã Tân Phú Thạnh
+    -  Xã Tân Phú Trung
+    -  Xã Tân Phú Tây
+    -  Xã Tân Phú Đông
+    -  Xã Tân Phúc
+    -  Xã Tân Phương
+    -  Xã Tân Phước
+    -  Xã Tân Phước Hưng
+    -  Xã Tân Phước Tây
+    -  Xã Tân Phượng
+    -  Xã Tân Quan
+    -  Xã Tân Quang
+    -  Xã Tân Quy Tây
+    -  Xã Tân Quý Tây
+    -  Xã Tân Quới
+    -  Xã Tân Quới Trung
+    -  Xã Tân Sơn
+    -  Xã Tân Sỏi
+    -  Xã Tân Thanh
+    -  Xã Tân Thanh Tây
+    -  Xã Tân Thiềng
+    -  Xã Tân Thuận
+    -  Xã Tân Thuận Bình
+    -  Xã Tân Thuận Tây
+    -  Xã Tân Thuận Đông
+    -  Xã Tân Thành
+    -  Xã Tân Thành A
+    -  Xã Tân Thành B
+    -  Xã Tân Thành Bình
+    -  Xã Tân Thái
+    -  Xã Tân Thông Hội
+    -  Xã Tân Thượng
+    -  Xã Tân Thạch
+    -  Xã Tân Thạnh
+    -  Xã Tân Thạnh Tây
+    -  Xã Tân Thạnh Đông
+    -  Xã Tân Thắng
+    -  Xã Tân Thịnh
+    -  Xã Tân Thọ
+    -  Xã Tân Thới
+    -  Xã Tân Thới Nhì
+    -  Xã Tân Thủy
+    -  Xã Tân Tiến
+    -  Xã Tân Tri
+    -  Xã Tân Triều
+    -  Xã Tân Trung
+    -  Xã Tân Trào
+    -  Xã Tân Trường
+    -  Xã Tân Trạch
+    -  Xã Tân Trịnh
+    -  Xã Tân Tuyến
+    -  Xã Tân Tác
+    -  Xã Tân Tây
+    -  Xã Tân Tú
+    -  Xã Tân Tập
+    -  Xã Tân Vinh
+    -  Xã Tân Viên
+    -  Xã Tân Việt
+    -  Xã Tân Văn
+    -  Xã Tân Vĩnh Hiệp
+    -  Xã Tân Xuân
+    -  Xã Tân Xã
+    -  Xã Tân Yên
+    -  Xã Tân Ân
+    -  Xã Tân Ân Tây
+    -  Xã Tân Điền
+    -  Xã Tân Đoàn
+    -  Xã Tân Đông
+    -  Xã Tân Định
+    -  Xã Tân Đồng
+    -  Xã Tân Đức
+    -  Xã Tân Ước
+    -  Xã Tây An
+    -  Xã Tây Bình
+    -  Xã Tây Cốc
+    -  Xã Tây Giang
+    -  Xã Tây Hiếu
+    -  Xã Tây Hoà
+    -  Xã Tây Hưng
+    -  Xã Tây Hồ
+    -  Xã Tây Kỳ
+    -  Xã Tây Lương
+    -  Xã Tây Ninh
+    -  Xã Tây Phong
+    -  Xã Tây Phú
+    -  Xã Tây Sơn
+    -  Xã Tây Thuận
+    -  Xã Tây Thành
+    -  Xã Tây Tiến
+    -  Xã Tây Trạch
+    -  Xã Tây Vinh
+    -  Xã Tây Xuân
+    -  Xã Tây Yên
+    -  Xã Tây Yên A
+    -  Xã Tây Đô
+    -  Xã Tén Tằn
+    -  Xã Tê Xăng
+    -  Xã Tênh Phông
+    -  Xã Tìa Dình
+    -  Xã Tình Cương
+    -  Xã Tình Húc
+    -  Xã Tích Cốc
+    -  Xã Tích Giang
+    -  Xã Tích Thiện
+    -  Xã Tòng Bạt
+    -  Xã Tòng Cọ
+    -  Xã Tòng Lệnh
+    -  Xã Tòng Sành
+    -  Xã Tòng Đậu
+    -  Xã Tóc Tiên
+    -  Xã Tô Hiệu
+    -  Xã Tô Múa
+    -  Xã Tô Mậu
+    -  Xã Tông Lạnh
+    -  Xã Tông Qua Lìn
+    -  Xã Tùng Bá
+    -  Xã Tùng Châu
+    -  Xã Tùng Khê
+    -  Xã Tùng Lâm
+    -  Xã Tùng Lộc
+    -  Xã Tùng Vài
+    -  Xã Tùng Ảnh
+    -  Xã Tú An
+    -  Xã Tú Lý
+    -  Xã Tú Lệ
+    -  Xã Tú Mịch
+    -  Xã Tú Nang
+    -  Xã Tú Sơn
+    -  Xã Tú Thịnh
+    -  Xã Tú Trĩ
+    -  Xã Tú Xuyên
+    -  Xã Tú Đoạn
+    -  Xã Túc Trưng
+    -  Xã Túc Đán
+    -  Xã Túng Sán
+    -  Xã Tăng Hoà
+    -  Xã Tăng Thành
+    -  Xã Tăng Tiến
+    -  Xã Tĩnh Bắc
+    -  Xã Tĩnh Hải
+    -  Xã Tơ Tung
+    -  Xã Tư Mại
+    -  Xã Tư Nghĩa
+    -  Xã Tương Giang
+    -  Xã Tường Hạ
+    -  Xã Tường Lộc
+    -  Xã Tường Phong
+    -  Xã Tường Phù
+    -  Xã Tường Sơn
+    -  Xã Tường Thượng
+    -  Xã Tường Tiến
+    -  Xã Tường Đa
+    -  Xã Tượng Lĩnh
+    -  Xã Tượng Sơn
+    -  Xã Tượng Văn
+    -  Xã Tạ An Khương
+    -  Xã Tạ An Khương  Nam
+    -  Xã Tạ An Khương Đông
+    -  Xã Tạ Bú
+    -  Xã Tạ Khoa
+    -  Xã Tạ Xá
+    -  Xã Tả Củ Tỷ
+    -  Xã Tả Gia Khâu
+    -  Xã Tả Giàng Phình
+    -  Xã Tả Lèng
+    -  Xã Tả Lủng
+    -  Xã Tả Ngải Chồ
+    -  Xã Tả Ngảo
+    -  Xã Tả Nhìu
+    -  Xã Tả Phìn
+    -  Xã Tả Phời
+    -  Xã Tả Sìn Thàng
+    -  Xã Tả Sử Choóng
+    -  Xã Tả Thanh Oai
+    -  Xã Tả Thàng
+    -  Xã Tả Van
+    -  Xã Tả Van Chư
+    -  Xã Tả Ván
+    -  Xã Tản Hồng
+    -  Xã Tản Lĩnh
+    -  Xã Tảo Dương Văn
+    -  Xã Tấn Mỹ
+    -  Xã Tất Thắng
+    -  Xã Tầm Xá
+    -  Xã Tập Ngãi
+    -  Xã Tập Sơn
+    -  Xã Tắc Vân
+    -  Xã Tế Lợi
+    -  Xã Tế Nông
+    -  Xã Tế Thắng
+    -  Xã Tế Tân
+    -  Xã Tề Lễ
+    -  Xã Tề Lỗ
+    -  Xã Tịnh An
+    -  Xã Tịnh Bình
+    -  Xã Tịnh Bắc
+    -  Xã Tịnh Châu
+    -  Xã Tịnh Giang
+    -  Xã Tịnh Hiệp
+    -  Xã Tịnh Hà
+    -  Xã Tịnh Hòa
+    -  Xã Tịnh Khê
+    -  Xã Tịnh Kỳ
+    -  Xã Tịnh Long
+    -  Xã Tịnh Minh
+    -  Xã Tịnh Phong
+    -  Xã Tịnh Sơn
+    -  Xã Tịnh Thiện
+    -  Xã Tịnh Thọ
+    -  Xã Tịnh Thới
+    -  Xã Tịnh Trà
+    -  Xã Tịnh Đông
+    -  Xã Tịnh Ấn Tây
+    -  Xã Tịnh Ấn Đông
+    -  Xã Tỏa Tình
+    -  Xã Tống Phan
+    -  Xã Tống Trân
+    -  Xã Tốt Động
+    -  Xã Tổng Cọt
+    -  Xã Tụ Nhân
+    -  Xã Tủa Sín Chải
+    -  Xã Tủa Thàng
+    -  Xã Tứ Cường
+    -  Xã Tứ Dân
+    -  Xã Tứ Hiệp
+    -  Xã Tứ Mỹ
+    -  Xã Tứ Quận
+    -  Xã Tứ Xuyên
+    -  Xã Tứ Xã
+    -  Xã Tứ Yên
+    -  Xã Tức Tranh
+    -  Xã Tử Du
+    -  Xã Tử Nê
+    -  Xã Tử Đà
+    -  Xã Tự Cường
+    -  Xã Tự Do
+    -  Xã Tự Lạn
+    -  Xã Tự Lập
+    -  Xã Tự Nhiên
+    -  Xã Tự Tân
+    -  Xã Uar
+    -  Xã Uy Nỗ
+    -  Xã Vang Quới Tây
+    -  Xã Vang Quới Đông
+    -  Xã Vi Hương
+    -  Xã Vinh An
+    -  Xã Vinh Giang
+    -  Xã Vinh Hiền
+    -  Xã Vinh Hà
+    -  Xã Vinh Hưng
+    -  Xã Vinh Hải
+    -  Xã Vinh Mỹ
+    -  Xã Vinh Phú
+    -  Xã Vinh Quang
+    -  Xã Vinh Quý
+    -  Xã Vinh Sơn
+    -  Xã Vinh Thanh
+    -  Xã Vinh Thái
+    -  Xã Vinh Tiền
+    -  Xã Vinh Xuân
+    -  Xã Viên An
+    -  Xã Viên An Đông
+    -  Xã Viên Bình
+    -  Xã Viên Nội
+    -  Xã Viên Thành
+    -  Xã Viêng Lán
+    -  Xã Viễn Sơn
+    -  Xã Việt Chu
+    -  Xã Việt Cường
+    -  Xã Việt Dân
+    -  Xã Việt Hòa
+    -  Xã Việt Hùng
+    -  Xã Việt Hưng
+    -  Xã Việt Hải
+    -  Xã Việt Hồng
+    -  Xã Việt Khái
+    -  Xã Việt Long
+    -  Xã Việt Lâm
+    -  Xã Việt Lập
+    -  Xã Việt Ngọc
+    -  Xã Việt Thuận
+    -  Xã Việt Thành
+    -  Xã Việt Thắng
+    -  Xã Việt Thống
+    -  Xã Việt Tiến
+    -  Xã Việt Vinh
+    -  Xã Việt Xuyên
+    -  Xã Việt Xuân
+    -  Xã Việt Yên
+    -  Xã Việt Đoàn
+    -  Xã Vàng Ma Chải
+    -  Xã Vàng San
+    -  Xã Vàng Đán
+    -  Xã Vân An
+    -  Xã Vân Canh
+    -  Xã Vân Côn
+    -  Xã Vân Diên
+    -  Xã Vân Du
+    -  Xã Vân Dương
+    -  Xã Vân Hà
+    -  Xã Vân Hòa
+    -  Xã Vân Hồ
+    -  Xã Vân Hội
+    -  Xã Vân Khánh
+    -  Xã Vân Khánh Tây
+    -  Xã Vân Khánh Đông
+    -  Xã Vân Lĩnh
+    -  Xã Vân Mộng
+    -  Xã Vân Nam
+    -  Xã Vân Nham
+    -  Xã Vân Nội
+    -  Xã Vân Phúc
+    -  Xã Vân Sơn
+    -  Xã Vân Thủy
+    -  Xã Vân Trung
+    -  Xã Vân Trình
+    -  Xã Vân Trường
+    -  Xã Vân Trục
+    -  Xã Vân Tùng
+    -  Xã Vân Tảo
+    -  Xã Vân Từ
+    -  Xã Vân Xuân
+    -  Xã Vân Âm
+    -  Xã Vân Đồn
+    -  Xã Vô Ngại
+    -  Xã Vô Tranh
+    -  Xã Vô Điếm
+    -  Xã Võ Lao
+    -  Xã Võ Liệt
+    -  Xã Võ Miếu
+    -  Xã Võ Ninh
+    -  Xã Võng La
+    -  Xã Võng Xuyên
+    -  Xã Văn An
+    -  Xã Văn Bán
+    -  Xã Văn Bình
+    -  Xã Văn Cẩm
+    -  Xã Văn Giang
+    -  Xã Văn Giáo
+    -  Xã Văn Hoàng
+    -  Xã Văn Hán
+    -  Xã Văn Hóa
+    -  Xã Văn Hải
+    -  Xã Văn Học
+    -  Xã Văn Hội
+    -  Xã Văn Khê
+    -  Xã Văn Khúc
+    -  Xã Văn Lang
+    -  Xã Văn Lem
+    -  Xã Văn Lung
+    -  Xã Văn Luông
+    -  Xã Văn Lãng
+    -  Xã Văn Lý
+    -  Xã Văn Lăng
+    -  Xã Văn Lương
+    -  Xã Văn Lộc
+    -  Xã Văn Lợi
+    -  Xã Văn Minh
+    -  Xã Văn Miếu
+    -  Xã Văn Môn
+    -  Xã Văn Nghĩa
+    -  Xã Văn Nho
+    -  Xã Văn Nhuệ
+    -  Xã Văn Nhân
+    -  Xã Văn Phong
+    -  Xã Văn Phú
+    -  Xã Văn Phương
+    -  Xã Văn Quán
+    -  Xã Văn Sơn
+    -  Xã Văn Thành
+    -  Xã Văn Thủy
+    -  Xã Văn Tiến
+    -  Xã Văn Tố
+    -  Xã Văn Tự
+    -  Xã Văn Võ
+    -  Xã Văn Vũ
+    -  Xã Văn Xuôi
+    -  Xã Văn Xá
+    -  Xã Văn Yên
+    -  Xã Văn Đức
+    -  Xã Vĩ Thượng
+    -  Xã Vĩnh An
+    -  Xã Vĩnh Bình
+    -  Xã Vĩnh Bình Bắc
+    -  Xã Vĩnh Bình Nam
+    -  Xã Vĩnh Bửu
+    -  Xã Vĩnh Chánh
+    -  Xã Vĩnh Chân
+    -  Xã Vĩnh Châu
+    -  Xã Vĩnh Châu A
+    -  Xã Vĩnh Châu B
+    -  Xã Vĩnh Chấp
+    -  Xã Vĩnh Công
+    -  Xã Vĩnh Gia
+    -  Xã Vĩnh Giang
+    -  Xã Vĩnh Hanh
+    -  Xã Vĩnh Hiền
+    -  Xã Vĩnh Hiệp
+    -  Xã Vĩnh Hoà
+    -  Xã Vĩnh Hoà Phú
+    -  Xã Vĩnh Hà
+    -  Xã Vĩnh Hào
+    -  Xã Vĩnh Hòa
+    -  Xã Vĩnh Hòa Hiệp
+    -  Xã Vĩnh Hòa Hưng Bắc
+    -  Xã Vĩnh Hòa Hưng Nam
+    -  Xã Vĩnh Hùng
+    -  Xã Vĩnh Hưng
+    -  Xã Vĩnh Hưng A
+    -  Xã Vĩnh Hải
+    -  Xã Vĩnh Hảo
+    -  Xã Vĩnh Hậu
+    -  Xã Vĩnh Hậu A
+    -  Xã Vĩnh Hồng
+    -  Xã Vĩnh Hội Đông
+    -  Xã Vĩnh Hựu
+    -  Xã Vĩnh Khang
+    -  Xã Vĩnh Khánh
+    -  Xã Vĩnh Khê
+    -  Xã Vĩnh Khúc
+    -  Xã Vĩnh Khương
+    -  Xã Vĩnh Kim
+    -  Xã Vĩnh Kiên
+    -  Xã Vĩnh Long
+    -  Xã Vĩnh Lâm
+    -  Xã Vĩnh Lương
+    -  Xã Vĩnh Lạc
+    -  Xã Vĩnh Lại
+    -  Xã Vĩnh Lập
+    -  Xã Vĩnh Lộc
+    -  Xã Vĩnh Lộc A
+    -  Xã Vĩnh Lộc B
+    -  Xã Vĩnh Lợi
+    -  Xã Vĩnh Minh
+    -  Xã Vĩnh Mỹ A
+    -  Xã Vĩnh Mỹ B
+    -  Xã Vĩnh Nam
+    -  Xã Vĩnh Ngọc
+    -  Xã Vĩnh Nhuận
+    -  Xã Vĩnh Ninh
+    -  Xã Vĩnh Phong
+    -  Xã Vĩnh Phú
+    -  Xã Vĩnh Phú Tây
+    -  Xã Vĩnh Phú Đông
+    -  Xã Vĩnh Phúc
+    -  Xã Vĩnh Phương
+    -  Xã Vĩnh Phước
+    -  Xã Vĩnh Phước A
+    -  Xã Vĩnh Phước B
+    -  Xã Vĩnh Quang
+    -  Xã Vĩnh Quới
+    -  Xã Vĩnh Quỳnh
+    -  Xã Vĩnh Sơn
+    -  Xã Vĩnh Thanh
+    -  Xã Vĩnh Thuận
+    -  Xã Vĩnh Thuận Tây
+    -  Xã Vĩnh Thuận Đông
+    -  Xã Vĩnh Thành
+    -  Xã Vĩnh Thái
+    -  Xã Vĩnh Thạch
+    -  Xã Vĩnh Thạnh
+    -  Xã Vĩnh Thạnh Trung
+    -  Xã Vĩnh Thắng
+    -  Xã Vĩnh Thịnh
+    -  Xã Vĩnh Thới
+    -  Xã Vĩnh Thủy
+    -  Xã Vĩnh Thực
+    -  Xã Vĩnh Tiến
+    -  Xã Vĩnh Trinh
+    -  Xã Vĩnh Trung
+    -  Xã Vĩnh Trường
+    -  Xã Vĩnh Trạch
+    -  Xã Vĩnh Trạch Đông
+    -  Xã Vĩnh Trị
+    -  Xã Vĩnh Tuy
+    -  Xã Vĩnh Tân
+    -  Xã Vĩnh Tú
+    -  Xã Vĩnh Tường
+    -  Xã Vĩnh Tế
+    -  Xã Vĩnh Viễn
+    -  Xã Vĩnh Viễn A
+    -  Xã Vĩnh Xuân
+    -  Xã Vĩnh Xá
+    -  Xã Vĩnh Xương
+    -  Xã Vĩnh Yên
+    -  Xã Vĩnh Ô
+    -  Xã Vĩnh Điều
+    -  Xã Vĩnh Đại
+    -  Xã Vĩnh Đồng
+    -  Xã Vũ An
+    -  Xã Vũ Bình
+    -  Xã Vũ Bản
+    -  Xã Vũ Chính
+    -  Xã Vũ Chấn
+    -  Xã Vũ Công
+    -  Xã Vũ Di
+    -  Xã Vũ Hoà
+    -  Xã Vũ Hòa
+    -  Xã Vũ Hội
+    -  Xã Vũ Linh
+    -  Xã Vũ Loan
+    -  Xã Vũ Lâm
+    -  Xã Vũ Lăng
+    -  Xã Vũ Lạc
+    -  Xã Vũ Lễ
+    -  Xã Vũ Minh
+    -  Xã Vũ Muộn
+    -  Xã Vũ Ninh
+    -  Xã Vũ Nông
+    -  Xã Vũ Oai
+    -  Xã Vũ Phúc
+    -  Xã Vũ Quí
+    -  Xã Vũ Sơn
+    -  Xã Vũ Thắng
+    -  Xã Vũ Tiến
+    -  Xã Vũ Trung
+    -  Xã Vũ Tây
+    -  Xã Vũ Vinh
+    -  Xã Vũ Vân
+    -  Xã Vũ Xá
+    -  Xã Vũ Yển
+    -  Xã Vũ Đoài
+    -  Xã Vũ Đông
+    -  Xã Vượng Lộc
+    -  Xã Vạn Bình
+    -  Xã Vạn Hoà
+    -  Xã Vạn Hòa
+    -  Xã Vạn Hưng
+    -  Xã Vạn Khánh
+    -  Xã Vạn Kim
+    -  Xã Vạn Linh
+    -  Xã Vạn Long
+    -  Xã Vạn Lương
+    -  Xã Vạn Mai
+    -  Xã Vạn Ninh
+    -  Xã Vạn Phái
+    -  Xã Vạn Phú
+    -  Xã Vạn Phúc
+    -  Xã Vạn Phước
+    -  Xã Vạn Thiện
+    -  Xã Vạn Thái
+    -  Xã Vạn Thạnh
+    -  Xã Vạn Thắng
+    -  Xã Vạn Thọ
+    -  Xã Vạn Thủy
+    -  Xã Vạn Trạch
+    -  Xã Vạn Xuân
+    -  Xã Vạn Yên
+    -  Xã Vạn Điểm
+    -  Xã Vần Chải
+    -  Xã Vần Dính
+    -  Xã Vầy Nưa
+    -  Xã Vật Lại
+    -  Xã Vị Bình
+    -  Xã Vị Quang
+    -  Xã Vị Thanh
+    -  Xã Vị Thuỷ
+    -  Xã Vị Thắng
+    -  Xã Vị Trung
+    -  Xã Vị Tân
+    -  Xã Vị Đông
+    -  Xã Vọng Thê
+    -  Xã Vọng Đông
+    -  Xã Vụ Bổn
+    -  Xã Vụ Cầu
+    -  Xã Vụ Quang
+    -  Xã Vực Trường
+    -  Xã Xa Dung
+    -  Xã Xa Lý
+    -  Xã Xiêng My
+    -  Xã Xuy Xá
+    -  Xã Xuyên Mộc
+    -  Xã Xuân An
+    -  Xã Xuân Bái
+    -  Xã Xuân Bình
+    -  Xã Xuân Bảo
+    -  Xã Xuân Bắc
+    -  Xã Xuân Canh
+    -  Xã Xuân Cao
+    -  Xã Xuân Chinh
+    -  Xã Xuân Châu
+    -  Xã Xuân Chính
+    -  Xã Xuân Cảnh
+    -  Xã Xuân Cẩm
+    -  Xã Xuân Du
+    -  Xã Xuân Dương
+    -  Xã Xuân Dục
+    -  Xã Xuân Giang
+    -  Xã Xuân Giao
+    -  Xã Xuân Hiệp
+    -  Xã Xuân Hoà
+    -  Xã Xuân Huy
+    -  Xã Xuân Hòa
+    -  Xã Xuân Hóa
+    -  Xã Xuân Hưng
+    -  Xã Xuân Hương
+    -  Xã Xuân Hải
+    -  Xã Xuân Hồng
+    -  Xã Xuân Hội
+    -  Xã Xuân Khang
+    -  Xã Xuân Khánh
+    -  Xã Xuân Khê
+    -  Xã Xuân Kiên
+    -  Xã Xuân La
+    -  Xã Xuân Lai
+    -  Xã Xuân Lam
+    -  Xã Xuân Lao
+    -  Xã Xuân Liên
+    -  Xã Xuân Long
+    -  Xã Xuân Lâm
+    -  Xã Xuân Lãnh
+    -  Xã Xuân Lôi
+    -  Xã Xuân Lĩnh
+    -  Xã Xuân Lũng
+    -  Xã Xuân Lương
+    -  Xã Xuân Lạc
+    -  Xã Xuân Lập
+    -  Xã Xuân Lẹ
+    -  Xã Xuân Lễ
+    -  Xã Xuân Lộc
+    -  Xã Xuân Mai
+    -  Xã Xuân Minh
+    -  Xã Xuân Mãn
+    -  Xã Xuân Mỹ
+    -  Xã Xuân Ngọc
+    -  Xã Xuân Nha
+    -  Xã Xuân Ninh
+    -  Xã Xuân Nội
+    -  Xã Xuân Nộn
+    -  Xã Xuân Phong
+    -  Xã Xuân Phú
+    -  Xã Xuân Phúc
+    -  Xã Xuân Phương
+    -  Xã Xuân Phước
+    -  Xã Xuân Phổ
+    -  Xã Xuân Quan
+    -  Xã Xuân Quang
+    -  Xã Xuân Quang 1
+    -  Xã Xuân Quang 2
+    -  Xã Xuân Quang 3
+    -  Xã Xuân Quế
+    -  Xã Xuân Quỳ
+    -  Xã Xuân Sinh
+    -  Xã Xuân Sơn
+    -  Xã Xuân Sơn Bắc
+    -  Xã Xuân Sơn Nam
+    -  Xã Xuân Thiên
+    -  Xã Xuân Thiện
+    -  Xã Xuân Thu
+    -  Xã Xuân Thành
+    -  Xã Xuân Thái
+    -  Xã Xuân Thượng
+    -  Xã Xuân Thạnh
+    -  Xã Xuân Thắng
+    -  Xã Xuân Thịnh
+    -  Xã Xuân Thọ
+    -  Xã Xuân Thọ 1
+    -  Xã Xuân Thọ 2
+    -  Xã Xuân Thới Sơn
+    -  Xã Xuân Thới Thượng
+    -  Xã Xuân Thới Đông
+    -  Xã Xuân Thủy
+    -  Xã Xuân Tiến
+    -  Xã Xuân Trung
+    -  Xã Xuân Trúc
+    -  Xã Xuân Trường
+    -  Xã Xuân Trạch
+    -  Xã Xuân Tâm
+    -  Xã Xuân Tân
+    -  Xã Xuân Tây
+    -  Xã Xuân Tình
+    -  Xã Xuân Tín
+    -  Xã Xuân Tường
+    -  Xã Xuân Tầm
+    -  Xã Xuân Vinh
+    -  Xã Xuân Viên
+    -  Xã Xuân Vân
+    -  Xã Xuân Yên
+    -  Xã Xuân Ái
+    -  Xã Xuân Áng
+    -  Xã Xuân Đan
+    -  Xã Xuân Đài
+    -  Xã Xuân Đám
+    -  Xã Xuân Đình
+    -  Xã Xuân Đông
+    -  Xã Xuân Đường
+    -  Xã Xuân Định
+    -  Xã Xuất Hóa
+    -  Xã Xuất Lễ
+    -  Xã Xy
+    -  Xã Xà Bang
+    -  Xã Xà Hồ
+    -  Xã Xà Phiên
+    -  Xã Xà Phìn
+    -  Xã Xá Lượng
+    -  Xã Xá Tổng
+    -  Xã Xích Thổ
+    -  Xã Xín Chải
+    -  Xã Xín Cái
+    -  Xã Xín Mần
+    -  Xã Xín Vàng
+    -  Xã Xương Lâm
+    -  Xã Xương Thịnh
+    -  Xã Xốp
+    -  Xã Xốp Cộp
+    -  Xã Y Can
+    -  Xã Y Sơn
+    -  Xã Y Tý
+    -  Xã Y Tịch
+    -  Xã Ya Hội
+    -  Xã Ya Ma
+    -  Xã Ya Tăng
+    -  Xã Ya Tờ Mốt
+    -  Xã Ya Xiêr
+    -  Xã Ya ly
+    -  Xã Yang Bắc
+    -  Xã Yang Mao
+    -  Xã Yang Nam
+    -  Xã Yang Reh
+    -  Xã Yang Tao
+    -  Xã Yang Trung
+    -  Xã Yên Bài
+    -  Xã Yên Bái
+    -  Xã Yên Bình
+    -  Xã Yên Bắc
+    -  Xã Yên Bằng
+    -  Xã Yên Bồng
+    -  Xã Yên Chính
+    -  Xã Yên Cư
+    -  Xã Yên Cường
+    -  Xã Yên Dương
+    -  Xã Yên Dưỡng
+    -  Xã Yên Giang
+    -  Xã Yên Giả
+    -  Xã Yên Hoa
+    -  Xã Yên Hà
+    -  Xã Yên Hân
+    -  Xã Yên Hòa
+    -  Xã Yên Hóa
+    -  Xã Yên Hùng
+    -  Xã Yên Hưng
+    -  Xã Yên Hồ
+    -  Xã Yên Hồng
+    -  Xã Yên Hợp
+    -  Xã Yên Khang
+    -  Xã Yên Khoái
+    -  Xã Yên Khánh
+    -  Xã Yên Khê
+    -  Xã Yên Khương
+    -  Xã Yên Kiện
+    -  Xã Yên Kỳ
+    -  Xã Yên Luông
+    -  Xã Yên Luật
+    -  Xã Yên Lâm
+    -  Xã Yên Lãng
+    -  Xã Yên Lư
+    -  Xã Yên Lương
+    -  Xã Yên Lạc
+    -  Xã Yên Lập
+    -  Xã Yên Lễ
+    -  Xã Yên Lỗ
+    -  Xã Yên Lộc
+    -  Xã Yên Lợi
+    -  Xã Yên Minh
+    -  Xã Yên Mông
+    -  Xã Yên Mạc
+    -  Xã Yên Mật
+    -  Xã Yên Mỹ
+    -  Xã Yên Na
+    -  Xã Yên Nam
+    -  Xã Yên Nghiệp
+    -  Xã Yên Nghĩa
+    -  Xã Yên Nguyên
+    -  Xã Yên Nhuận
+    -  Xã Yên Nhân
+    -  Xã Yên Ninh
+    -  Xã Yên Nội
+    -  Xã Yên Phong
+    -  Xã Yên Phú
+    -  Xã Yên Phúc
+    -  Xã Yên Phương
+    -  Xã Yên Phụ
+    -  Xã Yên Quang
+    -  Xã Yên Sơn
+    -  Xã Yên Sở
+    -  Xã Yên Than
+    -  Xã Yên Thuận
+    -  Xã Yên Thành
+    -  Xã Yên Thái
+    -  Xã Yên Thường
+    -  Xã Yên Thượng
+    -  Xã Yên Thạch
+    -  Xã Yên Thắng
+    -  Xã Yên Thịnh
+    -  Xã Yên Thọ
+    -  Xã Yên Thổ
+    -  Xã Yên Tiến
+    -  Xã Yên Trung
+    -  Xã Yên Trường
+    -  Xã Yên Trạch
+    -  Xã Yên Trị
+    -  Xã Yên Tâm
+    -  Xã Yên Tân
+    -  Xã Yên Tĩnh
+    -  Xã Yên Tập
+    -  Xã Yên Từ
+    -  Xã Yên Viên
+    -  Xã Yên Vượng
+    -  Xã Yên Xá
+    -  Xã Yên Đĩnh
+    -  Xã Yên Định
+    -  Xã Yên Đồng
+    -  Xã Yên Đổ
+    -  Xã Yên Đức
+    -  Xã Yến Dương
+    -  Xã Yến Mao
+    -  Xã Yến Sơn
+    -  Xã Yết Kiêu
+    -  Xã Yển Khê
+    -  Xã Za Hung
+    -  Xã Zuôich
+    -  Xã Ái Quốc
+    -  Xã Ái Thượng
+    -  Xã Ân Hòa
+    -  Xã Ân Hảo Tây
+    -  Xã Ân Hảo Đông
+    -  Xã Ân Hữu
+    -  Xã Ân Mỹ
+    -  Xã Ân Nghĩa
+    -  Xã Ân Phong
+    -  Xã Ân Phú
+    -  Xã Ân Sơn
+    -  Xã Ân Thạnh
+    -  Xã Ân Tình
+    -  Xã Ân Tín
+    -  Xã Ân Tường Tây
+    -  Xã Ân Tường Đông
+    -  Xã Ân Đức
+    -  Xã Âu Lâu
+    -  Xã Ích Hậu
+    -  Xã Ô Long Vỹ
+    -  Xã Ô Lâm
+    -  Xã Ôn Lương
+    -  Xã Ông Đình
+    -  Xã Úc Kỳ
+    -  Xã é Tòng
+    -  Xã ĐLiê Ya
+    -  Xã Đa Kai
+    -  Xã Đa Kia
+    -  Xã Đa Krông
+    -  Xã Đa Lộc
+    -  Xã Đa Mi
+    -  Xã Đa Phúc
+    -  Xã Đa Phước
+    -  Xã Đa Phước Hội
+    -  Xã Đa Quyn
+    -  Xã Đa Thông
+    -  Xã Đa Tốn
+    -  Xã Đak Jơ Ta
+    -  Xã Đak Nhau
+    -  Xã Đak SMar
+    -  Xã Đak Ta Ley
+    -  Xã Đak Ơ
+    -  Xã Đan Hà
+    -  Xã Đan Hội
+    -  Xã Đan Phượng
+    -  Xã Đan Thượng
+    -  Xã Đan Trường
+    -  Xã Đinh Lạc
+    -  Xã Đinh Trang Hòa
+    -  Xã Đinh Trang Thượng
+    -  Xã Đinh Xá
+    -  Xã Điêu Lương
+    -  Xã Điềm He
+    -  Xã Điềm Hy
+    -  Xã Điềm Mặc
+    -  Xã Điềm Thụy
+    -  Xã Điền Công
+    -  Xã Điền Hòa
+    -  Xã Điền Hương
+    -  Xã Điền Hạ
+    -  Xã Điền Hải
+    -  Xã Điền Lư
+    -  Xã Điền Lộc
+    -  Xã Điền Môn
+    -  Xã Điền Mỹ
+    -  Xã Điền Quang
+    -  Xã Điền Thượng
+    -  Xã Điền Trung
+    -  Xã Điền Xá
+    -  Xã Điện Hòa
+    -  Xã Điện Hồng
+    -  Xã Điện Minh
+    -  Xã Điện Phong
+    -  Xã Điện Phương
+    -  Xã Điện Phước
+    -  Xã Điện Quan
+    -  Xã Điện Quang
+    -  Xã Điện Thắng Bắc
+    -  Xã Điện Thắng Nam
+    -  Xã Điện Thắng Trung
+    -  Xã Điện Thọ
+    -  Xã Điện Tiến
+    -  Xã Điện Trung
+    -  Xã Điệp Nông
+    -  Xã Đoan Bái
+    -  Xã Đoan Hùng
+    -  Xã Đoan Hạ
+    -  Xã Đoài Côn
+    -  Xã Đoài Dương
+    -  Xã Đoài Khôn
+    -  Xã Đoàn Kết
+    -  Xã Đoàn Lập
+    -  Xã Đoàn Thượng
+    -  Xã Đoàn Tùng
+    -  Xã Đoàn Xá
+    -  Xã Đoàn Đào
+    -  Xã Đoọc Mạy
+    -  Xã Đà Loan
+    -  Xã Đà Sơn
+    -  Xã Đà Vị
+    -  Xã Đài Xuyên
+    -  Xã Đàm Thuỷ
+    -  Xã Đào Dương
+    -  Xã Đào Hữu Cảnh
+    -  Xã Đào Mỹ
+    -  Xã Đào Ngạn
+    -  Xã Đào Thịnh
+    -  Xã Đào Viên
+    -  Xã Đào Xá
+    -  Xã Đá Bạc
+    -  Xã Đá Đỏ
+    -  Xã Đèo Gia
+    -  Xã Đê Ar
+    -  Xã Đình Cao
+    -  Xã Đình Chu
+    -  Xã Đình Dù
+    -  Xã Đình Lập
+    -  Xã Đình Minh
+    -  Xã Đình Phong
+    -  Xã Đình Phùng
+    -  Xã Đình Tổ
+    -  Xã Đình Xuyên
+    -  Xã Đô Lương
+    -  Xã Đô Thành
+    -  Xã Đôn Châu
+    -  Xã Đôn Nhân
+    -  Xã Đôn Phong
+    -  Xã Đôn Phục
+    -  Xã Đôn Thuận
+    -  Xã Đôn Xuân
+    -  Xã Đông
+    -  Xã Đông An
+    -  Xã Đông Anh
+    -  Xã Đông Bình
+    -  Xã Đông Bắc
+    -  Xã Đông Cao
+    -  Xã Đông Cuông
+    -  Xã Đông Các
+    -  Xã Đông Cơ
+    -  Xã Đông Cường
+    -  Xã Đông Cứu
+    -  Xã Đông Cửu
+    -  Xã Đông Dư
+    -  Xã Đông Dương
+    -  Xã Đông Giang
+    -  Xã Đông Hiếu
+    -  Xã Đông Hiệp
+    -  Xã Đông Hoà
+    -  Xã Đông Hoàng
+    -  Xã Đông Huy
+    -  Xã Đông Hà
+    -  Xã Đông Hòa
+    -  Xã Đông Hòa Hiệp
+    -  Xã Đông Hưng
+    -  Xã Đông Hưng A
+    -  Xã Đông Hưng B
+    -  Xã Đông Hải
+    -  Xã Đông Hội
+    -  Xã Đông Hợp
+    -  Xã Đông Khê
+    -  Xã Đông Kinh
+    -  Xã Đông Kết
+    -  Xã Đông Kỳ
+    -  Xã Đông La
+    -  Xã Đông Lai
+    -  Xã Đông Long
+    -  Xã Đông Lâm
+    -  Xã Đông Lĩnh
+    -  Xã Đông Lỗ
+    -  Xã Đông Lợi
+    -  Xã Đông Minh
+    -  Xã Đông Mỹ
+    -  Xã Đông Nam
+    -  Xã Đông Ngũ
+    -  Xã Đông Ninh
+    -  Xã Đông Phong
+    -  Xã Đông Phú
+    -  Xã Đông Phương
+    -  Xã Đông Phương Yên
+    -  Xã Đông Phước
+    -  Xã Đông Phước A
+    -  Xã Đông Quan
+    -  Xã Đông Quang
+    -  Xã Đông Quí
+    -  Xã Đông Sang
+    -  Xã Đông Sơn
+    -  Xã Đông Thanh
+    -  Xã Đông Thuận
+    -  Xã Đông Thành
+    -  Xã Đông Thái
+    -  Xã Đông Thạnh
+    -  Xã Đông Thắng
+    -  Xã Đông Thịnh
+    -  Xã Đông Thọ
+    -  Xã Đông Thới
+    -  Xã Đông Tiến
+    -  Xã Đông Trung
+    -  Xã Đông Trà
+    -  Xã Đông Tân
+    -  Xã Đông Tảo
+    -  Xã Đông Vinh
+    -  Xã Đông Viên
+    -  Xã Đông Văn
+    -  Xã Đông Xuyên
+    -  Xã Đông Xuân
+    -  Xã Đông Xá
+    -  Xã Đông Yên
+    -  Xã Đông Á
+    -  Xã Đông Đô
+    -  Xã Đông Động
+    -  Xã Đú Sáng
+    -  Xã Đăk Djrăng
+    -  Xã Đăk HLơ
+    -  Xã Đăk Krong
+    -  Xã Đăk Long
+    -  Xã Đăk Ngọk
+    -  Xã Đăk Năng
+    -  Xã Đăk Pling
+    -  Xã Đăk Pơ Pho
+    -  Xã Đăk R'Moan
+    -  Xã Đăk Roong
+    -  Xã Đăk Song
+    -  Xã Đăk Sơmei
+    -  Xã Đăk Trôi
+    -  Xã Đăk Tơ Pang
+    -  Xã Đăk Tơ Ver
+    -  Xã Đăk Yă
+    -  Xã Đăng Hà
+    -  Xã Đăng Hưng Phước
+    -  Xã Đưng KNớ
+    -  Xã Đường 10
+    -  Xã Đường Hoa
+    -  Xã Đường Hồng
+    -  Xã Đường Lâm
+    -  Xã Đường Thượng
+    -  Xã Đường Âm
+    -  Xã Đạ Chais
+    -  Xã Đạ K' Nàng
+    -  Xã Đạ Kho
+    -  Xã Đạ Long
+    -  Xã Đạ Lây
+    -  Xã Đạ M' Rong
+    -  Xã Đạ M'ri
+    -  Xã Đạ Nhim
+    -  Xã Đạ Oai
+    -  Xã Đạ Pal
+    -  Xã Đạ Ploa
+    -  Xã Đạ Rsal
+    -  Xã Đạ Ròn
+    -  Xã Đạ Sar
+    -  Xã Đạ Tông
+    -  Xã Đạ Tồn
+    -  Xã Đạ Đờn
+    -  Xã Đại An
+    -  Xã Đại Bái
+    -  Xã Đại Bình
+    -  Xã Đại Bản
+    -  Xã Đại Chánh
+    -  Xã Đại Cương
+    -  Xã Đại Cường
+    -  Xã Đại Dực
+    -  Xã Đại Hiệp
+    -  Xã Đại Hà
+    -  Xã Đại Hòa
+    -  Xã Đại Hòa Lộc
+    -  Xã Đại Hóa
+    -  Xã Đại Hùng
+    -  Xã Đại Hưng
+    -  Xã Đại Hải
+    -  Xã Đại Hồng
+    -  Xã Đại Hợp
+    -  Xã Đại Lai
+    -  Xã Đại Lào
+    -  Xã Đại Lâm
+    -  Xã Đại Lãnh
+    -  Xã Đại Lịch
+    -  Xã Đại Lộc
+    -  Xã Đại Minh
+    -  Xã Đại Mạch
+    -  Xã Đại Nghĩa
+    -  Xã Đại Phong
+    -  Xã Đại Phác
+    -  Xã Đại Phú
+    -  Xã Đại Phúc
+    -  Xã Đại Phước
+    -  Xã Đại Phạm
+    -  Xã Đại Quang
+    -  Xã Đại Sơn
+    -  Xã Đại Sảo
+    -  Xã Đại Thành
+    -  Xã Đại Thạnh
+    -  Xã Đại Thắng
+    -  Xã Đại Thịnh
+    -  Xã Đại Tiến
+    -  Xã Đại Trạch
+    -  Xã Đại Tâm
+    -  Xã Đại Tân
+    -  Xã Đại Tập
+    -  Xã Đại Tự
+    -  Xã Đại Xuyên
+    -  Xã Đại Xuân
+    -  Xã Đại Yên
+    -  Xã Đại Ân 1
+    -  Xã Đại Ân 2
+    -  Xã Đại áng
+    -  Xã Đại Điền
+    -  Xã Đại Đình
+    -  Xã Đại Đồng
+    -  Xã Đại Đồng Thành
+    -  Xã Đại Đức
+    -  Xã Đạm Bri
+    -  Xã Đạo Lý
+    -  Xã Đạo Nghĩa
+    -  Xã Đạo Thạnh
+    -  Xã Đạo Trù
+    -  Xã Đạo Tú
+    -  Xã Đạo Viện
+    -  Xã Đạo Đức
+    -  Xã Đạp Thanh
+    -  Xã Đản Ván
+    -  Xã Đất Bằng
+    -  Xã Đất Cuốc
+    -  Xã Đất Mũi
+    -  Xã Đất Mới
+    -  Xã Đầm Hà
+    -  Xã Đắc Pre
+    -  Xã Đắc Pring
+    -  Xã Đắc Sơn
+    -  Xã Đắc Sở
+    -  Xã Đắc Tôi
+    -  Xã Đắk Ang
+    -  Xã Đắk Blà
+    -  Xã Đắk Búk So
+    -  Xã Đắk Choong
+    -  Xã Đắk Cấm
+    -  Xã Đắk DRông
+    -  Xã Đắk Drô
+    -  Xã Đắk Dục
+    -  Xã Đắk Gằn
+    -  Xã Đắk HRing
+    -  Xã Đắk Ha
+    -  Xã Đắk Hà
+    -  Xã Đắk Hòa
+    -  Xã Đắk KRoong
+    -  Xã Đắk Kan
+    -  Xã Đắk Kôi
+    -  Xã Đắk Kơ Ning
+    -  Xã Đắk La
+    -  Xã Đắk Lao
+    -  Xã Đắk Liêng
+    -  Xã Đắk Long
+    -  Xã Đắk Man
+    -  Xã Đắk Mar
+    -  Xã Đắk Môl
+    -  Xã Đắk Môn
+    -  Xã Đắk N'Drót
+    -  Xã Đắk N'Dung
+    -  Xã Đắk Na
+    -  Xã Đắk Nang
+    -  Xã Đắk Ngo
+    -  Xã Đắk Nhoong
+    -  Xã Đắk Nia
+    -  Xã Đắk Nuê
+    -  Xã Đắk Nên
+    -  Xã Đắk Nông
+    -  Xã Đắk PXi
+    -  Xã Đắk Phơi
+    -  Xã Đắk Plao
+    -  Xã Đắk Plô
+    -  Xã Đắk Pne
+    -  Xã Đắk Pék
+    -  Xã Đắk R'La
+    -  Xã Đắk R'Măng
+    -  Xã Đắk R'Tíh
+    -  Xã Đắk Ring
+    -  Xã Đắk Ru
+    -  Xã Đắk Ruồng
+    -  Xã Đắk Rơ Nga
+    -  Xã Đắk Rơ Wa
+    -  Xã Đắk Rơ Ông
+    -  Xã Đắk Sao
+    -  Xã Đắk Sin
+    -  Xã Đắk Som
+    -  Xã Đắk Sôr
+    -  Xã Đắk Sắk
+    -  Xã Đắk Trăm
+    -  Xã Đắk Tăng
+    -  Xã Đắk Tơ Kan
+    -  Xã Đắk Tơ Lung
+    -  Xã Đắk Tờ Re
+    -  Xã Đắk Ui
+    -  Xã Đắk Wer
+    -  Xã Đắk Wil
+    -  Xã Đắk Xú
+    -  Xã Đặng Cương
+    -  Xã Đặng Lễ
+    -  Xã Đặng Sơn
+    -  Xã Đặng Xá
+    -  Xã Đề Thám
+    -  Xã Đỉnh Bàn
+    -  Xã Đỉnh Sơn
+    -  Xã Địa Linh
+    -  Xã Địch Giáo
+    -  Xã Địch Quả
+    -  Xã Định An
+    -  Xã Định Biên
+    -  Xã Định Bình
+    -  Xã Định Công
+    -  Xã Định Cư
+    -  Xã Định Hiệp
+    -  Xã Định Hòa
+    -  Xã Định Hóa
+    -  Xã Định Hưng
+    -  Xã Định Hải
+    -  Xã Định Liên
+    -  Xã Định Long
+    -  Xã Định Môn
+    -  Xã Định Mỹ
+    -  Xã Định Sơn
+    -  Xã Định Thành
+    -  Xã Định Thành A
+    -  Xã Định Thủy
+    -  Xã Định Tiến
+    -  Xã Định Trung
+    -  Xã Định Tân
+    -  Xã Định Tăng
+    -  Xã Định Tường
+    -  Xã Định Yên
+    -  Xã Đọi Sơn
+    -  Xã Đốc Binh Kiều
+    -  Xã Đốc Tín
+    -  Xã Đồi 61
+    -  Xã Đồn Xá
+    -  Xã Đồn Đạc
+    -  Xã Đồng Bài
+    -  Xã Đồng Bảng
+    -  Xã Đồng Bẩm
+    -  Xã Đồng Cam
+    -  Xã Đồng Chum
+    -  Xã Đồng Cương
+    -  Xã Đồng Cẩm
+    -  Xã Đồng Cốc
+    -  Xã Đồng Du
+    -  Xã Đồng Gia
+    -  Xã Đồng Giáp
+    -  Xã Đồng Hóa
+    -  Xã Đồng Hưu
+    -  Xã Đồng Hướng
+    -  Xã Đồng Hợp
+    -  Xã Đồng Kho
+    -  Xã Đồng Khê
+    -  Xã Đồng Khởi
+    -  Xã Đồng Kỳ
+    -  Xã Đồng Liên
+    -  Xã Đồng Loan
+    -  Xã Đồng Luận
+    -  Xã Đồng Lâm
+    -  Xã Đồng Lý
+    -  Xã Đồng Lương
+    -  Xã Đồng Lạc
+    -  Xã Đồng Lộc
+    -  Xã Đồng Lợi
+    -  Xã Đồng Minh
+    -  Xã Đồng Môn
+    -  Xã Đồng Nai
+    -  Xã Đồng Nai Thượng
+    -  Xã Đồng Nghê
+    -  Xã Đồng Nơ
+    -  Xã Đồng Phong
+    -  Xã Đồng Phú
+    -  Xã Đồng Phúc
+    -  Xã Đồng Quang
+    -  Xã Đồng Quý
+    -  Xã Đồng Quế
+    -  Xã Đồng Rui
+    -  Xã Đồng Ruộng
+    -  Xã Đồng Sơn
+    -  Xã Đồng Than
+    -  Xã Đồng Thanh
+    -  Xã Đồng Thành
+    -  Xã Đồng Thái
+    -  Xã Đồng Tháp
+    -  Xã Đồng Thạnh
+    -  Xã Đồng Thắng
+    -  Xã Đồng Thịnh
+    -  Xã Đồng Tiến
+    -  Xã Đồng Trung
+    -  Xã Đồng Trúc
+    -  Xã Đồng Trạch
+    -  Xã Đồng Tuyển
+    -  Xã Đồng Tâm
+    -  Xã Đồng Tân
+    -  Xã Đồng Tĩnh
+    -  Xã Đồng Việt
+    -  Xã Đồng Văn
+    -  Xã Đồng Vương
+    -  Xã Đồng Xuân
+    -  Xã Đồng Yên
+    -  Xã Đồng Ích
+    -  Xã Đồng ý
+    -  Xã Đồng Đục
+    -  Xã Đổng Xá
+    -  Xã Đỗ Sơn
+    -  Xã Đỗ Xuyên
+    -  Xã Đỗ Động
+    -  Xã Độc Lập
+    -  Xã Đội Bình
+    -  Xã Đội Cấn
+    -  Xã Động Lâm
+    -  Xã Động Quan
+    -  Xã Động Đạt
+    -  Xã Đứa Mòn
+    -  Xã Đức An
+    -  Xã Đức Bác
+    -  Xã Đức Bình
+    -  Xã Đức Bình Tây
+    -  Xã Đức Bình Đông
+    -  Xã Đức Bồng
+    -  Xã Đức Chánh
+    -  Xã Đức Châu
+    -  Xã Đức Chính
+    -  Xã Đức Dũng
+    -  Xã Đức Giang
+    -  Xã Đức Hiệp
+    -  Xã Đức Hoà
+    -  Xã Đức Hòa
+    -  Xã Đức Hòa Hạ
+    -  Xã Đức Hòa Thượng
+    -  Xã Đức Hòa Đông
+    -  Xã Đức Hóa
+    -  Xã Đức Hương
+    -  Xã Đức Hạnh
+    -  Xã Đức Hồng
+    -  Xã Đức Hợp
+    -  Xã Đức La
+    -  Xã Đức Liên
+    -  Xã Đức Liễu
+    -  Xã Đức Long
+    -  Xã Đức Lâm
+    -  Xã Đức Lân
+    -  Xã Đức Lý
+    -  Xã Đức Lĩnh
+    -  Xã Đức Lương
+    -  Xã Đức Lạc
+    -  Xã Đức Lạng
+    -  Xã Đức Lập
+    -  Xã Đức Lập Hạ
+    -  Xã Đức Lập Thượng
+    -  Xã Đức Lợi
+    -  Xã Đức Minh
+    -  Xã Đức Mạnh
+    -  Xã Đức Mỹ
+    -  Xã Đức Nhuận
+    -  Xã Đức Nhân
+    -  Xã Đức Ninh
+    -  Xã Đức Phong
+    -  Xã Đức Phú
+    -  Xã Đức Phổ
+    -  Xã Đức Quang
+    -  Xã Đức Sơn
+    -  Xã Đức Thanh
+    -  Xã Đức Thuận
+    -  Xã Đức Thành
+    -  Xã Đức Thông
+    -  Xã Đức Thượng
+    -  Xã Đức Thạnh
+    -  Xã Đức Thắng
+    -  Xã Đức Thịnh
+    -  Xã Đức Thủy
+    -  Xã Đức Trạch
+    -  Xã Đức Tân
+    -  Xã Đức Tín
+    -  Xã Đức Tùng
+    -  Xã Đức Vân
+    -  Xã Đức Vĩnh
+    -  Xã Đức Xuyên
+    -  Xã Đức Xuân
+    -  Xã Đức Xương
+    -  Xã Đức Yên
+    -  Xã Đức Đồng
+    -  Xã Ấm Hạ
+    -  Xã Ẳng Cang
+    -  Xã Ẳng Nưa
+    -  Xã Ẳng Tở
+    -  Xã Ứng Hoè
+    -  Phường Gia Hội
+    -  Phường Đông Ba
+    -  Thị trấn Thạch Giám

@@ -1,0 +1,67 @@
+version: "2.0"
+nlu:
+- lookup: province_name
+  examples: |
+    -  TP.Cần Thơ
+    -  TP.Hà Nội
+    -  TP.Hải Phòng
+    -  TP.Hồ Chí Minh
+    -  TP.Đà Nẵng
+    -  Thừa Thiên - Huế
+    -  Tỉnh An Giang
+    -  Tỉnh Bà Rịa - Vũng Tàu
+    -  Tỉnh Bình Dương
+    -  Tỉnh Bình Phước
+    -  Tỉnh Bình Thuận
+    -  Tỉnh Bình Định
+    -  Tỉnh Bạc Liêu
+    -  Tỉnh Bắc Giang
+    -  Tỉnh Bắc Kạn
+    -  Tỉnh Bắc Ninh
+    -  Tỉnh Bến Tre
+    -  Tỉnh Cao Bằng
+    -  Tỉnh Cà Mau
+    -  Tỉnh Gia Lai
+    -  Tỉnh Hà Giang
+    -  Tỉnh Hà Nam
+    -  Tỉnh Hà Tĩnh
+    -  Tỉnh Hòa Bình
+    -  Tỉnh Hưng Yên
+    -  Tỉnh Hải Dương
+    -  Tỉnh Hậu Giang
+    -  Tỉnh Khánh Hòa
+    -  Tỉnh Kiên Giang
+    -  Tỉnh Kon Tum
+    -  Tỉnh Lai Châu
+    -  Tỉnh Long An
+    -  Tỉnh Lào Cai
+    -  Tỉnh Lâm Đồng
+    -  Tỉnh Lạng Sơn
+    -  Tỉnh Nam Định
+    -  Tỉnh Nghệ An
+    -  Tỉnh Ninh Bình
+    -  Tỉnh Ninh Thuận
+    -  Tỉnh Phú Thọ
+    -  Tỉnh Phú Yên
+    -  Tỉnh Quảng Bình
+    -  Tỉnh Quảng Nam
+    -  Tỉnh Quảng Ngãi
+    -  Tỉnh Quảng Ninh
+    -  Tỉnh Quảng Trị
+    -  Tỉnh Sóc Trăng
+    -  Tỉnh Sơn La
+    -  Tỉnh Thanh Hóa
+    -  Tỉnh Thái Bình
+    -  Tỉnh Thái Nguyên
+    -  Tỉnh Tiền Giang
+    -  Tỉnh Trà Vinh
+    -  Tỉnh Tuyên Quang
+    -  Tỉnh Tây Ninh
+    -  Tỉnh Vĩnh Long
+    -  Tỉnh Vĩnh Phúc
+    -  Tỉnh Yên Bái
+    -  Tỉnh Điện Biên
+    -  Tỉnh Đắk Lắk
+    -  Tỉnh Đắk Nông
+    -  Tỉnh Đồng Nai
+    -  Tỉnh Đồng Tháp

@@ -1,0 +1,163 @@
+version: "2.0"
+
+rules:
+# ------- From loop actions customer
+- rule: Yêu cầu đặt đơn hàng
+  steps:
+    - intent: ask_order
+    - action: customer_order_form
+    - active_loop: customer_order_form
+
+- rule: Kết thúc Form đặt hàng
+  condition:
+    - active_loop: customer_order_form
+  steps:
+    - action: customer_order_form
+    - active_loop: null
+    - slot_was_set:
+        - requested_slot: null
+    - action: action_submit
+
+- rule: Yêu cầu sửa đơn hàng
+  steps:
+  - intent: ask_edit_order
+  - action: action_reset_slot
+  - action: customer_order_form
+  - active_loop: customer_order_form
+
+- rule: Khi KH yêu cầu lưu đơn hàng
+  steps:
+    - intent: confirm
+    - action: action_confirm_order
+
+- rule: Khi KH yêu cầu Hủy đơn hàng
+  steps:
+    - intent: unconfirm
+    - action: action_reset_slot
+    - action: utter_order_cancellation
+
+- rule: reset slot
+  steps:
+    - intent: ask_reset_slot
+    - action: action_reset_slot
+
+# -------  ChitChat
+- rule: say hello anytime
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: nlu_fallback
+  steps:
+    - intent: nlu_fallback
+    - action: utter_nlu_fallback
+
+- rule: ask name bot
+  steps:
+    - intent: ask_name_bot
+    - action: utter_ask_name_bot
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+    - intent: bot_challenge
+    - action: utter_bot_challenge
+
+- rule: ask func
+  steps:
+    - intent: ask_func
+    - action: utter_func
+
+- rule: Khi KH yêu cầu tư vấn
+  steps:
+    - intent: ask_advise
+    - action: utter_ask_product_name
+
+- rule: Khi KH yêu cầu tư vấn
+  steps:
+    - intent: ask_product_list
+    - action: utter_ask_product_name
+
+- rule: Khi KH cung cấp tên sản phẩm
+  steps:
+    - intent: provide_product_name
+    - action: action_answer
+
+# -------- FAQs tư vấn thông tin sản phẩm
+- rule: ask composition
+  steps:
+    - intent: ask_composition
+    - action: action_set_slot_composition
+    - action: action_answer
+
+- rule: ask effects
+  steps:
+    - intent: ask_effects
+    - action: action_set_slot_effects
+    - action: action_answer
+
+- rule: ask contraindications
+  steps:
+    - intent: ask_contraindications
+    - action: action_set_slot_contraindications
+    - action: action_answer
+
+- rule: ask_user_manual
+  steps:
+    - intent: ask_user_manual
+    - action: action_set_slot_user_manual
+    - action: action_answer
+
+- rule: ask_storage
+  steps:
+    - intent: ask_storage
+    - action: action_set_slot_storage
+    - action: action_answer
+
+- rule: ask_made_in
+  steps:
+    - intent: ask_made_in
+    - action: action_set_slot_made_in
+    - action: action_answer
+
+- rule: ask_sale
+  steps:
+    - intent: ask_sale
+    - action: action_set_slot_sale
+    - action: action_answer
+
+- rule: ask price
+  steps:
+    - intent: ask_price
+    - action: action_set_slot_price
+    - action: action_answer
+
+- rule: ask recognizing signs
+  steps:
+    - intent: ask_recognizing_signs
+    - action: action_set_slot_recognizing_signs
+    - action: action_answer
+
+- rule: ask ship
+  steps:
+    - intent: ask_ship
+    - action: action_set_slot_ship
+    - action: action_answer
+
+- rule: ask user object
+  steps:
+    - intent: ask_user_object
+    - action: action_set_slot_user_object
+    - action: action_answer
+
+- rule: ask for product quantity
+  steps:
+    - intent: ask_for_product_quantity
+    - action: action_set_slot_product_quantity
+    - action: action_answer
+
+

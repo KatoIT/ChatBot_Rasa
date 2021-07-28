@@ -1,0 +1,38 @@
+version: "2.0"
+
+stories:
+
+- story: ask price
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_price
+  - action: action_set_slot_price
+  - action: action_answer
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: ask price 2
+  steps:
+  - intent: ask_price
+  - action: action_set_slot_price
+  - action: action_answer
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: ask effects
+  steps:
+  - intent: ask_effects
+  - action: action_set_slot_effects
+  - action: action_answer
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: ask effects
+  steps:
+  - intent: ask_user_manual
+  - action: action_set_slot_user_manual
+  - action: action_answer
+  - intent: thanks
+  - action: utter_goodbye
+
